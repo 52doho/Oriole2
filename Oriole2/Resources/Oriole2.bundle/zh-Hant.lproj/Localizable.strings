@@ -1,0 +1,181 @@
+/*
+ Localizable.strings
+ Oriole2
+ 
+ Created by Gary Wong on 8/17/11.
+ Copyright 2010 Oriole2 Ltd. All rights reserved.
+ */
+
+//iVersion
+"Download" = "下載";
+"Download on the App Store" = "在App Store下載";
+"Ignore" = "不再提示";
+"Version Format" = "版本 %@";
+"New in this version" = "新功能";
+"New Version Format" = "更新%@";
+"Update" = "升級";
+
+//iRate
+"Rate" = "評價";
+"Rate Title Format" = "感覺“%@”怎麼洋？評價壹下!";
+"Rate It Now" = "現在評價";
+"Remind Me Later" = "稍後再說";
+
+"Inbox" = "消息";
+"Error" = "錯誤";
+"Load webpage failue message" = "載入頁面錯誤，請重試。";
+"Back" = "返回";
+"OK" = "確定";
+"Done" = "確定";
+"Cancel" = "取消";
+"Edit" = "編輯";
+"Remove" = "刪除";
+"Delete" = "刪除";
+"Clear" = "清空";
+"Copy" = "拷貝";
+"Copying" = "拷貝中";
+"Copied" = "已拷貝";
+"Save" = "保存";
+"Saving" = "保存中";
+"Saved" = "已保存";
+"Failed" = "失敗";
+"Preparing" = "準備中";
+"Loading" = "載入中";
+"Waiting" = "請稍候";
+"E-mail" = "郵件";
+"Send Video via E-mail" = "用郵件發送視頻";
+"Send Photo via E-mail" = "用郵件發送照片";
+"Send" = "發送";
+"Send via E-mail" = "用郵件發送";
+"Sending" = "正在發送";
+"Dismiss" = "忽略";
+"E-mail failed to send. Please try again." = "郵件發送失敗，請重試。";
+"No email account found" = "不能發送郵件，請在 設置 -> 郵件 裏添加帳護。";
+
+//settings
+"Settings" = "設置";
+"More" = "更多";
+"More Apps" = "App禮盒";
+"Tell a Friend" = "告訴朋友";
+"Gift" = "贈送";
+"Gift This App" = "贈送這個應用";
+"Gift This App Title" = "🎁 贈送這個應用🎁";
+"Gift This App Body Format" = "妳確實喜歡%@。妳的家人和朋友將會對妳的禮物感到非常滿意。";
+"Check Out Format" = "推薦使用 %@";
+"Check out this application on the App Store" = "在App Store上查看:";
+
+//more apps
+"Special Honored" = "特別推薦";
+"App Switch" = "App切換";
+"Open" = "打開";
+"Free Download" = "免費下載";
+"Full Version" = "完整版";
+
+//feedback
+"Feedback" = "反饋";
+"AppName" = "應用名";
+"AppVersion" = "應用版本";
+"Model" = "設備";
+"System" = "系統";
+"Like" = "喜歡";
+"Dislike" = "不喜歡";
+"Like format" = "喜歡 %@?";
+"Feedback Type" = "反饋類型";
+"Bravo" = "真棒";
+"Bug" = "問題";
+"Idea" = "建議";
+"Email address" = "郵箱";
+"Message" = "內容";
+"Review on the App Store" = "在App Store評價";
+"No thanks" = "不了，謝謝";
+"No" = "不了";
+"Yes" = "好";
+"Negative feedback" = "感謝您的反饋!";
+"Positive feedback format" = "我們很高興您喜歡 👍 %@!\r\n\r\n請在App Store給我們好評，您的支持將鼓勵我們把產品做得更好。";
+
+//passcode
+"Turn Passcode On" = "打開密碼";
+"Turn Passcode Off" = "關閉密碼";
+"Change Passcode" = "更改密碼";
+"Enter your Passcode" = "輸入密碼";
+"Re-enter your Passcode" = "重新輸入密碼";
+"Passcodes did not match" = "密碼不匹配，請再試壹次。";
+"Enter your old passcode" = "輸入舊密碼";
+"Enter your new passcode" = "輸入新密碼";
+"Failed Passcode" = "密碼錯誤";
+
+//SNS
+"Share" = "分享";
+"Sign in" = "登錄";
+"Sign out" = "登出";
+"Online" = "已登錄";
+"Offline" = "未登錄";
+"Action" = "更多";
+"Follow" = "關註";
+"Followed" = "已關註";
+"Follow failed" = "關註失敗";
+"Share on Sina" = "新浪微博";
+"Share on Tencent" = "騰訊微博";
+"Share on NetEase" = "網易微博";
+"Share on Renren" = "人人網";
+"Share on Douban" = "豆瓣";
+"Share on Flickr" = "Flickr";
+"Share on Tumblr" = "Tumblr";
+"Share on Evernote" = "Evernote";
+"Share on Facebook" = "Facebook";
+"Share on Twitter" = "Twitter";
+"Share on Instagram" = "Instagram";
+"Share on Vkontakte" = "Vkontakte";
+"Share on Delicious" = "Delicious";
+"Share on Foursquare" = "Foursquare";
+"Share on Google Reader" = "Google Reader";
+"Share on Instapaper" = "Instapaper";
+"Share on LinkedIn" = "LinkedIn";
+"Share on Pinboard" = "Pinboard";
+"Share on ReadItLater" = "Read It Later";
+"Save to Photo Album" = "保存到相冊";
+"Share via SMS" = "短信";
+"Share via Email" = "郵件";
+"Print" = "列印";
+"Open in Safari" = "在Safari打開";
+"Open in PhotoCool" = "用酷照片編輯";
+"Download PhotoCool" = "下載酷照片";
+
+//IAP
+"Mart" = "商城";
+"Upgrade" = "升級";
+"Remove Ad" = "移除广告";
+"Restore" = "恢復購買";
+"Restore Purchases" = "恢復購買記錄";
+"Restore purchases successed" = "恢復成功";
+"Restore purchases failed" = "恢復失敗";
+"Purchase successed" = "購買成功";
+"Purchase failed" = "購買失敗";
+"Have purchased" = "您已經購買";
+"Buy" = "購買";
+"Buy now" = "購買";
+"Purchased" = "已購買";
+"Free" = "免費";
+"FREE" = "免費";
+"Free app" = "免費應用";
+"Free game" = "免費遊戲";
+"No Internet Connection" = "沒有網絡鏈接";
+"Please check your network connection and try again" = "請檢查您的網絡是否打開，再重試";
+
+//Photo
+"Auto save to Camera Roll" = "自動保存到相冊";
+"No photos" = "無照片";
+"Album" = "相冊";
+"Import" = "導入";
+"Import Image From" = "導入照片";
+"Photo Library" = "相冊";
+"Camera" = "相機";
+
+//Geo
+"Geo tagging" = "添加地理位置";
+"Location Services Disabled" = "地理位置服務已關閉，請在設置中打開";
+"Location Services Restricted" = "地理位置服務受限制";
+"Unknown Location" = "未知地理位置";
+
+//Help
+"Help" = "幫助";

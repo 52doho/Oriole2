@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Oriole2
+
+  Created by Gary Wong on 6/16/11.
+  Copyright 2011 Oriole2 Ltd. All rights reserved.
+*/
+CFBundleDisplayName = "Oriole2";
+CFBundleName = "Oriole2";
+NSHumanReadableCopyright = "Copyright © 2011 Oriole2";
+CFBundleShortVersionString = "0.3";

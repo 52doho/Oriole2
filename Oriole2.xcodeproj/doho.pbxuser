@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D2AAC07D0554694100DB518D /* VSCommonLib */;
+		addToTargets = (
+			D2AAC07D0554694100DB518D /* VSCommonLib */,
+		);
+		codeSenseManager = D9C02F3A14DE2810008023B0 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					980,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 326178374;
+			PBXWorkspaceStateSaveDate = 326178374;
+		};
+		perUserProjectItems = {
+			D976F3791371168B00D97496 /* PBXTextBookmark */ = D976F3791371168B00D97496 /* PBXTextBookmark */;
+			D976F37A1371168B00D97496 /* PBXTextBookmark */ = D976F37A1371168B00D97496 /* PBXTextBookmark */;
+			D976F37B1371168B00D97496 /* PBXBookmark */ = D976F37B1371168B00D97496 /* PBXBookmark */;
+			D976F37C1371168B00D97496 /* PlistBookmark */ = D976F37C1371168B00D97496 /* PlistBookmark */;
+			D9C02F3E14DE2810008023B0 /* PBXTextBookmark */ = D9C02F3E14DE2810008023B0 /* PBXTextBookmark */;
+			D9C0304114DE2810008023B0 /* PBXTextBookmark */ = D9C0304114DE2810008023B0 /* PBXTextBookmark */;
+			D9C0304214DE2810008023B0 /* PBXTextBookmark */ = D9C0304214DE2810008023B0 /* PBXTextBookmark */;
+			D9C0304314DE2810008023B0 /* PBXTextBookmark */ = D9C0304314DE2810008023B0 /* PBXTextBookmark */;
+			D9C0306214DE2810008023B0 /* PBXTextBookmark */ = D9C0306214DE2810008023B0 /* PBXTextBookmark */;
+			D9C0306314DE2810008023B0 /* PBXTextBookmark */ = D9C0306314DE2810008023B0 /* PBXTextBookmark */;
+			D9C0306414DE2810008023B0 /* PBXTextBookmark */ = D9C0306414DE2810008023B0 /* PBXTextBookmark */;
+			D9C0306514DE2810008023B0 /* PBXTextBookmark */ = D9C0306514DE2810008023B0 /* PBXTextBookmark */;
+		};
+		sourceControlManager = D9C02F3914DE2810008023B0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	D2AAC07D0554694100DB518D /* VSCommonLib */ = {
+		activeExec = 0;
+	};
+	D9449FD3131E23F9007CE8AA /* VSExtend.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1158, 691}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 351}";
+		};
+	};
+	D9549643131784460017EDAF /* VSCommonLib.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1158, 2226}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{668, 1100}";
+		};
+	};
+	D954964B131784460017EDAF /* VSDate+Extend.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1821.76, 1176}}";
+			sepNavSelRange = "{707, 0}";
+			sepNavVisRange = "{0, 804}";
+		};
+	};
+	D954964C131784460017EDAF /* VSDate+Extend.mm */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{752, 50}\";\n            s = 0;\n        },\n                {\n            r = \"{840, 20}\";\n            s = 0;\n        },\n                {\n            r = \"{875, 136}\";\n            s = 0;\n        },\n                {\n            r = \"{1040, 20}\";\n            s = 0;\n        },\n                {\n            r = \"{1080, 43}\";\n            s = 0;\n        },\n                {\n            r = \"{1212, 397}\";\n            s = 0;\n        },\n                {\n            r = \"{1651, 400}\";\n            s = 0;\n        },\n                {\n            r = \"{2103, 240}\";\n            s = 0;\n        },\n                {\n            r = \"{2403, 226}\";\n            s = 0;\n        },\n                {\n            r = \"{2716, 230}\";\n            s = 0;\n        },\n                {\n            r = \"{3007, 223}\";\n            s = 0;\n        },\n                {\n            r = \"{3318, 227}\";\n            s = 0;\n        },\n                {\n            r = \"{3603, 136}\";\n            s = 0;\n        },\n                {\n            r = \"{3768, 128}\";\n            s = 0;\n        },\n                {\n            r = \"{3937, 131}\";\n            s = 0;\n        },\n                {\n            r = \"{4239, 2215}\";\n            s = 0;\n        },\n                {\n            r = \"{6507, 726}\";\n            s = 0;\n        },\n                {\n            r = \"{7284, 500}\";\n            s = 0;\n        },\n                {\n            r = \"{7832, 492}\";\n            s = 0;\n        },\n                {\n            r = \"{8388, 248}\";\n            s = 0;\n        },\n                {\n            r = \"{8680, 325}\";\n            s = 0;\n        },\n                {\n            r = \"{9046, 82}\";\n            s = 0;\n        },\n                {\n            r = \"{9189, 335}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 9532}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1810.93, 2184}}";
+			sepNavSelRange = "{1703, 0}";
+			sepNavVisRange = "{1048, 818}";
+		};
+	};
+	D954965F131784460017EDAF /* VSImageView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1258.25, 3549}}";
+			sepNavSelRange = "{4001, 0}";
+			sepNavVisRange = "{3789, 717}";
+		};
+	};
+	D9549661131784460017EDAF /* VSTextView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1258.25, 3360}}";
+			sepNavSelRange = "{4688, 0}";
+			sepNavVisRange = "{4350, 593}";
+		};
+	};
+	D95497DB131786090017EDAF /* VSCommonLibTest */ = {
+		activeExec = 0;
+	};
+	D954996E1317971B0017EDAF /* VSAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1158, 714}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1072}";
+		};
+	};
+	D95499701317971B0017EDAF /* VSCommon.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2081.85, 1869}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{2053, 929}";
+		};
+	};
+	D976F3791371168B00D97496 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9549643131784460017EDAF /* VSCommonLib.h */;
+		name = "VSCommonLib.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1100;
+		vrLoc = 668;
+	};
+	D976F37A1371168B00D97496 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D954964C131784460017EDAF /* VSDate+Extend.mm */;
+		name = "VSDate+Extend.mm: 233";
+		rLen = 0;
+		rLoc = 7234;
+		rType = 0;
+		vrLen = 6041;
+		vrLoc = 2346;
+	};
+	D976F37B1371168B00D97496 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D954981C131788D20017EDAF /* Info.plist */;
+	};
+	D976F37C1371168B00D97496 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D954981C131788D20017EDAF /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/doho/Documents/Projects/VSCommonLib/trunk/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	D9C02F3914DE2810008023B0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = VSCommonLib;
+			};
+		};
+	};
+	D9C02F3A14DE2810008023B0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D9C02F3B14DE2810008023B0 /* VSAppDelegate.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1496.66, 4830}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{5650, 782}";
+		};
+	};
+	D9C02F3E14DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9449FD3131E23F9007CE8AA /* VSExtend.h */;
+		name = "VSExtend.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 351;
+		vrLoc = 0;
+	};
+	D9C0304114DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D954964B131784460017EDAF /* VSDate+Extend.h */;
+		name = "VSDate+Extend.h: 25";
+		rLen = 0;
+		rLoc = 707;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 0;
+	};
+	D9C0304214DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9EE1DFE1318A72A0065F19F /* VSGeometry+Extend.h */;
+		name = "VSGeometry+Extend.h: 358";
+		rLen = 0;
+		rLoc = 7750;
+		rType = 0;
+		vrLen = 596;
+		vrLoc = 1227;
+	};
+	D9C0304314DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9EE1DFF1318A72A0065F19F /* VSGeometry+Extend.m */;
+		name = "VSGeometry+Extend.m: 157";
+		rLen = 0;
+		rLoc = 3564;
+		rType = 0;
+		vrLen = 818;
+		vrLoc = 963;
+	};
+	D9C0306214DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D95499701317971B0017EDAF /* VSCommon.h */;
+		name = "VSCommon.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 929;
+		vrLoc = 2053;
+	};
+	D9C0306314DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D954996E1317971B0017EDAF /* VSAppDelegate.h */;
+		name = "VSAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1072;
+		vrLoc = 0;
+	};
+	D9C0306414DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9C02F3B14DE2810008023B0 /* VSAppDelegate.mm */;
+		name = "VSAppDelegate.mm: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 782;
+		vrLoc = 5650;
+	};
+	D9C0306514DE2810008023B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D954965F131784460017EDAF /* VSImageView.m */;
+		name = "VSImageView.m: 168";
+		rLen = 0;
+		rLoc = 5126;
+		rType = 0;
+		vrLen = 1004;
+		vrLoc = 4585;
+	};
+	D9EE1DFE1318A72A0065F19F /* VSGeometry+Extend.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1158, 7602}}";
+			sepNavSelRange = "{7750, 0}";
+			sepNavVisRange = "{1227, 596}";
+		};
+	};
+	D9EE1DFF1318A72A0065F19F /* VSGeometry+Extend.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1236.57, 3297}}";
+			sepNavSelRange = "{3564, 0}";
+			sepNavVisRange = "{963, 818}";
+		};
+	};
+}

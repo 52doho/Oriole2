@@ -1,0 +1,19 @@
+PODS:
+  - FXKeychain (1.5.1)
+  - MBProgressHUD (0.8)
+  - QuincyKit (2.1.9)
+  - StandardPaths (1.5.6)
+
+DEPENDENCIES:
+  - FXKeychain (~> 1.5)
+  - MBProgressHUD (~> 0.8)
+  - QuincyKit (~> 2.1.9)
+  - StandardPaths (~> 1.5.6)
+
+SPEC CHECKSUMS:
+  FXKeychain: beb642a4218ba783507af08865eda05e9b26a612
+  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
+  QuincyKit: f8c4b54cd4cef2eb27cc59e099619ac4904fb71b
+  StandardPaths: 009f9c1699e26e46b2fb1a46b8bacc693d34460e
+
+COCOAPODS: 0.32.1

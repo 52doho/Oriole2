@@ -1,0 +1,181 @@
+/* 
+ Localizable.strings
+ Oriole2
+ 
+ Created by Gary Wong on 8/17/11.
+ Copyright 2010 Oriole2 Ltd. All rights reserved.
+ */
+
+//iVersion
+"Download" = "Scarica";
+"Download on the App Store" = "Scarica nell'App Store";
+"Ignore" = "Ignora";
+"Version Format" = "Versione %@";
+"New in this version" = "Novità di questa versione";
+"New Version Format" = "La nuova versione (%@) è disponibile";
+"Update" = "Aggiornare";
+
+//iRate
+"Rate" = "Valuta";
+"Rate Title Format" = "Se ti piace %@, invia una recensione.";
+"Rate It Now" = "Valuta ora";
+"Remind Me Later" = "Ricordamelo più tardi";
+
+"Inbox" = "Inbox";
+"Error" = "Errore";
+"Load webpage failue message" = "Si è verificato un errore durante il caricamento. Riprova.";
+"Back" = "Indietro";
+"OK" = "OK";
+"Done" = "Fine";
+"Cancel" = "Annulla";
+"Edit" = "Modifica";
+"Remove" = "Rimuovi";
+"Delete" = "Delete";
+"Clear" = "Clear";
+"Copy" = "Copia";
+"Copying" = "Copia in corso";
+"Copied" = "Copia effettuata";
+"Save" = "Salva";
+"Saving" = "Salvataggio";
+"Saved" = "Salvataggio effettuato";
+"Failed" = "Errore";
+"Preparing" = "Preparazione";
+"Loading" = "Caricamento";
+"Waiting" = "In attesa";
+"E-mail" = "E-mail";
+"Send Video via E-mail" = "Invia video via e-mail";
+"Send Photo via E-mail" = "Invia foto via e-mail";
+"Send" = "Invia";
+"Send via E-mail" = "Invia via e-mail";
+"Sending" = "Invio in corso";
+"Dismiss" = "Annulla";
+"E-mail failed to send. Please try again." = "Errore durante l'invio dell'e-mail. Riprova.";
+"No email account found" = "Nessun account e-mail trovata. Si prega di configurazione in Impostazioni -> Posta.";
+
+//settings
+"Settings" = "Impostazioni";
+"More" = "Altro";
+"More Apps" = "Altre app";
+"Tell a Friend" = "Dillo a un amico";
+"Gift" = "Regalo";
+"Gift This App" = "Fai un regalo App";
+"Gift This App Title" = "Fai un regalo App";
+"Gift This App Body Format" = "È veramente godere usando%@ La vostra famiglia e gli amici ti ameranno per aver dato loro questa applicazione.";
+"Check Out Format" = "Check out %@";
+"Check out this application on the App Store" = "Check out questa applicazione su App Store:";
+
+//more apps
+"Special Honored" = "Speciale Onorato";
+"App Switch" = "App Switch";
+"Open" = "Apri";
+"Free Download" = "Free Download";
+"Full Version" = "Versione completa";
+
+//feedback
+"Feedback" = "Feedback";
+"AppName" = "Nome app";
+"AppVersion" = "Versione app";
+"Model" = "Modello";
+"System" = "Sistema";
+"Like" = "Mi piace";
+"Dislike" = "Non mi piace";
+"Like format" = "Ti piace %@?";
+"Feedback Type" = "Tipo di feedback";
+"Bravo" = "Bravo";
+"Bug" = "Bug";
+"Idea" = "Idea";
+"Email address" = "E-mail";
+"Message" = "Messaggio";
+"Review on the App Store" = "Valuta nell'App Store";
+"No thanks" = "No, grazie";
+"No" = "No";
+"Yes" = "Yes";
+"Negative feedback" = "Grazie per il feedback!";
+"Positive feedback format" = "Siamo lieti che ti piaccia 👍 %@\r\n\r\n Mostraci il tuo supporto lasciando una valutazione positiva nell'App Store.";
+
+//passcode
+"Turn Passcode On" = "Attiva codice d'accesso";
+"Turn Passcode Off" = "Disattiva codice di accesso";
+"Change Passcode" = "Cambia codice di accesso";
+"Enter your Passcode" = "Inserisci codice di accesso";
+"Re-enter your Passcode" = "Reinserisci codice di accesso";
+"Passcodes did not match" = "I codici non corrispondono. Riprova.";
+"Enter your old passcode" = "Inserisci vecchio codice di accesso";
+"Enter your new passcode" = "Inserisci nuovo codice di accesso";
+"Failed Passcode" = "Codice errato";
+
+//SNS
+"Share" = "Condividi";
+"Sign in" = "Accedi";
+"Sign out" = "Esci";
+"Online" = "On-line";
+"Offline" = "Off-line";
+"Action" = "Azione";
+"Follow" = "Follow";
+"Followed" = "Followed";
+"Follow failed" = "Follow failed";
+"Share on Sina" = "Sina weibo";
+"Share on Tencent" = "Tencent weibo";
+"Share on NetEase" = "Neteasy weibo";
+"Share on Renren" = "Renren";
+"Share on Douban" = "Douban";
+"Share on Flickr" = "Flickr";
+"Share on Tumblr" = "Tumblr";
+"Share on Evernote" = "Evernote";
+"Share on Facebook" = "Facebook";
+"Share on Twitter" = "Twitter";
+"Share on Instagram" = "Instagram";
+"Share on Vkontakte" = "Vkontakte";
+"Share on Delicious" = "Delicious";
+"Share on Foursquare" = "Foursquare";
+"Share on Google Reader" = "Google Reader";
+"Share on Instapaper" = "Instapaper";
+"Share on LinkedIn" = "LinkedIn";
+"Share on Pinboard" = "Pinboard";
+"Share on ReadItLater" = "Read It Later";
+"Save to Photo Album" = "Salva nell'Album foto";
+"Share via SMS" = "SMS";
+"Share via Email" = "E-mail";
+"Print" = "Stampa";
+"Open in Safari" = "Apri con Safari";
+"Open in PhotoCool" = "Open in PhotoCool";
+"Download PhotoCool" = "Download PhotoCool";
+
+//IAP
+"Mart" = "Mercato";
+"Upgrade" = "Potenzia";
+"Remove Ad" = "Remove Ad";
+"Restore" = "Ripristina";
+"Restore Purchases" = "Ripristina acquisti";
+"Restore purchases successed" = "Ripristino riuscito";
+"Restore purchases failed" = "Ripristino fallito";
+"Purchase successed" = "Acquisto riuscito";
+"Purchase failed" = "Acquisto fallito";
+"Have purchased" = "You already purchased this item";
+"Buy now" = "Compra";
+"Buy now" = "Compra ora";
+"Purchased" = "Purchased";
+"Free" = "Libero";
+"FREE" = "Libero";
+"Free app" = "Free app";
+"Free game" = "Free game";
+"No Internet Connection" = "No Internet Connection";
+"Please check your network connection and try again" = "Please check your network connection and try again";
+
+//Photo
+"Auto save to Camera Roll" = "Salvataggio autom. nella Galleria";
+"No photos" = "Nessuna foto";
+"Album" = "Album";
+"Import" = "Importa";
+"Import Image From" = "Importa immagine da";
+"Photo Library" = "Libreria foto";
+"Camera" = "Camera";
+
+//Geo
+"Geo tagging" = "Tag geolocalizzato";
+"Location Services Disabled" = "Servizi di geolocalizzazione disabilitati";
+"Location Services Restricted" = "Servizi di geolocalizzazione limitati";
+"Unknown Location" = "Posizione sconosciuta";
+
+//Help
+"Help" = "Aiuto";

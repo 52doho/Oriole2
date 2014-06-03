@@ -1,0 +1,181 @@
+/* 
+ Localizable.strings
+ Oriole2
+ 
+ Created by Gary Wong on 8/17/11.
+ Copyright 2010 Oriole2 Ltd. All rights reserved.
+ */
+
+//iVersion
+"Download" = "下载";
+"Download on the App Store" = "在App Store下载";
+"Ignore" = "不再提示";
+"Version Format" = "版本 %@";
+"New in this version" = "新功能";
+"New Version Format" = "更新%@";
+"Update" = "升级";
+
+//iRate
+"Rate" = "评价";
+"Rate Title Format" = "感觉“%@”怎么样？评价一下!";
+"Rate It Now" = "现在评价";
+"Remind Me Later" = "稍后再说";
+
+"Inbox" = "消息";
+"Error" = "错误";
+"Load webpage failue message" = "载入页面错误，请重试。";
+"Back" = "返回";
+"OK" = "确定";
+"Done" = "确定";
+"Cancel" = "取消";
+"Edit" = "编辑";
+"Remove" = "删除";
+"Delete" = "删除";
+"Clear" = "清空";
+"Copy" = "拷贝";
+"Copying" = "拷贝中";
+"Copied" = "已拷贝";
+"Save" = "保存";
+"Saving" = "保存中";
+"Saved" = "已保存";
+"Failed" = "失败";
+"Preparing" = "准备中";
+"Loading" = "载入中";
+"Waiting" = "请稍候";
+"E-mail" = "邮件";
+"Send Video via E-mail" = "用邮件发送视频";
+"Send Photo via E-mail" = "用邮件发送照片";
+"Send" = "发送";
+"Send via E-mail" = "用邮件发送";
+"Sending" = "正在发送";
+"Dismiss" = "忽略";
+"E-mail failed to send. Please try again." = "邮件发送失败，请重试。";
+"No email account found" = "不能发送邮件，请在 设置 -> 邮件 里添加账户。";
+
+//settings
+"Settings" = "设置";
+"More" = "更多";
+"More Apps" = "App礼盒";
+"Tell a Friend" = "告诉朋友";
+"Gift" = "赠送";
+"Gift This App" = "赠送这个应用";
+"Gift This App Title" = "🎁 赠送这个应用 🎁";
+"Gift This App Body Format" = "你确实喜欢 %@。你的家人和朋友将会对你的礼物感到非常满意。";
+"Check Out Format" = "推荐使用 %@";
+"Check out this application on the App Store" = "在App Store上查看:";
+
+//more apps
+"Special Honored" = "特别推荐";
+"App Switch" = "App切换";
+"Open" = "打开";
+"Free Download" = "免费下载";
+"Full Version" = "完整版";
+
+//feedback
+"Feedback" = "反馈";
+"AppName" = "应用名";
+"AppVersion" = "应用版本";
+"Model" = "设备";
+"System" = "系统";
+"Like" = "喜欢";
+"Dislike" = "不喜欢";
+"Like format" = "喜欢 %@?";
+"Feedback Type" = "反馈类型";
+"Bravo" = "真棒";
+"Bug" = "问题";
+"Idea" = "建议";
+"Email address" = "邮箱";
+"Message" = "内容";
+"Review on the App Store" = "在App Store评价";
+"No thanks" = "不了，谢谢";
+"No" = "不了";
+"Yes" = "好";
+"Negative feedback" = "感谢您的反馈!";
+"Positive feedback format" = "我们很高兴您喜欢 👍 %@!\r\n\r\n 请在App Store给我们好评，您的支持将鼓励我们把产品做得更好。";
+
+//passcode
+"Turn Passcode On" = "打开密码";
+"Turn Passcode Off" = "关闭密码";
+"Change Passcode" = "更改密码";
+"Enter your Passcode" = "输入密码";
+"Re-enter your Passcode" = "重新输入密码";
+"Passcodes did not match" = "密码不匹配，请再试一次。";
+"Enter your old passcode" = "输入旧密码";
+"Enter your new passcode" = "输入新密码";
+"Failed Passcode" = "密码错误";
+
+//SNS
+"Share" = "分享";
+"Sign in" = "登录";
+"Sign out" = "登出";
+"Online" = "已登录";
+"Offline" = "未登录";
+"Action" = "更多";
+"Follow" = "关注";
+"Followed" = "已关注";
+"Follow failed" = "关注失败";
+"Share on Sina" = "新浪微博";
+"Share on Tencent" = "腾讯微博";
+"Share on NetEase" = "网易微博";
+"Share on Renren" = "人人网";
+"Share on Douban" = "豆瓣";
+"Share on Flickr" = "Flickr";
+"Share on Tumblr" = "Tumblr";
+"Share on Evernote" = "Evernote";
+"Share on Facebook" = "Facebook";
+"Share on Twitter" = "Twitter";
+"Share on Instagram" = "Instagram";
+"Share on Vkontakte" = "Vkontakte";
+"Share on Delicious" = "Delicious";
+"Share on Foursquare" = "Foursquare";
+"Share on Google Reader" = "Google Reader";
+"Share on Instapaper" = "Instapaper";
+"Share on LinkedIn" = "LinkedIn";
+"Share on Pinboard" = "Pinboard";
+"Share on ReadItLater" = "Read It Later";
+"Save to Photo Album" = "保存到相册";
+"Share via SMS" = "短信";
+"Share via Email" = "邮件";
+"Print" = "打印";
+"Open in Safari" = "在Safari打开";
+"Open in PhotoCool" = "用酷照片编辑";
+"Download PhotoCool" = "下载酷照片";
+
+//IAP
+"Mart" = "商城";
+"Upgrade" = "升级";
+"Remove Ad" = "移除广告";
+"Restore" = "恢复购买";
+"Restore Purchases" = "恢复购买记录";
+"Restore purchases successed" = "恢复成功";
+"Restore purchases failed" = "恢复失败";
+"Purchase successed" = "购买成功";
+"Purchase failed" = "购买失败";
+"Have purchased" = "您已经购买";
+"Buy" = "购买";
+"Buy now" = "购买";
+"Purchased" = "已购买";
+"Free" = "免费";
+"FREE" = "免费";
+"Free app" = "免费应用";
+"Free game" = "免费游戏";
+"No Internet Connection" = "没有网络链接";
+"Please check your network connection and try again" = "请检查您的网络是否打开，再重试";
+
+//Photo
+"Auto save to Camera Roll" = "自动保存到相册";
+"No photos" = "无照片";
+"Album" = "相册";
+"Import" = "导入";
+"Import Image From" = "导入照片";
+"Photo Library" = "相册";
+"Camera" = "相机";
+
+//Geo
+"Geo tagging" = "添加地理位置";
+"Location Services Disabled" = "地理位置服务已关闭，请在设置中打开";
+"Location Services Restricted" = "地理位置服务受限制";
+"Unknown Location" = "未知地理位置";
+
+//Help
+"Help" = "帮助";
