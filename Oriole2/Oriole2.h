@@ -16,33 +16,33 @@
 // 
 
 //---------------------------Common---------------------------
-#import "Common/iCrashVC.h"
-#import "Common/iRate.h"
-#import "Common/iRateVC.h"
-#import "Common/iVersion.h"
-#import "Common/iVersionVC.h"
-#import "Common/OOAppDelegate.h"
-#import "Common/OOCommon.h"
+#import "iCrashVC.h"
+#import "iRate.h"
+#import "iRateVC.h"
+#import "iVersion.h"
+#import "iVersionVC.h"
+#import "OOAppDelegate.h"
+#import "OOCommon.h"
 
 //---------------------------Ads---------------------------
-#import "Ads/OOShareTextManager.h"
+#import "OOShareTextManager.h"
 
 //---------------------------Animation---------------------------
-#import "Animation/OOAnimation.h"
+#import "OOAnimation.h"
 
 //---------------------------Extend---------------------------
 #import "OOExtend.h"
 
 //---------------------------Controls---------------------------
-#import "Controls/OOMoreAppsView.h"
-#import "Controls/OOSplashScreen.h"
-#import "Controls/OOZoomableImageView.h"
+#import "OOMoreAppsView.h"
+#import "OOSplashScreen.h"
+#import "OOZoomableImageView.h"
 
 //---------------------------ViewControllers---------------------------
-#import "ViewControllers/OOMailViewController.h"
+#import "OOMailViewController.h"
 
 //---------------------------ThirdParty---------------------------
-#import "ThirdParty/GTM/GTMObjectSingleton.h"
+#import "GTMObjectSingleton.h"
 
 //---------------------------SNS---------------------------
-#import "SNS/OOActivity.h"
+#import "OOActivity.h"
