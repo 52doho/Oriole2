@@ -21,11 +21,6 @@
 #import "iRate.h"
 #import "iVersion.h"
 #import "OOCommon.h"
-#import "BWQuincyManager.h"
-
-//#import "GTMStackTrace.h"
-/*
-#include <exception>*/
 
 //private methods
 @interface OOAppDelegate (hidden)
@@ -46,76 +41,11 @@
     [iVersion sharedInstance];
 }
 
-/**
- @see http://chaosinmotion.com/blog/?p=423
- http://www.iphonedevsdk.com/forum/iphone-sdk-development-advanced-discussion/18633-flurry-uncaughtexception-handler.html
- */
-/*
-void _uncaughtExceptionHandler(NSException *exception)
-{
-    //[Flurry logError:@"uncaughtException" message:[exception name] exception:exception];
-    
-#ifndef DEBUG
-	NSString *trace = GTMStackTraceFromException(exception);
-    [Flurry logError:@"uncaughtException" message:trace exception:exception];
-#else
-    OOLog(@"Stack Trace: %@", [exception callStackSymbols]);
-#endif
-}*/
-
-//http://pastebin.com/HS6jLQs0
-//void _uncaughtExceptionHandler(NSException *exception)
-//{
-//    if ([exception respondsToSelector:@selector(callStackSymbols)])
-//    {
-//        OOLog(@"Exception %@ with callStack %@", exception, [exception callStackSymbols]);
-//        
-//#ifndef DEBUG
-//        NSMutableString *summarizedCallStackSymbols = [NSMutableString string];
-//        for (NSString *callStackSymbol in [exception callStackSymbols])
-//        {
-//            /* Remove the framework prefix */
-//            if (callStackSymbol.length > 51)
-//                callStackSymbol = [callStackSymbol substringFromIndex:51];
-//            
-//            /* Flurry's message space is very limited; remove the offset to further save space */
-//            NSRange plusRange = [callStackSymbol rangeOfString:@" + "];
-//            if (plusRange.location != NSNotFound)
-//                callStackSymbol = [callStackSymbol substringToIndex:plusRange.location];
-//            
-//            /* Skip useless top-of-stack entries */
-//            if (([callStackSymbol rangeOfString:@"__exceptionPreprocess"].location != NSNotFound) ||
-//                ([callStackSymbol rangeOfString:@"objc_exception_throw"].location != NSNotFound))
-//                continue;
-//            
-//            /* We could add a character between each symbol, but that just loses us precious space */
-//            [summarizedCallStackSymbols appendFormat:@"%@", callStackSymbol];                      
-//        }
-//        
-//        [Flurry logError:[exception name]
-//                          message:summarizedCallStackSymbols
-//                        exception:exception];
-//#endif
-//    }
-//    else
-//    {
-//#ifndef DEBUG
-//        [Flurry logError:[exception name]
-//                          message:[exception reason]
-//                        exception:exception];
-//#endif
-//    }
-//}
-
 - (id)init
 {
 	self = [super init];
 	if (self)
 	{
-//        NSSetUncaughtExceptionHandler(&_uncaughtExceptionHandler);
-        [[BWQuincyManager sharedQuincyManager] setSubmissionURL:@"http://oriole2.com/CrashReporter/crash_v300.php"];
-        [[BWQuincyManager sharedQuincyManager] setDelegate:(id<BWQuincyManagerDelegate>)self];
-//        [[BWQuincyManager sharedQuincyManager] startManager];
 	}
 	return self;
 }
