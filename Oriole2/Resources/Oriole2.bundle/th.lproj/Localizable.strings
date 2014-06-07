@@ -6,15 +6,6 @@
    Copyright 2010 Oriole2 Ltd. All rights reserved.
  */
 
-//iVersion
-"Download" = "ดาวน์โหลด";
-"Download on the App Store" = "ดาวน์โหลดบน App Store ของ";
-"Ignore" = "ไม่สนใจ";
-"Version Format" = "เวอร์ชั่น %@";
-"New in this version" = "ใหม่ในรุ่นนี้";
-"New Version Format" = "รุ่นใหม่ (%@) มีให้บริการ";
-"Update" = "ปรับปรุง";
-
 //iRate
 "Rate" = "ค่า";
 "Rate Title Format" = "ถ้าคุณชอบ %@ โปรดอัตรามัน.";

@@ -6,20 +6,13 @@
  Copyright 2010 Oriole2 Ltd. All rights reserved.
  */
 
-//iVersion
-"Download" = "Scarica";
-"Download on the App Store" = "Scarica nell'App Store";
-"Ignore" = "Ignora";
-"Version Format" = "Versione %@";
-"New in this version" = "Novità di questa versione";
-"New Version Format" = "La nuova versione (%@) è disponibile";
-"Update" = "Aggiornare";
-
 //iRate
-"Rate" = "Valuta";
-"Rate Title Format" = "Se ti piace %@, invia una recensione.";
-"Rate It Now" = "Valuta ora";
-"Remind Me Later" = "Ricordamelo più tardi";
+"iRateMessageTitle" = "Vota %@";
+"iRateAppMessage" = "Se ti piace utilizzare %@, ti dispiacerebbe darle un voto? Non ci vorrà più di un minuto. Grazie per il vostro supporto!";
+"iRateGameMessage" = "Se ti piace giocare a %@, ti dispiacerebbe darle un voto? Non ci vorrà più di un minuto. Grazie per il vostro supporto!";
+"iRateCancelButton" = "No, grazie";
+"iRateRateButton" = "Vota ora";
+"iRateRemindButton" = "Ricordamelo dopo";
 
 "Inbox" = "Inbox";
 "Error" = "Errore";

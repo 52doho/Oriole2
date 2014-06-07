@@ -6,20 +6,13 @@
  Copyright 2010 Oriole2 Ltd. All rights reserved.
  */
 
-//iVersion
-"Download" = "ダウンロードします";
-"Download on the App Store" = "App Storeでダウンロード";
-"Ignore" = "見落とします";
-"Version Format" = "バージョン %@";
-"New in this version" = "新功能";
-"New Version Format" = "バージョンアップ%@";
-"Update" = "Update";
-
 //iRate
-"Rate" = "評価する";
-"Rate Title Format" = "%@がいかがですか。ご評価をお願いします。";
-"Rate It Now" = "今評価します";
-"Remind Me Later" = "後でします";
+"iRateMessageTitle" = "%@の評価";
+"iRateAppMessage" = "%@をお使いいただき大変ありがとうございます。もしよろしければ1分程で済みますので、このアプリの評価をお願いします。ご協力感謝いたします！";
+"iRateGameMessage" = "%@をプレイしていただき大変ありがとうございます。もしよろしければ1分程で済みますので、このアプリの評価をお願いします。ご協力感謝いたします！";
+"iRateCancelButton" = "いえ、結構です";
+"iRateRateButton" = "今すぐ評価する";
+"iRateRemindButton" = "後でする";
 
 "Inbox" = "Inbox";
 "Error" = "間違いました";

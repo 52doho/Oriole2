@@ -16,10 +16,12 @@
 "Update" = "升级";
 
 //iRate
-"Rate" = "评价";
-"Rate Title Format" = "感觉“%@”怎么样？评价一下!";
-"Rate It Now" = "现在评价";
-"Remind Me Later" = "稍后再说";
+"iRateMessageTitle" = "亲";
+"iRateAppMessage" = "觉得%@好用，就来 App Store 支持一下吧！";
+"iRateGameMessage" = "觉得%@好玩，就来 App Store 支持一下吧！";
+"iRateCancelButton" = "不了";
+"iRateRateButton" = "支持一下";
+"iRateRemindButton" = "有待观察";
 
 "Inbox" = "消息";
 "Error" = "错误";

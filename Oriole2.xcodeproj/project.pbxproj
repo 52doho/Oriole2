@@ -27,45 +27,7 @@
 		4E4721501711779600675F51 /* OOActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E47214D1711779600675F51 /* OOActivity.h */; };
 		4E4721511711779600675F51 /* OOActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47214E1711779600675F51 /* OOActivity.m */; };
 		4E4721521711779600675F51 /* OOActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47214E1711779600675F51 /* OOActivity.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		4E69071B193CDCE1004E6CF2 /* NSData+MKBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690710193CDCE1004E6CF2 /* NSData+MKBase64.h */; };
-		4E69071C193CDCE1004E6CF2 /* NSData+MKBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690710193CDCE1004E6CF2 /* NSData+MKBase64.h */; };
-		4E69071D193CDCE1004E6CF2 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690711193CDCE1004E6CF2 /* NSData+MKBase64.m */; };
-		4E69071E193CDCE1004E6CF2 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690711193CDCE1004E6CF2 /* NSData+MKBase64.m */; };
-		4E69071F193CDCE1004E6CF2 /* SFHFKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690712193CDCE1004E6CF2 /* SFHFKeychainUtils.h */; };
-		4E690720193CDCE1004E6CF2 /* SFHFKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690712193CDCE1004E6CF2 /* SFHFKeychainUtils.h */; };
-		4E690721193CDCE1004E6CF2 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690713193CDCE1004E6CF2 /* SFHFKeychainUtils.m */; };
-		4E690722193CDCE1004E6CF2 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690713193CDCE1004E6CF2 /* SFHFKeychainUtils.m */; };
-		4E690723193CDCE1004E6CF2 /* MKSKProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690714193CDCE1004E6CF2 /* MKSKProduct.h */; };
-		4E690724193CDCE1004E6CF2 /* MKSKProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690714193CDCE1004E6CF2 /* MKSKProduct.h */; };
-		4E690725193CDCE1004E6CF2 /* MKSKProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690715193CDCE1004E6CF2 /* MKSKProduct.m */; };
-		4E690726193CDCE1004E6CF2 /* MKSKProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690715193CDCE1004E6CF2 /* MKSKProduct.m */; };
-		4E690727193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690716193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h */; };
-		4E690728193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690716193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h */; };
-		4E690729193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690717193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m */; };
-		4E69072A193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E690717193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m */; };
-		4E69072B193CDCE1004E6CF2 /* MKStoreKitConfigs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690718193CDCE1004E6CF2 /* MKStoreKitConfigs.h */; };
-		4E69072C193CDCE1004E6CF2 /* MKStoreKitConfigs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690718193CDCE1004E6CF2 /* MKStoreKitConfigs.h */; };
-		4E69072D193CDCE1004E6CF2 /* MKStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690719193CDCE1004E6CF2 /* MKStoreManager.h */; };
-		4E69072E193CDCE1004E6CF2 /* MKStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E690719193CDCE1004E6CF2 /* MKStoreManager.h */; };
-		4E69072F193CDCE1004E6CF2 /* MKStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E69071A193CDCE1004E6CF2 /* MKStoreManager.m */; };
-		4E690730193CDCE1004E6CF2 /* MKStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E69071A193CDCE1004E6CF2 /* MKStoreManager.m */; };
 		4E6DF04A14F4CA1B00379535 /* Oriole2_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4E6DF04914F4CA1B00379535 /* Oriole2_Prefix.pch */; };
-		4E7114AB1755F724004B5FD7 /* iRate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A31755F724004B5FD7 /* iRate.h */; };
-		4E7114AC1755F724004B5FD7 /* iRate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A31755F724004B5FD7 /* iRate.h */; };
-		4E7114AD1755F724004B5FD7 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114A41755F724004B5FD7 /* iRate.m */; };
-		4E7114AE1755F724004B5FD7 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114A41755F724004B5FD7 /* iRate.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		4E7114AF1755F724004B5FD7 /* iRateVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A51755F724004B5FD7 /* iRateVC.h */; };
-		4E7114B01755F724004B5FD7 /* iRateVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A51755F724004B5FD7 /* iRateVC.h */; };
-		4E7114B11755F724004B5FD7 /* iRateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114A61755F724004B5FD7 /* iRateVC.m */; };
-		4E7114B21755F724004B5FD7 /* iRateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114A61755F724004B5FD7 /* iRateVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		4E7114B31755F724004B5FD7 /* iVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A71755F724004B5FD7 /* iVersion.h */; };
-		4E7114B41755F724004B5FD7 /* iVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A71755F724004B5FD7 /* iVersion.h */; };
-		4E7114B51755F724004B5FD7 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114A81755F724004B5FD7 /* iVersion.m */; };
-		4E7114B61755F724004B5FD7 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114A81755F724004B5FD7 /* iVersion.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		4E7114B71755F724004B5FD7 /* iVersionVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A91755F724004B5FD7 /* iVersionVC.h */; };
-		4E7114B81755F724004B5FD7 /* iVersionVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7114A91755F724004B5FD7 /* iVersionVC.h */; };
-		4E7114B91755F724004B5FD7 /* iVersionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114AA1755F724004B5FD7 /* iVersionVC.m */; };
-		4E7114BA1755F724004B5FD7 /* iVersionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7114AA1755F724004B5FD7 /* iVersionVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4E7598F216B8D99300BC9B01 /* OOShareTextManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7598F016B8D99300BC9B01 /* OOShareTextManager.h */; };
 		4E7598F316B8D99300BC9B01 /* OOShareTextManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7598F016B8D99300BC9B01 /* OOShareTextManager.h */; };
 		4E7598F416B8D99300BC9B01 /* OOShareTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7598F116B8D99300BC9B01 /* OOShareTextManager.m */; };
@@ -154,10 +116,6 @@
 		4EAED57616070F5000393E6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAED56B16070F5000393E6E /* main.m */; };
 		4EAED57716070F5000393E6E /* OOApp_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAED56D16070F5000393E6E /* OOApp_AppDelegate.m */; };
 		4EAED57816070F5000393E6E /* OOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAED56F16070F5000393E6E /* OOViewController.m */; };
-		4EB7E676175C8EAC00A43530 /* iCrashVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB7E674175C8EAB00A43530 /* iCrashVC.h */; };
-		4EB7E677175C8EAC00A43530 /* iCrashVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB7E674175C8EAB00A43530 /* iCrashVC.h */; };
-		4EB7E678175C8EAC00A43530 /* iCrashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7E675175C8EAB00A43530 /* iCrashVC.m */; };
-		4EB7E679175C8EAC00A43530 /* iCrashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7E675175C8EAB00A43530 /* iCrashVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4EB7E67C175C94D900A43530 /* iRateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7E67A175C94D900A43530 /* iRateVC.xib */; };
 		4EB7E67D175C94D900A43530 /* iVersionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7E67B175C94D900A43530 /* iVersionVC.xib */; };
 		4EB7E67F175C959D00A43530 /* iCrashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7E67E175C959D00A43530 /* iCrashVC.xib */; };
@@ -175,10 +133,6 @@
 		4EF82132187992320072F706 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF82131187992320072F706 /* Default-568h@2x.png */; };
 		4EFF0E8E193C9CBA00782AD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFF0E8D193C9CBA00782AD4 /* UIKit.framework */; };
 		4EFF0E90193C9CC100782AD4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFF0E8F193C9CC100782AD4 /* SystemConfiguration.framework */; };
-		4EFF0F4C193CCCDA00782AD4 /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFF0EE5193CCCDA00782AD4 /* Flurry.h */; };
-		4EFF0F4D193CCCDA00782AD4 /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFF0EE5193CCCDA00782AD4 /* Flurry.h */; };
-		4EFF0F4E193CCCDA00782AD4 /* libFlurry_5.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFF0EE6193CCCDA00782AD4 /* libFlurry_5.0.0.a */; };
-		4EFF0F4F193CCCDA00782AD4 /* libFlurry_5.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFF0EE6193CCCDA00782AD4 /* libFlurry_5.0.0.a */; };
 		4EFF0F56193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFF0EEB193CCCDA00782AD4 /* GTMObjectSingleton.h */; };
 		4EFF0F57193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFF0EEB193CCCDA00782AD4 /* GTMObjectSingleton.h */; };
 		9C043C888A5E478D86137CCD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E204912516C4EB7A90DA4D9 /* libPods.a */; };
@@ -207,27 +161,8 @@
 		4E4721481711778B00675F51 /* OOZoomableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOZoomableImageView.m; sourceTree = "<group>"; };
 		4E47214D1711779600675F51 /* OOActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOActivity.h; sourceTree = "<group>"; };
 		4E47214E1711779600675F51 /* OOActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOActivity.m; sourceTree = "<group>"; };
-		4E690710193CDCE1004E6CF2 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
-		4E690711193CDCE1004E6CF2 /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
-		4E690712193CDCE1004E6CF2 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
-		4E690713193CDCE1004E6CF2 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
-		4E690714193CDCE1004E6CF2 /* MKSKProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSKProduct.h; sourceTree = "<group>"; };
-		4E690715193CDCE1004E6CF2 /* MKSKProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSKProduct.m; sourceTree = "<group>"; };
-		4E690716193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSKSubscriptionProduct.h; sourceTree = "<group>"; };
-		4E690717193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSKSubscriptionProduct.m; sourceTree = "<group>"; };
-		4E690718193CDCE1004E6CF2 /* MKStoreKitConfigs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStoreKitConfigs.h; sourceTree = "<group>"; };
-		4E690719193CDCE1004E6CF2 /* MKStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStoreManager.h; sourceTree = "<group>"; };
-		4E69071A193CDCE1004E6CF2 /* MKStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStoreManager.m; sourceTree = "<group>"; };
 		4E6DF04914F4CA1B00379535 /* Oriole2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oriole2_Prefix.pch; sourceTree = "<group>"; };
 		4E6DF30614F4CAF100379535 /* libOriole2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOriole2.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E7114A31755F724004B5FD7 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		4E7114A41755F724004B5FD7 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
-		4E7114A51755F724004B5FD7 /* iRateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRateVC.h; sourceTree = "<group>"; };
-		4E7114A61755F724004B5FD7 /* iRateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRateVC.m; sourceTree = "<group>"; };
-		4E7114A71755F724004B5FD7 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
-		4E7114A81755F724004B5FD7 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
-		4E7114A91755F724004B5FD7 /* iVersionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersionVC.h; sourceTree = "<group>"; };
-		4E7114AA1755F724004B5FD7 /* iVersionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersionVC.m; sourceTree = "<group>"; };
 		4E7598F016B8D99300BC9B01 /* OOShareTextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOShareTextManager.h; sourceTree = "<group>"; };
 		4E7598F116B8D99300BC9B01 /* OOShareTextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOShareTextManager.m; sourceTree = "<group>"; };
 		4E7D4FB814F54615006EFD89 /* Oriole2_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oriole2_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,8 +213,6 @@
 		4EAED56F16070F5000393E6E /* OOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOViewController.m; sourceTree = "<group>"; };
 		4EAED57016070F5000393E6E /* Oriole2_App-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Oriole2_App-Info.plist"; sourceTree = "<group>"; };
 		4EAED57116070F5000393E6E /* Oriole2_App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Oriole2_App-Prefix.pch"; sourceTree = "<group>"; };
-		4EB7E674175C8EAB00A43530 /* iCrashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCrashVC.h; sourceTree = "<group>"; };
-		4EB7E675175C8EAB00A43530 /* iCrashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCrashVC.m; sourceTree = "<group>"; };
 		4EB7E67A175C94D900A43530 /* iRateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iRateVC.xib; path = ../../InstaMirror/InstaMirror/iRateVC.xib; sourceTree = "<group>"; };
 		4EB7E67B175C94D900A43530 /* iVersionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iVersionVC.xib; path = ../../InstaMirror/InstaMirror/iVersionVC.xib; sourceTree = "<group>"; };
 		4EB7E67E175C959D00A43530 /* iCrashVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iCrashVC.xib; path = ../../PhotoManila/PhotoManila/iCrashVC.xib; sourceTree = "<group>"; };
@@ -296,11 +229,7 @@
 		4EF82131187992320072F706 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		4EFF0E8D193C9CBA00782AD4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EFF0E8F193C9CC100782AD4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		4EFF0EE5193CCCDA00782AD4 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		4EFF0EE6193CCCDA00782AD4 /* libFlurry_5.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.0.0.a; sourceTree = "<group>"; };
 		4EFF0EEB193CCCDA00782AD4 /* GTMObjectSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMObjectSingleton.h; sourceTree = "<group>"; };
-		4EFF0F9B193CD38600782AD4 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		4EFF0F9C193CD38600782AD4 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		4EFF0F9D193CD38600782AD4 /* Oriole2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Oriole2.bundle; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D91C50301430795600A1F3EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -349,7 +278,6 @@
 				4EA5BADA16071C6200C27749 /* CoreTelephony.framework in Frameworks */,
 				4EA5BADB16071C6200C27749 /* StoreKit.framework in Frameworks */,
 				4EA5BADE16071C6200C27749 /* AVFoundation.framework in Frameworks */,
-				4EFF0F4F193CCCDA00782AD4 /* libFlurry_5.0.0.a in Frameworks */,
 				4EA5BADF16071C6200C27749 /* MobileCoreServices.framework in Frameworks */,
 				4EA5BAE216071C6200C27749 /* CoreData.framework in Frameworks */,
 				4EA5BAE316071C6200C27749 /* Foundation.framework in Frameworks */,
@@ -376,7 +304,6 @@
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 				D95497CC131785A40017EDAF /* CFNetwork.framework in Frameworks */,
 				D95497CE131785A40017EDAF /* MessageUI.framework in Frameworks */,
-				4EFF0F4E193CCCDA00782AD4 /* libFlurry_5.0.0.a in Frameworks */,
 				D95497D0131785A40017EDAF /* QuartzCore.framework in Frameworks */,
 				D9EE1E191318AA540065F19F /* CoreGraphics.framework in Frameworks */,
 				4E7D634714F60B2000D8B7FF /* Security.framework in Frameworks */,
@@ -455,32 +382,6 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		4E69070E193CDCE1004E6CF2 /* MKStoreKit_5.0 */ = {
-			isa = PBXGroup;
-			children = (
-				4E69070F193CDCE1004E6CF2 /* Externals */,
-				4E690714193CDCE1004E6CF2 /* MKSKProduct.h */,
-				4E690715193CDCE1004E6CF2 /* MKSKProduct.m */,
-				4E690716193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h */,
-				4E690717193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m */,
-				4E690718193CDCE1004E6CF2 /* MKStoreKitConfigs.h */,
-				4E690719193CDCE1004E6CF2 /* MKStoreManager.h */,
-				4E69071A193CDCE1004E6CF2 /* MKStoreManager.m */,
-			);
-			path = MKStoreKit_5.0;
-			sourceTree = "<group>";
-		};
-		4E69070F193CDCE1004E6CF2 /* Externals */ = {
-			isa = PBXGroup;
-			children = (
-				4E690710193CDCE1004E6CF2 /* NSData+MKBase64.h */,
-				4E690711193CDCE1004E6CF2 /* NSData+MKBase64.m */,
-				4E690712193CDCE1004E6CF2 /* SFHFKeychainUtils.h */,
-				4E690713193CDCE1004E6CF2 /* SFHFKeychainUtils.m */,
-			);
-			path = Externals;
-			sourceTree = "<group>";
-		};
 		4EA5BAF4160721C900C27749 /* Script */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,16 +436,6 @@
 				4EA5BB081607286900C27749 /* OOAppDelegate.m */,
 				4EA5BB091607286900C27749 /* OOCommon.h */,
 				4EA5BB0A1607286900C27749 /* OOCommon.m */,
-				4EB7E674175C8EAB00A43530 /* iCrashVC.h */,
-				4EB7E675175C8EAB00A43530 /* iCrashVC.m */,
-				4E7114A31755F724004B5FD7 /* iRate.h */,
-				4E7114A41755F724004B5FD7 /* iRate.m */,
-				4E7114A51755F724004B5FD7 /* iRateVC.h */,
-				4E7114A61755F724004B5FD7 /* iRateVC.m */,
-				4E7114A71755F724004B5FD7 /* iVersion.h */,
-				4E7114A81755F724004B5FD7 /* iVersion.m */,
-				4E7114A91755F724004B5FD7 /* iVersionVC.h */,
-				4E7114AA1755F724004B5FD7 /* iVersionVC.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -668,20 +559,9 @@
 		4EFF0EB6193CCCDA00782AD4 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				4EFF0EE4193CCCDA00782AD4 /* Flurry_5.0 */,
 				4EFF0EE7193CCCDA00782AD4 /* GTM */,
-				4E69070E193CDCE1004E6CF2 /* MKStoreKit_5.0 */,
 			);
 			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		4EFF0EE4193CCCDA00782AD4 /* Flurry_5.0 */ = {
-			isa = PBXGroup;
-			children = (
-				4EFF0EE5193CCCDA00782AD4 /* Flurry.h */,
-				4EFF0EE6193CCCDA00782AD4 /* libFlurry_5.0.0.a */,
-			);
-			path = Flurry_5.0;
 			sourceTree = "<group>";
 		};
 		4EFF0EE7193CCCDA00782AD4 /* GTM */ = {
@@ -695,8 +575,6 @@
 		4EFF0F99193CD38600782AD4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4EFF0F9B193CD38600782AD4 /* iRate.bundle */,
-				4EFF0F9C193CD38600782AD4 /* iVersion.bundle */,
 				4EFF0F9D193CD38600782AD4 /* Oriole2.bundle */,
 			);
 			path = Resources;
@@ -732,33 +610,21 @@
 				4EA5BE091607286A00C27749 /* OOAppDelegate.h in Headers */,
 				4EA5BE0D1607286A00C27749 /* OOCommon.h in Headers */,
 				4EFF0F57193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */,
-				4E69072C193CDCE1004E6CF2 /* MKStoreKitConfigs.h in Headers */,
 				4EA5BE411607286A00C27749 /* OOSplashScreen.h in Headers */,
 				4EA5BE4D1607286A00C27749 /* OOGeometry+Extend.h in Headers */,
 				4EA5BE511607286A00C27749 /* OOData+Extend.h in Headers */,
 				4EA5BE591607286A00C27749 /* OOString+Extend.h in Headers */,
-				4E690720193CDCE1004E6CF2 /* SFHFKeychainUtils.h in Headers */,
 				4EA5BE5D1607286A00C27749 /* OOColor+Extend.h in Headers */,
-				4E690724193CDCE1004E6CF2 /* MKSKProduct.h in Headers */,
 				4EA5BE611607286A00C27749 /* OOImage+Extend.h in Headers */,
 				4EA5BE651607286A00C27749 /* OOImageView+Extend.h in Headers */,
-				4EFF0F4D193CCCDA00782AD4 /* Flurry.h in Headers */,
 				4EA5BE691607286A00C27749 /* OOView+Extend.h in Headers */,
-				4E69072E193CDCE1004E6CF2 /* MKStoreManager.h in Headers */,
 				4EA5BE7D1607286A00C27749 /* OOExtend.h in Headers */,
 				4EA5BE7F1607286A00C27749 /* Oriole2.h in Headers */,
-				4E690728193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h in Headers */,
 				4EA5C2C51607286B00C27749 /* OOMailViewController.h in Headers */,
 				4E7598F316B8D99300BC9B01 /* OOShareTextManager.h in Headers */,
 				4E47214A1711778B00675F51 /* OOZoomableImageView.h in Headers */,
 				4E4721501711779600675F51 /* OOActivity.h in Headers */,
-				4E7114AC1755F724004B5FD7 /* iRate.h in Headers */,
-				4E7114B01755F724004B5FD7 /* iRateVC.h in Headers */,
-				4E7114B41755F724004B5FD7 /* iVersion.h in Headers */,
-				4E7114B81755F724004B5FD7 /* iVersionVC.h in Headers */,
-				4EB7E677175C8EAC00A43530 /* iCrashVC.h in Headers */,
 				4E0DE7141769D282008A4E30 /* OOMoreAppsView.h in Headers */,
-				4E69071C193CDCE1004E6CF2 /* NSData+MKBase64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,33 +637,21 @@
 				4EA5BE081607286A00C27749 /* OOAppDelegate.h in Headers */,
 				4EA5BE0C1607286A00C27749 /* OOCommon.h in Headers */,
 				4EFF0F56193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */,
-				4E69072B193CDCE1004E6CF2 /* MKStoreKitConfigs.h in Headers */,
 				4EA5BE401607286A00C27749 /* OOSplashScreen.h in Headers */,
 				4EA5BE4C1607286A00C27749 /* OOGeometry+Extend.h in Headers */,
 				4EA5BE501607286A00C27749 /* OOData+Extend.h in Headers */,
 				4EA5BE581607286A00C27749 /* OOString+Extend.h in Headers */,
-				4E69071F193CDCE1004E6CF2 /* SFHFKeychainUtils.h in Headers */,
 				4EA5BE5C1607286A00C27749 /* OOColor+Extend.h in Headers */,
-				4E690723193CDCE1004E6CF2 /* MKSKProduct.h in Headers */,
 				4EA5BE601607286A00C27749 /* OOImage+Extend.h in Headers */,
 				4EA5BE641607286A00C27749 /* OOImageView+Extend.h in Headers */,
-				4EFF0F4C193CCCDA00782AD4 /* Flurry.h in Headers */,
 				4EA5BE681607286A00C27749 /* OOView+Extend.h in Headers */,
-				4E69072D193CDCE1004E6CF2 /* MKStoreManager.h in Headers */,
 				4EA5BE7C1607286A00C27749 /* OOExtend.h in Headers */,
 				4EA5BE7E1607286A00C27749 /* Oriole2.h in Headers */,
-				4E690727193CDCE1004E6CF2 /* MKSKSubscriptionProduct.h in Headers */,
 				4EA5C2C41607286B00C27749 /* OOMailViewController.h in Headers */,
 				4E7598F216B8D99300BC9B01 /* OOShareTextManager.h in Headers */,
 				4E4721491711778B00675F51 /* OOZoomableImageView.h in Headers */,
 				4E47214F1711779600675F51 /* OOActivity.h in Headers */,
-				4E7114AB1755F724004B5FD7 /* iRate.h in Headers */,
-				4E7114AF1755F724004B5FD7 /* iRateVC.h in Headers */,
-				4E7114B31755F724004B5FD7 /* iVersion.h in Headers */,
-				4E7114B71755F724004B5FD7 /* iVersionVC.h in Headers */,
-				4EB7E676175C8EAC00A43530 /* iCrashVC.h in Headers */,
 				4E0DE7131769D282008A4E30 /* OOMoreAppsView.h in Headers */,
-				4E69071B193CDCE1004E6CF2 /* NSData+MKBase64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,7 +876,6 @@
 				4EA5BDFB1607286A00C27749 /* OOAnimation.m in Sources */,
 				4EA5BE0B1607286A00C27749 /* OOAppDelegate.m in Sources */,
 				4EA5BE0F1607286A00C27749 /* OOCommon.m in Sources */,
-				4E69072A193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m in Sources */,
 				4EA5BE431607286A00C27749 /* OOSplashScreen.m in Sources */,
 				4EA5BE4F1607286A00C27749 /* OOGeometry+Extend.m in Sources */,
 				4EA5BE531607286A00C27749 /* OOData+Extend.m in Sources */,
@@ -1031,19 +884,10 @@
 				4EA5BE631607286A00C27749 /* OOImage+Extend.m in Sources */,
 				4EA5BE671607286A00C27749 /* OOImageView+Extend.m in Sources */,
 				4EA5BE6B1607286A00C27749 /* OOView+Extend.m in Sources */,
-				4E690726193CDCE1004E6CF2 /* MKSKProduct.m in Sources */,
-				4E69071E193CDCE1004E6CF2 /* NSData+MKBase64.m in Sources */,
 				4EA5C2C71607286B00C27749 /* OOMailViewController.m in Sources */,
 				4E7598F516B8D99300BC9B01 /* OOShareTextManager.m in Sources */,
-				4E690722193CDCE1004E6CF2 /* SFHFKeychainUtils.m in Sources */,
-				4E690730193CDCE1004E6CF2 /* MKStoreManager.m in Sources */,
 				4E47214C1711778B00675F51 /* OOZoomableImageView.m in Sources */,
 				4E4721521711779600675F51 /* OOActivity.m in Sources */,
-				4E7114AE1755F724004B5FD7 /* iRate.m in Sources */,
-				4E7114B21755F724004B5FD7 /* iRateVC.m in Sources */,
-				4E7114B61755F724004B5FD7 /* iVersion.m in Sources */,
-				4E7114BA1755F724004B5FD7 /* iVersionVC.m in Sources */,
-				4EB7E679175C8EAC00A43530 /* iCrashVC.m in Sources */,
 				4E0DE7161769D282008A4E30 /* OOMoreAppsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1055,7 +899,6 @@
 				4EA5BDFA1607286A00C27749 /* OOAnimation.m in Sources */,
 				4EA5BE0A1607286A00C27749 /* OOAppDelegate.m in Sources */,
 				4EA5BE0E1607286A00C27749 /* OOCommon.m in Sources */,
-				4E690729193CDCE1004E6CF2 /* MKSKSubscriptionProduct.m in Sources */,
 				4EA5BE421607286A00C27749 /* OOSplashScreen.m in Sources */,
 				4EA5BE4E1607286A00C27749 /* OOGeometry+Extend.m in Sources */,
 				4EA5BE521607286A00C27749 /* OOData+Extend.m in Sources */,
@@ -1064,19 +907,10 @@
 				4EA5BE621607286A00C27749 /* OOImage+Extend.m in Sources */,
 				4EA5BE661607286A00C27749 /* OOImageView+Extend.m in Sources */,
 				4EA5BE6A1607286A00C27749 /* OOView+Extend.m in Sources */,
-				4E690725193CDCE1004E6CF2 /* MKSKProduct.m in Sources */,
-				4E69071D193CDCE1004E6CF2 /* NSData+MKBase64.m in Sources */,
 				4EA5C2C61607286B00C27749 /* OOMailViewController.m in Sources */,
 				4E7598F416B8D99300BC9B01 /* OOShareTextManager.m in Sources */,
-				4E690721193CDCE1004E6CF2 /* SFHFKeychainUtils.m in Sources */,
-				4E69072F193CDCE1004E6CF2 /* MKStoreManager.m in Sources */,
 				4E47214B1711778B00675F51 /* OOZoomableImageView.m in Sources */,
 				4E4721511711779600675F51 /* OOActivity.m in Sources */,
-				4E7114AD1755F724004B5FD7 /* iRate.m in Sources */,
-				4E7114B11755F724004B5FD7 /* iRateVC.m in Sources */,
-				4E7114B51755F724004B5FD7 /* iVersion.m in Sources */,
-				4E7114B91755F724004B5FD7 /* iVersionVC.m in Sources */,
-				4EB7E678175C8EAC00A43530 /* iCrashVC.m in Sources */,
 				4E0DE7151769D282008A4E30 /* OOMoreAppsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1315,8 +1149,6 @@
 				DSTROOT = /tmp/VSCommonLib.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/Oriole2/Resources\\\"/**",
-					/Users/gary/Documents/Projects/Oriole2/Oriole2/Resources,
 					"$(PROJECT_DIR)/Oriole2/Resources",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1331,11 +1163,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Oriole2/ThirdParty/\"/**",
-					"$(PROJECT_DIR)/Oriole2/ThirdParty/Flurry",
-					iPhone,
-					SDK,
-					v4.2.3,
-					"$(PROJECT_DIR)/Oriole2/ThirdParty/Flurry_5.0",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1355,8 +1182,6 @@
 				DSTROOT = /tmp/VSCommonLib.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/Oriole2/Resources\\\"/**",
-					/Users/gary/Documents/Projects/Oriole2/Oriole2/Resources,
 					"$(PROJECT_DIR)/Oriole2/Resources",
 				);
 				GCC_MODEL_TUNING = G5;
@@ -1369,11 +1194,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Oriole2/ThirdParty/\"/**",
-					"$(PROJECT_DIR)/Oriole2/ThirdParty/Flurry",
-					iPhone,
-					SDK,
-					v4.2.3,
-					"$(PROJECT_DIR)/Oriole2/ThirdParty/Flurry_5.0",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

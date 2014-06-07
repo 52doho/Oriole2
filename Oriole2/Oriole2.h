@@ -16,11 +16,6 @@
 // 
 
 //---------------------------Common---------------------------
-#import "iCrashVC.h"
-#import "iRate.h"
-#import "iRateVC.h"
-#import "iVersion.h"
-#import "iVersionVC.h"
 #import "OOAppDelegate.h"
 #import "OOCommon.h"
 

@@ -1,19 +1,22 @@
 PODS:
   - FXKeychain (1.5.1)
+  - iRate (1.10.2)
+  - iVersion (1.10.6)
   - MBProgressHUD (0.8)
-  - QuincyKit (2.1.9)
   - StandardPaths (1.5.6)
 
 DEPENDENCIES:
   - FXKeychain (~> 1.5)
+  - iRate (~> 1.10.2)
+  - iVersion (~> 1.10.6)
   - MBProgressHUD (~> 0.8)
-  - QuincyKit (~> 2.1.9)
   - StandardPaths (~> 1.5.6)
 
 SPEC CHECKSUMS:
   FXKeychain: beb642a4218ba783507af08865eda05e9b26a612
+  iRate: 7d204971bab2f727195b868e32e05216fe257681
+  iVersion: bd6b244d3e381fd7838a9b1a94b9bcaa2c018e70
   MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
-  QuincyKit: f8c4b54cd4cef2eb27cc59e099619ac4904fb71b
   StandardPaths: 009f9c1699e26e46b2fb1a46b8bacc693d34460e
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

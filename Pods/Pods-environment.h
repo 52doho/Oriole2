@@ -18,15 +18,21 @@
 #define COCOAPODS_VERSION_MINOR_MBProgressHUD 8
 #define COCOAPODS_VERSION_PATCH_MBProgressHUD 0
 
-// QuincyKit
-#define COCOAPODS_POD_AVAILABLE_QuincyKit
-#define COCOAPODS_VERSION_MAJOR_QuincyKit 2
-#define COCOAPODS_VERSION_MINOR_QuincyKit 1
-#define COCOAPODS_VERSION_PATCH_QuincyKit 9
-
 // StandardPaths
 #define COCOAPODS_POD_AVAILABLE_StandardPaths
 #define COCOAPODS_VERSION_MAJOR_StandardPaths 1
 #define COCOAPODS_VERSION_MINOR_StandardPaths 5
 #define COCOAPODS_VERSION_PATCH_StandardPaths 6
+
+// iRate
+#define COCOAPODS_POD_AVAILABLE_iRate
+#define COCOAPODS_VERSION_MAJOR_iRate 1
+#define COCOAPODS_VERSION_MINOR_iRate 10
+#define COCOAPODS_VERSION_PATCH_iRate 2
+
+// iVersion
+#define COCOAPODS_POD_AVAILABLE_iVersion
+#define COCOAPODS_VERSION_MAJOR_iVersion 1
+#define COCOAPODS_VERSION_MINOR_iVersion 10
+#define COCOAPODS_VERSION_PATCH_iVersion 6
 

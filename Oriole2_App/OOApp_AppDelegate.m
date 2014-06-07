@@ -60,8 +60,6 @@
     
 //    [[SHK currentHelper] setRootViewController:self.window.rootViewController];
     
-    [Flurry startSession:@"BQ1LGYDQW27G7HBQQTZ7"];
-    
     //[NSException raise:@"测试异常" format:@"ss"];
     /*
     //push

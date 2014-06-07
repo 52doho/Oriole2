@@ -37,7 +37,7 @@ static char KeychainPersistence_Extend;
 - (void)setTransactionPersistorKeychain:(RMStoreKeychainPersistence_Extend *)transactionPersistorKeychain
 {
     [self willChangeValueForKey:@"transactionPersistorKeychain"];
-    objc_setAssociatedObject(self, &KeychainPersistence_Extend, transactionPersistorKeychain, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &KeychainPersistence_Extend, transactionPersistorKeychain, OBJC_ASSOCIATION_RETAIN);
     [self didChangeValueForKey:@"transactionPersistorKeychain"];
 }
 

@@ -6,20 +6,13 @@
  Copyright 2010 Oriole2 Ltd. All rights reserved.
  */
 
-//iVersion
-"Download" = "下載";
-"Download on the App Store" = "在App Store下載";
-"Ignore" = "不再提示";
-"Version Format" = "版本 %@";
-"New in this version" = "新功能";
-"New Version Format" = "更新%@";
-"Update" = "升級";
-
 //iRate
-"Rate" = "評價";
-"Rate Title Format" = "感覺“%@”怎麼洋？評價壹下!";
-"Rate It Now" = "現在評價";
-"Remind Me Later" = "稍後再說";
+"iRateMessageTitle" = "評分 %@";
+"iRateAppMessage" = "如果您喜歡用 %@，是否願意花一些時間打個分數？其過程將不超過一分鐘。 謝謝您的支持！";
+"iRateGameMessage" = "如果您喜歡玩 %@，是否願意花一些時間打個分數？其過程將不超過一分鐘。 謝謝您的支持！";
+"iRateCancelButton" = "不，謝謝";
+"iRateRateButton" = "現在評分";
+"iRateRemindButton" = "稍後提醒我";
 
 "Inbox" = "消息";
 "Error" = "錯誤";

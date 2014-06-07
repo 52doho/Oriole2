@@ -6,20 +6,13 @@
    Copyright 2010 Oriole2 Ltd. All rights reserved.
  */
 
-//iVersion
-"Download" = "Скачать";
-"Download on the App Store" = "Скачать на App Store,";
-"Ignore" = "Игнорировать";
-"Version Format" = "Версия%@";
-"New in this version" = "Новое в этой версии";
-"New Version Format" = "Новая версия (%@) доступен";
-"Update" = "Обновление";
-
 //iRate
-"Rate" = "Скорость";
-"Rate Title Format" = "Если вам нравится%@, пожалуйста, оцените его.";
-"Rate It Now" = "Оцените это";
-"Remind Me Later" = "Напомнить позже";
+"iRateMessageTitle" = "Оценить %@";
+"iRateAppMessage" = "Если вам нравится пользоваться %@, не будете ли вы возражать против того, чтобы уделить минуту и оценить его? Спасибо вам за поддержку!";
+"iRateGameMessage" = "Если вы наслаждаетесь игрой в %@, не будете ли вы возражать против того, чтобы уделить время и оценить её? Спасибо вам за поддержку!";
+"iRateCancelButton" = "Нет, спасибо";
+"iRateRateButton" = "Оценить сейчас";
+"iRateRemindButton" = "Напомнить позже";
 
 "Inbox" = "Входящие";
 "Error" = "Ошибка";
