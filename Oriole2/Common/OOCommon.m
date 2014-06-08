@@ -421,7 +421,7 @@ static NSBundle *wlBundle;
                 }
                 else
                 {
-                    hud.labelText = OOLocalizedStringInOOBundle(@"Failed");
+                    hud.labelText = [error localizedDescription];
                     [hud hide:YES afterDelay:1.];
                     OOLog(@"There was a problem displaying app store view");
                 }
