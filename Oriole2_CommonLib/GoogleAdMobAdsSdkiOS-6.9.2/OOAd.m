@@ -781,6 +781,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
 @interface OOAdInterstitial_Chartboost()<GADCustomEventInterstitial, ChartboostDelegate>
 {
     NSString *_placement;
+    BOOL _isMoreGame;
 }
 @end
 
@@ -800,33 +801,28 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
         NSString *token = dicParam[@"id"];
         NSString *secret = dicParam[@"signature"];
         
-//        OOAdRequestParams *extras = [self getExtrasForRequest:request delegate:self.delegate];
-        
         Chartboost *cb = [Chartboost sharedChartboost];
         cb.appId = token;
         cb.appSignature = secret;
+        cb.autoCacheAds = YES;
         cb.delegate = self;
         
-        //don't show more apps in Chartboost
-//        NSNumber *num = dicRequest[kOOAdIsMoreGame];
-//        BOOL isMoreGame = [num boolValue];
-//        if(isMoreGame)
-//        {
-//            [cb showMoreApps];
-//        }
-//        else
-//        {
-//            [cb showInterstitial:extras.placement];
-        // TODO: cb api 变为枚举
-        [cb cacheInterstitial:CBLocationMainMenu];
         _placement = CBLocationMainMenu;
-//        }
+        OOAdRequestParams *extras = [self getExtrasForRequest:request delegate:self.delegate];
+        _isMoreGame = extras.isMoreGame;
+        if (_isMoreGame)
+            [cb cacheMoreApps:_placement];
+        else
+            [cb cacheInterstitial:_placement];
     }
 }
 
 - (void)presentFromRootViewController:(UIViewController *)rootViewController
 {
-    [[Chartboost sharedChartboost] showInterstitial:_placement];
+    if (_isMoreGame)
+        [[Chartboost sharedChartboost] showMoreApps:_placement];
+    else
+        [[Chartboost sharedChartboost] showInterstitial:_placement];
 }
 
 - (BOOL)shouldDisplayInterstitial:(CBLocation)location
