@@ -31,4 +31,6 @@
 
 + (NSSet*)purchasedProductIdentifiers;
 
++ (BOOL)containsProductWithId:(NSString *)productId price:(float *)price localizedPrice:(NSString **)localizedPrice;
+
 @end

@@ -81,5 +81,24 @@ static char KeychainPersistence_Extend;
     return [[RMStore defaultStore].transactionPersistorKeychain purchasedProductIdentifiers];
 }
 
++ (BOOL)containsProductWithId:(NSString *)productIdentifier price:(float *)price localizedPrice:(NSString **)localizedPrice
+{
+    SKProduct *thisProduct = [[RMStore defaultStore] productForIdentifier:productIdentifier];
+    if (!thisProduct)
+        return NO;
+    
+    if(price)
+        *price = [thisProduct.price floatValue];
+    if(localizedPrice)
+    {
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [formatter setLocale:thisProduct.priceLocale];
+        *localizedPrice = [formatter stringFromNumber:thisProduct.price];
+    }
+    
+    return YES;
+}
+
 @end
 

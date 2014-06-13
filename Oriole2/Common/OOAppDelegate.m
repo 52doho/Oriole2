@@ -37,11 +37,11 @@
     [iRate sharedInstance].eventsUntilPrompt = 3;
     [iRate sharedInstance].usesUntilPrompt = 2;
     [iRate sharedInstance].remindPeriod = 4;
-    [iRate sharedInstance].messageTitle = OOLocalizedString(@"iRateMessageTitle");
-    [iRate sharedInstance].message = OOLocalizedString(@"iRateAppMessage");
-    [iRate sharedInstance].cancelButtonLabel = OOLocalizedString(@"iRateCancelButton");
-    [iRate sharedInstance].remindButtonLabel = OOLocalizedString(@"iRateRateButton");
-    [iRate sharedInstance].rateButtonLabel = OOLocalizedString(@"iRateRemindButton");
+    [iRate sharedInstance].messageTitle = OOLocalizedStringInOOBundle(@"iRateMessageTitle");
+    [iRate sharedInstance].message = OOLocalizedStringInOOBundle(@"iRateAppMessage");
+    [iRate sharedInstance].cancelButtonLabel = OOLocalizedStringInOOBundle(@"iRateCancelButton");
+    [iRate sharedInstance].remindButtonLabel = OOLocalizedStringInOOBundle(@"iRateRateButton");
+    [iRate sharedInstance].rateButtonLabel = OOLocalizedStringInOOBundle(@"iRateRemindButton");
     
     [iVersion sharedInstance];
 }
