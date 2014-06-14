@@ -18,9 +18,8 @@
 //---------------------------Common---------------------------
 #import "OOAppDelegate.h"
 #import "OOCommon.h"
-
-//---------------------------Ads---------------------------
-#import "OOShareTextManager.h"
+#import "OOMoreAppsEntity.h"
+#import "OOParseManager.h"
 
 //---------------------------Animation---------------------------
 #import "OOAnimation.h"

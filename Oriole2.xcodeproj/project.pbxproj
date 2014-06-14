@@ -17,6 +17,14 @@
 		4E135BF215559005000EDE4D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E135BF115559005000EDE4D /* Twitter.framework */; };
 		4E1FDE3414F5CB3D003D15C0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */; };
 		4E1FDE3514F5CB47003D15C0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */; };
+		4E2B65CE194CB70B00552E94 /* OOMoreAppsEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B65CA194CB70B00552E94 /* OOMoreAppsEntity.h */; };
+		4E2B65CF194CB70B00552E94 /* OOMoreAppsEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B65CA194CB70B00552E94 /* OOMoreAppsEntity.h */; };
+		4E2B65D0194CB70B00552E94 /* OOMoreAppsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B65CB194CB70B00552E94 /* OOMoreAppsEntity.m */; };
+		4E2B65D1194CB70B00552E94 /* OOMoreAppsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B65CB194CB70B00552E94 /* OOMoreAppsEntity.m */; };
+		4E2B65D2194CB70B00552E94 /* OOParseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B65CC194CB70B00552E94 /* OOParseManager.h */; };
+		4E2B65D3194CB70B00552E94 /* OOParseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B65CC194CB70B00552E94 /* OOParseManager.h */; };
+		4E2B65D4194CB70B00552E94 /* OOParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B65CD194CB70B00552E94 /* OOParseManager.m */; };
+		4E2B65D5194CB70B00552E94 /* OOParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B65CD194CB70B00552E94 /* OOParseManager.m */; };
 		4E460AD5163FAB630063F76F /* 1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4E460AD3163FAB630063F76F /* 1.PNG */; };
 		4E460AD6163FAB630063F76F /* 2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4E460AD4163FAB630063F76F /* 2.PNG */; };
 		4E4721491711778B00675F51 /* OOZoomableImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4721471711778B00675F51 /* OOZoomableImageView.h */; };
@@ -28,10 +36,6 @@
 		4E4721511711779600675F51 /* OOActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47214E1711779600675F51 /* OOActivity.m */; };
 		4E4721521711779600675F51 /* OOActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47214E1711779600675F51 /* OOActivity.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4E6DF04A14F4CA1B00379535 /* Oriole2_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4E6DF04914F4CA1B00379535 /* Oriole2_Prefix.pch */; };
-		4E7598F216B8D99300BC9B01 /* OOShareTextManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7598F016B8D99300BC9B01 /* OOShareTextManager.h */; };
-		4E7598F316B8D99300BC9B01 /* OOShareTextManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7598F016B8D99300BC9B01 /* OOShareTextManager.h */; };
-		4E7598F416B8D99300BC9B01 /* OOShareTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7598F116B8D99300BC9B01 /* OOShareTextManager.m */; };
-		4E7598F516B8D99300BC9B01 /* OOShareTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7598F116B8D99300BC9B01 /* OOShareTextManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4E7D4FBB14F54615006EFD89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		4E7D4FBC14F54615006EFD89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EE1E181318AA540065F19F /* CoreGraphics.framework */; };
 		4E7D62FD14F601C500D8B7FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7D62FC14F601C500D8B7FF /* AVFoundation.framework */; };
@@ -155,6 +159,10 @@
 		4E135BF115559005000EDE4D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		4E13C742163A3B8E00B9BA16 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4E2B65CA194CB70B00552E94 /* OOMoreAppsEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOMoreAppsEntity.h; sourceTree = "<group>"; };
+		4E2B65CB194CB70B00552E94 /* OOMoreAppsEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOMoreAppsEntity.m; sourceTree = "<group>"; };
+		4E2B65CC194CB70B00552E94 /* OOParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOParseManager.h; sourceTree = "<group>"; };
+		4E2B65CD194CB70B00552E94 /* OOParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOParseManager.m; sourceTree = "<group>"; };
 		4E460AD3163FAB630063F76F /* 1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.PNG; path = "../../../ProjectManager/PhotoCool/宣传图/iphone Free/en/1.PNG"; sourceTree = "<group>"; };
 		4E460AD4163FAB630063F76F /* 2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.PNG; path = "../../../ProjectManager/PhotoCool/宣传图/iphone Free/en/2.PNG"; sourceTree = "<group>"; };
 		4E4721471711778B00675F51 /* OOZoomableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOZoomableImageView.h; sourceTree = "<group>"; };
@@ -163,8 +171,6 @@
 		4E47214E1711779600675F51 /* OOActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOActivity.m; sourceTree = "<group>"; };
 		4E6DF04914F4CA1B00379535 /* Oriole2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oriole2_Prefix.pch; sourceTree = "<group>"; };
 		4E6DF30614F4CAF100379535 /* libOriole2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOriole2.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E7598F016B8D99300BC9B01 /* OOShareTextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOShareTextManager.h; sourceTree = "<group>"; };
-		4E7598F116B8D99300BC9B01 /* OOShareTextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOShareTextManager.m; sourceTree = "<group>"; };
 		4E7D4FB814F54615006EFD89 /* Oriole2_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oriole2_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7D62FC14F601C500D8B7FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4E7D634514F60B1E00D8B7FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -396,7 +402,6 @@
 		4EA5BAF91607286900C27749 /* Oriole2 */ = {
 			isa = PBXGroup;
 			children = (
-				4EA5BAFA1607286900C27749 /* Ads */,
 				4EA5BAFD1607286900C27749 /* Animation */,
 				4EA5BB001607286900C27749 /* Common */,
 				4EA5BB111607286900C27749 /* Controls */,
@@ -409,15 +414,6 @@
 				4EFF0F99193CD38600782AD4 /* Resources */,
 			);
 			path = Oriole2;
-			sourceTree = "<group>";
-		};
-		4EA5BAFA1607286900C27749 /* Ads */ = {
-			isa = PBXGroup;
-			children = (
-				4E7598F016B8D99300BC9B01 /* OOShareTextManager.h */,
-				4E7598F116B8D99300BC9B01 /* OOShareTextManager.m */,
-			);
-			path = Ads;
 			sourceTree = "<group>";
 		};
 		4EA5BAFD1607286900C27749 /* Animation */ = {
@@ -436,6 +432,10 @@
 				4EA5BB081607286900C27749 /* OOAppDelegate.m */,
 				4EA5BB091607286900C27749 /* OOCommon.h */,
 				4EA5BB0A1607286900C27749 /* OOCommon.m */,
+				4E2B65CA194CB70B00552E94 /* OOMoreAppsEntity.h */,
+				4E2B65CB194CB70B00552E94 /* OOMoreAppsEntity.m */,
+				4E2B65CC194CB70B00552E94 /* OOParseManager.h */,
+				4E2B65CD194CB70B00552E94 /* OOParseManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -608,6 +608,7 @@
 				4EA5B8A116071C6200C27749 /* Oriole2_Prefix.pch in Headers */,
 				4EA5BDF91607286A00C27749 /* OOAnimation.h in Headers */,
 				4EA5BE091607286A00C27749 /* OOAppDelegate.h in Headers */,
+				4E2B65CF194CB70B00552E94 /* OOMoreAppsEntity.h in Headers */,
 				4EA5BE0D1607286A00C27749 /* OOCommon.h in Headers */,
 				4EFF0F57193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */,
 				4EA5BE411607286A00C27749 /* OOSplashScreen.h in Headers */,
@@ -620,8 +621,8 @@
 				4EA5BE691607286A00C27749 /* OOView+Extend.h in Headers */,
 				4EA5BE7D1607286A00C27749 /* OOExtend.h in Headers */,
 				4EA5BE7F1607286A00C27749 /* Oriole2.h in Headers */,
+				4E2B65D3194CB70B00552E94 /* OOParseManager.h in Headers */,
 				4EA5C2C51607286B00C27749 /* OOMailViewController.h in Headers */,
-				4E7598F316B8D99300BC9B01 /* OOShareTextManager.h in Headers */,
 				4E47214A1711778B00675F51 /* OOZoomableImageView.h in Headers */,
 				4E4721501711779600675F51 /* OOActivity.h in Headers */,
 				4E0DE7141769D282008A4E30 /* OOMoreAppsView.h in Headers */,
@@ -635,6 +636,7 @@
 				4E6DF04A14F4CA1B00379535 /* Oriole2_Prefix.pch in Headers */,
 				4EA5BDF81607286A00C27749 /* OOAnimation.h in Headers */,
 				4EA5BE081607286A00C27749 /* OOAppDelegate.h in Headers */,
+				4E2B65CE194CB70B00552E94 /* OOMoreAppsEntity.h in Headers */,
 				4EA5BE0C1607286A00C27749 /* OOCommon.h in Headers */,
 				4EFF0F56193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */,
 				4EA5BE401607286A00C27749 /* OOSplashScreen.h in Headers */,
@@ -647,8 +649,8 @@
 				4EA5BE681607286A00C27749 /* OOView+Extend.h in Headers */,
 				4EA5BE7C1607286A00C27749 /* OOExtend.h in Headers */,
 				4EA5BE7E1607286A00C27749 /* Oriole2.h in Headers */,
+				4E2B65D2194CB70B00552E94 /* OOParseManager.h in Headers */,
 				4EA5C2C41607286B00C27749 /* OOMailViewController.h in Headers */,
-				4E7598F216B8D99300BC9B01 /* OOShareTextManager.h in Headers */,
 				4E4721491711778B00675F51 /* OOZoomableImageView.h in Headers */,
 				4E47214F1711779600675F51 /* OOActivity.h in Headers */,
 				4E0DE7131769D282008A4E30 /* OOMoreAppsView.h in Headers */,
@@ -881,11 +883,12 @@
 				4EA5BE531607286A00C27749 /* OOData+Extend.m in Sources */,
 				4EA5BE5B1607286A00C27749 /* OOString+Extend.m in Sources */,
 				4EA5BE5F1607286A00C27749 /* OOColor+Extend.m in Sources */,
+				4E2B65D1194CB70B00552E94 /* OOMoreAppsEntity.m in Sources */,
+				4E2B65D5194CB70B00552E94 /* OOParseManager.m in Sources */,
 				4EA5BE631607286A00C27749 /* OOImage+Extend.m in Sources */,
 				4EA5BE671607286A00C27749 /* OOImageView+Extend.m in Sources */,
 				4EA5BE6B1607286A00C27749 /* OOView+Extend.m in Sources */,
 				4EA5C2C71607286B00C27749 /* OOMailViewController.m in Sources */,
-				4E7598F516B8D99300BC9B01 /* OOShareTextManager.m in Sources */,
 				4E47214C1711778B00675F51 /* OOZoomableImageView.m in Sources */,
 				4E4721521711779600675F51 /* OOActivity.m in Sources */,
 				4E0DE7161769D282008A4E30 /* OOMoreAppsView.m in Sources */,
@@ -904,11 +907,12 @@
 				4EA5BE521607286A00C27749 /* OOData+Extend.m in Sources */,
 				4EA5BE5A1607286A00C27749 /* OOString+Extend.m in Sources */,
 				4EA5BE5E1607286A00C27749 /* OOColor+Extend.m in Sources */,
+				4E2B65D0194CB70B00552E94 /* OOMoreAppsEntity.m in Sources */,
+				4E2B65D4194CB70B00552E94 /* OOParseManager.m in Sources */,
 				4EA5BE621607286A00C27749 /* OOImage+Extend.m in Sources */,
 				4EA5BE661607286A00C27749 /* OOImageView+Extend.m in Sources */,
 				4EA5BE6A1607286A00C27749 /* OOView+Extend.m in Sources */,
 				4EA5C2C61607286B00C27749 /* OOMailViewController.m in Sources */,
-				4E7598F416B8D99300BC9B01 /* OOShareTextManager.m in Sources */,
 				4E47214B1711778B00675F51 /* OOZoomableImageView.m in Sources */,
 				4E4721511711779600675F51 /* OOActivity.m in Sources */,
 				4E0DE7151769D282008A4E30 /* OOMoreAppsView.m in Sources */,

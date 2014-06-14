@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OOMoreAppsEntity.h"
 
 @interface OOMoreAppsView : UIView
 {
@@ -19,6 +20,6 @@
 - (void)startAnimate;
 - (void)stopAnimate;
 
-- (void)bindWithData:(NSDictionary *)dic;
+- (void)bindWithData:(OOMoreAppsEntity *)moreAppsEntity;
 
 @end

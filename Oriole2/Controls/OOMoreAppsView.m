@@ -15,8 +15,7 @@
     BOOL canAnimate;
     UIButton *btn1, *btn2;
     NSArray *aryImageNames;
-    NSArray *aryApps;
-    NSString *artistUrl;
+    OOMoreAppsEntity *moreAppsEntity;
 }
 
 @end
@@ -93,17 +92,11 @@
     [btn2 addTarget:target action:action forControlEvents:controlEvents];
 }
 
-- (void)bindWithData:(NSDictionary *)dic
+- (void)bindWithData:(OOMoreAppsEntity *)entity
 {
-    if([dic isKindOfClass:[NSDictionary class]])
+    if([entity isKindOfClass:[OOMoreAppsEntity class]])
     {
-        NSString *randomTimeFrom = dic[@"secondsFrom"];
-        NSString *randomTimeTo = dic[@"secondsTo"];
-        self.randomTimeFrom = [randomTimeFrom integerValue];
-        self.randomTimeTo = [randomTimeTo integerValue];
-        
-        aryApps = dic[@"apps"];
-        artistUrl = dic[@"artist"][@"url"];
+        moreAppsEntity = entity;
         
         [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -113,10 +106,10 @@
 {
     UIViewController *topmostViewController = [OOCommon getTopmostViewController];
     NSUInteger appId = NSUIntegerMax;
-    for (NSDictionary *dic in aryApps)
+    for (OOAppEntity *app in moreAppsEntity.aryAppEntities)
     {
-        uint _id = [dic[@"id"] intValue];
-        NSString *scheme = dic[@"scheme"];
+        uint _id = app.appId;
+        NSString *scheme = app.scheme;
         if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]])
             continue;//has been installed
         else
@@ -132,7 +125,7 @@
         hud.labelText = nil;
     }
     else
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:artistUrl]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:moreAppsEntity.artistUrl]];
 }
 
 - (UIImage *)_getRandomImageExceptWithTag:(int)tag newTag:(uint *)newTag
@@ -180,7 +173,7 @@
     {
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(_actuallyAnimate) object:nil];
         float delay = OORANDOM(_randomTimeFrom, _randomTimeTo);
-//        float delay = 2;
+        //        float delay = 2;
         [self performSelector:@selector(_actuallyAnimate) withObject:nil afterDelay:delay];
     }
 }
