@@ -7,6 +7,7 @@
 //
 
 #import "OOMoreAppsEntity.h"
+#import "OOCommon.h"
 
 @implementation OOAppEntity
 
