@@ -6,14 +6,14 @@
 //  Copyright 2010 Oriole2 Ltd. All rights reserved.
 //
 // Permission is hereby granted to staffs of Oriole2 Ltd.
-// Any person obtaining a copy of this software and associated documentation 
-// files (the "Software") should not use, copy, modify, merge, publish, distribute, 
-// sublicense, and/or sell copies of the Software without permission granted by 
+// Any person obtaining a copy of this software and associated documentation
+// files (the "Software") should not use, copy, modify, merge, publish, distribute,
+// sublicense, and/or sell copies of the Software without permission granted by
 // Oriole2 Ltd.
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 
 
 #import "OOAppDelegate.h"
@@ -29,7 +29,7 @@
 
 @implementation OOAppDelegate
 
-+ (void)initialize
++ (void)load
 {
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     [iRate sharedInstance].promptAtLaunch = NO;
@@ -39,11 +39,16 @@
     [iRate sharedInstance].remindPeriod = 4;
     [iRate sharedInstance].messageTitle = OOLocalizedStringInOOBundle(@"iRateMessageTitle");
     [iRate sharedInstance].message = OOLocalizedStringInOOBundle(@"iRateAppMessage");
-    [iRate sharedInstance].cancelButtonLabel = OOLocalizedStringInOOBundle(@"iRateCancelButton");
-    [iRate sharedInstance].remindButtonLabel = OOLocalizedStringInOOBundle(@"iRateRateButton");
-    [iRate sharedInstance].rateButtonLabel = OOLocalizedStringInOOBundle(@"iRateRemindButton");
     
-    [iVersion sharedInstance];
+    [iRate sharedInstance].cancelButtonLabel = @"";
+    [iRate sharedInstance].remindButtonLabel = OOLocalizedStringInOOBundle(@"iRateRemindButton");//exchange
+    [iRate sharedInstance].rateButtonLabel = OOLocalizedStringInOOBundle(@"iRateRateButton");
+    
+    [iVersion sharedInstance].ignoreButtonLabel = @"";
+    NSString *remind = [iVersion sharedInstance].remindButtonLabel;
+    NSString *download = [iVersion sharedInstance].downloadButtonLabel;
+    [iVersion sharedInstance].remindButtonLabel = download;
+    [iVersion sharedInstance].downloadButtonLabel = remind;
 }
 
 - (id)init
@@ -55,7 +60,7 @@
 	return self;
 }
 
-- (void)dealloc 
+- (void)dealloc
 {
 }
 
