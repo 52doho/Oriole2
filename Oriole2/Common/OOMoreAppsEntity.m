@@ -36,7 +36,10 @@
         _artistUrl = object[@"artistUrl"];
         
         PFRelation *appEntities = object[@"appEntities"];
-        [appEntities.query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        PFQuery *query = appEntities.query;
+        [query whereKey:@"orderIndex" greaterThanOrEqualTo:@(0)];
+        [query orderByAscending:@"orderIndex"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error)
             {
                 OOLogError(@"get Parse data error:%@", error);
