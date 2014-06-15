@@ -35,10 +35,11 @@
         _secondsTo = [object[@"secondsTo"] unsignedIntegerValue];
         _artistUrl = object[@"artistUrl"];
         
-        PFRelation *appEntities = object[@"appEntities"];
+        PFRelation *appEntities = object[@"appUnions"];
         PFQuery *query = appEntities.query;
-        [query whereKey:@"orderIndex" greaterThanOrEqualTo:@(0)];
-        [query orderByAscending:@"orderIndex"];
+        [query includeKey:@"appEntity"];
+        [query whereKey:@"order" greaterThanOrEqualTo:@(0)];
+        [query orderByAscending:@"order"];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error)
             {
@@ -47,10 +48,12 @@
             else
             {
                 NSMutableArray *ary = [NSMutableArray array];
-                for (PFObject *app in objects) {
-                    [ary addObject:[[OOAppEntity alloc] initWithPFObject:app]];
+                for (PFObject *appUnion in objects) {
+                    PFObject *appEntity = appUnion[@"appEntity"];
+                    [ary addObject:[[OOAppEntity alloc] initWithPFObject:appEntity]];
                 }
                 _aryAppEntities = [NSArray arrayWithArray:ary];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kOOMoreAppsDidUpdateNotification object:nil];
                 
                 OOLog(@"get more apps from Parse Success!");
             }

@@ -8,6 +8,10 @@
 
 #import <Parse/Parse.h>
 
+#define kOOMoreAppsDidUpdateNotification @"kOOMoreAppsDidUpdateNotification"
+#define kOOCommonParseAppId @"AmPG4AQ5dLDFPydmdM8KkY7uM7KCWe4JRX9FzDpt"
+#define kOOCommonParseClientKey @"U3g1oOPmYZuQRnZtE766BJc3Aaia4B7X1INnMbzx"
+
 @interface OOAppEntity : NSObject
 
 @property (nonatomic, assign, readonly) NSUInteger appId;
