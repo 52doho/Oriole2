@@ -10,6 +10,7 @@
 
 #import "OOParseManager.h"
 #import "GTMObjectSingleton.h"
+#import "OOCommon.h"
 
 @interface OOParseManager()
 
