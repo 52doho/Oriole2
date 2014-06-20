@@ -109,9 +109,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
     {
         if(!interstitialOld.hasBeenUsed)
         {
-            UIViewController *vc = [OOCommon getRootViewController];
-            if(vc.presentedViewController)
-                vc = vc.presentedViewController;
+            UIViewController *vc = [OOCommon getTopmostViewController];
             [interstitialOld presentFromRootViewController:vc];
             
             [aryInterstitialPresenting addObject:interstitialOld];

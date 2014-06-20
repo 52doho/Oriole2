@@ -97,9 +97,8 @@
     if([entity isKindOfClass:[OOMoreAppsEntity class]])
     {
         moreAppsEntity = entity;
-        
-        [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchUpInside];
     }
+    [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)_moreAppsViewTapped
@@ -125,7 +124,7 @@
         hud.labelText = nil;
     }
     else
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:moreAppsEntity.artistUrl]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:moreAppsEntity.artistUrl ?: @"itms-apps://itunes.apple.com/us/artist/oriole2-co.-ltd./id506665225?mt=8"]];
 }
 
 - (UIImage *)_getRandomImageExceptWithTag:(int)tag newTag:(uint *)newTag
