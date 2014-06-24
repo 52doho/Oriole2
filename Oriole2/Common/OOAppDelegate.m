@@ -49,6 +49,7 @@
     NSString *download = [iVersion sharedInstance].downloadButtonLabel;
     [iVersion sharedInstance].remindButtonLabel = download;
     [iVersion sharedInstance].downloadButtonLabel = remind;
+    [iVersion sharedInstance].displayAppUsingStorekitIfAvailable = NO;
 }
 
 - (id)init
