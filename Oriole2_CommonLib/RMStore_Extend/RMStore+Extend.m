@@ -28,6 +28,7 @@
 @implementation RMStore(Extend)
 
 static char KeychainPersistence_Extend;
+static char ReceiptVerificator_Extend;
 
 - (RMStoreKeychainPersistence_Extend *)transactionPersistorKeychain
 {
@@ -41,14 +42,26 @@ static char KeychainPersistence_Extend;
     [self didChangeValueForKey:@"transactionPersistorKeychain"];
 }
 
+- (id<RMStoreReceiptVerificator>)receiptVerificator_Extend
+{
+    return objc_getAssociatedObject(self, &ReceiptVerificator_Extend);
+}
+
+- (void)setReceiptVerificator_Extend:(id<RMStoreReceiptVerificator>)receiptVerificator_Extend
+{
+    [self willChangeValueForKey:@"receiptVerificator_Extend"];
+    objc_setAssociatedObject(self, &ReceiptVerificator_Extend, receiptVerificator_Extend, OBJC_ASSOCIATION_RETAIN);
+    [self didChangeValueForKey:@"receiptVerificator_Extend"];
+}
+
 + (void)initialize
 {
     [RMStore defaultStore].transactionPersistorKeychain = [[RMStoreKeychainPersistence_Extend alloc] init];
     [RMStore defaultStore].transactionPersistor = [RMStore defaultStore].transactionPersistorKeychain;
     
     const BOOL iOS7OrHigher = floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1;
-    id<RMStoreReceiptVerificator> receiptVerificator = iOS7OrHigher ? [[RMStoreAppReceiptVerificator alloc] init] : [[RMStoreTransactionReceiptVerificator alloc] init];
-    [RMStore defaultStore].receiptVerificator = receiptVerificator;
+    [RMStore defaultStore].receiptVerificator_Extend = iOS7OrHigher ? [[RMStoreAppReceiptVerificator alloc] init] : [[RMStoreTransactionReceiptVerificator alloc] init];
+    [RMStore defaultStore].receiptVerificator = [RMStore defaultStore].receiptVerificator_Extend;
 }
 
 + (void)removeTransactions
