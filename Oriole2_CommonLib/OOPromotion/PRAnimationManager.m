@@ -47,7 +47,7 @@
     NSNumber *position5 = @(to + farestDestance * 1/5);
     NSNumber *position6 = @(to);
     
-    NSArray *frameValues = [NSArray arrayWithObjects:position0,position1,position2,position3,position4,position5,position6,nil];
+    NSArray *frameValues = @[position0,position1,position2,position3,position4,position5,position6];
     [animation setValues:frameValues];
     
     animation.fillMode = kCAFillModeForwards;
@@ -92,7 +92,7 @@
     NSNumber *position5 = @(to + farestDestance * 1/5 * sign);
     NSNumber *position6 = @(to);
     
-    NSArray *frameValues = [NSArray arrayWithObjects:position0,position1,position2,position3,position4,position5,position6,nil];
+    NSArray *frameValues = @[position0,position1,position2,position3,position4,position5,position6];
     [animation setValues:frameValues];
     
     CFTimeInterval beginTime = CACurrentMediaTime();
@@ -128,22 +128,21 @@
     CATransform3D undershootScale = CATransform3DMakeScale(toScale - farestScale / 2, toScale - farestScale / 2, 1.0);
     CATransform3D endingScale = CATransform3DMakeScale(toScale, toScale, 1);
     
-    NSArray *boundsValues = [NSArray arrayWithObjects:[NSValue valueWithCATransform3D:startingScale],
+    NSArray *boundsValues = @[[NSValue valueWithCATransform3D:startingScale],
                              [NSValue valueWithCATransform3D:overshootScale],
                              [NSValue valueWithCATransform3D:undershootScale],
-                             [NSValue valueWithCATransform3D:endingScale], nil];
+                             [NSValue valueWithCATransform3D:endingScale]];
     [animation setValues:boundsValues];
     
-    NSArray *times = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0],
-                      [NSNumber numberWithFloat:0.5],
-                      [NSNumber numberWithFloat:0.9],
-                      [NSNumber numberWithFloat:1.0], nil];
+    NSArray *times = @[@0.0f,
+                      @0.5f,
+                      @0.9f,
+                      @1.0f];
     [animation setKeyTimes:times];
     
-    NSArray *timingFunctions = [NSArray arrayWithObjects:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+    NSArray *timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
-                                [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
-                                nil];
+                                [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [animation setTimingFunctions:timingFunctions];
     animation.fillMode = kCAFillModeForwards;
     animation.removedOnCompletion = NO;
@@ -175,8 +174,8 @@
     CATransform3D startingScale = CATransform3DMakeScale(1 + deltaScaleX, 1 + deltaScaleY, 1);
     CATransform3D endingScale = CATransform3DMakeScale(1 - deltaScaleX, 1 - deltaScaleY, 1);
     
-    NSArray *boundsValues = [NSArray arrayWithObjects:[NSValue valueWithCATransform3D:startingScale],
-                             [NSValue valueWithCATransform3D:endingScale], [NSValue valueWithCATransform3D:startingScale], nil];
+    NSArray *boundsValues = @[[NSValue valueWithCATransform3D:startingScale],
+                             [NSValue valueWithCATransform3D:endingScale], [NSValue valueWithCATransform3D:startingScale]];
     [animation setValues:boundsValues];
     
     if(repeatCount < 0)

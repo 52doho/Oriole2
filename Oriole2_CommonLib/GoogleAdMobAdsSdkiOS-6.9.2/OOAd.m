@@ -136,7 +136,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
         GADRequest *request = [OOAd adRequestWithPlacement:interstitialOld.placement isMoreGame:interstitialOld.isMoreGame];
         [interstitial loadRequest:request];
         
-        [dicPlacements setObject:interstitial forKey:interstitialOld.placement];
+        dicPlacements[interstitialOld.placement] = interstitial;
     }
     else
     {
@@ -167,7 +167,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
     if(dicPlacements == nil)
     {
         dicPlacements = [NSMutableDictionary dictionary];
-        [dicMediations setObject:dicPlacements forKey:mediationID];
+        dicMediations[mediationID] = dicPlacements;
     }
     OOInterstitial *interstitial = dicPlacements[placement];
     if(interstitial)
@@ -209,7 +209,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
         GADRequest *request = [OOAd adRequestWithPlacement:placement isMoreGame:isMoreGame];
         [interstitial loadRequest:request];
         
-        [dicPlacements setObject:interstitial forKey:placement];
+        dicPlacements[placement] = interstitial;
         
         return OOInterstitialState_CreateNew;
     }
