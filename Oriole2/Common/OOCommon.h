@@ -6,14 +6,14 @@
 //  Copyright 2010 Oriole2 Ltd. All rights reserved.
 //
 // Permission is hereby granted to staffs of Oriole2 Ltd.
-// Any person obtaining a copy of this software and associated documentation 
-// files (the "Software") should not use, copy, modify, merge, publish, distribute, 
-// sublicense, and/or sell copies of the Software without permission granted by 
+// Any person obtaining a copy of this software and associated documentation
+// files (the "Software") should not use, copy, modify, merge, publish, distribute,
+// sublicense, and/or sell copies of the Software without permission granted by
 // Oriole2 Ltd.
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 
 
 // Safe releases
@@ -56,19 +56,19 @@
 #define kTabbarItemIsUsedNavigationController @"TabbarItemIsUsedNavigationController"
 
 //Debug logs
-#ifdef DEBUG  
-#define OOLog(log, ...) NSLog(log, ## __VA_ARGS__)  
+#ifdef DEBUG
+#define OOLog(log, ...) NSLog(log, ## __VA_ARGS__)
 #define OOLogError(log, ...) NSLog( @"\n-------ERROR------- <%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(log), ##__VA_ARGS__] )
 #define OOLogWithFileLine(log, ...) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(log), ##__VA_ARGS__] )
 #define OOLogWithClassMethod(log, ...) NSLog(@"<%@ %@> %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), [NSString stringWithFormat:(log), ##__VA_ARGS__])
 #define OOLogWithInterval(log, ...) NSLog(@"<interval:%f> %@", [[NSDate date] timeIntervalSinceReferenceDate], [NSString stringWithFormat:(log), ##__VA_ARGS__])
-#else  
+#else
 #define OOLog(log, ...)
 #define OOLogError(log, ...)
 #define OOLogWithFileLine(log, ...)
 #define OOLogWithClassMethod()
 #define OOLogWithInterval(log, ...)
-#endif  
+#endif
 
 // Block
 #if NS_BLOCKS_AVAILABLE
@@ -181,6 +181,7 @@ typedef void (^OOBlockArray)(NSArray *ary);
 + (UIWindow *)getOriginalWindow;
 + (UIViewController *)getRootViewController;
 + (UIViewController *)getTopmostViewController;
++ (void)presentOnTopmostVCWithVC:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
 
 + (void)dialPhone:(NSString *)phoneNumber;
 + (void)exchangeUint:(uint *)v1 with:(uint *)v2;

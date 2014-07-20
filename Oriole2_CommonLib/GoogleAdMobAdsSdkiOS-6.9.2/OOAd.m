@@ -103,16 +103,32 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
     [(PHAPIRequest *)[PHPublisherOpenRequest requestForApp:token secret:secret] send];
 }
 */
+
+- (void)_presentInterstitial:(OOInterstitial *)interstitial fromViewController:(UIViewController *)fromViewController
+{
+    if (!interstitial || !fromViewController)
+        return;
+    
+    if ([fromViewController isBeingPresented])
+    {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self _presentInterstitial:interstitial fromViewController:fromViewController];
+        });
+    }
+    else
+    {
+        [interstitial presentFromRootViewController:fromViewController];
+    }
+}
+
 - (void)_presentInterstitialAndCacheMore:(OOInterstitial *)interstitialOld delegate:(id<GADInterstitialDelegate>)delegate
 {
     if(interstitialOld)
     {
         if(!interstitialOld.hasBeenUsed)
         {
-            UIViewController *vc = [OOCommon getTopmostViewController];
-            [interstitialOld presentFromRootViewController:vc];
-            
             [aryInterstitialPresenting addObject:interstitialOld];
+            [self _presentInterstitial:interstitialOld fromViewController:[OOCommon getTopmostViewController]];
         }
         else
         {
@@ -545,6 +561,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
 
 - (void)productViewControllerDidFinish:(SKStoreProductViewController *)productVC
 {
+    productVC.delegate = nil;
     [productVC dismissViewControllerAnimated:YES completion:^{
     }];
 }

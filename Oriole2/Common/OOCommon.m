@@ -227,6 +227,28 @@ static NSBundle *wlBundle;
     return rootViewController;
 }
 
++ (void)_presentViewController:(UIViewController *)viewControllerToPresent fromViewController:(UIViewController *)fromViewController animated:(BOOL)flag completion:(void (^)(void))completion
+{
+    if (!viewControllerToPresent || !fromViewController)
+        return;
+    
+    if ([fromViewController isBeingPresented])
+    {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self _presentViewController:viewControllerToPresent fromViewController:fromViewController animated:flag completion:completion];
+        });
+    }
+    else
+    {
+        [fromViewController presentViewController:viewControllerToPresent animated:flag completion:completion];
+    }
+}
+
++ (void)presentOnTopmostVCWithVC:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion
+{
+    [self _presentViewController:viewControllerToPresent fromViewController:[self getTopmostViewController] animated:flag completion:completion];
+}
+
 + (void)dialPhone:(NSString *)phoneNumber
 {
 	if (phoneNumber.length > 0)
@@ -374,22 +396,6 @@ static NSBundle *wlBundle;
     [self openInAppStoreWithID:appID viewController:viewController showHudInView:viewController.view];
 }
 
-+ (void)_showModalViewController:(UIViewController *)modalVC
-{
-    if(modalVC)
-    {
-        UIViewController *topmostViewController = [OOCommon getTopmostViewController];
-        if(topmostViewController.presentedViewController)
-        {
-            [topmostViewController dismissViewControllerAnimated:NO completion:^{
-                [topmostViewController presentViewController:modalVC animated:YES completion:nil];
-            }];
-        }
-        else
-            [topmostViewController presentViewController:modalVC animated:YES completion:nil];
-    }
-}
-
 + (MBProgressHUD *)openInAppStoreWithID:(int)appID viewController:(UIViewController *)viewController showHudInView:(UIView *)view
 {
     MBProgressHUD *hud = nil;
@@ -415,7 +421,7 @@ static NSBundle *wlBundle;
                 if (result)
                 {
                     [hud hide:YES];
-                    [self _showModalViewController:storeController];
+                    [self presentOnTopmostVCWithVC:storeController animated:YES completion:NULL];
                     
                     [bridge increaseRetainCount];
                 }
@@ -430,7 +436,7 @@ static NSBundle *wlBundle;
         else
         {
             [storeController loadProductWithParameters:productParameters completionBlock:nil];
-            [self _showModalViewController:storeController];
+            [self presentOnTopmostVCWithVC:storeController animated:YES completion:NULL];
 
             [bridge increaseRetainCount];
         }
