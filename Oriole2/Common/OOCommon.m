@@ -49,6 +49,7 @@
 
 - (void)productViewControllerDidFinish:(SKStoreProductViewController *)productVC
 {
+    productVC.delegate = nil;
     [productVC dismissViewControllerAnimated:YES completion:^{
 //        NSLog(@"OOBridgeObject productViewControllerDidFinish");
         self_strong = nil;

@@ -58,6 +58,7 @@
 #pragma mark - SKStoreProductViewControllerDelegate -
 - (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
 {
+    viewController.delegate = nil;
     [self.viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -196,6 +197,7 @@
 {
     [super productViewControllerDidFinish:viewController];
     
+    viewController.delegate = nil;
     _retained_self = nil;//release self for iPhone.
 }
 
