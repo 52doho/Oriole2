@@ -15,6 +15,7 @@
 //#import "PunchBoxAdDelegate.h"
 
 #import "OOMoreAppsView.h"
+#import "OOParseManager.h"
 
 #import "GADCustomEventBanner.h"
 #import "GADCustomEventBannerDelegate.h"
@@ -118,6 +119,11 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
     else
     {
         [interstitial presentFromRootViewController:fromViewController];
+        
+        [DEFAULTS setObject:[NSDate date] forKey:[self _getInterstitialLastShowDateKeyWithPlacement:interstitial.placement]];
+        NSString *kCount = [self _getInterstitialLastShowCountKeyWithPlacement:interstitial.placement];
+        NSUInteger count = [DEFAULTS integerForKey:kCount];
+        [DEFAULTS setObject:@(count + 1) forKey:kCount];
     }
 }
 
@@ -246,9 +252,53 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOAd, instance);
     [self _showInterstitialWithMediationId:mediationID placement:placement isMoreGame:NO isCache:YES delegate:nil];
 }
 
+- (NSString *)_getInterstitialLastShowDateKeyWithPlacement:(NSString *)placement
+{
+    if (!placement)
+        return nil;
+    
+    return [NSString stringWithFormat:@"OOInterstitialLastShowDate_%@", placement];
+}
+
+- (NSString *)_getInterstitialLastShowCountKeyWithPlacement:(NSString *)placement
+{
+    if (!placement)
+        return nil;
+    
+    return [NSString stringWithFormat:@"OOInterstitialLastShowCount_%@", placement];
+}
+
 - (OOInterstitialState)showInterstitialOfAppBecomeActiveWithMediationID:(NSString *)mediationID delegate:(id<GADInterstitialDelegate>)delegate
 {
-    return [self showInterstitialWithMediationId:mediationID placement:@"app_become_active" delegate:delegate];
+    static NSString *PLACEMENT = @"app_become_active";
+    static BOOL isFirstLaunch = YES;
+    if (isFirstLaunch)
+    {
+        isFirstLaunch = NO;
+        if ([OOParseManager instance].interstitial_showAtLaunch)
+            return [self showInterstitialWithMediationId:mediationID placement:PLACEMENT delegate:delegate];
+    }
+    else
+    {
+        NSDate *lastShowDate = [DEFAULTS objectForKey:[self _getInterstitialLastShowDateKeyWithPlacement:PLACEMENT]];
+        if (!lastShowDate)
+            return [self showInterstitialWithMediationId:mediationID placement:PLACEMENT delegate:delegate];
+        
+        NSString *kCount = [self _getInterstitialLastShowCountKeyWithPlacement:PLACEMENT];
+        NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:lastShowDate];
+        if (0 < interval && interval < 3600) {
+            NSUInteger count = [DEFAULTS integerForKey:kCount];
+            if (count < [OOParseManager instance].interstitial_maxShowPerHour)
+                return [self showInterstitialWithMediationId:mediationID placement:PLACEMENT delegate:delegate];
+        }
+        else
+        {
+            [DEFAULTS setObject:@(0) forKey:kCount];
+            return [self showInterstitialWithMediationId:mediationID placement:PLACEMENT delegate:delegate];
+        }
+    }
+    
+    return OOInterstitialState_Nothing;
 }
 
 - (OOInterstitialState)showInterstitialOfAppBecomeActiveWithMediationID:(NSString *)mediationID
