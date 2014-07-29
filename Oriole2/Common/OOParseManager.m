@@ -138,6 +138,8 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
     
     [Parse setApplicationId:appid clientKey:clientKey];
     
+    [_parseObjectOfShareText fetchIfNeeded];
+    
     [self _getShareTextWithLanguage:[OOCommon getCurrentLanguage] appId:appId errorBlock:^(NSError *error) {
         [self _getShareTextWithLanguage:@"en" appId:appId errorBlock:NULL];
     }];
