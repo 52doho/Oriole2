@@ -209,7 +209,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
 
 - (NSString *)moregameText
 {
-    return [self _getObjectForKey:@"moregameText" defaultValue:@""];
+    return [self _getObjectForKey:@"moregameText" defaultValue:@"Games"];
 }
 
 - (BOOL)interstitial_showAtLaunch
