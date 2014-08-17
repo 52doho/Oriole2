@@ -7,6 +7,7 @@
 //
 
 #import "OOAd.h"
+#import "MBProgressHUD.h"
 //#import <RevMobAds/RevMobAds.h>
 #import "Chartboost.h"
 //#import "DMAdView.h"
