@@ -1,12 +1,12 @@
 PODS:
-  - Bolts (1.1.0)
-  - Facebook-iOS-SDK (3.14.1):
+  - Bolts (1.1.2)
+  - Facebook-iOS-SDK (3.17.0):
     - Bolts
   - FXKeychain (1.5.1)
-  - iRate (1.10.2)
+  - iRate (1.10.3)
   - iVersion (1.10.6)
-  - MBProgressHUD (0.8)
-  - Parse (1.2.19):
+  - MBProgressHUD (0.9)
+  - Parse (1.2.20):
     - Facebook-iOS-SDK (~> 3.11)
   - StandardPaths (1.5.6)
 
@@ -15,17 +15,17 @@ DEPENDENCIES:
   - iRate (~> 1.10.2)
   - iVersion (~> 1.10.6)
   - MBProgressHUD (~> 0.8)
-  - Parse (~> 1.2.19)
+  - Parse (~> 1.2.20)
   - StandardPaths (~> 1.5.6)
 
 SPEC CHECKSUMS:
-  Bolts: 91c2af8eae1d44e1dd75946a5b0ae04a43ea43e4
-  Facebook-iOS-SDK: e9b3d5ac54ee3e5e693f4eef470b97911b3d076d
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
+  Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
   FXKeychain: beb642a4218ba783507af08865eda05e9b26a612
-  iRate: 7d204971bab2f727195b868e32e05216fe257681
+  iRate: 40ebea2bb1e88866cef7393bd0abeae232cc5d38
   iVersion: bd6b244d3e381fd7838a9b1a94b9bcaa2c018e70
-  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
-  Parse: ffebaecaddd32cb52671010f81567c298ff93d04
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  Parse: 28c0dc54f30201a369d29a2f76c09fa43b2add16
   StandardPaths: 009f9c1699e26e46b2fb1a46b8bacc693d34460e
 
 COCOAPODS: 0.33.1

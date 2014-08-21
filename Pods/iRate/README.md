@@ -7,7 +7,7 @@ iRate is a library to help you promote your iPhone and Mac App Store apps by pro
 Supported OS & SDK Versions
 -----------------------------
 
-* Supported build target - iOS 7.1 / Mac OS 10.9 (Xcode 5.1, Apple LLVM compiler 5.1)
+* Supported build target - iOS 8.0 / Mac OS 10.9 (Xcode 6.0, Apple LLVM compiler 6.0)
 * Earliest supported deployment target - iOS 5.0 / Mac OS 10.7
 * Earliest compatible deployment target - iOS 4.3 / Mac OS 10.6
 
@@ -212,11 +212,11 @@ Returns YES if the prompt criteria have been met, and NO if they have not. You c
 
     - (void)promptForRating;
 
-This method will immediately trigger the rating prompt without checking that the  app store is available, and without calling the iRateShouldShouldPromptForRating delegate method. Note that this method depends on the `appStoreID` and `applicationGenre` properties, which are only retrieved after polling the iTunes server, so if you intend to call this method directly, you will need to set these properties yourself beforehand, or use the `promptIfNetworkAvailable` method instead.
+This method will immediately trigger the rating prompt without checking that the  app store is available, and without calling the iRateShouldPromptForRating delegate method. Note that this method depends on the `appStoreID` and `applicationGenre` properties, which are only retrieved after polling the iTunes server, so if you intend to call this method directly, you will need to set these properties yourself beforehand, or use the `promptIfNetworkAvailable` method instead.
 
     - (void)promptIfNetworkAvailable;
 
-This method will check if the app store is available, and if it is, it will display the rating prompt to the user. The iRateShouldShouldPromptForRating delegate method will be called before the alert is shown, so you can intercept it. Note that if your app is sandboxed and does not have the network access permission, this method will ignore the network availability status, however in this case you will need to manually set the appStoreID or iRate cannot function.
+This method will check if the app store is available, and if it is, it will display the rating prompt to the user. The iRateShouldPromptForRating delegate method will be called before the alert is shown, so you can intercept it. Note that if your app is sandboxed and does not have the network access permission, this method will ignore the network availability status, however in this case you will need to manually set the appStoreID or iRate cannot function.
 
     - (void)openRatingsPageInAppStore;
 
@@ -236,7 +236,7 @@ This method is called if iRate cannot connect to the App Store, usually because 
 
 This method is called if iRate detects that the application has been updated since the last time it was launched.
 
-    - (BOOL)iRateShouldShouldPromptForRating;
+    - (BOOL)iRateShouldPromptForRating;
 
 This method is called immediately before the rating prompt is displayed to the user. You can use this method to implement custom prompt logic in addition to the standard rules. You can also use this method to block the standard prompt alert and display the rating prompt in a different way, or bypass it altogether.
 
@@ -320,9 +320,13 @@ The example is for Mac OS, but the same principle can be applied on iOS.
 Release Notes
 -----------------
 
+Version 1.10.3
+
+- Fixed another bug in the rating reset logic after upgrade
+- Improved Turkish translation
+
 Version 1.10.2
 
-- Added -isFirstUse method
 - Fixed bug where app would never prompt for rating after an upgrade if it had not already done so
 - Improved italian localization
 
