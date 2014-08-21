@@ -165,11 +165,16 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
 
 - (NSString *)_getObjectForKey:(NSString *)key defaultValue:(NSString *)defaultValue
 {
-    NSString *text = _parseObjectOfShareText[key];
-    if(text)
-        return text;
-    else
+    if ([_parseObjectOfShareText isDataAvailable]) {
+        NSString *text = _parseObjectOfShareText[key];
+        if(text)
+            return text;
+        else
+            return defaultValue;
+    } else {
+        [_parseObjectOfShareText fetchIfNeeded];
         return defaultValue;
+    }
 }
 
 - (NSString *)shareImage
