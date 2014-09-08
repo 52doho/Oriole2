@@ -20,11 +20,20 @@
 #import <QuartzCore/QuartzCore.h>
 
 
+typedef enum
+{
+    OOAnimationDirection_Top,
+    OOAnimationDirection_Left,
+    OOAnimationDirection_Bottom,
+    OOAnimationDirection_Right
+}OOAnimationDirection;
+
 @interface OOAnimation : NSObject
 {
 
 }
 
+// UIView Animations
 + (void)fadeInView:(UIView *)view;
 + (void)fadeInView:(UIView *)view duration:(double)duration;
 + (void)fadeOutForView:(UIView *)view;
@@ -39,6 +48,20 @@
 
 + (void)hightlightView:(UIView *)view;
 
-+ (void)popUpAnimationForView:(UIView *)view;
++ (void)popUpForView:(UIView *)view;
+
+
+// Core Animations
+- (void)dropDownForView:(UIView *)view fromY:(float)fromY toY:(float)toY bounceDistance:(float)bounceDistance duration:(float)duration delay:(float)delay completeBlock:(OOBlockBasic)completeBlock;
+
+- (void)dropDownAndFadeInForView:(UIView *)view fromScale:(float)fromScale delay:(NSTimeInterval)delay duration:(float)duration completeBlock:(OOBlockBasic)completeBlock;
+
+- (void)flyAndBounceInForView:(UIView *)view isX:(BOOL)isX from:(float)from to:(float)to bounceDistance:(float)bounceDistance duration:(float)duration delay:(float)delay completeBlock:(OOBlockBasic)completeBlock;
+
+- (void)bounceInForView:(UIView *)view fromScale:(float)fromScale toScale:(float)toScale farestScale:(float)farestScale duration:(float)duration delay:(float)delay completeBlock:(OOBlockBasic)completeBlock;
+
+- (void)stretchForView:(UIView *)view deltaScaleX:(float)deltaScaleX deltaScaleY:(float)deltaScaleY duration:(float)duration delay:(float)delay repeatCount:(int)repeatCount completeBlock:(OOBlockBasic)completeBlock;
+
+- (void)flipForView:(UIView *)view mirrorView:(UIView *)mirrorView direction:(OOAnimationDirection)direction duration:(float)duration count:(uint)count completeBlock:(OOBlockBasic)completeBlock;
 
 @end

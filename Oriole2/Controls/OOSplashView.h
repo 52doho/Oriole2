@@ -1,5 +1,5 @@
 //
-//  OOSplashScreen.h
+//  OOSplashView.h
 //  Oriole2
 //
 //  Created by Gary Wong on 11-7-15.
@@ -20,25 +20,25 @@
 
 typedef enum
 {
-    OOSplashScreenAnimation_FadeOut,
-    OOSplashScreenAnimation_ScaleAndFadeOut,
-}OOSplashScreenAnimation;
+    OOSplashViewAnimation_FadeOut,
+    OOSplashViewAnimation_ScaleAndFadeOut,
+}OOSplashViewAnimation;
 
-@interface OOSplashScreen : UIView
+@interface OOSplashView : UIView
 {
     UIImageView *ooImageView;
     UIImageView *appImageView;
     BOOL isMainVCLoaded, isVSImageHide;
     NSTimer *theTimer;
-    OOSplashScreenAnimation appImageAnimation;
+    OOSplashViewAnimation appImageAnimation;
     float appImageAnimationDuration, appImagePauseDuration;
 }
-@property(nonatomic, assign) OOSplashScreenAnimation appImageAnimation;
+@property(nonatomic, assign) OOSplashViewAnimation appImageAnimation;
 @property(nonatomic, assign) float appImageAnimationDuration, appImagePauseDuration;
 @property(nonatomic, assign) BOOL isMainVCLoaded;
 
 - (id)initWithFrame:(CGRect)frame appImageName:(NSString*)appImageName;
 - (id)initWithFrame:(CGRect)frame ooImageName:(NSString*)ooImageName appImageName:(NSString*)appImageName;
-- (id)initWithFrame:(CGRect)frame ooImageName:(NSString*)ooImageName appImageName:(NSString*)appImageName appImageAnimation:(OOSplashScreenAnimation)animation appImageAnimationDuration:(float)animationDuration appImagePauseDuration:(float)pauseDuration;
+- (id)initWithFrame:(CGRect)frame ooImageName:(NSString*)ooImageName appImageName:(NSString*)appImageName appImageAnimation:(OOSplashViewAnimation)animation appImageAnimationDuration:(float)animationDuration appImagePauseDuration:(float)pauseDuration;
 
 @end

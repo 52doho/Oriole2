@@ -1,5 +1,5 @@
 //
-//  OOSplashScreen.m
+//  OOSplashView.m
 //  Oriole2
 //
 //  Created by Gary Wong on 11-7-15.
@@ -16,17 +16,17 @@
 // all copies or substantial portions of the Software.
 // 
 
-#import "OOSplashScreen.h"
+#import "OOSplashView.h"
 #import "OOCommon.h"
 
-@interface OOSplashScreen(hidden)
+@interface OOSplashView(hidden)
 - (void)_checkCanFinish;
 @end
 
-@implementation OOSplashScreen
+@implementation OOSplashView
 @synthesize appImageAnimation, appImageAnimationDuration, appImagePauseDuration, isMainVCLoaded;
 
-- (id)initWithFrame:(CGRect)frame ooImageName:(NSString*)ooImageName appImageName:(NSString*)appImageName appImageAnimation:(OOSplashScreenAnimation)animation appImageAnimationDuration:(float)animationDuration appImagePauseDuration:(float)pauseDuration
+- (id)initWithFrame:(CGRect)frame ooImageName:(NSString*)ooImageName appImageName:(NSString*)appImageName appImageAnimation:(OOSplashViewAnimation)animation appImageAnimationDuration:(float)animationDuration appImagePauseDuration:(float)pauseDuration
 {
     self = [super initWithFrame:frame];
     if (self)
@@ -68,13 +68,13 @@
 
 - (id)initWithFrame:(CGRect)frame ooImageName:(NSString*)ooImageName appImageName:(NSString*)appImageName
 {
-    return [self initWithFrame:frame ooImageName:ooImageName appImageName:appImageName appImageAnimation:OOSplashScreenAnimation_FadeOut appImageAnimationDuration:1.5 appImagePauseDuration:0];
+    return [self initWithFrame:frame ooImageName:ooImageName appImageName:appImageName appImageAnimation:OOSplashViewAnimation_FadeOut appImageAnimationDuration:1.5 appImagePauseDuration:0];
 }
 
 - (void)_hideAppImageView
 {
     [UIView animateWithDuration:appImageAnimationDuration animations:^(void) {
-        if (appImageAnimation == OOSplashScreenAnimation_FadeOut)
+        if (appImageAnimation == OOSplashViewAnimation_FadeOut)
         {
             self.alpha = 0.0;
         }
@@ -127,7 +127,7 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    OOLog(@"OOSplashScreen dealloc");
+    OOLog(@"OOSplashView dealloc");
 }
 
 @end
