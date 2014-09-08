@@ -6,8 +6,8 @@ PODS:
   - iRate (1.10.3)
   - iVersion (1.10.6)
   - MBProgressHUD (0.9)
-  - Parse (1.2.20):
-    - Facebook-iOS-SDK (~> 3.11)
+  - Parse (1.2.21):
+    - Facebook-iOS-SDK (~> 3.17)
   - StandardPaths (1.5.6)
 
 DEPENDENCIES:
@@ -25,7 +25,7 @@ SPEC CHECKSUMS:
   iRate: 40ebea2bb1e88866cef7393bd0abeae232cc5d38
   iVersion: bd6b244d3e381fd7838a9b1a94b9bcaa2c018e70
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  Parse: 28c0dc54f30201a369d29a2f76c09fa43b2add16
+  Parse: 4be4e9fe2ee6dae16010e7622a5641a7c89154b7
   StandardPaths: 009f9c1699e26e46b2fb1a46b8bacc693d34460e
 
 COCOAPODS: 0.33.1
