@@ -7,31 +7,31 @@
 //
 //
 // Permission is hereby granted to staffs of Oriole2 Ltd.
-// Any person obtaining a copy of this software and associated documentation 
-// files (the "Software") should not use, copy, modify, merge, publish, distribute, 
-// sublicense, and/or sell copies of the Software without permission granted by 
+// Any person obtaining a copy of this software and associated documentation
+// files (the "Software") should not use, copy, modify, merge, publish, distribute,
+// sublicense, and/or sell copies of the Software without permission granted by
 // Oriole2 Ltd.
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import "OOCommon.h"
 
-@interface OOMailViewController : NSObject<MFMailComposeViewControllerDelegate>
+@interface OOMailViewController : NSObject <MFMailComposeViewControllerDelegate>
 {
-    Class mailClass;
-    NSString *_mailBody;
-    NSString *_mailSubject;
-    NSArray *_toRecipients;
+    Class            mailClass;
+    NSString         *_mailBody;
+    NSString         *_mailSubject;
+    NSArray          *_toRecipients;
     UIViewController *rootVC;
-    UIBarStyle barStyle;
+    UIBarStyle       barStyle;
 }
-@property (nonatomic, retain) NSString *_mailBody;
-@property (nonatomic, retain) NSString *_mailSubject;
-@property (nonatomic, retain) NSArray *_toRecipients;
+@property (nonatomic, retain) NSString   *_mailBody;
+@property (nonatomic, retain) NSString   *_mailSubject;
+@property (nonatomic, retain) NSArray    *_toRecipients;
 @property (nonatomic, assign) UIBarStyle barStyle;
 
 + (id)shareMailViewController;

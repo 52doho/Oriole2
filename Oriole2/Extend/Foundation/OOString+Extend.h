@@ -17,12 +17,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString(Extend)
+@interface NSString (Extend)
 
 - (BOOL)isNotEmpty;
 - (BOOL)isNumberValue;
 - (NSString *)urlEncodedString;
 - (NSString *)urlDecodedString;
-
 
 @end

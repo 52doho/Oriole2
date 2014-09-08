@@ -60,5 +60,4 @@
         }                                                                   \
         return obj;                                                         \
     }
-
 #endif  // NS_BLOCKS_AVAILABLE

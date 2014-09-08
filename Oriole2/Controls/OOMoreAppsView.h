@@ -20,9 +20,8 @@
 
 @interface OOMoreAppsView : UIView
 {
-    
 }
-//default: 10 ~ 12
+// default: 10 ~ 12
 @property(nonatomic, assign) float randomTimeFrom, randomTimeTo;
 
 - (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;

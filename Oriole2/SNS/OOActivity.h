@@ -18,40 +18,34 @@
 #import <UIKit/UIKit.h>
 #import <StoreKit/StoreKit.h>
 
-@interface OOActivityProviderPhotoCool : UIActivityItemProvider<UIActivityItemSource>
+@interface OOActivityProviderPhotoCool : UIActivityItemProvider <UIActivityItemSource>
 
 @end
 
-
-@interface OOActivityBase : UIActivity<UIDocumentInteractionControllerDelegate, SKStoreProductViewControllerDelegate>
+@interface OOActivityBase : UIActivity <UIDocumentInteractionControllerDelegate, SKStoreProductViewControllerDelegate>
 {
-    
 }
 @property (nonatomic, strong, readonly) UIBarButtonItem *presentFromButton;
-@property (nonatomic, assign) UIPopoverController *popoverController;
+@property (nonatomic, assign) UIPopoverController       *popoverController;
 
 @property (nonatomic, assign, readonly) CGRect presentFromRect;
 @property (nonatomic, strong, readonly) UIView *presentInView;
 
-//view controller to present the store screen
+// view controller to present the store screen
 @property (nonatomic, assign, readonly) UIViewController *viewController;
 
 - (id)initWithPresentViewController:(UIViewController *)viewController barButton:(UIBarButtonItem *)presentFromButton;
 - (id)initWithPresentViewController:(UIViewController *)viewController rect:(CGRect)presentFromRect view:(UIView *)presentInView;
 @end
 
-
 @interface OOActivityPhotoCool : OOActivityBase
 {
-    
 }
 
 @end
 
-
 @interface OOActivityInstagram : OOActivityBase
 {
-    
 }
 @property (nonatomic, strong) NSString *caption;
 

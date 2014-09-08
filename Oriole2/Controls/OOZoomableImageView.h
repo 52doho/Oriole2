@@ -1,4 +1,4 @@
- //
+//
 //  OOZoomableImageView.h
 //  FloatingGallery
 //
@@ -21,9 +21,9 @@
 @interface OOZoomableImageView : UIScrollView <UIScrollViewDelegate>
 {
 }
-@property(nonatomic, copy, readonly) UIImageView *imageView;
-@property(nonatomic, assign) BOOL shouldMonitorShrinkToMin, outOfBoundTappable, shouldMonitorDeviceOrientation;
-@property(nonatomic, assign) id<OOZoomableImageViewDelegate> delegateZoomableImageView;
+@property(nonatomic, copy, readonly) UIImageView              *imageView;
+@property(nonatomic, assign) BOOL                             shouldMonitorShrinkToMin, outOfBoundTappable, shouldMonitorDeviceOrientation;
+@property(nonatomic, assign) id <OOZoomableImageViewDelegate> delegateZoomableImageView;
 
 - (void)displayImage:(UIImage *)image;
 - (void)displayImage:(UIImage *)image scaleAspectFit:(BOOL)scaleAspectFit;

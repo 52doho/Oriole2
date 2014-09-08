@@ -15,14 +15,13 @@
 // all copies or substantial portions of the Software.
 //
 
-
 #import "OOAppDelegate.h"
 
 #import "iRate.h"
 #import "iVersion.h"
 #import "OOCommon.h"
 
-//private methods
+// private methods
 @interface OOAppDelegate (hidden)
 
 @end
@@ -39,11 +38,11 @@
     [iRate sharedInstance].remindPeriod = 4;
     [iRate sharedInstance].messageTitle = OOLocalizedStringInOOBundle(@"iRateMessageTitle");
     [iRate sharedInstance].message = OOLocalizedStringInOOBundle(@"iRateAppMessage");
-    
+
     [iRate sharedInstance].cancelButtonLabel = @"";
-    [iRate sharedInstance].remindButtonLabel = OOLocalizedStringInOOBundle(@"iRateRemindButton");//exchange
+    [iRate sharedInstance].remindButtonLabel = OOLocalizedStringInOOBundle(@"iRateRemindButton"); // exchange
     [iRate sharedInstance].rateButtonLabel = OOLocalizedStringInOOBundle(@"iRateRateButton");
-    
+
     [iVersion sharedInstance].ignoreButtonLabel = @"";
     NSString *remind = [iVersion sharedInstance].remindButtonLabel;
     NSString *download = [iVersion sharedInstance].downloadButtonLabel;
@@ -54,11 +53,12 @@
 
 - (id)init
 {
-	self = [super init];
-	if (self)
-	{
-	}
-	return self;
+    self = [super init];
+
+    if (self) {
+    }
+
+    return self;
 }
 
 - (void)dealloc
@@ -67,7 +67,7 @@
 
 #pragma mark -
 #pragma mark Memory management
-//overload me to get a memory tracing support
+// overload me to get a memory tracing support
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
 {
     [OOCommon logMemory];

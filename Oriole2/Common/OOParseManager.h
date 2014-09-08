@@ -19,10 +19,10 @@
 
 @interface OOParseManager : NSObject
 
-@property (nonatomic, strong, readonly) NSString *shareImage, *shareImageInstagram, *shareVideo, *shareText, *shareApp, *shareTitle, *instagramUid, *moregameText;
+@property (nonatomic, strong, readonly) NSString         *shareImage, *shareImageInstagram, *shareVideo, *shareText, *shareApp, *shareTitle, *instagramUid, *moregameText;
 @property (nonatomic, strong, readonly) OOMoreAppsEntity *moreAppsEntity;
 
-@property (nonatomic, assign, readonly) BOOL interstitial_showAtLaunch;
+@property (nonatomic, assign, readonly) BOOL       interstitial_showAtLaunch;
 @property (nonatomic, assign, readonly) NSUInteger interstitial_maxShowPerHour;
 
 + (OOParseManager *)instance;

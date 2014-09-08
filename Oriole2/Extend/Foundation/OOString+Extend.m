@@ -17,11 +17,11 @@
 
 #import "OOString+Extend.h"
 
-@implementation NSString(Extend)
+@implementation NSString (Extend)
 
 - (BOOL)isNotEmpty
 {
-	return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] != 0;
+    return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] != 0;
 }
 
 - (BOOL)isNumberValue
@@ -32,20 +32,22 @@
 - (NSString *)urlEncodedString
 {
     NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                           (CFStringRef)self,
-                                                                           NULL,
-																		   CFSTR("!*'();:@&=+$,/?%#[]"),
-                                                                           kCFStringEncodingUTF8));
-	return result;
+            (CFStringRef)self,
+            NULL,
+            CFSTR("!*'();:@&=+$,/?%#[]"),
+            kCFStringEncodingUTF8));
+
+    return result;
 }
 
 - (NSString *)urlDecodedString
 {
-	NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
-																						   (CFStringRef)self,
-																						   CFSTR(""),
-																						   kCFStringEncodingUTF8));
-	return result;	
+    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
+            (CFStringRef)self,
+            CFSTR(""),
+            kCFStringEncodingUTF8));
+
+    return result;
 }
 
 @end
