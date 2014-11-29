@@ -1,7 +1,7 @@
 //
 //  iVersion.h
 //
-//  Version 1.10.6
+//  Version 1.11.4
 //
 //  Created by Nick Lockwood on 26/01/2011.
 //  Copyright 2011 Charcoal Design
@@ -31,44 +31,62 @@
 //
 
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-missing-property-synthesis"
+
+
 #import <Availability.h>
 #undef weak_delegate
 #if __has_feature(objc_arc_weak) && \
-(!(defined __MAC_OS_X_VERSION_MIN_REQUIRED) || \
-__MAC_OS_X_VERSION_MIN_REQUIRED >= __MAC_10_8)
+(TARGET_OS_IPHONE || __MAC_OS_X_VERSION_MIN_REQUIRED >= __MAC_10_8)
 #define weak_delegate weak
 #else
 #define weak_delegate unsafe_unretained
 #endif
 
 
-#ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
+#import <TargetConditionals.h>
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
-#import <StoreKit/StoreKit.h>
+#define IVERSION_EXTERN UIKIT_EXTERN
 #else
 #import <Cocoa/Cocoa.h>
+#define IVERSION_EXTERN APPKIT_EXTERN
+#endif
+
+
+#if defined(IVERSION_USE_STOREKIT) && IVERSION_USE_STOREKIT
+#import <StoreKit/StoreKit.h>
 #endif
 
 
 extern NSString *const iVersionErrorDomain;
 
-
 //localisation string keys
-static NSString *const iVersionInThisVersionTitleKey = @"iVersionInThisVersionTitle";
-static NSString *const iVersionUpdateAvailableTitleKey = @"iVersionUpdateAvailableTitle";
-static NSString *const iVersionVersionLabelFormatKey = @"iVersionVersionLabelFormat";
-static NSString *const iVersionOKButtonKey = @"iVersionOKButton";
-static NSString *const iVersionIgnoreButtonKey = @"iVersionIgnoreButton";
-static NSString *const iVersionRemindButtonKey = @"iVersionRemindButton";
-static NSString *const iVersionDownloadButtonKey = @"iVersionDownloadButton";
+IVERSION_EXTERN NSString *const iVersionInThisVersionTitleKey; //iVersionInThisVersionTitle
+IVERSION_EXTERN NSString *const iVersionUpdateAvailableTitleKey; //iVersionUpdateAvailableTitle
+IVERSION_EXTERN NSString *const iVersionVersionLabelFormatKey; //iVersionVersionLabelFormat
+IVERSION_EXTERN NSString *const iVersionOKButtonKey; //iVersionOKButton
+IVERSION_EXTERN NSString *const iVersionIgnoreButtonKey; //iVersionIgnoreButton
+IVERSION_EXTERN NSString *const iVersionRemindButtonKey; //iVersionRemindButton
+IVERSION_EXTERN NSString *const iVersionDownloadButtonKey; //iVersionDownloadButton
 
 
-typedef enum
+typedef NS_ENUM(NSUInteger, iVersionErrorCode)
 {
     iVersionErrorBundleIdDoesNotMatchAppStore = 1,
-    iVersionErrorApplicationNotFoundOnAppStore
-}
-iVersionErrorCode;
+    iVersionErrorApplicationNotFoundOnAppStore,
+    iVersionErrorOSVersionNotSupported
+};
+
+
+typedef NS_ENUM(NSInteger, iVersionUpdatePriority)
+{
+    iVersionUpdatePriorityDefault = 0,
+    iVersionUpdatePriorityLow = 1,
+    iVersionUpdatePriorityMedium = 2,
+    iVersionUpdatePriorityHigh = 3
+};
 
 
 @interface NSString(iVersion)
@@ -106,10 +124,6 @@ iVersionErrorCode;
 //bundle ID is not unique between iOS and Mac app stores
 @property (nonatomic, assign) NSUInteger appStoreID;
 
-//app-specific configuration - you may need to set some of these
-@property (nonatomic, copy) NSString *remoteVersionsPlistURL;
-@property (nonatomic, copy) NSString *localVersionsPlistPath;
-
 //application details - these are set automatically
 @property (nonatomic, copy) NSString *applicationVersion;
 @property (nonatomic, copy) NSString *applicationBundleID;
@@ -131,16 +145,18 @@ iVersionErrorCode;
 @property (nonatomic, copy) NSString *downloadButtonLabel;
 
 //debugging and prompt overrides
+@property (nonatomic, assign) iVersionUpdatePriority updatePriority;
+@property (nonatomic, assign) BOOL useUIAlertControllerIfAvailable;
 @property (nonatomic, assign) BOOL useAllAvailableLanguages;
-@property (nonatomic, assign) BOOL disableAlertViewResizing;
 @property (nonatomic, assign) BOOL onlyPromptIfMainWindowIsAvailable;
-@property (nonatomic, assign) BOOL displayAppUsingStorekitIfAvailable;
 @property (nonatomic, assign) BOOL useAppStoreDetailsIfNoPlistEntryFound;
 @property (nonatomic, assign) BOOL checkAtLaunch;
 @property (nonatomic, assign) BOOL verboseLogging;
 @property (nonatomic, assign) BOOL previewMode;
 
 //advanced properties for implementing custom behaviour
+@property (nonatomic, copy) NSString *remoteVersionsPlistURL;
+@property (nonatomic, copy) NSString *localVersionsPlistPath;
 @property (nonatomic, copy) NSString *ignoredVersion;
 @property (nonatomic, strong) NSDate *lastChecked;
 @property (nonatomic, strong) NSDate *lastReminded;
@@ -149,10 +165,14 @@ iVersionErrorCode;
 @property (nonatomic, weak_delegate) id<iVersionDelegate> delegate;
 
 //manually control behaviour
-- (void)openAppPageInAppStore;
+- (BOOL)openAppPageInAppStore;
 - (void)checkIfNewVersion;
 - (NSString *)versionDetails;
 - (BOOL)shouldCheckForNewVersion;
 - (void)checkForNewVersion;
 
 @end
+
+
+#pragma clang diagnostic pop
+
