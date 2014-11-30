@@ -17,6 +17,7 @@
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import "OOCommon.h"
 
 typedef enum {
     OOAnimationDirection_Top,

@@ -23,13 +23,13 @@
 
 // ---------------------------Animation---------------------------
 #import "OOAnimation.h"
+#import "PRAnimationManager.h"
 
 // ---------------------------Extend---------------------------
 #import "OOExtend.h"
 
 // ---------------------------Controls---------------------------
 #import "OOMoreAppsView.h"
-#import "OOSplashScreen.h"
 #import "OOZoomableImageView.h"
 
 // ---------------------------ViewControllers---------------------------
