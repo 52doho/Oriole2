@@ -7,8 +7,8 @@
 //
 
 #import "RMStore+Extend.h"
-#import "RMStoreAppReceiptVerificator.h"
-#import "RMStoreTransactionReceiptVerificator.h"
+//#import "RMStoreAppReceiptVerificator.h"
+//#import "RMStoreTransactionReceiptVerificator.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
 
@@ -59,8 +59,8 @@ static char ReceiptVerificator_Extend;
     [RMStore defaultStore].transactionPersistorKeychain = [[RMStoreKeychainPersistence_Extend alloc] init];
     [RMStore defaultStore].transactionPersistor = [RMStore defaultStore].transactionPersistorKeychain;
     
-    const BOOL iOS7OrHigher = floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1;
-    [RMStore defaultStore].receiptVerificator_Extend = iOS7OrHigher ? [[RMStoreAppReceiptVerificator alloc] init] : [[RMStoreTransactionReceiptVerificator alloc] init];
+//    const BOOL iOS7OrHigher = floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1;
+//    [RMStore defaultStore].receiptVerificator_Extend = iOS7OrHigher ? [[RMStoreAppReceiptVerificator alloc] init] : [[RMStoreTransactionReceiptVerificator alloc] init];
     [RMStore defaultStore].receiptVerificator = [RMStore defaultStore].receiptVerificator_Extend;
 }
 

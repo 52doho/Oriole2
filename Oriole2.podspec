@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
 #  s.source       = { :git => "https://github.com/52doho/Oriole2.git", :tag => "v#{s.version}"}
   s.source_files  = "Oriole2", "Oriole2/**/*.{h,m,mm}"
   s.resources = "Oriole2/Resources/*.{bundle}"
-  s.libraries = "libz"
   s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Parse" }
   s.frameworks = "SystemConfiguration", "MobileCoreServices", "StoreKit"
   s.requires_arc = true

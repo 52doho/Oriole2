@@ -30,6 +30,7 @@
 
 // ---------------------------Controls---------------------------
 #import "OOMoreAppsView.h"
+#import "OOSplashView.h"
 #import "OOZoomableImageView.h"
 
 // ---------------------------ViewControllers---------------------------

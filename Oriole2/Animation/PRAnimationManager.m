@@ -7,6 +7,7 @@
 //
 
 #import "PRAnimationManager.h"
+#import "OOView+Extend.h"
 
 @interface PRAnimationManager()
 @end
