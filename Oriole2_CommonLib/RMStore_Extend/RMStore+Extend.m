@@ -16,10 +16,11 @@
 
 - (void)setPurchasedProductOfIdentifier:(NSString *)productIdentifier
 {
-    NSDictionary *dic = objc_msgSend(self, NSSelectorFromString(@"transactionsDictionary"));
-    NSMutableDictionary *updatedTransactions = [NSMutableDictionary dictionaryWithDictionary:dic];
-    updatedTransactions[productIdentifier] = @(1);
-    objc_msgSend(self, NSSelectorFromString(@"setTransactionsDictionary:"), updatedTransactions);
+    // NOTE: compile error
+//    NSDictionary *dic = objc_msgSend(self, NSSelectorFromString(@"transactionsDictionary"));
+//    NSMutableDictionary *updatedTransactions = [NSMutableDictionary dictionaryWithDictionary:dic];
+//    updatedTransactions[productIdentifier] = @(1);
+//    objc_msgSend(self, NSSelectorFromString(@"setTransactionsDictionary:"), updatedTransactions);
 }
 
 @end
