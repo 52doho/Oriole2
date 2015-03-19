@@ -17,6 +17,7 @@
 // all copies or substantial portions of the Software.
 //
 
+#import "CALayer+XibConfiguration.h"
 #import "OOData+Extend.h"
 #import "OOString+Extend.h"
 #import "OOImage+Extend.h"

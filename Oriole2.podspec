@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.dependency "FXKeychain", '~> 1.5.2'
   s.dependency "iRate", '~> 1.11.3'
   s.dependency "iVersion", '~> 1.11.4'
-  s.dependency "Parse", '~> 1.5.0'
+  s.dependency "Parse", '~> 1.6.4'
 end

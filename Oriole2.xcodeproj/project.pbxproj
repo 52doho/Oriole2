@@ -39,6 +39,8 @@
 		4E8978D714F5C8710036870A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95497CD131785A40017EDAF /* MessageUI.framework */; };
 		4E8978D814F5C8710036870A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95497CF131785A40017EDAF /* QuartzCore.framework */; };
 		4E8978DD14F5C9B40036870A /* libOriole2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6DF30614F4CAF100379535 /* libOriole2.a */; };
+		4EA2069C1ABA4BD000FA02CE /* CALayer+XibConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA2069A1ABA4BD000FA02CE /* CALayer+XibConfiguration.h */; };
+		4EA2069D1ABA4BD000FA02CE /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA2069B1ABA4BD000FA02CE /* CALayer+XibConfiguration.m */; };
 		4EA5B5DC1607116800C27749 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA5B5DB1607116800C27749 /* Accounts.framework */; };
 		4EA5BDF81607286A00C27749 /* OOAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA5BAFE1607286900C27749 /* OOAnimation.h */; };
 		4EA5BDFA1607286A00C27749 /* OOAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5BAFF1607286900C27749 /* OOAnimation.m */; };
@@ -128,6 +130,8 @@
 		4E7D4FB814F54615006EFD89 /* Oriole2_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oriole2_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7D62FC14F601C500D8B7FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4E7D634514F60B1E00D8B7FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4EA2069A1ABA4BD000FA02CE /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
+		4EA2069B1ABA4BD000FA02CE /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		4EA5B5DB1607116800C27749 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		4EA5BAF216071C6200C27749 /* Oriole2 Script-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Oriole2 Script-Info.plist"; path = "/Users/gary/Documents/Projects/Oriole2/Oriole2 Script-Info.plist"; sourceTree = "<absolute>"; };
 		4EA5BAF5160721C900C27749 /* BuildScript.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = BuildScript.sh; sourceTree = "<group>"; };
@@ -322,6 +326,15 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		4EA206991ABA4BD000FA02CE /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				4EA2069A1ABA4BD000FA02CE /* CALayer+XibConfiguration.h */,
+				4EA2069B1ABA4BD000FA02CE /* CALayer+XibConfiguration.m */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
 		4EA5BAF4160721C900C27749 /* Script */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +405,7 @@
 		4EA5BB2A1607286900C27749 /* Extend */ = {
 			isa = PBXGroup;
 			children = (
+				4EA206991ABA4BD000FA02CE /* CoreAnimation */,
 				4EA5BB2B1607286900C27749 /* CoreGraphic */,
 				4EA5BB2E1607286900C27749 /* Foundation */,
 				4EA5BB351607286900C27749 /* UIKit */,
@@ -558,6 +572,7 @@
 				4EA5BE0C1607286A00C27749 /* OOCommon.h in Headers */,
 				4EFF0F56193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */,
 				4EA5BE401607286A00C27749 /* OOSplashView.h in Headers */,
+				4EA2069C1ABA4BD000FA02CE /* CALayer+XibConfiguration.h in Headers */,
 				4EA5BE4C1607286A00C27749 /* OOGeometry+Extend.h in Headers */,
 				4EA5BE501607286A00C27749 /* OOData+Extend.h in Headers */,
 				4EA5BE581607286A00C27749 /* OOString+Extend.h in Headers */,
@@ -767,6 +782,7 @@
 				4EA5BE421607286A00C27749 /* OOSplashView.m in Sources */,
 				4EA5BE4E1607286A00C27749 /* OOGeometry+Extend.m in Sources */,
 				4EA5BE521607286A00C27749 /* OOData+Extend.m in Sources */,
+				4EA2069D1ABA4BD000FA02CE /* CALayer+XibConfiguration.m in Sources */,
 				4EA5BE5A1607286A00C27749 /* OOString+Extend.m in Sources */,
 				4EA5BE5E1607286A00C27749 /* OOColor+Extend.m in Sources */,
 				4E5FAB411A2AD52400BA308D /* PRAnimationManager.m in Sources */,
