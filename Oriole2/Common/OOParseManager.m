@@ -127,7 +127,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
 {
     NSParameterAssert(language);
 
-    NSString    *format = [NSString stringWithFormat:@"language = '%@' AND appId = '%i'", language, appId];
+    NSString    *format = [NSString stringWithFormat:@"language = '%@' AND appId = '%i'", language, (int)appId];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:format];
     PFQuery     *query = [PFQuery queryWithClassName:@"ShareText" predicate:predicate];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
@@ -154,13 +154,15 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
 
     [Parse setApplicationId:appid clientKey:clientKey];
 
-    [_parseObjectOfShareText fetchIfNeeded];
+    [_parseObjectOfShareText fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        OOLogError(@"fetchIfNeededInBackgroundWithBlock, object:%@, error:%@", object, error);
+    }];
 
     [self _getShareTextWithLanguage:[OOCommon getCurrentLanguage] appId:appId errorBlock:^(NSError *error) {
         [self _getShareTextWithLanguage:@"en" appId:appId errorBlock:NULL];
     }];
 
-    NSString    *format = [NSString stringWithFormat:@"appId = '%i'", appId];
+    NSString    *format = [NSString stringWithFormat:@"appId = '%i'", (int)appId];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:format];
     PFQuery     *query = [PFQuery queryWithClassName:@"OOMoreApps" predicate:predicate];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
