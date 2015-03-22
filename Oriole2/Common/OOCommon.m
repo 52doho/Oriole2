@@ -435,6 +435,7 @@ static NSBundle * wlBundle;
             hud.labelText = OOLocalizedStringInOOBundle(@"Waiting");
             hud.mode = MBProgressHUDModeIndeterminate;
             hud.removeFromSuperViewOnHide = YES;
+            hud.userInteractionEnabled = NO;
 
             [storeController loadProductWithParameters:productParameters completionBlock:^(BOOL result, NSError *error) {
                 if (result) {

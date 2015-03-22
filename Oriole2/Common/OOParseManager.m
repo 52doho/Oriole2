@@ -154,10 +154,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
 
     [Parse setApplicationId:appid clientKey:clientKey];
 
-    [_parseObjectOfShareText fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        OOLogError(@"fetchIfNeededInBackgroundWithBlock, object:%@, error:%@", object, error);
-    }];
-
+    [self _fetchParseObject];
     [self _getShareTextWithLanguage:[OOCommon getCurrentLanguage] appId:appId errorBlock:^(NSError *error) {
         [self _getShareTextWithLanguage:@"en" appId:appId errorBlock:NULL];
     }];
@@ -171,6 +168,12 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
         } else {
             OOLogError(@"get Parse data error:%@", error);
         }
+    }];
+}
+
+- (void)_fetchParseObject {
+    [_parseObjectOfShareText fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        OOLogError(@"fetchIfNeededInBackgroundWithBlock, object:%@, error:%@", object, error);
     }];
 }
 
@@ -190,7 +193,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
             return defaultValue;
         }
     } else {
-        [_parseObjectOfShareText fetchIfNeeded];
+        [self _fetchParseObject];
         return defaultValue;
     }
 }
