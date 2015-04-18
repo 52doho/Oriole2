@@ -917,6 +917,7 @@
 		};
 		4E7D4FD014F54615006EFD89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FC949AC1F102D6B88BC5EF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = /Users/gary/Documents/Projects/PhotoManila/Entitlements.plist;
@@ -964,6 +965,7 @@
 		};
 		4E7D4FD114F54615006EFD89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA70851A4450A7B8D6DAB77E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = /Users/gary/Documents/Projects/PhotoManila/Entitlements.plist;
@@ -1004,6 +1006,7 @@
 		};
 		D95497DE131786090017EDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FC949AC1F102D6B88BC5EF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1032,6 +1035,7 @@
 		};
 		D95497DF131786090017EDAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA70851A4450A7B8D6DAB77E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

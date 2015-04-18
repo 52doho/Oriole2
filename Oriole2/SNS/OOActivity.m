@@ -17,7 +17,6 @@
 
 #import "OOActivity.h"
 #import "OOCommon.h"
-#import "StandardPaths.h"
 
 @implementation OOActivityProviderPhotoCool
 
@@ -142,7 +141,7 @@
 - (void)performActivity
 {
     if ([self _canEditInPhotoCool]) {
-        NSString *tmpPath = [[[NSFileManager defaultManager] temporaryDataPath] stringByAppendingPathComponent:@"PhotoCool.jpg"];
+        NSString *tmpPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"PhotoCool.jpg"];
 
         if (![UIImageJPEGRepresentation(self.imageToEdit, 1) writeToFile:tmpPath atomically:YES]) {
             // failure
@@ -271,7 +270,7 @@
 
 - (void)performActivity
 {
-    NSString *tmpPath = [[[NSFileManager defaultManager] temporaryDataPath] stringByAppendingPathComponent:@"instagram.igo"];
+    NSString *tmpPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"instagram.igo"];
 
     if (![UIImageJPEGRepresentation(self.imageToEdit, 1) writeToFile:tmpPath atomically:YES]) {
         // failure

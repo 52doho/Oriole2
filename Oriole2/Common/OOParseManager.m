@@ -20,7 +20,6 @@
 #import "OOParseManager.h"
 #import "GTMObjectSingleton.h"
 #import "OOCommon.h"
-#import "StandardPaths.h"
 
 @interface PFObject (extensions)
 - (void)encodeWithCoder:(NSCoder *)encoder;
@@ -179,7 +178,7 @@ GTMOBJECT_SINGLETON_BOILERPLATE(OOParseManager, instance)
 
 - (NSString *)_getLocalPersistancePath
 {
-    return [[[NSFileManager defaultManager] offlineDataPath] stringByAppendingPathComponent:@"parseObjectOfShareText"];
+    return [NSTemporaryDirectory() stringByAppendingPathComponent:@"parseObjectOfShareText"];
 }
 
 - (NSString *)_getObjectForKey:(NSString *)key defaultValue:(NSString *)defaultValue
