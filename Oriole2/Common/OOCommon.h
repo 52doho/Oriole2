@@ -72,9 +72,29 @@
   #define OOLogWithInterval(log, ...)
 #endif
 
+// blocks
+#define ZPInvokeBlock(block, ...) \
+if (block)                    \
+block(__VA_ARGS__)
+
+#define dispatch_main_sync_safe(block) \
+if ([NSThread isMainThread]) { \
+block(); \
+} else { \
+dispatch_sync(dispatch_get_main_queue(), block); \
+}
+
+#define dispatch_main_async_safe(block) \
+if ([NSThread isMainThread]) { \
+block(); \
+} else { \
+dispatch_async(dispatch_get_main_queue(), block); \
+}
+
 // Block
 #if NS_BLOCKS_AVAILABLE
-    typedef void (^ OOBlockBasic)(void);
+	typedef void (^ OOBlockBasic)(void);
+	typedef void (^ OOBlockBool)(BOOL);
     typedef void (^ OOBlockData)(NSData *data);
     typedef void (^ OOBlockNumber)(NSNumber *number);
     typedef void (^ OOBlockError)(NSError *error);

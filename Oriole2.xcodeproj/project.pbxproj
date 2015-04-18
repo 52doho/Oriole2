@@ -39,6 +39,15 @@
 		4E8978D714F5C8710036870A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95497CD131785A40017EDAF /* MessageUI.framework */; };
 		4E8978D814F5C8710036870A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95497CF131785A40017EDAF /* QuartzCore.framework */; };
 		4E8978DD14F5C9B40036870A /* libOriole2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6DF30614F4CAF100379535 /* libOriole2.a */; };
+		4E9E34BB1AE2AFE7009EA5CE /* NSDate+Random.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9E34B21AE2AFE7009EA5CE /* NSDate+Random.h */; };
+		4E9E34BC1AE2AFE7009EA5CE /* NSDate+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E34B31AE2AFE7009EA5CE /* NSDate+Random.m */; };
+		4E9E34BD1AE2AFE7009EA5CE /* NSNumber+Random.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9E34B41AE2AFE7009EA5CE /* NSNumber+Random.h */; };
+		4E9E34BE1AE2AFE7009EA5CE /* NSNumber+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E34B51AE2AFE7009EA5CE /* NSNumber+Random.m */; };
+		4E9E34BF1AE2AFE7009EA5CE /* NSString+Random.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9E34B61AE2AFE7009EA5CE /* NSString+Random.h */; };
+		4E9E34C01AE2AFE7009EA5CE /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E34B71AE2AFE7009EA5CE /* NSString+Random.m */; };
+		4E9E34C11AE2AFE7009EA5CE /* RandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9E34B81AE2AFE7009EA5CE /* RandomKit.h */; };
+		4E9E34C21AE2AFE7009EA5CE /* UIColor+Random.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9E34B91AE2AFE7009EA5CE /* UIColor+Random.h */; };
+		4E9E34C31AE2AFE7009EA5CE /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E34BA1AE2AFE7009EA5CE /* UIColor+Random.m */; };
 		4EA2069C1ABA4BD000FA02CE /* CALayer+XibConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA2069A1ABA4BD000FA02CE /* CALayer+XibConfiguration.h */; };
 		4EA2069D1ABA4BD000FA02CE /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA2069B1ABA4BD000FA02CE /* CALayer+XibConfiguration.m */; };
 		4EA5B5DC1607116800C27749 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA5B5DB1607116800C27749 /* Accounts.framework */; };
@@ -130,6 +139,15 @@
 		4E7D4FB814F54615006EFD89 /* Oriole2_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oriole2_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7D62FC14F601C500D8B7FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4E7D634514F60B1E00D8B7FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4E9E34B21AE2AFE7009EA5CE /* NSDate+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Random.h"; sourceTree = "<group>"; };
+		4E9E34B31AE2AFE7009EA5CE /* NSDate+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Random.m"; sourceTree = "<group>"; };
+		4E9E34B41AE2AFE7009EA5CE /* NSNumber+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Random.h"; sourceTree = "<group>"; };
+		4E9E34B51AE2AFE7009EA5CE /* NSNumber+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Random.m"; sourceTree = "<group>"; };
+		4E9E34B61AE2AFE7009EA5CE /* NSString+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Random.h"; sourceTree = "<group>"; };
+		4E9E34B71AE2AFE7009EA5CE /* NSString+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Random.m"; sourceTree = "<group>"; };
+		4E9E34B81AE2AFE7009EA5CE /* RandomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomKit.h; sourceTree = "<group>"; };
+		4E9E34B91AE2AFE7009EA5CE /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
+		4E9E34BA1AE2AFE7009EA5CE /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 		4EA2069A1ABA4BD000FA02CE /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
 		4EA2069B1ABA4BD000FA02CE /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		4EA5B5DB1607116800C27749 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -326,6 +344,22 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		4E9E34B11AE2AFE7009EA5CE /* RandomKit */ = {
+			isa = PBXGroup;
+			children = (
+				4E9E34B21AE2AFE7009EA5CE /* NSDate+Random.h */,
+				4E9E34B31AE2AFE7009EA5CE /* NSDate+Random.m */,
+				4E9E34B41AE2AFE7009EA5CE /* NSNumber+Random.h */,
+				4E9E34B51AE2AFE7009EA5CE /* NSNumber+Random.m */,
+				4E9E34B61AE2AFE7009EA5CE /* NSString+Random.h */,
+				4E9E34B71AE2AFE7009EA5CE /* NSString+Random.m */,
+				4E9E34B81AE2AFE7009EA5CE /* RandomKit.h */,
+				4E9E34B91AE2AFE7009EA5CE /* UIColor+Random.h */,
+				4E9E34BA1AE2AFE7009EA5CE /* UIColor+Random.m */,
+			);
+			path = RandomKit;
+			sourceTree = "<group>";
+		};
 		4EA206991ABA4BD000FA02CE /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +387,7 @@
 				4EA5BB001607286900C27749 /* Common */,
 				4EA5BB111607286900C27749 /* Controls */,
 				4EA5BB2A1607286900C27749 /* Extend */,
+				4E9E34B11AE2AFE7009EA5CE /* RandomKit */,
 				4EA5BB4F1607286900C27749 /* SNS */,
 				4EA5BDE51607286A00C27749 /* ViewControllers */,
 				4EFF0EB6193CCCDA00782AD4 /* ThirdParty */,
@@ -564,6 +599,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9E34BD1AE2AFE7009EA5CE /* NSNumber+Random.h in Headers */,
+				4E9E34BB1AE2AFE7009EA5CE /* NSDate+Random.h in Headers */,
 				4E6DF04A14F4CA1B00379535 /* Oriole2_Prefix.pch in Headers */,
 				4EA5BDF81607286A00C27749 /* OOAnimation.h in Headers */,
 				4EA5BE081607286A00C27749 /* OOAppDelegate.h in Headers */,
@@ -581,12 +618,15 @@
 				4EA5BE641607286A00C27749 /* OOImageView+Extend.h in Headers */,
 				4EA5BE681607286A00C27749 /* OOView+Extend.h in Headers */,
 				4EA5BE7C1607286A00C27749 /* OOExtend.h in Headers */,
+				4E9E34BF1AE2AFE7009EA5CE /* NSString+Random.h in Headers */,
 				4EA5BE7E1607286A00C27749 /* Oriole2.h in Headers */,
+				4E9E34C11AE2AFE7009EA5CE /* RandomKit.h in Headers */,
 				4E2B65D2194CB70B00552E94 /* OOParseManager.h in Headers */,
 				4EA5C2C41607286B00C27749 /* OOMailViewController.h in Headers */,
 				4E4721491711778B00675F51 /* OOZoomableImageView.h in Headers */,
 				4E47214F1711779600675F51 /* OOActivity.h in Headers */,
 				4E0DE7131769D282008A4E30 /* OOMoreAppsView.h in Headers */,
+				4E9E34C21AE2AFE7009EA5CE /* UIColor+Random.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +816,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9E34BE1AE2AFE7009EA5CE /* NSNumber+Random.m in Sources */,
 				4EA5BDFA1607286A00C27749 /* OOAnimation.m in Sources */,
 				4EA5BE0A1607286A00C27749 /* OOAppDelegate.m in Sources */,
 				4EA5BE0E1607286A00C27749 /* OOCommon.m in Sources */,
@@ -791,8 +832,11 @@
 				4EA5BE621607286A00C27749 /* OOImage+Extend.m in Sources */,
 				4EA5BE661607286A00C27749 /* OOImageView+Extend.m in Sources */,
 				4EA5BE6A1607286A00C27749 /* OOView+Extend.m in Sources */,
+				4E9E34C01AE2AFE7009EA5CE /* NSString+Random.m in Sources */,
 				4EA5C2C61607286B00C27749 /* OOMailViewController.m in Sources */,
 				4E47214B1711778B00675F51 /* OOZoomableImageView.m in Sources */,
+				4E9E34C31AE2AFE7009EA5CE /* UIColor+Random.m in Sources */,
+				4E9E34BC1AE2AFE7009EA5CE /* NSDate+Random.m in Sources */,
 				4E4721511711779600675F51 /* OOActivity.m in Sources */,
 				4E0DE7151769D282008A4E30 /* OOMoreAppsView.m in Sources */,
 			);
