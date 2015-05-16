@@ -6,11 +6,11 @@
 // project.
 
 
-// Bolts
-#define COCOAPODS_POD_AVAILABLE_Bolts
-#define COCOAPODS_VERSION_MAJOR_Bolts 1
-#define COCOAPODS_VERSION_MINOR_Bolts 1
-#define COCOAPODS_VERSION_PATCH_Bolts 4
+// Bolts/Tasks
+#define COCOAPODS_POD_AVAILABLE_Bolts_Tasks
+#define COCOAPODS_VERSION_MAJOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_MINOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_PATCH_Bolts_Tasks 5
 
 // FXKeychain
 #define COCOAPODS_POD_AVAILABLE_FXKeychain
@@ -26,15 +26,16 @@
 
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse
-#define COCOAPODS_VERSION_MAJOR_Parse 1
-#define COCOAPODS_VERSION_MINOR_Parse 6
-#define COCOAPODS_VERSION_PATCH_Parse 5
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.7.2.2.
 
 // iRate
 #define COCOAPODS_POD_AVAILABLE_iRate
 #define COCOAPODS_VERSION_MAJOR_iRate 1
 #define COCOAPODS_VERSION_MINOR_iRate 11
-#define COCOAPODS_VERSION_PATCH_iRate 3
+#define COCOAPODS_VERSION_PATCH_iRate 4
 
 // iVersion
 #define COCOAPODS_POD_AVAILABLE_iVersion
