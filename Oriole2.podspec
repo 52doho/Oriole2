@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
   s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Parse" }
   s.frameworks = "SystemConfiguration", "MobileCoreServices", "StoreKit"
   s.requires_arc = true
-  s.dependency "MBProgressHUD", '~> 0.9'
-  s.dependency "StandardPaths", '~> 1.6.3'
-  s.dependency "FXKeychain", '~> 1.5.2'
-  s.dependency "iRate", '~> 1.11.3'
-  s.dependency "iVersion", '~> 1.11.4'
-  s.dependency "Parse", '~> 1.6.4'
+  s.dependency "MBProgressHUD"
+  s.dependency "StandardPaths"
+  s.dependency "FXKeychain"
+  s.dependency "iRate"
+  s.dependency "iVersion"
+  s.dependency "Parse"
 end
