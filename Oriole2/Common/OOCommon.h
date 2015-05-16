@@ -95,6 +95,8 @@ dispatch_async(dispatch_get_main_queue(), block); \
 #if NS_BLOCKS_AVAILABLE
 	typedef void (^ OOBlockBasic)(void);
 	typedef void (^ OOBlockBool)(BOOL);
+	typedef void (^ OOBlockFloat)(float);
+	typedef void (^ OOBlockInt)(int);
     typedef void (^ OOBlockData)(NSData *data);
     typedef void (^ OOBlockNumber)(NSNumber *number);
     typedef void (^ OOBlockError)(NSError *error);
