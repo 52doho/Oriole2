@@ -15,8 +15,6 @@ Pod::Spec.new do |s|
   s.frameworks = "SystemConfiguration", "MobileCoreServices", "StoreKit"
   s.requires_arc = true
   s.dependency "MBProgressHUD"
-  s.dependency "StandardPaths"
-  s.dependency "FXKeychain"
   s.dependency "iRate"
   s.dependency "iVersion"
   s.dependency "Parse"

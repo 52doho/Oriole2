@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4E03ADA71681D49300B1DA93 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E03ADA61681D49200B1DA93 /* Social.framework */; };
-		4E0A8072187487B30001F5C2 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBDBA9417506103003A9693 /* CrashReporter.framework */; };
 		4E0DE7131769D282008A4E30 /* OOMoreAppsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0DE7111769D282008A4E30 /* OOMoreAppsView.h */; };
 		4E0DE7151769D282008A4E30 /* OOMoreAppsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DE7121769D282008A4E30 /* OOMoreAppsView.m */; };
 		4E135BF015558FF9000EDE4D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E135BEF15558FF9000EDE4D /* CoreLocation.framework */; };
@@ -28,6 +27,8 @@
 		4E5FAB401A2AD52400BA308D /* PRAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E5FAB3E1A2AD52400BA308D /* PRAnimationManager.h */; };
 		4E5FAB411A2AD52400BA308D /* PRAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FAB3F1A2AD52400BA308D /* PRAnimationManager.m */; };
 		4E6DF04A14F4CA1B00379535 /* Oriole2_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4E6DF04914F4CA1B00379535 /* Oriole2_Prefix.pch */; };
+		4E6E57A01B08958400525995 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFF0E8D193C9CBA00782AD4 /* UIKit.framework */; };
+		4E6E57A21B08958800525995 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6E57A11B08958800525995 /* AssetsLibrary.framework */; };
 		4E7D4FBB14F54615006EFD89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		4E7D4FBC14F54615006EFD89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EE1E181318AA540065F19F /* CoreGraphics.framework */; };
 		4E7D62FD14F601C500D8B7FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7D62FC14F601C500D8B7FF /* AVFoundation.framework */; };
@@ -80,17 +81,13 @@
 		4EAED57216070F5000393E6E /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAED56416070F5000393E6E /* AirshipConfig.plist */; };
 		4EAED57316070F5000393E6E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EAED56516070F5000393E6E /* InfoPlist.strings */; };
 		4EAED57416070F5000393E6E /* OOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAED56716070F5000393E6E /* OOViewController.xib */; };
-		4EAED57516070F5000393E6E /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAED56A16070F5000393E6E /* GTMNSString+HTML.m */; };
 		4EAED57616070F5000393E6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAED56B16070F5000393E6E /* main.m */; };
 		4EAED57716070F5000393E6E /* OOApp_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAED56D16070F5000393E6E /* OOApp_AppDelegate.m */; };
 		4EAED57816070F5000393E6E /* OOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAED56F16070F5000393E6E /* OOViewController.m */; };
 		4EB7E67C175C94D900A43530 /* iRateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7E67A175C94D900A43530 /* iRateVC.xib */; };
 		4EB7E67D175C94D900A43530 /* iVersionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7E67B175C94D900A43530 /* iVersionVC.xib */; };
 		4EB7E67F175C959D00A43530 /* iCrashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7E67E175C959D00A43530 /* iCrashVC.xib */; };
-		4EBDBA9F17506103003A9693 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4EBDBA9617506103003A9693 /* iRate.bundle */; };
-		4EBDBAA017506103003A9693 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4EBDBA9717506103003A9693 /* iVersion.bundle */; };
 		4EBDBAA217506103003A9693 /* Oriole2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4EBDBA9917506103003A9693 /* Oriole2.bundle */; };
-		4EBDBAA317506103003A9693 /* Quincy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4EBDBA9A17506103003A9693 /* Quincy.bundle */; };
 		4EDC3AD614F6226500B69FF4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDC3AD514F6226500B69FF4 /* StoreKit.framework */; };
 		4EDC3AD814F6226A00B69FF4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDC3AD714F6226A00B69FF4 /* CoreTelephony.framework */; };
 		4EDC3ADA14F6227600B69FF4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDC3AD914F6227600B69FF4 /* AudioToolbox.framework */; };
@@ -104,6 +101,7 @@
 		4EFF0F56193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFF0EEB193CCCDA00782AD4 /* GTMObjectSingleton.h */; };
 		9C043C888A5E478D86137CCD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E204912516C4EB7A90DA4D9 /* libPods.a */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D84E1BFCA7CC959476F452A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E204912516C4EB7A90DA4D9 /* libPods.a */; };
 		D91C50311430795600A1F3EF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91C50301430795600A1F3EF /* CoreData.framework */; };
 		D95497CC131785A40017EDAF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95497CB131785A40017EDAF /* CFNetwork.framework */; };
 		D95497CE131785A40017EDAF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95497CD131785A40017EDAF /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -136,6 +134,8 @@
 		4E5FAB3F1A2AD52400BA308D /* PRAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRAnimationManager.m; sourceTree = "<group>"; };
 		4E6DF04914F4CA1B00379535 /* Oriole2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oriole2_Prefix.pch; sourceTree = "<group>"; };
 		4E6DF30614F4CAF100379535 /* libOriole2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOriole2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6E579D1B088FFA00525995 /* Oriole2.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oriole2.podspec; sourceTree = "<group>"; };
+		4E6E57A11B08958800525995 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4E7D4FB814F54615006EFD89 /* Oriole2_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oriole2_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7D62FC14F601C500D8B7FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4E7D634514F60B1E00D8B7FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -185,8 +185,6 @@
 		4EAED56416070F5000393E6E /* AirshipConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = AirshipConfig.plist; sourceTree = "<group>"; };
 		4EAED56616070F5000393E6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EAED56816070F5000393E6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OOViewController.xib; sourceTree = "<group>"; };
-		4EAED56916070F5000393E6E /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
-		4EAED56A16070F5000393E6E /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		4EAED56B16070F5000393E6E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EAED56C16070F5000393E6E /* OOApp_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOApp_AppDelegate.h; sourceTree = "<group>"; };
 		4EAED56D16070F5000393E6E /* OOApp_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOApp_AppDelegate.m; sourceTree = "<group>"; };
@@ -197,11 +195,7 @@
 		4EB7E67A175C94D900A43530 /* iRateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iRateVC.xib; path = ../../InstaMirror/InstaMirror/iRateVC.xib; sourceTree = "<group>"; };
 		4EB7E67B175C94D900A43530 /* iVersionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iVersionVC.xib; path = ../../InstaMirror/InstaMirror/iVersionVC.xib; sourceTree = "<group>"; };
 		4EB7E67E175C959D00A43530 /* iCrashVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iCrashVC.xib; path = ../../PhotoManila/PhotoManila/iCrashVC.xib; sourceTree = "<group>"; };
-		4EBDBA9417506103003A9693 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
-		4EBDBA9617506103003A9693 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		4EBDBA9717506103003A9693 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		4EBDBA9917506103003A9693 /* Oriole2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Oriole2.bundle; sourceTree = "<group>"; };
-		4EBDBA9A17506103003A9693 /* Quincy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Quincy.bundle; sourceTree = "<group>"; };
 		4ED45CA316392BAB0044B931 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EDC3AD514F6226500B69FF4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4EDC3AD714F6226A00B69FF4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -231,13 +225,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6E57A21B08958800525995 /* AssetsLibrary.framework in Frameworks */,
+				4E6E57A01B08958400525995 /* UIKit.framework in Frameworks */,
 				4E03ADA71681D49300B1DA93 /* Social.framework in Frameworks */,
 				4EA5B5DC1607116800C27749 /* Accounts.framework in Frameworks */,
 				4E135BF215559005000EDE4D /* Twitter.framework in Frameworks */,
 				4E135BF015558FF9000EDE4D /* CoreLocation.framework in Frameworks */,
 				4E7D634614F60B1E00D8B7FF /* Security.framework in Frameworks */,
 				4E8978DD14F5C9B40036870A /* libOriole2.a in Frameworks */,
-				4E0A8072187487B30001F5C2 /* CrashReporter.framework in Frameworks */,
 				4E7D4FBB14F54615006EFD89 /* Foundation.framework in Frameworks */,
 				4E7D4FBC14F54615006EFD89 /* CoreGraphics.framework in Frameworks */,
 				4E8978D514F5C8710036870A /* CoreData.framework in Frameworks */,
@@ -249,6 +244,7 @@
 				4EDC3ADB14F6227A00B69FF4 /* AudioToolbox.framework in Frameworks */,
 				4EDC3ADC14F6227A00B69FF4 /* CoreTelephony.framework in Frameworks */,
 				4EDC3ADD14F6227A00B69FF4 /* StoreKit.framework in Frameworks */,
+				D84E1BFCA7CC959476F452A6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +301,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				4EA5BAF216071C6200C27749 /* Oriole2 Script-Info.plist */,
+				4E6E579D1B088FFA00525995 /* Oriole2.podspec */,
 				9C77D6B95651F1041D6B3D7D /* Pods */,
 			);
 			name = VSCommonLib;
@@ -313,6 +310,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E6E57A11B08958800525995 /* AssetsLibrary.framework */,
 				4EFF0E8F193C9CC100782AD4 /* SystemConfiguration.framework */,
 				4EFF0E8D193C9CBA00782AD4 /* UIKit.framework */,
 				4EA5B5DB1607116800C27749 /* Accounts.framework */,
@@ -511,8 +509,6 @@
 				4EF8212F187990900072F706 /* res.txt */,
 				4EAED56416070F5000393E6E /* AirshipConfig.plist */,
 				4EAED56516070F5000393E6E /* InfoPlist.strings */,
-				4EAED56916070F5000393E6E /* GTMNSString+HTML.h */,
-				4EAED56A16070F5000393E6E /* GTMNSString+HTML.m */,
 				4EAED56B16070F5000393E6E /* main.m */,
 				4EAED56C16070F5000393E6E /* OOApp_AppDelegate.h */,
 				4EAED56D16070F5000393E6E /* OOApp_AppDelegate.m */,
@@ -531,11 +527,7 @@
 		4EBDBA9317506103003A9693 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4EBDBA9417506103003A9693 /* CrashReporter.framework */,
-				4EBDBA9617506103003A9693 /* iRate.bundle */,
-				4EBDBA9717506103003A9693 /* iVersion.bundle */,
 				4EBDBA9917506103003A9693 /* Oriole2.bundle */,
-				4EBDBA9A17506103003A9693 /* Quincy.bundle */,
 			);
 			name = Resources;
 			path = Oriole2/Resources;
@@ -637,9 +629,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E7D4FCF14F54615006EFD89 /* Build configuration list for PBXNativeTarget "Oriole2_App" */;
 			buildPhases = (
+				5375D128E26C061B86ED2D4B /* Check Pods Manifest.lock */,
 				4E7D4FB414F54615006EFD89 /* Sources */,
 				4E7D4FB514F54615006EFD89 /* Frameworks */,
 				4E7D4FB614F54615006EFD89 /* Resources */,
+				44EF2287EB4D0FAF3BAB7202 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -735,10 +729,7 @@
 				4E460AD6163FAB630063F76F /* 2.PNG in Resources */,
 				4EF82132187992320072F706 /* Default-568h@2x.png in Resources */,
 				4EF82130187990900072F706 /* res.txt in Resources */,
-				4EBDBA9F17506103003A9693 /* iRate.bundle in Resources */,
-				4EBDBAA017506103003A9693 /* iVersion.bundle in Resources */,
 				4EBDBAA217506103003A9693 /* Oriole2.bundle in Resources */,
-				4EBDBAA317506103003A9693 /* Quincy.bundle in Resources */,
 				4EB7E67C175C94D900A43530 /* iRateVC.xib in Resources */,
 				4EB7E67D175C94D900A43530 /* iVersionVC.xib in Resources */,
 				4EB7E67F175C959D00A43530 /* iCrashVC.xib in Resources */,
@@ -755,6 +746,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		44EF2287EB4D0FAF3BAB7202 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5375D128E26C061B86ED2D4B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		5D8A1DE71EDA4BE8AC171D6B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -805,7 +826,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAED57516070F5000393E6E /* GTMNSString+HTML.m in Sources */,
 				4EAED57616070F5000393E6E /* main.m in Sources */,
 				4EAED57716070F5000393E6E /* OOApp_AppDelegate.m in Sources */,
 				4EAED57816070F5000393E6E /* OOViewController.m in Sources */,
@@ -933,6 +953,7 @@
 		};
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FC949AC1F102D6B88BC5EF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -949,6 +970,7 @@
 		};
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA70851A4450A7B8D6DAB77E /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -968,15 +990,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\\\"$(SRCROOT)/Oriole2/Resources\\\"",
-					"\\\"$(SRCROOT)/Oriole2/ThirdParty/FacebookSDK\\ 3.1\\\"",
-					"\\\"$(SRCROOT)/Oriole2/ThirdParty/Revmob\\ 5.2.9\\\"",
-					"\\\"$(SRCROOT)/Oriole2/Resources/Revmob\\ 5.2.9\\\"",
-					"\\\"$(SRCROOT)/Oriole2/Resources/Revmob\\ 5.6.0\\\"",
-					/Users/gary/Documents/Projects/Oriole2/Oriole2/Resources,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -988,13 +1002,10 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Oriole2_App/Oriole2_App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ThirdParty/Airship 1.1.1\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -1015,27 +1026,16 @@
 				CODE_SIGN_ENTITLEMENTS = /Users/gary/Documents/Projects/PhotoManila/Entitlements.plist;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\\\"$(SRCROOT)/Oriole2/Resources\\\"",
-					"\\\"$(SRCROOT)/Oriole2/ThirdParty/FacebookSDK\\ 3.1\\\"",
-					"\\\"$(SRCROOT)/Oriole2/ThirdParty/Revmob\\ 5.2.9\\\"",
-					"\\\"$(SRCROOT)/Oriole2/Resources/Revmob\\ 5.2.9\\\"",
-					"\\\"$(SRCROOT)/Oriole2/Resources/Revmob\\ 5.6.0\\\"",
-					/Users/gary/Documents/Projects/Oriole2/Oriole2/Resources,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Oriole2_App/Oriole2_App-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Oriole2_App/Oriole2_App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ThirdParty/Airship 1.1.1\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",

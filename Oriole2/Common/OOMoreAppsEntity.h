@@ -15,7 +15,7 @@
 // all copies or substantial portions of the Software.
 //
 
-#import <Parse/Parse.h>
+#import "Parse/Parse.h"
 
 #define kOOMoreAppsDidUpdateNotification @"kOOMoreAppsDidUpdateNotification"
 #define kOOCommonParseAppId              @"AmPG4AQ5dLDFPydmdM8KkY7uM7KCWe4JRX9FzDpt"

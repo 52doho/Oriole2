@@ -1,6 +1,5 @@
 PODS:
   - Bolts/Tasks (1.1.5)
-  - FXKeychain (1.5.2)
   - iRate (1.11.4)
   - iVersion (1.11.4)
   - MBProgressHUD (0.9.1)
@@ -8,18 +7,16 @@ PODS:
     - Bolts/Tasks (>= 1.1.5)
 
 DEPENDENCIES:
-  - FXKeychain (~> 1.5.2)
-  - iRate (~> 1.11.3)
-  - iVersion (~> 1.11.4)
-  - MBProgressHUD (~> 0.9)
-  - Parse (~> 1.7.2.2)
+  - iRate
+  - iVersion
+  - MBProgressHUD
+  - Parse
 
 SPEC CHECKSUMS:
   Bolts: aac24961496d504aa56fc267cde95162a71bac39
-  FXKeychain: 1a711bddc04a2bd69850dcfe297b8a43027a9980
   iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
   iVersion: 2b6ffe708672cb494ba3cab150a94800c2892e81
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   Parse: 6187586a80eb7b4960d755f85e1353148a611f87
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.37.1

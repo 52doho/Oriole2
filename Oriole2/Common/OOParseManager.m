@@ -15,7 +15,7 @@
 // all copies or substantial portions of the Software.
 //
 
-#import <Parse/Parse.h>
+#import "Parse/Parse.h"
 
 #import "OOParseManager.h"
 #import "GTMObjectSingleton.h"

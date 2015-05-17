@@ -80,8 +80,8 @@
 - (IBAction)btnTapped:(id)sender
 {
 //    [[iRate sharedInstance] logEvent:NO];
-    [iRate sharedInstance].appStoreID = 512796815;
-    [[iRate sharedInstance] promptForRating];
+//    [iRate sharedInstance].appStoreID = 512796815;
+//    [[iRate sharedInstance] promptForRating];
 //    [iVersion sharedInstance].appStoreID = 512796815;
 }
 

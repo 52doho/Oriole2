@@ -8,8 +8,8 @@
 
 #import "OOApp_AppDelegate.h"
 
+#import "OOParseManager.h"
 #import "OOViewController.h"
-#import "GTMNSString+HTML.h"
 //#import "CCShareKitConfigurator.h"
 //#import "SHKConfiguration.h"
 
@@ -57,6 +57,8 @@
     self.viewController = [[[OOViewController alloc] initWithNibName:@"OOViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [[OOParseManager instance] setupWithParseAppId:kOOCommonParseAppId clientKey:kOOCommonParseClientKey appId:651289240];
     
 //    [[SHK currentHelper] setRootViewController:self.window.rootViewController];
     
@@ -178,7 +180,7 @@
      See also applicationDidEnterBackground:.
      */
 }
-
+/*
 #pragma mark - iRate iVersion -
 - (iRateVC *)iRateViewControllerForRating
 {
@@ -196,6 +198,6 @@
 {
     iCrashVC *crashVC = [[iCrashVC alloc] initWithNibName:@"iCrashVC" bundle:nil];
     return crashVC;
-}
+}*/
 
 @end
