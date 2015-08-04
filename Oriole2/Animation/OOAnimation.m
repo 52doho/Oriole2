@@ -16,7 +16,7 @@
 //
 
 #import "OOAnimation.h"
-#import "OOView+Extend.h"
+#import "UIView+Extend.h"
 
 @implementation OOAnimation
 

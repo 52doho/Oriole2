@@ -1,11 +1,9 @@
-/*
- *  OOExtend.h
- *  Oriole2
- *
- *  Created by Gary Wong on 3/2/11.
- *  Copyright 2011 Oriole2 Ltd. All rights reserved.
- *
- */
+//
+//  UIColor+Extend.m
+//  Oriole2
+//
+//  Created by Gary Wong on 3/8/11.
+//  Copyright 2011 Oriole2 Ltd. All rights reserved.
 //
 // Permission is hereby granted to staffs of Oriole2 Ltd.
 // Any person obtaining a copy of this software and associated documentation
@@ -17,11 +15,19 @@
 // all copies or substantial portions of the Software.
 //
 
-#import "CALayer+XibConfiguration.h"
-#import "NSData+Extend.h"
-#import "NSString+Extend.h"
-#import "UIImage+Extend.h"
-#import "UIImageView+Extend.h"
 #import "UIColor+Extend.h"
-#import "UIView+Extend.h"
-#import "OOGeometry+Extend.h"
+#import "OOCommon.h"
+
+@implementation UIColor (Extend)
+
++ (UIColor *)randomColor
+{
+    CGFloat red = OORANDOM_0_1();
+    CGFloat green = OORANDOM_0_1();
+    CGFloat blue = OORANDOM_0_1();
+    UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+
+    return color;
+}
+
+@end

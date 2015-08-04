@@ -20,11 +20,10 @@
 #import "OOCommon.h"
 #import "OOMoreAppsEntity.h"
 #import "OOParseManager.h"
-#import "RandomKit.h"
 
 // ---------------------------Animation---------------------------
 #import "OOAnimation.h"
-#import "PRAnimationManager.h"
+#import "OOAnimationManager.h"
 
 // ---------------------------Extend---------------------------
 #import "OOExtend.h"

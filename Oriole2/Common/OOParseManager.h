@@ -25,7 +25,7 @@
 @property (nonatomic, assign, readonly) BOOL       interstitial_showAtLaunch;
 @property (nonatomic, assign, readonly) NSUInteger interstitial_maxShowPerHour;
 
-+ (OOParseManager *)instance;
++ (instancetype)instance;
 
 - (void)setupWithParseAppId:(NSString *)appid clientKey:(NSString *)clientKey appId:(NSUInteger)appId;
 

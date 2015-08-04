@@ -16,7 +16,7 @@
 //
 
 #import "OOZoomableImageView.h"
-#import "OOView+Extend.h"
+#import "UIView+Extend.h"
 #import "OOCommon.h"
 
 @interface OOZoomableImageView ()
