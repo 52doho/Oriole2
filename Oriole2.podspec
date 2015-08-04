@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT (example)"  
   s.author       = { "Gary Wong" => "52doho@gmail.com" }
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/52doho/Oriole2.git", :branch=> "master"}
+  s.source       = { :git => "https://github.com/52doho/Oriole2.git", :branch=> "develop"}
 #  s.source       = { :git => "https://github.com/52doho/Oriole2.git", :tag => "v#{s.version}"}
   s.source_files  = "Oriole2", "Oriole2/**/*.{h,m,mm}"
   s.resources = "Oriole2/Resources/*.{bundle}"
