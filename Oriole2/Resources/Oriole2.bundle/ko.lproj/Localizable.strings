@@ -1,0 +1,174 @@
+/* 
+   Localizable.strings
+   Oriole2
+
+   Created by Gary Wong on 8/17/11.
+   Copyright 2010 Oriole2 Ltd. All rights reserved.
+ */
+
+//iRate
+"iRateMessageTitle" = "%@ 평가하기";
+"iRateAppMessage" = "%@ 앱을 사용해 보신 소감이 어떠신가요? 리뷰 작성을 부탁 드립니다. 길어도 1분이면 작성하실 수 있을 것입니다. 도움 감사 드립니다.";
+"iRateGameMessage" = "%@ 앱을 플레이해 보신 소감이 어떠신가요? 리뷰 작성을 부탁 드립니다. 길어도 1분이면 작성하실 수 있을 것입니다. 도움 감사 드립니다.";
+"iRateCancelButton" = "괜찮습니다";
+"iRateRateButton" = "지금 평가하기";
+"iRateRemindButton" = "나중에 다시 알림";
+
+"Inbox" = "받은 편지함";
+"Error" = "오류";
+"Load webpage failue message" = "오류 페이지를로드하는 동안 다시 시도하십시오.";
+"Back" = "뒤로";
+"OK" = "OK";
+"Done" = "완료";
+"Cancel" = "취소";
+"Edit" = "편집";
+"Remove" = "제거";
+"Delete" = "삭제";
+"Clear" = "지우기";
+"Copy" = "복사";
+"Copying" = "복사";
+"Copied" = "복사";
+"Save" = "저장";
+"Saving" = "저장";
+"Saved" = "저장";
+"Failed" = "실패";
+"Preparing" = "준비";
+"Loading" = "로드";
+"Waiting" = "대기";
+"E-mail" = "전자 메일";
+"Send Video via E-mail" = "E-메일을 통해 비디오 전송";
+"Send Photo via E-mail" = "E-메일을 통해 사진을 보내";
+"Send" = "보내기";
+"Send via E-mail" = "E-메일을 통해 보내기";
+"Sending" = "전송";
+"Dismiss" = "해제";
+"E-mail failed to send. Please try again." = "전자 메일 전송 실패 후 다시 시도하십시오.";
+"No email account found" = "어떤 이메일 계정이 발견되지는 설정에서 설정하십시오 -> 메일을.";
+
+//settings
+"Settings" = "설정";
+"More" = "추가";
+"More Apps" = "선물 상자";
+"Tell a Friend" = "친구를 말하십시오";
+"Gift" = "선물";
+"Gift This App" = "선물이 응용 프로그램";
+"Gift This App Title" = "선물이 응용 프로그램";
+"Gift This App Body Format" = "당신은 정말 %의 @을 사용하여 즐길 수 귀하의 가족과 친구들이 그들에게이 앱을주는 당신을 사랑합니다.";
+"Check Out Format" = "%@ 체크 아웃";
+"Check out this application on the App Store" = "앱 스토어에서이 응용 프로그램을 체크 아웃:";
+
+//more apps	/ / 더 많은 애플 리케이션
+"Special Honored" = "특별한 영광";
+"App Switch" = "응용 프로그램 전환";
+"Open" = "열기";
+"Free Download" = "무료 다운로드";
+"Full Version" = "풀 버전";
+
+//feedback
+"Feedback" = "피드백";
+"AppName" = "응용 프로그램 이름";
+"AppVersion" = "응용 프로그램 버전";
+"Model" = "모델";
+"System" = "시스템";
+"Like" = "좋아요";
+"Dislike" = "혐오";
+"Like format" = "%의 @ 마음에 드 셨나요?";
+"Feedback Type" = "피드백 타입";
+"Bravo" = "브라보";
+"Bug" = "버그";
+"Idea" = "아이디어";
+"Email address" = "전자 메일";
+"Message" = "메시지";
+"Review on the App Store" = "앱 스토어에 대한 검토";
+"No thanks" = "아니오, 감사합니다";
+"No" = "아니오";
+"Yes" = "예";
+"Negative feedback" = "당신의 의견을 당신을 감사하십시오!";
+"Positive feedback format" = "우리는 당신이 우리에게 앱 스토어에 긍정적 인 리뷰를 떠나기로 👍 %@ \r\n\r\n Show 당신의 지원을 좋아 기쁘다.";
+
+//passcode
+"Turn Passcode On" = "에 패스를 돌려";
+"Turn Passcode Off" = "암호 해제";
+"Change Passcode" = "암호 변경";
+"Enter your Passcode" = "당신의 암호를 입력";
+"Re-enter your Passcode" = "사용자 암호를 다시 입력";
+"Passcodes did not match" = "패스 코드가 일치하지 않았다 다시 시도하십시오.";
+"Enter your old passcode" = "이전 암호를 입력하십시오";
+"Enter your new passcode" = "새 암호를 입력하십시오";
+"Failed Passcode" = "암호 실패";
+
+//SNS
+"Share" = "공유";
+"Sign in" = "로그인";
+"Sign out" = "로그 아웃";
+"Online" = "온라인";
+"Offline" = "오프라인";
+"Action" = "작업";
+"Follow" = "에 따라";
+"Followed" = "이어";
+"Follow failed" = "수행 실패";
+"Share on Sina" = "시나 웨이 보";
+"Share on Tencent" = "텐센트 웨이 보";
+"Share on NetEase" = "넷 이즈 웨이 보";
+"Share on Renren" = "Renren의";
+"Share on Douban" = "Douban";
+"Share on Flickr" = "플리커";
+"Share on Tumblr" = "tumblr에";
+"Share on Evernote" = "에버 노트";
+"Share on Facebook" = "페이스 북";
+"Share on Twitter" = "센터";
+"Share on Instagram" = "인스 타 그램";
+"Share on Vkontakte" = "Vkontakte";
+"Share on Delicious" = "맛있는";
+"Share on Foursquare" = "정사각형";
+"Share on Google Reader" = "구글 리더";
+"Share on Instapaper" = "인스 타 페이퍼";
+"Share on LinkedIn" = "링크드 인";
+"Share on Pinboard" = "핀 보드";
+"Share on ReadItLater" = "나중에 읽기";
+"Save to Photo Album" = "사진 앨범에 저장";
+"Share via SMS" = "SMS";
+"Share via Email" = "전자 메일";
+"Print" = "인쇄";
+"Open in Safari" = "Safari에서 열기";
+"Open in PhotoCool" = "PhotoCool에서 열기";
+"Download PhotoCool" = "다운로드 PhotoCool";
+
+//IAP
+"Mart" = "마트";
+"Upgrade" = "업그레이드";
+"Remove Ad" = "Remove Ad";
+"Restore" = "복원";
+"Restore Purchases" = "복원 구매";
+"Restore purchases successed" = "복원는 successed";
+"Restore purchases failed" = "복원 실패";
+"Purchase successed" = "구매는 successed";
+"Purchase failed" = "구입 실패";
+"Have purchased" = "당신이 항목을 이미 구입";
+"Buy" = "매수";
+"Buy now" = "지금 구매";
+"Purchased" = "구입";
+"Free" = "무료";
+"FREE" = "FREE";
+"Free app" = "무료 응용 프로그램";
+"Free game" = "무료 게임";
+"No Internet Connection" = "인터넷에 연결하지 않습니다";
+"Please check your network connection and try again" = "네트워크 연결을 확인하고 다시 시도하십시오";
+
+//Photo
+"Auto save to Camera Roll" = "자동 카메라 롤에 저장";
+"No photos" = "사진 없음";
+"Album" = "앨범";
+"Import" = "가져 오기";
+"Import Image From" = "가져 오기 이미지";
+"Photo Library" = "사진 라이브러리";
+"Camera" = "카메라";
+
+//Geo
+"Geo tagging" = "지오 태그";
+"Location Services Disabled" = "위치 서비스 사용 안 함";
+"Location Services Restricted" = "위치 서비스 제한";
+"Unknown Location" = "알 수없는 위치";
+
+//Help
+"Help" = "도움말";

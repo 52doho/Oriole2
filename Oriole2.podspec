@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "Oriole2 common libs."
   s.description  = "Oriole2"
   s.homepage     = "http://Oriole2.com"
-  s.license      = "MIT (example)"  
+  s.license      = "MIT"
   s.author       = { "Gary Wong" => "52doho@gmail.com" }
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/52doho/Oriole2.git", :branch=> "develop"}

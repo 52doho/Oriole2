@@ -1,0 +1,174 @@
+/* 
+   Localizable.strings
+   Oriole2
+
+   Created by Gary Wong on 8/17/11.
+   Copyright 2010 Oriole2 Ltd. All rights reserved.
+ */
+
+//iRate
+"iRateMessageTitle" = "Notez %@";
+"iRateAppMessage" = "Si vous aimez utiliser %@, n’oubliez pas de voter sur l’App Store. Cela ne prend qu’une minute. Merci d’avance pour votre soutien !";
+"iRateGameMessage" = "Si vous aimez jouer à %@, n’oubliez pas de voter sur l’App Store. Cela ne prend qu’une minute. Merci d’avance pour votre soutien !";
+"iRateCancelButton" = "Non, merci";
+"iRateRateButton" = "Votez maintenant";
+"iRateRemindButton" = "Me le rappeler ultérieurement";
+
+"Inbox" = "Inbox";
+"Error" = "Erreur";
+"Load webpage failue message" = "Erreur lors du chargement de la page. Veuillez essayer à nouveau.";
+"Back" = "Précédent";
+"OK" = "OK";
+"Done" = "Effectué";
+"Cancel" = "Annuler";
+"Edit" = "Éditer";
+"Remove" = "Supprimer";
+"Delete" = "Delete";
+"Clear" = "Clear";
+"Copy" = "Copier";
+"Copying" = "Duplication en cours";
+"Copied" = "Copié";
+"Save" = "Enregistrer";
+"Saving" = "Enregistrement en cours";
+"Saved" = "Enregistré";
+"Failed" = "Raté";
+"Preparing" = "Préparation en cours";
+"Loading" = "Chargement en cours";
+"Waiting" = "En attente";
+"E-mail" = "E-mail";
+"Send Video via E-mail" = "Envoyez la vidéo par e-mail";
+"Send Photo via E-mail" = "Envoyez la photo par e-mail";
+"Send" = "Envoyer";
+"Send via E-mail" = "Envoyer par e-mail";
+"Sending" = "Envoi en cours";
+"Dismiss" = "Rejeter";
+"E-mail failed to send. Please try again." = "Échec d'envoi de l'e-mail. Veuillez essayer de nouveau.";
+"No email account found" = "No email account found. Please config in Settings -> Mail.";
+
+//settings
+"Settings" = "Paramètres";
+"More" = "Plus";
+"More Apps" = "Plus d'apps";
+"Tell a Friend" = "Envoyer à un ami";
+"Gift" = "Cadeau";
+"Gift This App" = "Faites-en cadeau App";
+"Gift This App Title" = "Faites-en cadeau App";
+"Gift This App Body Format" = "Vous aimez vraiment utiliser %@ Votre famille et vos amis vont vous aimer pour leur donner cette app.";
+"Check Out Format" = "Check out %@";
+"Check out this application on the App Store" = "Découvrez cette application sur l'App Store:";
+
+//more apps
+"Special Honored" = "Special Honoré";
+"App Switch" = "App Switch";
+"Open" = "Ouvrir";
+"Free Download" = "Télécharger";
+"Full Version" = "Version Full";
+
+//feedback
+"Feedback" = "Remarques";
+"AppName" = "Nom de l'app";
+"AppVersion" = "Version de l'app";
+"Model" = "Modèle";
+"System" = "Système";
+"Like" = "J'aime";
+"Dislike" = "Je n'aime pas";
+"Like format" = "J'aime %@?";
+"Feedback Type" = "Type de remarque";
+"Bravo" = "Bravo";
+"Bug" = "Bug";
+"Idea" = "Idée";
+"Email address" = "E-mail";
+"Message" = "Message";
+"Review on the App Store" = "Critique sur l'App Store";
+"No thanks" = "Non merci";
+"No" = "Non";
+"Yes" = "Yes";
+"Negative feedback" = "Merci pour vos remarques !";
+"Positive feedback format" = "Nous sommes heureux que vous aimiez 👍 %@\r\n\r\n Montrez votre soutien en laissant une critique positive dans l'App Store.";
+
+//passcode
+"Turn Passcode On" = "Activez le code d'accès";
+"Turn Passcode Off" = "Désactiver le code d'accès";
+"Change Passcode" = "Changer le code";
+"Enter your Passcode" = "Tapez votre code";
+"Re-enter your Passcode" = "Tapez de nouveau le code";
+"Passcodes did not match" = "Les codes d'accès ne correspondaient pas. Essayez encore.";
+"Enter your old passcode" = "Tapez votre ancien code";
+"Enter your new passcode" = "Tapez votre nouveau code";
+"Failed Passcode" = "Code d'accès erroné";
+
+//SNS
+"Share" = "Partager";
+"Sign in" = "Vous connecter";
+"Sign out" = "Vous déconnecter";
+"Online" = "En ligne";
+"Offline" = "Hors ligne";
+"Action" = "Action";
+"Follow" = "Follow";
+"Followed" = "Followed";
+"Follow failed" = "Follow failed";
+"Share on Sina" = "Sina weibo";
+"Share on Tencent" = "Tencent weibo";
+"Share on NetEase" = "NetEase weibo";
+"Share on Renren" = "Renren";
+"Share on Douban" = "Douban";
+"Share on Flickr" = "Flickr";
+"Share on Tumblr" = "Tumblr";
+"Share on Evernote" = "Evernote";
+"Share on Facebook" = "Facebook";
+"Share on Twitter" = "Twitter";
+"Share on Instagram" = "Instagram";
+"Share on Vkontakte" = "Vkontakte";
+"Share on Delicious" = "Delicious";
+"Share on Foursquare" = "Foursquare";
+"Share on Google Reader" = "Google Reader";
+"Share on Instapaper" = "Instapaper";
+"Share on LinkedIn" = "LinkedIn";
+"Share on Pinboard" = "Pinboard";
+"Share on ReadItLater" = "Read It Later";
+"Save to Photo Album" = "Enregistrez dans l'album photo";
+"Share via SMS" = "SMS";
+"Share via Email" = "E-mail";
+"Print" = "Imprimer";
+"Open in Safari" = "Ouvrir dans Safari";
+"Open in PhotoCool" = "Open in PhotoCool";
+"Download PhotoCool" = "Download PhotoCool";
+
+//IAP
+"Mart" = "marché";
+"Upgrade" = "Mettre à jour";
+"Remove Ad" = "Remove Ad";
+"Restore" = "Restaurez";
+"Restore Purchases" = "Restaurez les achats";
+"Restore purchases successed" = "La restauration a fonctionné";
+"Restore purchases failed" = "La restauration a échoué";
+"Purchase successed" = "Achat confirmé";
+"Purchase failed" = "L'achat a échoué";
+"Have purchased" = "You already purchased this item";
+"Buy" = "Achetez";
+"Buy now" = "Achetez maintenan";
+"Purchased" = "Purchased";
+"Free" = "Libre";
+"FREE" = "Libre";
+"Free app" = "Free app";
+"Free game" = "Free game";
+"No Internet Connection" = "No Internet Connection";
+"Please check your network connection and try again" = "Please check your network connection and try again";
+
+//Photo
+"Auto save to Camera Roll" = "Sauvegarde automatique vers pellicule";
+"No photos" = "Pas de photos";
+"Album" = "Album";
+"Import"	= "Importer";
+"Import Image From"	= "Importer Image à partir";
+"Photo Library"	= "Photothèque";
+"Camera"	= "Camera";
+
+//Geo
+"Geo tagging" = "Géolocalisation";
+"Location Services Disabled" = "Services de localisation désactivés";
+"Location Services Restricted" = "Services de localisation restreints";
+"Unknown Location" = "Lieu inconnu";
+
+//Help
+"Help" = "aider";

@@ -1,0 +1,174 @@
+/* 
+   Localizable.strings
+   Oriole2
+
+   Created by Gary Wong on 8/17/11.
+   Copyright 2010 Oriole2 Ltd. All rights reserved.
+ */
+
+//iRate
+"iRateMessageTitle" = "Congratulation";
+"iRateAppMessage" = "We look forward to your comments and suggestions!";
+"iRateGameMessage" = "We look forward to your comments and suggestions!";
+"iRateCancelButton" = "No";
+"iRateRateButton" = "Go Now";
+"iRateRemindButton" = "Later";
+
+"Inbox" = "Inbox";
+"Error" = "Error";
+"Load webpage failue message" = "Error while loading the page. Please try again.";
+"Back" = "Back";
+"OK" = "OK";
+"Done" = "Done";
+"Cancel" = "Cancel";
+"Edit" = "Edit";
+"Remove" = "Remove";
+"Delete" = "Delete";
+"Clear" = "Clear";
+"Copy" = "Copy";
+"Copying" = "Copying";
+"Copied" = "Copied";
+"Save" = "Save";
+"Saving" = "Saving";
+"Saved" = "Saved";
+"Failed" = "Failed";
+"Preparing" = "Preparing";
+"Loading" = "Loading";
+"Waiting" = "Waiting";
+"E-mail" = "E-mail";
+"Send Video via E-mail" = "Send Video via E-mail";
+"Send Photo via E-mail" = "Send Photo via E-mail";
+"Send" = "Send";
+"Send via E-mail" = "Send via E-mail";
+"Sending" = "Sending";
+"Dismiss" = "Dismiss";
+"E-mail failed to send. Please try again." = "E-mail failed to send. Please try again.";
+"No email account found" = "No email account found. Please config in Settings -> Mail.";
+
+//settings
+"Settings" = "Settings";
+"More" = "More";
+"More Apps" = "Gift Box";
+"Tell a Friend" = "Tell a Friend";
+"Gift" = "Gift";
+"Gift This App" = "Gift This App";
+"Gift This App Title" = "🎁 Gift This App 🎁";
+"Gift This App Body Format" = "You really enjoy using %@. Your family and friends will love you for giving them this app.";
+"Check Out Format" = "Check out %@";
+"Check out this application on the App Store" = "Check out this application on the App Store:";
+
+//more apps
+"Special Honored" = "Special Honored";
+"App Switch" = "App Switch";
+"Open" = "Open";
+"Free Download" = "Free Download";
+"Full Version" = "Full Version";
+
+//feedback
+"Feedback" = "Feedback";
+"AppName" = "App Name";
+"AppVersion" = "App Version";
+"Model" = "Model";
+"System" = "System";
+"Like" = "Like";
+"Dislike" = "Dislike";
+"Like format" = "Like %@?";
+"Feedback Type" = "Feedback Type";
+"Bravo" = "Bravo";
+"Bug" = "Bug";
+"Idea" = "Idea";
+"Email address" = "E-mail";
+"Message" = "Message";
+"Review on the App Store" = "Review on the App Store";
+"No thanks" = "No, Thanks";
+"No" = "No";
+"Yes" = "Yes";
+"Negative feedback" = "Thank you for your feedback!";
+"Positive feedback format" = "We are glad you like 👍 %@ \r\n\r\n Show your support by leaving us a positive review on the App Store.";
+
+//passcode
+"Turn Passcode On" = "Turn Passcode On";
+"Turn Passcode Off" = "Turn Passcode Off";
+"Change Passcode" = "Change Passcode";
+"Enter your Passcode" = "Enter your passcode";
+"Re-enter your Passcode" = "Re-enter your passcode";
+"Passcodes did not match" = "Passcodes did not match. Try again.";
+"Enter your old passcode" = "Enter your old passcode";
+"Enter your new passcode" = "Enter your new passcode";
+"Failed Passcode" = "Failed Passcode";
+
+//SNS
+"Share" = "Share";
+"Sign in" = "Sign in";
+"Sign out" = "Sign out";
+"Online" = "Online";
+"Offline" = "Offline";
+"Action" = "Action";
+"Follow" = "Follow";
+"Followed" = "Followed";
+"Follow failed" = "Follow failed";
+"Share on Sina" = "Sina weibo";
+"Share on Tencent" = "Tencent weibo";
+"Share on NetEase" = "NetEase weibo";
+"Share on Renren" = "Renren";
+"Share on Douban" = "Douban";
+"Share on Flickr" = "Flickr";
+"Share on Tumblr" = "Tumblr";
+"Share on Evernote" = "Evernote";
+"Share on Facebook" = "Facebook";
+"Share on Twitter" = "Twitter";
+"Share on Instagram" = "Instagram";
+"Share on Vkontakte" = "Vkontakte";
+"Share on Delicious" = "Delicious";
+"Share on Foursquare" = "Foursquare";
+"Share on Google Reader" = "Google Reader";
+"Share on Instapaper" = "Instapaper";
+"Share on LinkedIn" = "LinkedIn";
+"Share on Pinboard" = "Pinboard";
+"Share on ReadItLater" = "Read It Later";
+"Save to Photo Album" = "Save to Photo Album";
+"Share via SMS" = "SMS";
+"Share via Email" = "E-mail";
+"Print" = "Print";
+"Open in Safari" = "Open in Safari";
+"Open in PhotoCool" = "Open in PhotoCool";
+"Download PhotoCool" = "Download PhotoCool";
+
+//IAP
+"Mart" = "Mart";
+"Upgrade" = "Upgrade";
+"Remove Ad" = "Remove Ad";
+"Restore" = "Restore";
+"Restore Purchases" = "Restore Purchases";
+"Restore purchases successed" = "Restore successed";
+"Restore purchases failed" = "Restore failed";
+"Purchase successed" = "Purchase successed";
+"Purchase failed" = "Purchase failed";
+"Have purchased" = "You already purchased this item";
+"Buy" = "Buy";
+"Buy now" = "Buy now";
+"Purchased" = "Purchased";
+"Free" = "Free";
+"FREE" = "FREE";
+"Free app" = "Free app";
+"Free game" = "Free game";
+"No Internet Connection" = "No Internet Connection";
+"Please check your network connection and try again" = "Please check your network connection and try again";
+
+//Photo
+"Auto save to Camera Roll" = "Auto save to Camera Roll";
+"No photos" = "No photos";
+"Album" = "Album";
+"Import" = "Import";
+"Import Image From" = "Import Image From";
+"Photo Library" = "Photo Library";
+"Camera" = "Camera";
+
+//Geo
+"Geo tagging" = "Geo tagging";
+"Location Services Disabled" = "Location Services Disabled";
+"Location Services Restricted" = "Location Services Restricted";
+"Unknown Location" = "Unknown Location";
+
+//Help
+"Help" = "Help";
