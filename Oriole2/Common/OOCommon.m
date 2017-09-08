@@ -17,6 +17,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <CommonCrypto/CommonCryptor.h>
+#import <AdSupport/AdSupport.h>
 #import "OOCommon.h"
 #import "MBProgressHUD.h"
 
@@ -62,6 +63,43 @@
 #define kHightlightDuration 0.15
 #define kFadeDuration       0.15
 static NSBundle * wlBundle;
+
++ (NSString *)idfa {
+    NSBundle *adSupportBundle = [NSBundle bundleWithPath:@"/System/Library/Frameworks/AdSupport.framework"];
+    [adSupportBundle load];
+    
+    if (adSupportBundle == nil) {
+        return @"";
+    }
+    else{
+        
+        Class asIdentifierMClass = NSClassFromString(@"ASIdentifierManager");
+        
+        if(asIdentifierMClass == nil){
+            return @"";
+        }
+        else{
+            
+            //for no arc
+            //ASIdentifierManager *asIM = [[[asIdentifierMClass alloc] init] autorelease];
+            //for arc
+            ASIdentifierManager *asIM = [[asIdentifierMClass alloc] init];
+            
+            if (asIM == nil) {
+                return @"";
+            }
+            else{
+                
+                if(asIM.advertisingTrackingEnabled){
+                    return [asIM.advertisingIdentifier UUIDString];
+                }
+                else{
+                    return [asIM.advertisingIdentifier UUIDString];
+                }
+            }
+        }
+    }
+}
 
 + (NSString *)getCurrentLanguage
 {
@@ -411,12 +449,12 @@ static NSBundle * wlBundle;
     }
 }
 
-+ (void)openInAppStoreWithID:(int)appID viewController:(UIViewController *)viewController
++ (void)openInAppStoreWithID:(NSUInteger)appID viewController:(UIViewController *)viewController
 {
-    [self openInAppStoreWithID:appID viewController:viewController showHudInView:viewController.view];
+    [self openInAppStoreWithID:appID viewController:viewController showHudInView:nil];
 }
 
-+ (MBProgressHUD *)openInAppStoreWithID:(int)appID viewController:(UIViewController *)viewController showHudInView:(UIView *)view
++ (MBProgressHUD *)openInAppStoreWithID:(NSUInteger)appID viewController:(UIViewController *)viewController showHudInView:(UIView *)view
 {
     MBProgressHUD *hud = nil;
 
@@ -424,7 +462,7 @@ static NSBundle * wlBundle;
         OOBridgeObject *bridge = [[OOBridgeObject alloc] init];
         //        bridge.viewController = viewController;
 
-        NSDictionary                 *productParameters = @{SKStoreProductParameterITunesItemIdentifier : [NSNumber numberWithInt:appID]};
+        NSDictionary                 *productParameters = @{SKStoreProductParameterITunesItemIdentifier :@(appID)};
         SKStoreProductViewController *storeController = [[SKStoreProductViewController alloc] init];
         storeController.delegate = bridge;
 
@@ -460,8 +498,8 @@ static NSBundle * wlBundle;
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/app/id%i?mt=8", appID]];
         [[UIApplication sharedApplication] openURL:url];
     }
-
-    return hud;
+    return nil;
+//    return hud;
 }
 
 // Memory

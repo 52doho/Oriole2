@@ -47,6 +47,6 @@
 @interface OOActivityInstagram : OOActivityBase
 {
 }
-@property (nonatomic, strong) NSString *caption;
+@property (nonatomic, strong) NSString *caption;// 已经不能使用
 
 @end

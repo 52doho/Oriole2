@@ -146,6 +146,8 @@ dispatch_async(dispatch_get_main_queue(), block); \
 {
 }
 
++ (NSString *)idfa;
+
 + (NSString *)getCurrentLanguage;
 + (NSString *)hashString:(NSString *)str;
 + (NSString *)getLocalizedAppName;
@@ -171,8 +173,8 @@ dispatch_async(dispatch_get_main_queue(), block); \
 + (NSString *)getFrequencyTextByUnit:(NSUInteger)calendarUnit;
 + (NSUInteger)getCalendarUnitByFrequencyText:(NSString *)text;
 
-+ (void)openInAppStoreWithID:(int)appID viewController:(UIViewController *)viewController;
-+ (MBProgressHUD *)openInAppStoreWithID:(int)appID viewController:(UIViewController *)viewController showHudInView:(UIView *)view;
++ (void)openInAppStoreWithID:(NSUInteger)appID viewController:(UIViewController *)viewController;
++ (MBProgressHUD *)openInAppStoreWithID:(NSUInteger)appID viewController:(UIViewController *)viewController showHudInView:(UIView *)view;
 
 // Memory
 + (void)logMemory;

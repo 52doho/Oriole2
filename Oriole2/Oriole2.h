@@ -19,7 +19,9 @@
 #import "OOAppDelegate.h"
 #import "OOCommon.h"
 #import "OOMoreAppsEntity.h"
-#import "OOParseManager.h"
+
+// ---------------------------Ad---------------------------
+#import "OOAd.h"
 
 // ---------------------------Animation---------------------------
 #import "OOAnimation.h"
@@ -30,6 +32,7 @@
 
 // ---------------------------Controls---------------------------
 #import "OOMoreAppsView.h"
+#import "OOMoreAppsButton.h"
 #import "OOSplashView.h"
 #import "OOZoomableImageView.h"
 

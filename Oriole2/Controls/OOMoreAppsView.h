@@ -27,6 +27,7 @@
 - (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 - (void)startAnimate;
 - (void)stopAnimate;
+- (void)setBannerImageUrls:(NSArray *)imageUrls;
 
 - (void)bindWithData:(OOMoreAppsEntity *)moreAppsEntity;
 

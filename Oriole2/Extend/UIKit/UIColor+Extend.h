@@ -23,5 +23,6 @@
  *   Get a random UIColor object
  */
 + (UIColor *)randomColor;
++ (UIColor *)colorFromHexString:(NSString *)hexString;
 
 @end

@@ -31,22 +31,39 @@
 
 @implementation OOMoreAppsView
 
+- (NSString *)_getLocalPathForImageUrl:(NSString *)url {
+    NSString *filename = [url lastPathComponent];
+    if (filename.length == 0) {
+        return nil;
+    }
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *folder = [path stringByAppendingPathComponent:@"ads"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:folder]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    return [folder stringByAppendingPathComponent:filename];
+}
+
+- (BOOL)_isWebUrl:(NSString *)str {
+    return str.length > 0 && [str rangeOfString:@"http"].location == 0;
+}
+
 - (void)_setDefault
 {
     self.backgroundColor = [UIColor clearColor];
     self.clipsToBounds = YES;
 
-    aryImageNames = [NSArray arrayWithObjects:@"Oriole2.bundle/Images/MoreApps_Oriole2_Orange.png",
-        @"Oriole2.bundle/Images/MoreApps_Oriole2_Blue.png",
-        @"Oriole2.bundle/Images/MoreApps_Oriole2_Green.png", nil];
+    if (!aryImageNames) {
+        [self setBannerImageUrls:[NSArray arrayWithObjects:@"Oriole2.bundle/Images/MoreApps_Oriole2_Orange.png",
+                               @"Oriole2.bundle/Images/MoreApps_Oriole2_Blue.png",
+                               @"Oriole2.bundle/Images/MoreApps_Oriole2_Green.png", nil]];
+    }
 
     btn1 = [[UIButton alloc] init];
     btn1.backgroundColor = [UIColor clearColor];
     btn1.imageView.contentMode = UIViewContentModeScaleAspectFit;
     btn1.contentMode = UIViewContentModeScaleAspectFit;
-    uint newTag = 0;
-    [btn1 setImage:[self _getRandomImageExceptWithTag:-1 newTag:&newTag] forState:UIControlStateNormal];
-    btn1.tag = newTag;
     [self addSubview:btn1];
 
     btn2 = [[UIButton alloc] init];
@@ -74,6 +91,8 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+    
     [self _setDefault];
 }
 
@@ -84,16 +103,42 @@
     btn1.frame = btn2.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 }
 
+- (void)setBannerImageUrls:(NSArray *)imageUrls {
+    NSMutableArray *_newImages = [NSMutableArray array];
+    for (id imageUrl in imageUrls) {
+        if ([imageUrl isKindOfClass:[NSString class]]) {
+            [_newImages addObject:imageUrl];
+            
+            if ([self _isWebUrl:imageUrl]) {
+                NSString *path = [self _getLocalPathForImageUrl:imageUrl];
+                if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+                        [imageData writeToFile:path atomically:YES];
+                    });
+                }
+            }
+        }
+    }
+    if ([_newImages count] > 0) {
+        aryImageNames = _newImages;
+        
+        uint newTag = 0;
+        [btn1 setImage:[self _getRandomImageExceptWithTag:-1 newTag:&newTag] forState:UIControlStateNormal];
+        btn1.tag = newTag;
+    }
+}
+
 - (void)setRandomTimeFrom:(float)value
 {
-    if (value <= _randomTimeTo) {
+    if (value > 0 && value <= _randomTimeTo) {
         _randomTimeFrom = value;
     }
 }
 
 - (void)setRandomTimeTo:(float)value
 {
-    if (value >= _randomTimeFrom) {
+    if (value > 0 && value >= _randomTimeFrom) {
         _randomTimeTo = value;
     }
 }
@@ -119,7 +164,7 @@
     NSUInteger       appId = NSUIntegerMax;
 
     for (OOAppEntity *app in moreAppsEntity.aryAppEntities) {
-        uint     _id = app.appId;
+        NSUInteger _id = app.appId;
         NSString *scheme = app.scheme;
 
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]]) {
@@ -131,23 +176,28 @@
     }
 
     if ((appId != NSUIntegerMax) && topmostViewController) {
-        MBProgressHUD *hud = [OOCommon openInAppStoreWithID:appId viewController:topmostViewController showHudInView:self];
-        hud.opacity = 0;
-        hud.labelText = nil;
+        [OOCommon openInAppStoreWithID:appId viewController:topmostViewController];
     } else {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:moreAppsEntity.artistUrl ?:@"itms-apps://itunes.apple.com/us/artist/oriole2-co.-ltd./id506665225?mt=8"]];
     }
 }
 
-- (UIImage *)_getRandomImageExceptWithTag:(int)tag newTag:(uint *)newTag
+- (UIImage *)_getRandomImageExceptWithTag:(NSUInteger)tag newTag:(uint *)newTag
 {
-    uint i = OORANDOM(0, aryImageNames.count);
+    NSUInteger count = aryImageNames.count;
+    uint i = OORANDOM(0, count);
 
-    while (i == tag)
-        i = OORANDOM(0, aryImageNames.count);
+    while (i == tag && count > 1)
+        i = OORANDOM(0, count);
 
+    UIImage  *image;
     NSString *name = aryImageNames[i];
-    UIImage  *image = kUniversalImage(name);
+    if ([self _isWebUrl:name]) {
+        NSString *path = [self _getLocalPathForImageUrl:name];
+        image = [UIImage imageWithContentsOfFile:path];
+    } else {
+        image = kUniversalImage(name);
+    }
 
     if (newTag) {
         *newTag = i;

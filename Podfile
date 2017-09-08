@@ -1,7 +1,8 @@
 platform :ios, "6.0"
 
-link_with 'Oriole2', 'Oriole2_App'
+target 'Oriole2'
 pod 'MBProgressHUD'
 pod 'iRate'
 pod 'iVersion'
-pod 'Parse'
+pod 'LKbadgeView'
+pod 'Google-Mobile-Ads-SDK', '~> 7.23.0'
