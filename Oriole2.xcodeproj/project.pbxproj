@@ -11,8 +11,8 @@
 		4E0DE7131769D282008A4E30 /* OOMoreAppsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0DE7111769D282008A4E30 /* OOMoreAppsView.h */; };
 		4E0DE7151769D282008A4E30 /* OOMoreAppsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DE7121769D282008A4E30 /* OOMoreAppsView.m */; };
 		4E1FDE3414F5CB3D003D15C0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */; };
-		4E2B65CE194CB70B00552E94 /* OOMoreAppsEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B65CA194CB70B00552E94 /* OOMoreAppsEntity.h */; };
-		4E2B65D0194CB70B00552E94 /* OOMoreAppsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B65CB194CB70B00552E94 /* OOMoreAppsEntity.m */; };
+		4E393C261F6360200008FEA7 /* DeviceUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E393C241F6360200008FEA7 /* DeviceUID.h */; };
+		4E393C271F6360200008FEA7 /* DeviceUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E393C251F6360200008FEA7 /* DeviceUID.m */; };
 		4E4721491711778B00675F51 /* OOZoomableImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4721471711778B00675F51 /* OOZoomableImageView.h */; };
 		4E47214B1711778B00675F51 /* OOZoomableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4721481711778B00675F51 /* OOZoomableImageView.m */; };
 		4E47214F1711779600675F51 /* OOActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E47214D1711779600675F51 /* OOActivity.h */; };
@@ -77,8 +77,8 @@
 		4E135BEF15558FF9000EDE4D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E135BF115559005000EDE4D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		4E2B65CA194CB70B00552E94 /* OOMoreAppsEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOMoreAppsEntity.h; sourceTree = "<group>"; };
-		4E2B65CB194CB70B00552E94 /* OOMoreAppsEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOMoreAppsEntity.m; sourceTree = "<group>"; };
+		4E393C241F6360200008FEA7 /* DeviceUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUID.h; sourceTree = "<group>"; };
+		4E393C251F6360200008FEA7 /* DeviceUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUID.m; sourceTree = "<group>"; };
 		4E4721471711778B00675F51 /* OOZoomableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOZoomableImageView.h; sourceTree = "<group>"; };
 		4E4721481711778B00675F51 /* OOZoomableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOZoomableImageView.m; sourceTree = "<group>"; };
 		4E47214D1711779600675F51 /* OOActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOActivity.h; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 = {
+		0867D691FE84028FC02AAC07 /* VSCommonLib */ = {
 			isa = PBXGroup;
 			children = (
 				4EA5BAF91607286900C27749 /* Oriole2 */,
@@ -289,8 +289,8 @@
 				4EA5BB081607286900C27749 /* OOAppDelegate.m */,
 				4EA5BB091607286900C27749 /* OOCommon.h */,
 				4EA5BB0A1607286900C27749 /* OOCommon.m */,
-				4E2B65CA194CB70B00552E94 /* OOMoreAppsEntity.h */,
-				4E2B65CB194CB70B00552E94 /* OOMoreAppsEntity.m */,
+				4E393C241F6360200008FEA7 /* DeviceUID.h */,
+				4E393C251F6360200008FEA7 /* DeviceUID.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -426,7 +426,6 @@
 				4EA5BDF81607286A00C27749 /* OOAnimation.h in Headers */,
 				4EA5BE081607286A00C27749 /* OOAppDelegate.h in Headers */,
 				4E5FAB401A2AD52400BA308D /* OOAnimationManager.h in Headers */,
-				4E2B65CE194CB70B00552E94 /* OOMoreAppsEntity.h in Headers */,
 				4EA5BE0C1607286A00C27749 /* OOCommon.h in Headers */,
 				4EFF0F56193CCCDA00782AD4 /* GTMObjectSingleton.h in Headers */,
 				4EA5BE401607286A00C27749 /* OOSplashView.h in Headers */,
@@ -436,6 +435,7 @@
 				4EA5BE581607286A00C27749 /* NSString+Extend.h in Headers */,
 				4EA5BE5C1607286A00C27749 /* UIColor+Extend.h in Headers */,
 				4EA5BE601607286A00C27749 /* UIImage+Extend.h in Headers */,
+				4E393C261F6360200008FEA7 /* DeviceUID.h in Headers */,
 				4EA5BE641607286A00C27749 /* UIImageView+Extend.h in Headers */,
 				4EA5BE681607286A00C27749 /* UIView+Extend.h in Headers */,
 				4EA5BE7C1607286A00C27749 /* OOExtend.h in Headers */,
@@ -513,7 +513,7 @@
 				es,
 				de,
 			);
-			mainGroup = 0867D691FE84028FC02AAC07;
+			mainGroup = 0867D691FE84028FC02AAC07 /* VSCommonLib */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -600,10 +600,10 @@
 				4EA5BE4E1607286A00C27749 /* OOGeometry+Extend.m in Sources */,
 				4EA5BE521607286A00C27749 /* NSData+Extend.m in Sources */,
 				4EA2069D1ABA4BD000FA02CE /* CALayer+XibConfiguration.m in Sources */,
+				4E393C271F6360200008FEA7 /* DeviceUID.m in Sources */,
 				4EA5BE5A1607286A00C27749 /* NSString+Extend.m in Sources */,
 				4EA5BE5E1607286A00C27749 /* UIColor+Extend.m in Sources */,
 				4E5FAB411A2AD52400BA308D /* OOAnimationManager.m in Sources */,
-				4E2B65D0194CB70B00552E94 /* OOMoreAppsEntity.m in Sources */,
 				4EA5BE621607286A00C27749 /* UIImage+Extend.m in Sources */,
 				4EA5BE661607286A00C27749 /* UIImageView+Extend.m in Sources */,
 				4EA5BE6A1607286A00C27749 /* UIView+Extend.m in Sources */,

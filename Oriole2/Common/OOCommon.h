@@ -147,6 +147,23 @@ dispatch_async(dispatch_get_main_queue(), block); \
 }
 
 + (NSString *)idfa;
++ (NSString *)idfa_md5;
++ (NSString *)deviceId;
++ (NSString *)deviceName;
++ (NSString *)deviceLocale;
++ (NSString *)deviceCountry;
++ (NSString *)deviceModel;
++ (NSString *)deviceBrand;
++ (NSString *)timezone;
++ (NSString *)macAddress;
++ (NSString *)systemName;
++ (NSString *)systemVersion;
++ (NSString *)uniqueId;
++ (NSString *)bundleId;
++ (NSString *)appVersion;
++ (NSString *)buildNumber;
++ (NSString *)systemManufacturer;
++ (NSString *)userAgent;
 
 + (NSString *)getCurrentLanguage;
 + (NSString *)hashString:(NSString *)str;

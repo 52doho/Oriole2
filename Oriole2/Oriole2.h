@@ -18,7 +18,6 @@
 // ---------------------------Common---------------------------
 #import "OOAppDelegate.h"
 #import "OOCommon.h"
-#import "OOMoreAppsEntity.h"
 
 // ---------------------------Ad---------------------------
 #import "OOAd.h"

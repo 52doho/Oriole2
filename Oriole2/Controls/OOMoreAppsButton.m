@@ -19,7 +19,6 @@
 #import "OOCommon.h"
 #import "OOAd.h"
 #import "UIColor+Extend.h"
-#import "NSString+TKCategory.h"
 #import "LKBadgeView.h"
 
 @interface OOMoreAppsButton ()<GADInterstitialDelegate>
@@ -46,29 +45,12 @@
     }
 }
 
-- (void)_downloadConfig
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSURL *url = [NSURL URLWithString:@"http://120.27.195.105/magento/Oriole2/Oriole2.json"];
-//        NSData *data = [NSData dataWithContentsOfURL:url];
-        NSError *err = nil;
-        NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
-        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
-        if (!err && json) {
-            dispatch_main_async_safe(^{
-                [self _didLoadConfig:json];
-            });
-        } else {
-            OOLogError(@"下载广告配置错误：%@", err);
-        }
-    });
-}
-
-- (void)_didLoadConfig:(NSDictionary *)json {
-    _config = json;
-    NSDictionary *appConfig = json[self.configName];
+- (void)_didLoadConfig:(NSDictionary *)appConfig {
+    _config = appConfig;
     if (appConfig) {
+        BOOL disabled = [appConfig[@"download_button"][@"disabled"] boolValue];
+        self.hidden = disabled;
+        
         _app_callback_url = appConfig[@"download_button"][@"app_callback_url"];
         _is_show_interstitial = [appConfig[@"download_button"][@"is_show_interstitial"] boolValue];
         if (_is_show_interstitial) {
@@ -97,6 +79,10 @@
     UIColor *badge_color = [UIColor redColor];
     if (_appCurrentIndex >= ((int)_apps.count - 1)) {
         _appCurrentIndex = 0;
+        if (_interstitial_id.length > 0) {
+            _is_show_interstitial = true;
+            return;// 所有 app 已显示，显示 admob 广告
+        }
     }
     
     for (NSUInteger i = _appCurrentIndex; i < _apps.count; i++) {
@@ -138,7 +124,9 @@
     [self addSubview:badgeView];
     [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchDown];
     
-    [self _downloadConfig];
+    [[OOAd instance] downloadConfigWithAppName:self.configName completion:^(NSDictionary *dic) {
+        [self _didLoadConfig:dic];
+    }];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -196,16 +184,23 @@
         
         if ([self _isWebUrl:_app_callback_url]) {
             NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970] * 1000;
-            NSString *ios_idfa_md5 = [[[OOCommon idfa] md5sum] uppercaseString];
-            NSURLComponents *components = [NSURLComponents componentsWithString:_app_callback_url];
-            components.queryItems =
-            @[
-              [NSURLQueryItem queryItemWithName:@"channel" value:[NSString stringWithFormat:@"Oriole2_%@", self.configName]],
-              [NSURLQueryItem queryItemWithName:@"os" value:@"iOS"],
-              [NSURLQueryItem queryItemWithName:@"ios_idfa_md5" value:ios_idfa_md5],
-              [NSURLQueryItem queryItemWithName:@"timestamp" value:[@(timestamp) stringValue]],
-              ];
-            NSURL *url = components.URL;
+            NSDictionary *params = @{
+                                     @"channel":[NSString stringWithFormat:@"Oriole2_%@", self.configName],
+                                     @"timestamp":[@(timestamp) stringValue],
+                                     @"device_id":[OOCommon deviceId],
+                                     @"ios_idfa":[OOCommon idfa],
+                                     @"ios_idfa_md5":[OOCommon idfa_md5],
+                                     @"device_model":[OOCommon deviceModel],
+                                     @"device_brand":[OOCommon deviceBrand],
+                                     @"device_name":[OOCommon deviceName],
+                                     @"country":[OOCommon deviceCountry],
+                                     @"locale":[OOCommon deviceLocale],
+                                     @"system_version":[OOCommon systemVersion],
+                                     @"system_name":[OOCommon systemName],
+                                     @"app_version":[OOCommon appVersion],
+                                     @"timezone":[OOCommon timezone],
+                                     };
+            NSURL *url = [OOAd buildQueryUrl:_app_callback_url params:params];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             NSOperationQueue *queue = [[NSOperationQueue alloc] init];
             [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {

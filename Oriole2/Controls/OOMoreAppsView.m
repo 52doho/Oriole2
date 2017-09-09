@@ -24,7 +24,7 @@
     BOOL             canAnimate;
     UIButton         *btn1, *btn2;
     NSArray          *aryImageNames;
-    OOMoreAppsEntity *moreAppsEntity;
+//    OOMoreAppsEntity *moreAppsEntity;
 }
 
 @end
@@ -149,36 +149,36 @@
     [btn2 addTarget:target action:action forControlEvents:controlEvents];
 }
 
-- (void)bindWithData:(OOMoreAppsEntity *)entity
-{
-    if ([entity isKindOfClass:[OOMoreAppsEntity class]]) {
-        moreAppsEntity = entity;
-    }
-
-    [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchUpInside];
-}
+//- (void)bindWithData:(OOMoreAppsEntity *)entity
+//{
+//    if ([entity isKindOfClass:[OOMoreAppsEntity class]]) {
+//        moreAppsEntity = entity;
+//    }
+//
+//    [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchUpInside];
+//}
 
 - (void)_moreAppsViewTapped
 {
     UIViewController *topmostViewController = [OOCommon getTopmostViewController];
     NSUInteger       appId = NSUIntegerMax;
 
-    for (OOAppEntity *app in moreAppsEntity.aryAppEntities) {
-        NSUInteger _id = app.appId;
-        NSString *scheme = app.scheme;
-
-        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]]) {
-            continue; // has been installed
-        } else {
-            appId = _id;
-            break;
-        }
-    }
+//    for (OOAppEntity *app in moreAppsEntity.aryAppEntities) {
+//        NSUInteger _id = app.appId;
+//        NSString *scheme = app.scheme;
+//
+//        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]]) {
+//            continue; // has been installed
+//        } else {
+//            appId = _id;
+//            break;
+//        }
+//    }
 
     if ((appId != NSUIntegerMax) && topmostViewController) {
         [OOCommon openInAppStoreWithID:appId viewController:topmostViewController];
     } else {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:moreAppsEntity.artistUrl ?:@"itms-apps://itunes.apple.com/us/artist/oriole2-co.-ltd./id506665225?mt=8"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/us/artist/oriole2-co.-ltd./id506665225?mt=8"]];
     }
 }
 

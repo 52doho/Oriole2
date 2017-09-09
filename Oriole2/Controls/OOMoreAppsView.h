@@ -16,7 +16,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OOMoreAppsEntity.h"
+//#import "OOMoreAppsEntity.h"
 
 @interface OOMoreAppsView : UIView
 {
@@ -29,6 +29,6 @@
 - (void)stopAnimate;
 - (void)setBannerImageUrls:(NSArray *)imageUrls;
 
-- (void)bindWithData:(OOMoreAppsEntity *)moreAppsEntity;
+//- (void)bindWithData:(OOMoreAppsEntity *)moreAppsEntity;
 
 @end

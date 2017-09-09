@@ -6,7 +6,6 @@
 //
 
 #import "OOAd.h"
-#import "OOCommon.h"
 //#import <Chartboost/Chartboost.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
@@ -53,15 +52,55 @@
     return self;
 }
 
++ (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params {
+    NSMutableArray *queryItems = [NSMutableArray array];
+    for (NSString *key in [params allKeys]) {
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:key value:params[key]]];
+    }
+    NSURLComponents *components = [NSURLComponents componentsWithString:url];
+    components.queryItems = queryItems;
+    return components.URL;
+}
+
+- (void)downloadConfigWithAppName:(NSString *)appname completion:(OOBlockDictionary)completion {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSDictionary *params = @{
+                                 @"app":appname,
+                                 @"device_id":[OOCommon deviceId],
+                                 @"ios_idfa":[OOCommon idfa],
+                                 @"device_model":[OOCommon deviceModel],
+                                 @"device_brand":[OOCommon deviceBrand],
+                                 @"device_name":[OOCommon deviceName],
+                                 @"country":[OOCommon deviceCountry],
+                                 @"locale":[OOCommon deviceLocale],
+                                 @"system_version":[OOCommon systemVersion],
+                                 @"system_name":[OOCommon systemName],
+                                 @"app_version":[OOCommon appVersion],
+                                 @"timezone":[OOCommon timezone],
+                                 };
+        NSURL *url = [OOAd buildQueryUrl:@"https://www.taobangzhu.net/mobileapi/ad/configOriole2" params:params];
+        NSError *err = nil;
+        NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
+        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+        dispatch_main_async_safe(^{
+            if (completion) {
+                completion(json);
+                
+                _interstitial_aba_enabled = ![json[@"interstitial_aba"][@"disabled"] boolValue];
+            }
+        });
+        if (err || !json) {
+            OOLogError(@"下载广告配置错误：%@", err);
+        }
+    });
+}
+
 #define OOAdLog(log, ...) OOLog(@"<OOAd> %@", [NSString stringWithFormat:(log), ## __VA_ARGS__])
 
 #define kAdRequestParams @"kAdRequestParams"
 + (GADRequest *)adRequestWithPlacement:(NSString *)placement isMoreGame:(BOOL)isMoreGame {
     GADRequest        *request = [GADRequest request];
-    request.testDevices = @[
-                            @"5331e99c6444bf981c5847d8ed5a2166"
-                            ];
-    
     OOAdRequestParams *params = [[OOAdRequestParams alloc] init];
     
     params.placement = placement;
