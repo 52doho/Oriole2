@@ -25,11 +25,12 @@ typedef enum {
 
 @interface OOAd : NSObject {
 }
+@property (nonatomic, strong, readonly) NSDictionary *config;
 @property (nonatomic, assign) BOOL interstitial_aba_enabled;
 
 + (OOAd *)instance;
 + (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params;
-- (void)downloadConfigWithAppName:(NSString *)appname completion:(OOBlockDictionary)completion;
+- (void)downloadConfigWithAppName:(NSString *)appname;
 
 + (GADRequest *)adRequestWithPlacement:(NSString *)placement isMoreGame:(BOOL)isMoreGame;
 + (GADRequest *)adRequestWithPlacement:(NSString *)placement;

@@ -44,10 +44,10 @@
     [iRate sharedInstance].rateButtonLabel = OOLocalizedStringInOOBundle(@"iRateRateButton");
 
     [iVersion sharedInstance].ignoreButtonLabel = @"";
-    NSString *remind = [iVersion sharedInstance].remindButtonLabel;
-    NSString *download = [iVersion sharedInstance].downloadButtonLabel;
-    [iVersion sharedInstance].remindButtonLabel = download;
-    [iVersion sharedInstance].downloadButtonLabel = remind;
+//    NSString *remind = [iVersion sharedInstance].remindButtonLabel;
+//    NSString *download = [iVersion sharedInstance].downloadButtonLabel;
+//    [iVersion sharedInstance].remindButtonLabel = download;
+//    [iVersion sharedInstance].downloadButtonLabel = remind;
 }
 
 - (id)init

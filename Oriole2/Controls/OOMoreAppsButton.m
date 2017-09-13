@@ -124,9 +124,12 @@
     [self addSubview:badgeView];
     [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchDown];
     
-    [[OOAd instance] downloadConfigWithAppName:self.configName completion:^(NSDictionary *dic) {
-        [self _didLoadConfig:dic];
-    }];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didDownloadOOAdConfig:) name:@"kDidDownloadOOAdConfig" object:nil];
+    [[OOAd instance] downloadConfigWithAppName:self.configName];
+}
+
+- (void)_didDownloadOOAdConfig:(NSNotification *)notification {
+    [self _didLoadConfig:notification.object];
 }
 
 - (id)initWithFrame:(CGRect)frame

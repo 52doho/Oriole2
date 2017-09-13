@@ -62,7 +62,7 @@
     return components.URL;
 }
 
-- (void)downloadConfigWithAppName:(NSString *)appname completion:(OOBlockDictionary)completion {
+- (void)downloadConfigWithAppName:(NSString *)appname {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSDictionary *params = @{
                                  @"app":appname,
@@ -83,15 +83,14 @@
         NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
         NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
-        dispatch_main_async_safe(^{
-            if (completion) {
-                completion(json);
-                
-                _interstitial_aba_enabled = ![json[@"interstitial_aba"][@"disabled"] boolValue];
-            }
-        });
         if (err || !json) {
             OOLogError(@"下载广告配置错误：%@", err);
+        } else {
+            dispatch_main_async_safe(^{
+                _interstitial_aba_enabled = ![json[@"interstitial_aba"][@"disabled"] boolValue];
+                _config = json;
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"kDidDownloadOOAdConfig" object:json];
+            });
         }
     });
 }
