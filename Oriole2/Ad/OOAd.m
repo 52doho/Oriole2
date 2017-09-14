@@ -52,16 +52,6 @@
     return self;
 }
 
-+ (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params {
-    NSMutableArray *queryItems = [NSMutableArray array];
-    for (NSString *key in [params allKeys]) {
-        [queryItems addObject:[NSURLQueryItem queryItemWithName:key value:params[key]]];
-    }
-    NSURLComponents *components = [NSURLComponents componentsWithString:url];
-    components.queryItems = queryItems;
-    return components.URL;
-}
-
 - (void)downloadConfigWithAppName:(NSString *)appname {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSDictionary *params = @{
@@ -78,7 +68,7 @@
                                  @"app_version":[OOCommon appVersion],
                                  @"timezone":[OOCommon timezone],
                                  };
-        NSURL *url = [OOAd buildQueryUrl:@"https://www.taobangzhu.net/mobileapi/ad/configOriole2" params:params];
+        NSURL *url = [OOCommon buildQueryUrl:@"https://www.taobangzhu.net/mobileapi/ad/configOriole2" params:params];
         NSError *err = nil;
         NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
         NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];

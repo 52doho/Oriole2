@@ -29,7 +29,6 @@ typedef enum {
 @property (nonatomic, assign) BOOL interstitial_aba_enabled;
 
 + (OOAd *)instance;
-+ (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params;
 - (void)downloadConfigWithAppName:(NSString *)appname;
 
 + (GADRequest *)adRequestWithPlacement:(NSString *)placement isMoreGame:(BOOL)isMoreGame;

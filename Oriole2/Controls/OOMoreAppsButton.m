@@ -203,7 +203,7 @@
                                      @"app_version":[OOCommon appVersion],
                                      @"timezone":[OOCommon timezone],
                                      };
-            NSURL *url = [OOAd buildQueryUrl:_app_callback_url params:params];
+            NSURL *url = [OOCommon buildQueryUrl:_app_callback_url params:params];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             NSOperationQueue *queue = [[NSOperationQueue alloc] init];
             [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {

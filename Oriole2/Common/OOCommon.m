@@ -831,4 +831,42 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
         }];
 }
 
+
++ (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params {
+    NSMutableArray *queryItems = [NSMutableArray array];
+    for (NSString *key in [params allKeys]) {
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:key value:params[key]]];
+    }
+    NSURLComponents *components = [NSURLComponents componentsWithString:url];
+    components.queryItems = queryItems;
+    return components.URL;
+}
+
++ (void)logAppOpenWithAppName:(NSString *)appName {
+    if (appName.length > 0) {
+        NSDictionary *params = @{
+                                 @"app_name":appName,
+                                 @"device_id":[OOCommon deviceId],
+                                 @"ios_idfa":[OOCommon idfa],
+                                 @"ios_idfa_md5":[OOCommon idfa_md5],
+                                 @"device_model":[OOCommon deviceModel],
+                                 @"device_brand":[OOCommon deviceBrand],
+                                 @"device_name":[OOCommon deviceName],
+                                 @"country":[OOCommon deviceCountry],
+                                 @"locale":[OOCommon deviceLocale],
+                                 @"system_version":[OOCommon systemVersion],
+                                 @"system_name":[OOCommon systemName],
+                                 @"app_version":[OOCommon appVersion],
+                                 @"timezone":[OOCommon timezone],
+                                 };
+        NSURL *url = [OOCommon buildQueryUrl:@"https://www.taobangzhu.net/mobileapi/ad/oriole2AppOpenLog" params:params];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+            OOLog(@"点击记录结果：%@", connectionError);
+        }];
+    }
+}
+
 @end
+

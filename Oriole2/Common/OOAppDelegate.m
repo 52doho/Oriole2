@@ -33,7 +33,7 @@
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     [iRate sharedInstance].promptAtLaunch = NO;
     [iRate sharedInstance].daysUntilPrompt = 0;
-    [iRate sharedInstance].eventsUntilPrompt = 3;
+    [iRate sharedInstance].eventsUntilPrompt = 5;
     [iRate sharedInstance].usesUntilPrompt = 2;
     [iRate sharedInstance].remindPeriod = 4;
     [iRate sharedInstance].messageTitle = OOLocalizedStringInOOBundle(@"iRateMessageTitle");
@@ -42,7 +42,8 @@
     [iRate sharedInstance].cancelButtonLabel = @"";
     [iRate sharedInstance].remindButtonLabel = OOLocalizedStringInOOBundle(@"iRateRemindButton"); // exchange
     [iRate sharedInstance].rateButtonLabel = OOLocalizedStringInOOBundle(@"iRateRateButton");
-
+    
+    [iVersion sharedInstance].checkPeriod = 1;
     [iVersion sharedInstance].ignoreButtonLabel = @"";
 //    NSString *remind = [iVersion sharedInstance].remindButtonLabel;
 //    NSString *download = [iVersion sharedInstance].downloadButtonLabel;

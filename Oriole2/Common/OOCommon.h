@@ -202,4 +202,7 @@ dispatch_async(dispatch_get_main_queue(), block); \
 // write image to the album of app. if the album doesn't exist, then creat one.
 + (void)writeImageToSavedPhotosAlbum:(UIImage *)image metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock;
 
++ (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params;
++ (void)logAppOpenWithAppName:(NSString *)appName;
+
 @end
