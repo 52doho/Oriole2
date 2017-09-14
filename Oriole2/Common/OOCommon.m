@@ -22,6 +22,7 @@
 #import "DeviceUID.h"
 #import "MBProgressHUD.h"
 #import "NSString+TKCategory.h"
+#import "iVersion.h"
 
 #import <mach/task.h>
 #import <mach/mach.h>
@@ -63,11 +64,39 @@
 
 @end
 
+
+
+@interface OOCommon()<iVersionDelegate> {
+    OOBlockBool _iVersionStateChangedCallback;
+}
+
+@end
+
 @implementation OOCommon
 
 #define kHightlightDuration 0.15
 #define kFadeDuration       0.15
 static NSBundle * wlBundle;
+
++ (OOCommon *)instance{
+    static OOCommon *sharedInstance = nil;
+    if (sharedInstance == nil)
+    {
+        sharedInstance = [(OOCommon *)[self alloc] init];
+    }
+    return sharedInstance;
+}
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        [iVersion sharedInstance].delegate = self;
+    }
+    
+    return self;
+}
 
 + (NSString *)idfa {
     NSBundle *adSupportBundle = [NSBundle bundleWithPath:@"/System/Library/Frameworks/AdSupport.framework"];
@@ -866,6 +895,33 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
             OOLog(@"点击记录结果：%@", connectionError);
         }];
     }
+}
+
+- (void)iVersionStateChanged:(OOBlockBool)callback {
+    _iVersionStateChangedCallback = callback;
+    
+    NSString *lastNewVersion = [self _iVersionLastNewVersion];
+    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    BOOL hasNew = lastNewVersion.length > 0 && [lastNewVersion compare:currentVersion options:NSNumericSearch] == NSOrderedDescending;
+    ZPInvokeBlock(_iVersionStateChangedCallback, hasNew);
+}
+
+#define kiVersionLastNewVersion @"OOLastNewVersion"
+- (NSString *)_iVersionLastNewVersion
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kiVersionLastNewVersion];
+}
+
+- (void)_setiVersionLastNewVersion:(NSString *)version
+{
+    [[NSUserDefaults standardUserDefaults] setObject:version forKey:kiVersionLastNewVersion];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+#pragma mark -iVersionDelegate
+- (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
+    [self _setiVersionLastNewVersion:version];
+    ZPInvokeBlock(_iVersionStateChangedCallback, YES);
 }
 
 @end

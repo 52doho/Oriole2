@@ -13,6 +13,8 @@
 		4E1FDE3414F5CB3D003D15C0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */; };
 		4E393C261F6360200008FEA7 /* DeviceUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E393C241F6360200008FEA7 /* DeviceUID.h */; };
 		4E393C271F6360200008FEA7 /* DeviceUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E393C251F6360200008FEA7 /* DeviceUID.m */; };
+		4E394B621F6A38100037AFB4 /* OOAppNameButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E394B601F6A38100037AFB4 /* OOAppNameButton.h */; };
+		4E394B631F6A38100037AFB4 /* OOAppNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E394B611F6A38100037AFB4 /* OOAppNameButton.m */; };
 		4E4721491711778B00675F51 /* OOZoomableImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4721471711778B00675F51 /* OOZoomableImageView.h */; };
 		4E47214B1711778B00675F51 /* OOZoomableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4721481711778B00675F51 /* OOZoomableImageView.m */; };
 		4E47214F1711779600675F51 /* OOActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E47214D1711779600675F51 /* OOActivity.h */; };
@@ -79,6 +81,8 @@
 		4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4E393C241F6360200008FEA7 /* DeviceUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUID.h; sourceTree = "<group>"; };
 		4E393C251F6360200008FEA7 /* DeviceUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUID.m; sourceTree = "<group>"; };
+		4E394B601F6A38100037AFB4 /* OOAppNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAppNameButton.h; sourceTree = "<group>"; };
+		4E394B611F6A38100037AFB4 /* OOAppNameButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOAppNameButton.m; sourceTree = "<group>"; };
 		4E4721471711778B00675F51 /* OOZoomableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOZoomableImageView.h; sourceTree = "<group>"; };
 		4E4721481711778B00675F51 /* OOZoomableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOZoomableImageView.m; sourceTree = "<group>"; };
 		4E47214D1711779600675F51 /* OOActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOActivity.h; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 		4EA5BB111607286900C27749 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				4E394B601F6A38100037AFB4 /* OOAppNameButton.h */,
+				4E394B611F6A38100037AFB4 /* OOAppNameButton.m */,
 				4E0DE7111769D282008A4E30 /* OOMoreAppsView.h */,
 				4E0DE7121769D282008A4E30 /* OOMoreAppsView.m */,
 				4E9E22561F6272F500904BEB /* OOMoreAppsButton.h */,
@@ -440,6 +446,7 @@
 				4EA5BE681607286A00C27749 /* UIView+Extend.h in Headers */,
 				4EA5BE7C1607286A00C27749 /* OOExtend.h in Headers */,
 				4E9E22581F6272F500904BEB /* OOMoreAppsButton.h in Headers */,
+				4E394B621F6A38100037AFB4 /* OOAppNameButton.h in Headers */,
 				4EA5BE7E1607286A00C27749 /* Oriole2.h in Headers */,
 				4E9E225D1F627A3400904BEB /* OOAd.h in Headers */,
 				4EA5C2C41607286B00C27749 /* OOMailViewController.h in Headers */,
@@ -609,6 +616,7 @@
 				4EA5BE6A1607286A00C27749 /* UIView+Extend.m in Sources */,
 				4EA5C2C61607286B00C27749 /* OOMailViewController.m in Sources */,
 				4E47214B1711778B00675F51 /* OOZoomableImageView.m in Sources */,
+				4E394B631F6A38100037AFB4 /* OOAppNameButton.m in Sources */,
 				4E4721511711779600675F51 /* OOActivity.m in Sources */,
 				4E9E225E1F627A3400904BEB /* OOAd.m in Sources */,
 				4E0DE7151769D282008A4E30 /* OOMoreAppsView.m in Sources */,

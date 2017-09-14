@@ -146,6 +146,9 @@ dispatch_async(dispatch_get_main_queue(), block); \
 {
 }
 
++ (OOCommon *)instance;
+- (void)iVersionStateChanged:(OOBlockBool)callback;
+
 + (NSString *)idfa;
 + (NSString *)idfa_md5;
 + (NSString *)deviceId;

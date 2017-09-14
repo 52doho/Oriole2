@@ -155,7 +155,7 @@
     [super layoutSubviews];
 
     CGSize size = self.frame.size;
-    badgeView.frame = CGRectMake(0, -size.height * 0.6, size.width, size.height);
+    badgeView.frame = CGRectMake(0, -size.height * 0.7, size.width, size.height);
     
     // set again to SHOW badge
     [self _setBadge:badgeView.text];
