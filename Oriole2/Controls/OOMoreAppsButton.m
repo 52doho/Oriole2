@@ -115,12 +115,15 @@
 - (void)_setDefault
 {
     self.backgroundColor = [UIColor clearColor];
-
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
+    
     badgeView = [[LKBadgeView alloc] init];
     badgeView.textColor = [UIColor whiteColor];
+    badgeView.badgeColor = [UIColor clearColor];
     badgeView.font = [UIFont boldSystemFontOfSize:14];
     badgeView.horizontalAlignment = LKBadgeViewHorizontalAlignmentRight;
     badgeView.outlineWidth = 0;
+    [self _setBadge:@""];
     [self addSubview:badgeView];
     [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchDown];
     
@@ -130,6 +133,23 @@
 
 - (void)_didDownloadOOAdConfig:(NSNotification *)notification {
     [self _didLoadConfig:notification.object];
+}
+
++ (id)buttonWithConfigName:(NSString *)configName {
+    OOMoreAppsButton *button = [[OOMoreAppsButton alloc] initWithFrame:CGRectMake(0, 0, 150, 30) configName:configName];
+    return button;
+}
+
+- (id)initWithFrame:(CGRect)frame configName:(NSString *)configName
+{
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        self.configName = configName;
+        [self _setDefault];
+    }
+    
+    return self;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -153,12 +173,20 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-
+    
+    UILabel *label = nil;
+    for (UIView *subView in [self subviews]) {
+        if ([subView isKindOfClass:[UILabel class]]) {
+            label = (UILabel *)subView;
+        }
+    }
     CGSize size = self.frame.size;
-    badgeView.frame = CGRectMake(0, -size.height * 0.7, size.width, size.height);
+    CGFloat height = 22;
+    badgeView.frame = CGRectMake(0, label.frame.origin.y - height, size.width, height);
+    label.frame = CGRectMake(size.width - label.frame.size.width, label.frame.origin.y, label.frame.size.width, label.frame.size.height);
     
     // set again to SHOW badge
-    [self _setBadge:badgeView.text];
+    badgeView.text = badgeView.text;
 }
 
 - (BOOL)_isWebUrl:(NSString *)str {

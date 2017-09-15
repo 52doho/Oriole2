@@ -72,6 +72,9 @@
         NSError *err = nil;
         NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
         NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+        if (!data) {
+            return;
+        }
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
         if (err || !json) {
             OOLogError(@"下载广告配置错误：%@", err);

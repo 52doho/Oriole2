@@ -30,6 +30,7 @@
 #import "OOExtend.h"
 
 // ---------------------------Controls---------------------------
+#import "OOAppNameButton.h"
 #import "OOMoreAppsView.h"
 #import "OOMoreAppsButton.h"
 #import "OOSplashView.h"

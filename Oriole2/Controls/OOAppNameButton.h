@@ -21,4 +21,6 @@
 {
 }
 
++ (id)buttonWithName:(NSString *)name;
+
 @end

@@ -22,4 +22,6 @@
 }
 @property(nonatomic, retain) IB_DESIGNABLE NSString *configName;
 
++ (id)buttonWithConfigName:(NSString *)configName;
+
 @end

@@ -30,9 +30,16 @@
 
 @implementation OOAppNameButton
 
++ (id)buttonWithName:(NSString *)name {
+    OOAppNameButton *button = [[OOAppNameButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
+    [button setTitle:name forState:UIControlStateNormal];
+    return button;
+}
+
 - (void)_setDefault
 {
     self.backgroundColor = [UIColor clearColor];
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
 
     badgeView = [[LKBadgeView alloc] init];
     badgeView.badgeColor = [UIColor redColor];
@@ -75,8 +82,15 @@
 {
     [super layoutSubviews];
 
+    UILabel *label = nil;
+    for (UIView *subView in [self subviews]) {
+        if ([subView isKindOfClass:[UILabel class]]) {
+            label = (UILabel *)subView;
+        }
+    }
     CGSize size = self.frame.size;
-    badgeView.frame = CGRectMake(0, -size.height * 0.7, size.width, size.height);
+    CGFloat height = 22;
+    badgeView.frame = CGRectMake(0, label.frame.origin.y - height, size.width, height);
     
     // set again to SHOW badge
     badgeView.text = badgeView.text;

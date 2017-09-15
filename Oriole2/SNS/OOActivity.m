@@ -188,7 +188,7 @@
         }
     } else {
         // open photocool free in app store
-        [OOCommon openInAppStoreWithID:525995682 viewController:self.viewController];
+        [OOCommon openInAppStoreWithID:520418326 viewController:self.viewController];
     }
 
     [self activityDidFinish:YES];
