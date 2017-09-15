@@ -7,100 +7,374 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1807756E19A848F2C231A90DA517111A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5DFE361FE1333AE390621178CE1D3E /* UIKit.framework */; };
-		1E528D890E3B32D53D963CE1417BA4D8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A02E8E5397B257AD90322C04FD87085 /* MBProgressHUD-dummy.m */; };
-		271D3B10DA222B550CFC1C22850B8BAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D16849D6424F2BF5536A44DC0D576A2 /* Foundation.framework */; };
-		2A76DB3CD21C569626495DE7D69D7B0C /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F2C4D24551450B8D9FB461D69A988E /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2BCAF2AE488450BAC451E757E31D701C /* iRate.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BE7D4854FD21EF1D8A6BBFEF9DCE51 /* iRate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		41F3F0ADA2A729654ABA403D27BB0DB2 /* LKbadgeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8FF04B3B488EC232D814716D3F9573 /* LKbadgeView-dummy.m */; };
-		509D8F10DC7BD0265790C450C94228E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EFB5DF8426F596F91070C9D262405F /* CoreGraphics.framework */; };
-		535C3BD688BA2CDEC5DAE361DDF5D7B0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 713E84FB735E81C9B14B94BABC9FA676 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6B6936E5E2AA402A1DAE3011DB1573B1 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C56B6DE59EE81AE58ACF55BC2C336E /* iVersion.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6BB00037A0146C2384E584C316C3204D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D16849D6424F2BF5536A44DC0D576A2 /* Foundation.framework */; };
-		8C6232F0DDF1C10C59C5EB7553DD91F4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6260F0E3C123FA9DC09FC271AD9825 /* iRate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		951E122F9EFF8F6DF2AAF2E80A10630A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D16849D6424F2BF5536A44DC0D576A2 /* Foundation.framework */; };
-		979EC9FC52786632C7868277DEFF61D8 /* iVersion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CF2ED5AF30C3DDBF16692D1337567 /* iVersion-dummy.m */; };
-		ACEF04E1B1A727ADDA52D0C0EB36EF6D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B555187E3CF4CD52DE5B9AF8E5D9FC09 /* StoreKit.framework */; };
-		BAE1CE15D7F8BFEE81B0E13124EF74FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D16849D6424F2BF5536A44DC0D576A2 /* Foundation.framework */; };
-		BF26C62362FD5EFE73ADB7A93C458F9E /* LKBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = D23E12EFA4AE430DF15830AD35059286 /* LKBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C67A8A000A299E576C5F20B8922CB257 /* Pods-Oriole2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BF682E22809853A1472812637ED2DA /* Pods-Oriole2-dummy.m */; };
-		D00A03104BEB019F0072BCE512371A5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D16849D6424F2BF5536A44DC0D576A2 /* Foundation.framework */; };
-		D096B7E9A7B9DBC9B9AE2025D44FBF2E /* iVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DF1B3C3BA423493FDE9A25BC627ED51 /* iVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D41CC975469B508B5FF168E52DF66CED /* iRate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E2F932F05497544B11AA24A5AF49FD /* iRate-dummy.m */; };
-		F4CACA203D51BC789AEFA5ADCDC8301E /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B96210BA3EE03AFC70D40BD717366 /* LKBadgeView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		05566222D2FD59CA00AE22EC4F54D1DE /* NSObject+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDD740A503A32545B21A2666332B47B /* NSObject+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		08244BCA27831CCB7E97BDF7AF7C7431 /* NSArray+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9742C5134660340CE6F5282CB79CBB /* NSArray+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B61019A632E10237EAAE32F9562F6B7 /* TKCoverflowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A56ACDE668D624D840E5362CB64F6C /* TKCoverflowView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BBE63D91CDA5D2C015EDD40EB3BD7AC /* TKSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D340269ACF2D65BF9814E587435E66A8 /* TKSwitchCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0CF4181605B75715B3535BEFDD6826C7 /* TKGlowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D80F2359ADD9D87A85A66B6D62D72F55 /* TKGlowButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0DA05281BB654CA503C67AA33B5147FD /* TKImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 529C59861F3F4EE9BEC62ACFA28CFFD3 /* TKImageCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0DF12F5D9FF3B735A8C96A38745BB7E5 /* TKLabelTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3C43A91643932CA24E1A1F7670EA20 /* TKLabelTextFieldCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0EC3AF09E1FD436727CD18B9EDD3843F /* UIBarButtonItem+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AECC938BAA71415312221BE70EFEA7E /* UIBarButtonItem+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		10612A04D48ABEAB488E7FCD1410AA47 /* TKTextViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DD63BCC4D46E2E43B46261ED32CAABDA /* TKTextViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115C128E21EBC1206720B1D507AEA4C0 /* TKLabelTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D025B3B52D032D36337951C3BE5752 /* TKLabelTextFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11D6BAF7BEF85DF1B2BC8BDD212231D9 /* TKCalendarMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8825465E173E6E81D9868DF6BE4B87 /* TKCalendarMonthViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1231A89D2988B8B695789ED6F4BA81E1 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F182316FCB12679D9C10ECE440C2442 /* TKAlertCenter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		14C2FB41D13217703D2629ABBA5FBF03 /* TKShimmerLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 16BAF546FE5FE0DBF3F98A91F1CDFCDB /* TKShimmerLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14F0A2E64477A8CEFF1E89E385EEC498 /* TKCalendarDayEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA925963394C8E4A066194B0161E4E2D /* TKCalendarDayEventView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1715E8189C1672D29102DDA592D77BCB /* TKCoverflowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A02EFEBC3940C688C21C1D76BAB03 /* TKCoverflowView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1807756E19A848F2C231A90DA517111A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D05DBD84D2F2B468512BF6210992A06 /* UIKit.framework */; };
+		1E528D890E3B32D53D963CE1417BA4D8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7268D49AD4D7A2B29CBA7FB312162C8 /* MBProgressHUD-dummy.m */; };
+		1EEF27316D8A4BAAE34F250197ED2AA7 /* TKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 49AE5CEE770B4BF3F68A07F718752125 /* TKTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F4ED7072278331509992D5495181228 /* TapkuLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 7096FAF03DC59A62E40B66AA1FE7909F /* TapkuLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2028F61079B3DA8B223528924EDE747B /* TKCalendarMonthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D334EDFD6A2DD9B7076A961A2DE88B /* TKCalendarMonthViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		206FAA269F212D9F9C5FC81FD0832AC4 /* UIAlertView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C14B324D353621C4CA7E566A496F8066 /* UIAlertView+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		207A87A28E7DF295B1652D3B38DBBE67 /* NSString+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E821DD46E187A6699D1E309F678AED /* NSString+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		271D3B10DA222B550CFC1C22850B8BAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */; };
+		2730BD069FBDD5F3F25461A175BE4CF1 /* TKProgressAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA307DC5028F2892BC013B52B42629C5 /* TKProgressAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2833BF3277834802550DA6BA783D12E8 /* UIViewController+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE2D834276C0E53D2C86D2CC87FD096 /* UIViewController+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2A76DB3CD21C569626495DE7D69D7B0C /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3F5DEBEE70A85755C3944D53D72AD3 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BA399C51A239A3DA8EC28ECDB84CBB4 /* NSArray+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA034A0CF8255B248CA8E70B88ABE /* NSArray+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2BCAF2AE488450BAC451E757E31D701C /* iRate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6EF1B03C4AFBDDB419FFFBDCF775B6 /* iRate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FC43083ACF0A46904122EDEA0CD95AE /* TKEmptyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7B61DAD60DD55C82CEE9C0A1E5AB9F /* TKEmptyView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		310F83FFAAC7B1D764522F63B25E9B39 /* TKCalendarMonthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E0B0032D645195621B2A1A403A350 /* TKCalendarMonthTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		316C9C1431EF12C86272FFF8F12C939E /* TKLabelSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62933D7272A3D58EED2967C65D9261D7 /* TKLabelSwitchCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3883622E338222F47D711AAEBB5CCA73 /* UIScreen+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4775065B5201ABCD555318F25A26D03F /* UIScreen+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4127D8C08C84EE6F14942B9B1105589C /* TKHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FAC3657219F998020C0B3F9C01CDA6 /* TKHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41F3F0ADA2A729654ABA403D27BB0DB2 /* LKbadgeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 238E358AE13A838DFAA38220C829B5EA /* LKbadgeView-dummy.m */; };
+		42D5BE289DA135CEFFB21B3D2F701C14 /* NSMutableArray+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A4DF2BA45A3FE35A2BBAE94F5A7B2D /* NSMutableArray+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		433C65DB56AD882B0FEDEB1DE2ADC5B1 /* UIImagePickerController+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 130F8C6D3C8E74FE1C19EAC203AFE132 /* UIImagePickerController+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		458996020054A4BDE87B62B687BFE0B5 /* TKRetroButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE96A76841AB3F802EEAF993336C5B /* TKRetroButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		466758E62953DC8893C45CD9E3FD4985 /* TKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A41FAE11ABC3E958A76FCC81149FDAE /* TKWebViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		46D95C47B2FE7BB0FE4920BA4BB15233 /* TKCalendarMonthTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 315FC13BA175B9E6B6825C407F22E325 /* TKCalendarMonthTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4840A954E57FA0CF7EB9FB0B2D6C4D31 /* TKGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D137F0454AEC26D4A206CFAF8A1C0 /* TKGlobal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D534CD98195D179F24C7B8ACA9491C0 /* TKAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3086569C196935DF8802B9BD2D072469 /* TKAlertViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F7411F84BA4EA16AEFB1CD751CAD6EB /* TKCalendarDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3E03668CABFF98EB607C00D90D24B5 /* TKCalendarDayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FB86482B49934D2463E5A9629B3F714 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */; };
+		4FFE5655CC39CA2D939412439B4BCA38 /* UIScrollview+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADE386F1D91B8A30514A3358D3395C /* UIScrollview+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		509D8F10DC7BD0265790C450C94228E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A578FAF320BC929578D9E351D5E1F7 /* CoreGraphics.framework */; };
+		51CFB9B6ED53C34A5511FD1925CED140 /* UIImagePickerController+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F4EA9BDCAE9A3CDA4DD653C5CBCBFD5 /* UIImagePickerController+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		535C3BD688BA2CDEC5DAE361DDF5D7B0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E59E1B74E6AD3BAD2A6E2FE471412A32 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5500B01842D5483E32705080284A7C21 /* TKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E0C46A48E2BA48D0D85A6013AB0283 /* TKViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		569238AA646083C7082B63F68460230A /* TKShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D165B7D9FFBBC476E865EBC67F896CED /* TKShapeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5897235214DE8A5652773FAC373C36B0 /* UIColor+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 453EF0106FE8E00C6B1C57DB2AAE1B27 /* UIColor+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5A2E4D7C5256922952966E9FBB5BCD6F /* TKWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9798F94485313CD633B9FA9976229EF9 /* TKWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AE4B3BC7960F2B8FD5AA1DD79B13CC7 /* TKLabelFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E1392950C351231B52766BCADECEE2 /* TKLabelFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EC829DB03AFDE7A4BB24AB6FDE80CFF /* TKAlertCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA867DE27BC513E522DB229B248DA91 /* TKAlertCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EFB6345C2A67F4AAC64DA331BA63F1C /* Pods-Oriole2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BF682E22809853A1472812637ED2DA /* Pods-Oriole2-dummy.m */; };
+		640455554ED5D2DACC1C1DC5A5F78112 /* TKButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A1658A3899C31AAA210FBDA9A9F8BF44 /* TKButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67882E38F06959FC7F5376447E9AEA69 /* UITextField+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F7F6B998973F8D237F0C44779160C1 /* UITextField+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		679CE3AF2FAF85E0614C65B7B1A6C7FF /* TKNetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D3FB67B034DE240EAAA4B25CA602320D /* TKNetworkQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69BE429213F18B2F2DFD808F349598CD /* TKTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 618745FD816ABF24B0575B3D7EEE4EFE /* TKTextFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B6936E5E2AA402A1DAE3011DB1573B1 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EB7D128682940CABD399403682AE /* iVersion.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6BB00037A0146C2384E584C316C3204D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */; };
+		6C963965723DD430A9425FE982D29DC7 /* UIActionSheet+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6331FBC9C4A4688F07F423454DDC43C7 /* UIActionSheet+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D7C6F826EC6F5AB10B4C8F78E426BE0 /* TKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F51190917601D441400ED39AA4B567D /* TKAlertViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		740E31E030D16BA044C8911DAF756134 /* TKLabelTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 689411D2D32C45DF38E39582008B5FBF /* TKLabelTextViewCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		76D281FC3C95AE9D329C411E3150AB6A /* UIImage+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0D2470C40EBBA8610789D92306CB82 /* UIImage+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780A811FABC411888DD20012F44C7A66 /* TKAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FB00D2FFC4211BBAEE262E5CF4B17DAD /* TKAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		793E9A35B3D61F35B23A022F9ACF2882 /* TKProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7274C618DCCF13CF210A87309955A /* TKProgressBarView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7960D28B42767DADB99D47026E42584C /* TKSwitchCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE3D3D7107F580EFDE725640CD9219B /* TKSwitchCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A519622F55D3C7D2EF4DA52D637A3DF /* TKCalendarMonthView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0EAAE2B5446B57F1B02C089D3EC674 /* TKCalendarMonthView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BDF24290789E8CE53E9D08D07CCB163 /* TKProgressCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3246E58AA631575E57518F55571C672B /* TKProgressCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CF32E86531C09A785254096B984430F /* TKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B47B4E1AFBA353BAF0DDEEF36A010D30 /* TKTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7E1075B56FA6BC8AFEFB680D768B1A12 /* TKNetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5C42A30CA434F6BA4EC04E3C8DA731 /* TKNetworkQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		80F0A7D88BB6A7D6D0D549B4D3E38D6A /* TKLabelSwitchCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 71EBA20F01579AD7AA0F82A29468D86B /* TKLabelSwitchCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81A2AF0201A9CD2A43F784637383ED2E /* TKCalendarDayEventView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9315CCF5042D406C2E7B5F6B9A23E7 /* TKCalendarDayEventView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8376C23421A0F93A7E227928D87BFE15 /* TKImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED7EF660BA2E67DFE67FD308F17AB4 /* TKImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		851F9775B74601CB9079E1D6732D60BA /* UIAlertView+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB0531FBA716420B8CABD32A210F72E /* UIAlertView+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		878F9839EEB792D8092E2A9700924C9D /* UIScrollview+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A79C27F122EC8B8CDF64D5E0408096 /* UIScrollview+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B517D41705810170C1B6BFE1D5C8D7A /* TKGlowButton.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1CD1181BF89CE63D0140DD4D4B48EF /* TKGlowButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C6232F0DDF1C10C59C5EB7553DD91F4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC09D3D1BC77F6F8F90601E0E780A6 /* iRate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8C7BB9915A62B98AA64A907CAFF4BC10 /* TKProgressCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5453E669AF9ECCC63ABD87570D0A8D /* TKProgressCircleView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8D287D81DA272D0908931665C39DCABE /* TKGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E0AE16689F4DF1A1BFEFC4689E171C /* TKGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D7FE38A25ED57F759EEE708B4090EA7 /* UIDevice+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 46693A6F16611D2BC119DB9A15959D10 /* UIDevice+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EFB8D390C15E93FC8464F11333DA809 /* TKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14802B770BCE97C09B302E5BC6C11A89 /* TKTableViewCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		936BA3BCD49A3A439550228C5CAC0D40 /* NSString+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F85C7C18069096309523665A6214A6CD /* NSString+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		951E122F9EFF8F6DF2AAF2E80A10630A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */; };
+		96B6772E9E9F6788AE6371E2F5065D3D /* NSMutableArray+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 724D981A9E09C9765942C8F93B52069C /* NSMutableArray+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		979EC9FC52786632C7868277DEFF61D8 /* iVersion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EFBFA466BF56EADAE8B0783CF4603F /* iVersion-dummy.m */; };
+		980D94BAD68447B2AFDB2E0D10FD5AC5 /* NSDate+CalendarGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B17F7B8E0BCE7256AA764386588044 /* NSDate+CalendarGrid.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		99624A9D50078A2BA099C10AEB293EC7 /* TKWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7A707116A366D9F5EE7769671423F7 /* TKWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B4B4B067410775B0E754163F1EF272D /* TKShimmerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A05434CC7CB61B17B988DF5A7EEBE /* TKShimmerLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9E9875FA86D8788C1D60E76A7D0B68A3 /* UITextField+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC61028D7426903A817529081678F66 /* UITextField+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F801975886CE896569ED5D9DD45E831 /* TKLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79324838287B1FC37F6330D84A01C5FF /* TKLabelCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A00E2F7E63346A2E625AB5E1284FE2BF /* NSObject+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 655D8BB09301260237F26F53B699E095 /* NSObject+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1F813701093C285D29F0A7F8486967D /* TKHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2092D7BF48D33CF1C9000699F609DC33 /* TKHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A21F6B51D82BD75346CA9FE17D8720CF /* TKShapeView.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8B2EF90CD8364B106ED313B58785CA /* TKShapeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A26E064F3323512A3C03154B321742A4 /* TKKeyboardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B283A68C1145AFA4391A558627E12C4 /* TKKeyboardTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A51924D201A3F80F5D71851B0E2A4AF0 /* TKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF0C3EFC7A482ED361A71E13A6CAB56 /* TKTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5BC3BF53CBCE39270A177E00A2527ED /* UIColor+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = CCD726F473E7A75773381F984B0A9E84 /* UIColor+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A76930EEA941BBFB42F042B088EE6136 /* UIGestureRecognizer+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588182D98B652D3A0283E02C7CBCA94 /* UIGestureRecognizer+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A800CBE6B23831B9E139D9962DF277E9 /* UIFont+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C6AD81BFB46B138D50BDBF79622572 /* UIFont+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A93E8A04A4DAE5005C20CFA890F8B5EB /* NSDate+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = F0F9C20EA238D48CE5517023D79C14CF /* NSDate+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8519236438905F81578E6227E67BCB /* TKLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D628B3718761FE18148D9B29B2A8008 /* TKLabelCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB36D0420A644A9634BC17B66D3F653D /* TKCalendarDayViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9137C53BD72DBDC0D3CE102F6CEC429B /* TKCalendarDayViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACEF04E1B1A727ADDA52D0C0EB36EF6D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC26C65697EB13255A7001A8DA0B1771 /* StoreKit.framework */; };
+		B00AFACB98C961516C0208882E777040 /* UIButton+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E433C3A9797E864F1BAA4527B40E2AE /* UIButton+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B19AA0E3A0968F40B6D5E30CE1425D77 /* TapkuLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F53C51E5CEC9F45A513B0B3EB64DC81 /* TapkuLibrary-dummy.m */; };
+		B7202F121EC11226DC42C846525312F2 /* TKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 871B921AEDBEB2D9EF69C7CA7270D78E /* TKLoadingView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B735714C68437A3ABC7881B844EB6239 /* NSDate+CalendarGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A07A175BB74B2A65093B2C1A92E0881 /* NSDate+CalendarGrid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B97DA38E52F93874066E5F3493F4B3D9 /* TKViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F57BBC1901DF3C23BED3940E324180 /* TKViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3675D453D4306FAB4F07B232AA02A7 /* TKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C216E6480046B64578D5FF087F36DFA8 /* TKTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BC0683A105C496A5E9B484B9588C03F9 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8104ACF6BEEC4F340BBBF1204E27D6 /* UIView+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BD594175ABFE0DC22F620AC8BDDEFEF8 /* TKCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B5C0F4DBD5B1D0CFA881DC7268AD4 /* TKCalendarMonthView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BE38F5B52338657FB0F5739DC467F55B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */; };
+		BF26C62362FD5EFE73ADB7A93C458F9E /* LKBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC486E8E222BDC073E2B7313A4B2A6C /* LKBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2F9E0544D08B928FEB7255E7277D030 /* UIDevice+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 34756AA7391FF3C8AE196182592D71F7 /* UIDevice+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C3B6045C0B5D6718D9265479AFCE5ECD /* TKKeyboardTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F02A794A29FAD3E2A458BD152BB0FEF /* TKKeyboardTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5B314A64A53950BDFA131082F7D6804 /* UIViewController+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 223F997B555C338DC15BC95140137124 /* UIViewController+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5CF78AA057E8F5095EAE2B478172482 /* TKLabelTextViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DA3CD64F1FD071FAB4028C015DBA062 /* TKLabelTextViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C77FF332ABCC1FB03964E96FA1F4E613 /* TKTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDDCB7D711DE64945FD8CE0262ECA9B /* TKTextViewCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C7C8C775F6021D994FBC6C385898D0EC /* TKCalendarDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F7DC80DC7A67946611EB3FD75F6A0C /* TKCalendarDayViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C8494C427A97B2D3D7BEC0EBAE830647 /* TKWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D239286160B42D1E7CC3B09F05BC8FF2 /* TKWindow.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C9B6D9A575482BA3FD18991CEEFEF1F6 /* TKLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7448818F42A73C3F95C0A944B744836 /* TKLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAB42C3E85285E9007769300C8FBB11A /* UIActionSheet+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 12341D0FB787D09E73696F44680DDB7D /* UIActionSheet+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CC734F95948676A2BD387A4D1EADFFE4 /* TKTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3F40A21B13671360967D722FEABF /* TKTextFieldCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CCF6B6E3611CEF479B521ABF34C1CA27 /* TKLabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C85214B4C005FC3ACAF976A2EDEF24D1 /* TKLabelFieldCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CDF50083850D27561031CFD3F75A303B /* TKRetroButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DB7FD561A8053463BC5446ECB110E11D /* TKRetroButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D00A03104BEB019F0072BCE512371A5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */; };
+		D096B7E9A7B9DBC9B9AE2025D44FBF2E /* iVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 558295C57AC45796A99DF2E23461DC80 /* iVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D09BD59CEFA2995821F573B7490E0974 /* TKReorderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC665CF56507407188CB65CB5D3B9F5 /* TKReorderTableView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D41CC975469B508B5FF168E52DF66CED /* iRate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0A54A1167A7A31020AC063B5E5F92 /* iRate-dummy.m */; };
+		D4CB82FFE67ACFB7FD10A00E40708E46 /* TKProgressBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = BB459C0ED274037F559D7A8C1F5D21E0 /* TKProgressBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D582D0AFADDAF3D69D6BA33A4F1F9B5F /* UIImageView+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7058E90C38F649BC9FDEB35135EAB0F3 /* UIImageView+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7047091A812F4A526BB1A0E8FCD39D3 /* UIImageView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1057B01CD1129FCD73EA8B6A1F1AC600 /* UIImageView+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D7F1607BA2553A052229C16E46B3A4D0 /* TKGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDE2F3BD23778094F4B616478226002 /* TKGradientView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DB24EB0CBB94475A5F33BFB15BC0FCD8 /* TKTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 489012E762E6B9D217E8F030117E4ACB /* TKTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBD046F0895C4EBE6BF674EEF3A6326B /* TKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8428DFBF30AD32712851226BB43BD4 /* TKAppDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DC2062890BD5D0DAE513938F4DE106C6 /* UIView+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D94AB86E347C289B505DDB0C6C5FB5 /* UIView+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E456AF92FE3C18DDC06A7B86AAC32AA2 /* TKReorderTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = C41A10544D69797FC21DBECF22DEF331 /* TKReorderTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E49E8BFDCA1580E558CA5303F46A8ACB /* UIFont+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 95EB8F012A2FDF5AD78579FA11E94A27 /* UIFont+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E954C344403518DE089FD7C4C5063B47 /* TKSlideToUnlockView.h in Headers */ = {isa = PBXBuildFile; fileRef = E6DCC59C1F3AA9C779E63C8F62E25937 /* TKSlideToUnlockView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB29B5D05E3108B69C3550ACDF9EB639 /* TKEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C63B5097593F1C4A2CF11F30D6ED1925 /* TKEmptyView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ED12DCDCF2ADF796F803E5437EB46B7C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25260DB9B397BF0F0666630A9DEEC35 /* QuartzCore.framework */; };
+		EE8A754CB100E5B9163E3C695A73839A /* UIGestureRecognizer+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FD4638B5AC6E8A53F37D68FFFC4A11 /* UIGestureRecognizer+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE9794CA50C4A82D6B30959B686637A3 /* UIImage+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F26F940A2BB0DADF6010A497EC1A896A /* UIImage+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F1261C86060B31A201658BAB3393D620 /* TKCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79ACBBF40E64C378486CC3A235D3D934 /* TKCalendarDayView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F46BD060F69C9F323FFB7A019D74E54F /* TKGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = FA124E5DEA69F5749AB1C034EE1E58FF /* TKGlobal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F4CACA203D51BC789AEFA5ADCDC8301E /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A64C27AE45756DBE84D663251D83FA90 /* LKBadgeView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F70A11BFFD40266819F66BC86B673A0C /* UIButton+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C407F0CC69FAA0B60E8948125749724 /* UIButton+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F81266B5090BFE1CE264C938C5C44C0F /* TKSlideToUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756CA644C95DB1B68364DBC805E9E70 /* TKSlideToUnlockView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F939295186D1A5A48102B613F9981FA7 /* TKButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD0F8C633AAC5F1510DAC87667AE458 /* TKButtonCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FAD34A3DC0E6E0B10630BD77DA9FDB52 /* UIBarButtonItem+TKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 36B5DC3B365345113EF74489BE6AF49D /* UIBarButtonItem+TKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAE87C044C17FE5E639597A66A6C5BA7 /* NSDate+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C5CBD390E0E91C970C0C1EA779A545 /* NSDate+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FB51BA14989FE2F4EE63716D71FFBB00 /* UIScreen+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B6629864C826F750C80A6A9DAAF52A /* UIScreen+TKCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FCD3A953A2600C5588C88FACF0B823C8 /* TKProgressAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B471507B799E45E2A82BC00C2BB43595 /* TKProgressAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05866D2897F19DD0324E8CAFA28A9D97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E998595DE39E28C562D6DAA4E8A9AE9E;
-			remoteInfo = iRate;
-		};
-		1E61143812A7FAD65A88247EEA3A4F55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E6BDA29873EFF9BFC3331A7594A3AA3;
-			remoteInfo = iVersion;
-		};
-		2CE110BF9483CDD15D7EBDFCA69C2205 /* PBXContainerItemProxy */ = {
+		1229EEB0310D0AD70B4AFF156478A8F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 35FEDD8D3367DFD007FC58FF284F05C9;
 			remoteInfo = LKbadgeView;
 		};
-		EBDE8AD4C3D7CB6824F09B6700AF6558 /* PBXContainerItemProxy */ = {
+		4E8D8F7A48F317585FBBF7BB6D0D5A5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B524849F128861FF1F3096FB6D57531;
+			remoteInfo = TapkuLibrary;
+		};
+		6F72A8A760984610C16D0947AB98EDF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E998595DE39E28C562D6DAA4E8A9AE9E;
+			remoteInfo = iRate;
+		};
+		A60B43E5B1B347FD8FB037BE53D871A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 175B076ED45EB1A3E40F58BA14036467;
 			remoteInfo = MBProgressHUD;
 		};
+		F9BADC69E873C66F19AA2D65D35080EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E6BDA29873EFF9BFC3331A7594A3AA3;
+			remoteInfo = iVersion;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A79C27F122EC8B8CDF64D5E0408096 /* UIScrollview+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollview+TKCategory.h"; path = "src/TapkuLibrary/UIScrollview+TKCategory.h"; sourceTree = "<group>"; };
+		01DCAE8E5BE8A7EE65E52C8DC5448929 /* iRate.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = iRate.bundle; path = iRate/iRate.bundle; sourceTree = "<group>"; };
+		049AA034A0CF8255B248CA8E70B88ABE /* NSArray+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+TKCategory.m"; path = "src/TapkuLibrary/NSArray+TKCategory.m"; sourceTree = "<group>"; };
+		0588182D98B652D3A0283E02C7CBCA94 /* UIGestureRecognizer+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+TKCategory.m"; path = "src/TapkuLibrary/UIGestureRecognizer+TKCategory.m"; sourceTree = "<group>"; };
+		0AD0F8C633AAC5F1510DAC87667AE458 /* TKButtonCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKButtonCell.m; path = src/TapkuLibrary/TKButtonCell.m; sourceTree = "<group>"; };
+		0AE3D3D7107F580EFDE725640CD9219B /* TKSwitchCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKSwitchCell.h; path = src/TapkuLibrary/TKSwitchCell.h; sourceTree = "<group>"; };
+		0C04494B67807E9A04E6684F243EE1EA /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		0C0B5C0F4DBD5B1D0CFA881DC7268AD4 /* TKCalendarMonthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKCalendarMonthView.m; path = src/TapkuLibrary/TKCalendarMonthView.m; sourceTree = "<group>"; };
+		0DA3CD64F1FD071FAB4028C015DBA062 /* TKLabelTextViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKLabelTextViewCell.h; path = src/TapkuLibrary/TKLabelTextViewCell.h; sourceTree = "<group>"; };
+		0E7B61DAD60DD55C82CEE9C0A1E5AB9F /* TKEmptyView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKEmptyView.h; path = src/TapkuLibrary/TKEmptyView.h; sourceTree = "<group>"; };
+		1057B01CD1129FCD73EA8B6A1F1AC600 /* UIImageView+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+TKCategory.m"; path = "src/TapkuLibrary/UIImageView+TKCategory.m"; sourceTree = "<group>"; };
+		12341D0FB787D09E73696F44680DDB7D /* UIActionSheet+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+TKCategory.m"; path = "src/TapkuLibrary/UIActionSheet+TKCategory.m"; sourceTree = "<group>"; };
+		130F8C6D3C8E74FE1C19EAC203AFE132 /* UIImagePickerController+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImagePickerController+TKCategory.m"; path = "src/TapkuLibrary/UIImagePickerController+TKCategory.m"; sourceTree = "<group>"; };
+		13C6AD81BFB46B138D50BDBF79622572 /* UIFont+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+TKCategory.m"; path = "src/TapkuLibrary/UIFont+TKCategory.m"; sourceTree = "<group>"; };
 		140F8D3301A51085EEC164607A380F54 /* Pods-Oriole2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Oriole2.release.xcconfig"; sourceTree = "<group>"; };
-		16C56B6DE59EE81AE58ACF55BC2C336E /* iVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iVersion.m; path = iVersion/iVersion.m; sourceTree = "<group>"; };
-		27BE7D4854FD21EF1D8A6BBFEF9DCE51 /* iRate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = iRate/iRate.h; sourceTree = "<group>"; };
-		28FCFEC8E0845322F337551D3ED44C2D /* iRate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iRate-prefix.pch"; sourceTree = "<group>"; };
-		2B41970E77BC4CD2556AA55FF68394DB /* LKbadgeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKbadgeView-prefix.pch"; sourceTree = "<group>"; };
-		2C8CF2ED5AF30C3DDBF16692D1337567 /* iVersion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iVersion-dummy.m"; sourceTree = "<group>"; };
-		47EFB5DF8426F596F91070C9D262405F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		4CD5B752E0ECCBD835174991056249E1 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		596903A192CC8A9F5BD8B1FC9A4E2968 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DF1B3C3BA423493FDE9A25BC627ED51 /* iVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iVersion.h; path = iVersion/iVersion.h; sourceTree = "<group>"; };
-		634B96210BA3EE03AFC70D40BD717366 /* LKBadgeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
+		14802B770BCE97C09B302E5BC6C11A89 /* TKTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKTableViewCell.m; path = src/TapkuLibrary/TKTableViewCell.m; sourceTree = "<group>"; };
+		168A5B404A9B83352B495A71EF8B38C0 /* libLKbadgeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLKbadgeView.a; path = libLKbadgeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		16BAF546FE5FE0DBF3F98A91F1CDFCDB /* TKShimmerLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKShimmerLabel.h; path = src/TapkuLibrary/TKShimmerLabel.h; sourceTree = "<group>"; };
+		1A0E0B0032D645195621B2A1A403A350 /* TKCalendarMonthTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKCalendarMonthTableViewController.m; path = src/TapkuLibrary/TKCalendarMonthTableViewController.m; sourceTree = "<group>"; };
+		1D9315CCF5042D406C2E7B5F6B9A23E7 /* TKCalendarDayEventView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKCalendarDayEventView.h; path = src/TapkuLibrary/TKCalendarDayEventView.h; sourceTree = "<group>"; };
+		1E3C43A91643932CA24E1A1F7670EA20 /* TKLabelTextFieldCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKLabelTextFieldCell.m; path = src/TapkuLibrary/TKLabelTextFieldCell.m; sourceTree = "<group>"; };
+		1E433C3A9797E864F1BAA4527B40E2AE /* UIButton+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+TKCategory.h"; path = "src/TapkuLibrary/UIButton+TKCategory.h"; sourceTree = "<group>"; };
+		1FD1FD4E204D867C6E73ADB67D6F6187 /* TapkuLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TapkuLibrary.xcconfig; sourceTree = "<group>"; };
+		2092D7BF48D33CF1C9000699F609DC33 /* TKHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKHTTPRequest.m; path = src/TapkuLibrary/TKHTTPRequest.m; sourceTree = "<group>"; };
+		223F997B555C338DC15BC95140137124 /* UIViewController+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TKCategory.h"; path = "src/TapkuLibrary/UIViewController+TKCategory.h"; sourceTree = "<group>"; };
+		238E358AE13A838DFAA38220C829B5EA /* LKbadgeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKbadgeView-dummy.m"; sourceTree = "<group>"; };
+		23B6629864C826F750C80A6A9DAAF52A /* UIScreen+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+TKCategory.m"; path = "src/TapkuLibrary/UIScreen+TKCategory.m"; sourceTree = "<group>"; };
+		2C407F0CC69FAA0B60E8948125749724 /* UIButton+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TKCategory.m"; path = "src/TapkuLibrary/UIButton+TKCategory.m"; sourceTree = "<group>"; };
+		2C7A707116A366D9F5EE7769671423F7 /* TKWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKWindow.h; path = src/TapkuLibrary/TKWindow.h; sourceTree = "<group>"; };
+		2EE2D834276C0E53D2C86D2CC87FD096 /* UIViewController+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TKCategory.m"; path = "src/TapkuLibrary/UIViewController+TKCategory.m"; sourceTree = "<group>"; };
+		2EF0C3EFC7A482ED361A71E13A6CAB56 /* TKTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKTableViewController.h; path = src/TapkuLibrary/TKTableViewController.h; sourceTree = "<group>"; };
+		2F8825465E173E6E81D9868DF6BE4B87 /* TKCalendarMonthViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKCalendarMonthViewController.m; path = src/TapkuLibrary/TKCalendarMonthViewController.m; sourceTree = "<group>"; };
+		3086569C196935DF8802B9BD2D072469 /* TKAlertViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKAlertViewController.h; path = src/TapkuLibrary/TKAlertViewController.h; sourceTree = "<group>"; };
+		30FAC3657219F998020C0B3F9C01CDA6 /* TKHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKHTTPRequest.h; path = src/TapkuLibrary/TKHTTPRequest.h; sourceTree = "<group>"; };
+		315FC13BA175B9E6B6825C407F22E325 /* TKCalendarMonthTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKCalendarMonthTableViewController.h; path = src/TapkuLibrary/TKCalendarMonthTableViewController.h; sourceTree = "<group>"; };
+		31D334EDFD6A2DD9B7076A961A2DE88B /* TKCalendarMonthViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKCalendarMonthViewController.h; path = src/TapkuLibrary/TKCalendarMonthViewController.h; sourceTree = "<group>"; };
+		3246E58AA631575E57518F55571C672B /* TKProgressCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKProgressCircleView.h; path = src/TapkuLibrary/TKProgressCircleView.h; sourceTree = "<group>"; };
+		34756AA7391FF3C8AE196182592D71F7 /* UIDevice+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+TKCategory.m"; path = "src/TapkuLibrary/UIDevice+TKCategory.m"; sourceTree = "<group>"; };
+		35ADE386F1D91B8A30514A3358D3395C /* UIScrollview+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollview+TKCategory.m"; path = "src/TapkuLibrary/UIScrollview+TKCategory.m"; sourceTree = "<group>"; };
+		36B5DC3B365345113EF74489BE6AF49D /* UIBarButtonItem+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+TKCategory.h"; path = "src/TapkuLibrary/UIBarButtonItem+TKCategory.h"; sourceTree = "<group>"; };
+		3A07A175BB74B2A65093B2C1A92E0881 /* NSDate+CalendarGrid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+CalendarGrid.h"; path = "src/TapkuLibrary/NSDate+CalendarGrid.h"; sourceTree = "<group>"; };
+		3D05DBD84D2F2B468512BF6210992A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3D628B3718761FE18148D9B29B2A8008 /* TKLabelCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKLabelCell.h; path = src/TapkuLibrary/TKLabelCell.h; sourceTree = "<group>"; };
+		3DA867DE27BC513E522DB229B248DA91 /* TKAlertCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKAlertCenter.h; path = src/TapkuLibrary/TKAlertCenter.h; sourceTree = "<group>"; };
+		453EF0106FE8E00C6B1C57DB2AAE1B27 /* UIColor+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+TKCategory.m"; path = "src/TapkuLibrary/UIColor+TKCategory.m"; sourceTree = "<group>"; };
+		46693A6F16611D2BC119DB9A15959D10 /* UIDevice+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+TKCategory.h"; path = "src/TapkuLibrary/UIDevice+TKCategory.h"; sourceTree = "<group>"; };
+		46F7DC80DC7A67946611EB3FD75F6A0C /* TKCalendarDayViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKCalendarDayViewController.m; path = src/TapkuLibrary/TKCalendarDayViewController.m; sourceTree = "<group>"; };
+		4775065B5201ABCD555318F25A26D03F /* UIScreen+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScreen+TKCategory.h"; path = "src/TapkuLibrary/UIScreen+TKCategory.h"; sourceTree = "<group>"; };
+		489012E762E6B9D217E8F030117E4ACB /* TKTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKTableViewCell.h; path = src/TapkuLibrary/TKTableViewCell.h; sourceTree = "<group>"; };
+		49AE5CEE770B4BF3F68A07F718752125 /* TKTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKTextView.h; path = src/TapkuLibrary/TKTextView.h; sourceTree = "<group>"; };
+		4AC0A54A1167A7A31020AC063B5E5F92 /* iRate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iRate-dummy.m"; sourceTree = "<group>"; };
+		4D0D2470C40EBBA8610789D92306CB82 /* UIImage+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+TKCategory.h"; path = "src/TapkuLibrary/UIImage+TKCategory.h"; sourceTree = "<group>"; };
+		4EDF3B619D1746C0CA3314C2ECADB170 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		4F02A794A29FAD3E2A458BD152BB0FEF /* TKKeyboardTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKKeyboardTableViewController.h; path = src/TapkuLibrary/TKKeyboardTableViewController.h; sourceTree = "<group>"; };
+		4F6EF1B03C4AFBDDB419FFFBDCF775B6 /* iRate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = iRate/iRate.h; sourceTree = "<group>"; };
+		529C59861F3F4EE9BEC62ACFA28CFFD3 /* TKImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKImageCache.m; path = src/TapkuLibrary/TKImageCache.m; sourceTree = "<group>"; };
+		52DC3F40A21B13671360967D722FEABF /* TKTextFieldCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKTextFieldCell.m; path = src/TapkuLibrary/TKTextFieldCell.m; sourceTree = "<group>"; };
+		52FD4638B5AC6E8A53F37D68FFFC4A11 /* UIGestureRecognizer+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+TKCategory.h"; path = "src/TapkuLibrary/UIGestureRecognizer+TKCategory.h"; sourceTree = "<group>"; };
+		558295C57AC45796A99DF2E23461DC80 /* iVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iVersion.h; path = iVersion/iVersion.h; sourceTree = "<group>"; };
+		58F57BBC1901DF3C23BED3940E324180 /* TKViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKViewController.h; path = src/TapkuLibrary/TKViewController.h; sourceTree = "<group>"; };
+		59A56ACDE668D624D840E5362CB64F6C /* TKCoverflowView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKCoverflowView.h; path = src/TapkuLibrary/TKCoverflowView.h; sourceTree = "<group>"; };
+		5AECC938BAA71415312221BE70EFEA7E /* UIBarButtonItem+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+TKCategory.m"; path = "src/TapkuLibrary/UIBarButtonItem+TKCategory.m"; sourceTree = "<group>"; };
+		5DDE2F3BD23778094F4B616478226002 /* TKGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKGradientView.m; path = src/TapkuLibrary/TKGradientView.m; sourceTree = "<group>"; };
+		5E9742C5134660340CE6F5282CB79CBB /* NSArray+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+TKCategory.h"; path = "src/TapkuLibrary/NSArray+TKCategory.h"; sourceTree = "<group>"; };
+		5F51190917601D441400ED39AA4B567D /* TKAlertViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKAlertViewController.m; path = src/TapkuLibrary/TKAlertViewController.m; sourceTree = "<group>"; };
+		618745FD816ABF24B0575B3D7EEE4EFE /* TKTextFieldCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKTextFieldCell.h; path = src/TapkuLibrary/TKTextFieldCell.h; sourceTree = "<group>"; };
+		62933D7272A3D58EED2967C65D9261D7 /* TKLabelSwitchCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKLabelSwitchCell.m; path = src/TapkuLibrary/TKLabelSwitchCell.m; sourceTree = "<group>"; };
+		6331FBC9C4A4688F07F423454DDC43C7 /* UIActionSheet+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+TKCategory.h"; path = "src/TapkuLibrary/UIActionSheet+TKCategory.h"; sourceTree = "<group>"; };
 		6366103A2DED6D1E658B6275EA81DDE8 /* Pods-Oriole2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Oriole2-acknowledgements.plist"; sourceTree = "<group>"; };
+		63E1392950C351231B52766BCADECEE2 /* TKLabelFieldCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKLabelFieldCell.h; path = src/TapkuLibrary/TKLabelFieldCell.h; sourceTree = "<group>"; };
+		64D025B3B52D032D36337951C3BE5752 /* TKLabelTextFieldCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKLabelTextFieldCell.h; path = src/TapkuLibrary/TKLabelTextFieldCell.h; sourceTree = "<group>"; };
+		655D8BB09301260237F26F53B699E095 /* NSObject+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+TKCategory.h"; path = "src/TapkuLibrary/NSObject+TKCategory.h"; sourceTree = "<group>"; };
+		689411D2D32C45DF38E39582008B5FBF /* TKLabelTextViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKLabelTextViewCell.m; path = src/TapkuLibrary/TKLabelTextViewCell.m; sourceTree = "<group>"; };
+		68A7274C618DCCF13CF210A87309955A /* TKProgressBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKProgressBarView.m; path = src/TapkuLibrary/TKProgressBarView.m; sourceTree = "<group>"; };
+		6C9DC5AC938B71CFC62A04191AA461B1 /* iRate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iRate.xcconfig; sourceTree = "<group>"; };
 		6D19727365566E8D23ED945BF09BB358 /* Pods-Oriole2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Oriole2-resources.sh"; sourceTree = "<group>"; };
-		713E84FB735E81C9B14B94BABC9FA676 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		72F2C4D24551450B8D9FB461D69A988E /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		778B90976F7AB19347FC390A58F6D52A /* iVersion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iVersion-prefix.pch"; sourceTree = "<group>"; };
-		7A02E8E5397B257AD90322C04FD87085 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		6F4EA9BDCAE9A3CDA4DD653C5CBCBFD5 /* UIImagePickerController+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImagePickerController+TKCategory.h"; path = "src/TapkuLibrary/UIImagePickerController+TKCategory.h"; sourceTree = "<group>"; };
+		7058E90C38F649BC9FDEB35135EAB0F3 /* UIImageView+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+TKCategory.h"; path = "src/TapkuLibrary/UIImageView+TKCategory.h"; sourceTree = "<group>"; };
+		7096FAF03DC59A62E40B66AA1FE7909F /* TapkuLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TapkuLibrary.h; path = src/TapkuLibrary/TapkuLibrary.h; sourceTree = "<group>"; };
+		71EBA20F01579AD7AA0F82A29468D86B /* TKLabelSwitchCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKLabelSwitchCell.h; path = src/TapkuLibrary/TKLabelSwitchCell.h; sourceTree = "<group>"; };
+		724D981A9E09C9765942C8F93B52069C /* NSMutableArray+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+TKCategory.m"; path = "src/TapkuLibrary/NSMutableArray+TKCategory.m"; sourceTree = "<group>"; };
+		79324838287B1FC37F6330D84A01C5FF /* TKLabelCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKLabelCell.m; path = src/TapkuLibrary/TKLabelCell.m; sourceTree = "<group>"; };
+		79ACBBF40E64C378486CC3A235D3D934 /* TKCalendarDayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKCalendarDayView.m; path = src/TapkuLibrary/TKCalendarDayView.m; sourceTree = "<group>"; };
+		7CDDCB7D711DE64945FD8CE0262ECA9B /* TKTextViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKTextViewCell.m; path = src/TapkuLibrary/TKTextViewCell.m; sourceTree = "<group>"; };
+		80B3DD47FA20773154BFA013D0760C2A /* libPods-Oriole2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Oriole2.a"; path = "libPods-Oriole2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A578FAF320BC929578D9E351D5E1F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		847F88A4E364E6E65A32F669C06A3D1E /* Pods-Oriole2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Oriole2-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8D16849D6424F2BF5536A44DC0D576A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		930357E2E2AE05FF2A4BC270E8C0DE19 /* libPods-Oriole2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Oriole2.a"; path = "libPods-Oriole2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		871B921AEDBEB2D9EF69C7CA7270D78E /* TKLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKLoadingView.m; path = src/TapkuLibrary/TKLoadingView.m; sourceTree = "<group>"; };
+		8756CA644C95DB1B68364DBC805E9E70 /* TKSlideToUnlockView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKSlideToUnlockView.m; path = src/TapkuLibrary/TKSlideToUnlockView.m; sourceTree = "<group>"; };
+		87EFBFA466BF56EADAE8B0783CF4603F /* iVersion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iVersion-dummy.m"; sourceTree = "<group>"; };
+		88F61C645CF5EB38227CAE89B9656CD7 /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTapkuLibrary.a; path = libTapkuLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B283A68C1145AFA4391A558627E12C4 /* TKKeyboardTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKKeyboardTableViewController.m; path = src/TapkuLibrary/TKKeyboardTableViewController.m; sourceTree = "<group>"; };
+		8F2D6AC20CC2DB7B6974C92E24820FBB /* iVersion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iVersion-prefix.pch"; sourceTree = "<group>"; };
+		90C0241984E274AD4D94064D77B42B18 /* libiVersion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libiVersion.a; path = libiVersion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9137C53BD72DBDC0D3CE102F6CEC429B /* TKCalendarDayViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKCalendarDayViewController.h; path = src/TapkuLibrary/TKCalendarDayViewController.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95D378230198212C87CDCCA5E6D5AC78 /* libiVersion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libiVersion.a; path = libiVersion.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C6260F0E3C123FA9DC09FC271AD9825 /* iRate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = iRate/iRate.m; sourceTree = "<group>"; };
-		AF5DFE361FE1333AE390621178CE1D3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B149F440B5C5CFF7723A7C9359E49653 /* libLKbadgeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLKbadgeView.a; path = libLKbadgeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B555187E3CF4CD52DE5B9AF8E5D9FC09 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
-		B8E2F932F05497544B11AA24A5AF49FD /* iRate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iRate-dummy.m"; sourceTree = "<group>"; };
-		BC8FF04B3B488EC232D814716D3F9573 /* LKbadgeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKbadgeView-dummy.m"; sourceTree = "<group>"; };
-		BCD294241B0EED6F4F2D2DE60A239469 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		C0F1EE999E0B79FE4B196D5EEE80E168 /* LKbadgeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKbadgeView.xcconfig; sourceTree = "<group>"; };
+		940A05434CC7CB61B17B988DF5A7EEBE /* TKShimmerLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKShimmerLabel.m; path = src/TapkuLibrary/TKShimmerLabel.m; sourceTree = "<group>"; };
+		95EB8F012A2FDF5AD78579FA11E94A27 /* UIFont+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+TKCategory.h"; path = "src/TapkuLibrary/UIFont+TKCategory.h"; sourceTree = "<group>"; };
+		974D137F0454AEC26D4A206CFAF8A1C0 /* TKGlobal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKGlobal.h; path = src/TapkuLibrary/TKGlobal.h; sourceTree = "<group>"; };
+		9798F94485313CD633B9FA9976229EF9 /* TKWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKWebViewController.h; path = src/TapkuLibrary/TKWebViewController.h; sourceTree = "<group>"; };
+		97B17F7B8E0BCE7256AA764386588044 /* NSDate+CalendarGrid.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CalendarGrid.m"; path = "src/TapkuLibrary/NSDate+CalendarGrid.m"; sourceTree = "<group>"; };
+		9A41FAE11ABC3E958A76FCC81149FDAE /* TKWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKWebViewController.m; path = src/TapkuLibrary/TKWebViewController.m; sourceTree = "<group>"; };
+		9B76EB7D128682940CABD399403682AE /* iVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iVersion.m; path = iVersion/iVersion.m; sourceTree = "<group>"; };
+		9D14DD2EA7438ED2642815E7487A2BF5 /* LKbadgeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKbadgeView.xcconfig; sourceTree = "<group>"; };
+		9F182316FCB12679D9C10ECE440C2442 /* TKAlertCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKAlertCenter.m; path = src/TapkuLibrary/TKAlertCenter.m; sourceTree = "<group>"; };
+		9F53C51E5CEC9F45A513B0B3EB64DC81 /* TapkuLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TapkuLibrary-dummy.m"; sourceTree = "<group>"; };
+		9FC486E8E222BDC073E2B7313A4B2A6C /* LKBadgeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
+		A1658A3899C31AAA210FBDA9A9F8BF44 /* TKButtonCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKButtonCell.h; path = src/TapkuLibrary/TKButtonCell.h; sourceTree = "<group>"; };
+		A25260DB9B397BF0F0666630A9DEEC35 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A2CF67FEF777EEEFD454276375538375 /* TapkuLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TapkuLibrary-prefix.pch"; sourceTree = "<group>"; };
+		A64C27AE45756DBE84D663251D83FA90 /* LKBadgeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
+		A7F7F6B998973F8D237F0C44779160C1 /* UITextField+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+TKCategory.m"; path = "src/TapkuLibrary/UITextField+TKCategory.m"; sourceTree = "<group>"; };
+		A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		AA1CD1181BF89CE63D0140DD4D4B48EF /* TKGlowButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKGlowButton.h; path = src/TapkuLibrary/TKGlowButton.h; sourceTree = "<group>"; };
+		AA307DC5028F2892BC013B52B42629C5 /* TKProgressAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKProgressAlertView.h; path = src/TapkuLibrary/TKProgressAlertView.h; sourceTree = "<group>"; };
+		AA3F5DEBEE70A85755C3944D53D72AD3 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		ABC61028D7426903A817529081678F66 /* UITextField+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+TKCategory.h"; path = "src/TapkuLibrary/UITextField+TKCategory.h"; sourceTree = "<group>"; };
+		AC26C65697EB13255A7001A8DA0B1771 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		ADDD740A503A32545B21A2666332B47B /* NSObject+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+TKCategory.m"; path = "src/TapkuLibrary/NSObject+TKCategory.m"; sourceTree = "<group>"; };
+		AFC665CF56507407188CB65CB5D3B9F5 /* TKReorderTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKReorderTableView.m; path = src/TapkuLibrary/TKReorderTableView.m; sourceTree = "<group>"; };
+		B1B74F375D12A11EFD2D533E8E6FA486 /* LKbadgeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKbadgeView-prefix.pch"; sourceTree = "<group>"; };
+		B2CE96A76841AB3F802EEAF993336C5B /* TKRetroButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKRetroButton.m; path = src/TapkuLibrary/TKRetroButton.m; sourceTree = "<group>"; };
+		B471507B799E45E2A82BC00C2BB43595 /* TKProgressAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKProgressAlertView.m; path = src/TapkuLibrary/TKProgressAlertView.m; sourceTree = "<group>"; };
+		B47B4E1AFBA353BAF0DDEEF36A010D30 /* TKTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKTextView.m; path = src/TapkuLibrary/TKTextView.m; sourceTree = "<group>"; };
+		B49A02EFEBC3940C688C21C1D76BAB03 /* TKCoverflowView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKCoverflowView.m; path = src/TapkuLibrary/TKCoverflowView.m; sourceTree = "<group>"; };
+		B5E0C46A48E2BA48D0D85A6013AB0283 /* TKViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKViewController.m; path = src/TapkuLibrary/TKViewController.m; sourceTree = "<group>"; };
+		B9A4DF2BA45A3FE35A2BBAE94F5A7B2D /* NSMutableArray+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+TKCategory.h"; path = "src/TapkuLibrary/NSMutableArray+TKCategory.h"; sourceTree = "<group>"; };
+		B9BD44C9B630137CF5B644460AC0E7F5 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		BA925963394C8E4A066194B0161E4E2D /* TKCalendarDayEventView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKCalendarDayEventView.m; path = src/TapkuLibrary/TKCalendarDayEventView.m; sourceTree = "<group>"; };
+		BB459C0ED274037F559D7A8C1F5D21E0 /* TKProgressBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKProgressBarView.h; path = src/TapkuLibrary/TKProgressBarView.h; sourceTree = "<group>"; };
+		BDED7EF660BA2E67DFE67FD308F17AB4 /* TKImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKImageCache.h; path = src/TapkuLibrary/TKImageCache.h; sourceTree = "<group>"; };
+		C14B324D353621C4CA7E566A496F8066 /* UIAlertView+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+TKCategory.m"; path = "src/TapkuLibrary/UIAlertView+TKCategory.m"; sourceTree = "<group>"; };
+		C216E6480046B64578D5FF087F36DFA8 /* TKTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKTableViewController.m; path = src/TapkuLibrary/TKTableViewController.m; sourceTree = "<group>"; };
 		C4006E2754839D27B3D7AA3A8B1BC167 /* Pods-Oriole2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Oriole2.debug.xcconfig"; sourceTree = "<group>"; };
-		D23E12EFA4AE430DF15830AD35059286 /* LKBadgeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
-		E6570AE6E3C51205386F14A6A97663F3 /* iVersion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iVersion.xcconfig; sourceTree = "<group>"; };
+		C41A10544D69797FC21DBECF22DEF331 /* TKReorderTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKReorderTableView.h; path = src/TapkuLibrary/TKReorderTableView.h; sourceTree = "<group>"; };
+		C58BB349CC009A7F13F9BBB0D62C9A7D /* libiRate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libiRate.a; path = libiRate.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C63B5097593F1C4A2CF11F30D6ED1925 /* TKEmptyView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKEmptyView.m; path = src/TapkuLibrary/TKEmptyView.m; sourceTree = "<group>"; };
+		C85214B4C005FC3ACAF976A2EDEF24D1 /* TKLabelFieldCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKLabelFieldCell.m; path = src/TapkuLibrary/TKLabelFieldCell.m; sourceTree = "<group>"; };
+		C8585E4ABB088F7C73451E328BCD80B0 /* iRate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iRate-prefix.pch"; sourceTree = "<group>"; };
+		CCD726F473E7A75773381F984B0A9E84 /* UIColor+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+TKCategory.h"; path = "src/TapkuLibrary/UIColor+TKCategory.h"; sourceTree = "<group>"; };
+		CD5C42A30CA434F6BA4EC04E3C8DA731 /* TKNetworkQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKNetworkQueue.m; path = src/TapkuLibrary/TKNetworkQueue.m; sourceTree = "<group>"; };
+		D02ED8BDA4EF364F469FBCA86DF4AF04 /* iVersion.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = iVersion.bundle; path = iVersion/iVersion.bundle; sourceTree = "<group>"; };
+		D165B7D9FFBBC476E865EBC67F896CED /* TKShapeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKShapeView.m; path = src/TapkuLibrary/TKShapeView.m; sourceTree = "<group>"; };
+		D239286160B42D1E7CC3B09F05BC8FF2 /* TKWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKWindow.m; path = src/TapkuLibrary/TKWindow.m; sourceTree = "<group>"; };
+		D340269ACF2D65BF9814E587435E66A8 /* TKSwitchCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKSwitchCell.m; path = src/TapkuLibrary/TKSwitchCell.m; sourceTree = "<group>"; };
+		D3FB67B034DE240EAAA4B25CA602320D /* TKNetworkQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKNetworkQueue.h; path = src/TapkuLibrary/TKNetworkQueue.h; sourceTree = "<group>"; };
+		D4D94AB86E347C289B505DDB0C6C5FB5 /* UIView+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TKCategory.h"; path = "src/TapkuLibrary/UIView+TKCategory.h"; sourceTree = "<group>"; };
+		D7448818F42A73C3F95C0A944B744836 /* TKLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKLoadingView.h; path = src/TapkuLibrary/TKLoadingView.h; sourceTree = "<group>"; };
+		D80F2359ADD9D87A85A66B6D62D72F55 /* TKGlowButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKGlowButton.m; path = src/TapkuLibrary/TKGlowButton.m; sourceTree = "<group>"; };
+		DB7FD561A8053463BC5446ECB110E11D /* TKRetroButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKRetroButton.h; path = src/TapkuLibrary/TKRetroButton.h; sourceTree = "<group>"; };
+		DCF398D9E29EA611D98084BC35964489 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		DD3E03668CABFF98EB607C00D90D24B5 /* TKCalendarDayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKCalendarDayView.h; path = src/TapkuLibrary/TKCalendarDayView.h; sourceTree = "<group>"; };
+		DD63BCC4D46E2E43B46261ED32CAABDA /* TKTextViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKTextViewCell.h; path = src/TapkuLibrary/TKTextViewCell.h; sourceTree = "<group>"; };
+		E59E1B74E6AD3BAD2A6E2FE471412A32 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E5C5CBD390E0E91C970C0C1EA779A545 /* NSDate+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+TKCategory.m"; path = "src/TapkuLibrary/NSDate+TKCategory.m"; sourceTree = "<group>"; };
 		E6BF682E22809853A1472812637ED2DA /* Pods-Oriole2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Oriole2-dummy.m"; sourceTree = "<group>"; };
-		E8865C7B7194930196EF487504271A9C /* iRate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iRate.xcconfig; sourceTree = "<group>"; };
-		F1D4FF5BA60F2B4615624C0E6BB35779 /* libiRate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libiRate.a; path = libiRate.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F24C35F5D3455E7AA7223691D9DBEB17 /* iVersion.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = iVersion.bundle; path = iVersion/iVersion.bundle; sourceTree = "<group>"; };
-		F3F2E05FEEED92D163329CB99D333C50 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
-		F4AF0C830B61CE7182364D019C0E47C6 /* iRate.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = iRate.bundle; path = iRate/iRate.bundle; sourceTree = "<group>"; };
+		E6DCC59C1F3AA9C779E63C8F62E25937 /* TKSlideToUnlockView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKSlideToUnlockView.h; path = src/TapkuLibrary/TKSlideToUnlockView.h; sourceTree = "<group>"; };
+		E7268D49AD4D7A2B29CBA7FB312162C8 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		E797E742057F550DC20B8703D7DDBB12 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB0EAAE2B5446B57F1B02C089D3EC674 /* TKCalendarMonthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKCalendarMonthView.h; path = src/TapkuLibrary/TKCalendarMonthView.h; sourceTree = "<group>"; };
+		EC8428DFBF30AD32712851226BB43BD4 /* TKAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKAppDelegate.m; path = src/TapkuLibrary/TKAppDelegate.m; sourceTree = "<group>"; };
+		ECB0531FBA716420B8CABD32A210F72E /* UIAlertView+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+TKCategory.h"; path = "src/TapkuLibrary/UIAlertView+TKCategory.h"; sourceTree = "<group>"; };
+		EE5453E669AF9ECCC63ABD87570D0A8D /* TKProgressCircleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKProgressCircleView.m; path = src/TapkuLibrary/TKProgressCircleView.m; sourceTree = "<group>"; };
+		F0F9C20EA238D48CE5517023D79C14CF /* NSDate+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+TKCategory.h"; path = "src/TapkuLibrary/NSDate+TKCategory.h"; sourceTree = "<group>"; };
+		F0FC09D3D1BC77F6F8F90601E0E780A6 /* iRate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = iRate/iRate.m; sourceTree = "<group>"; };
+		F26F940A2BB0DADF6010A497EC1A896A /* UIImage+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+TKCategory.m"; path = "src/TapkuLibrary/UIImage+TKCategory.m"; sourceTree = "<group>"; };
+		F2E297CB7C7F6A9336A377C141C17CEA /* iVersion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iVersion.xcconfig; sourceTree = "<group>"; };
+		F5E0AE16689F4DF1A1BFEFC4689E171C /* TKGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKGradientView.h; path = src/TapkuLibrary/TKGradientView.h; sourceTree = "<group>"; };
+		F5E821DD46E187A6699D1E309F678AED /* NSString+TKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TKCategory.h"; path = "src/TapkuLibrary/NSString+TKCategory.h"; sourceTree = "<group>"; };
+		F85C7C18069096309523665A6214A6CD /* NSString+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TKCategory.m"; path = "src/TapkuLibrary/NSString+TKCategory.m"; sourceTree = "<group>"; };
+		FA124E5DEA69F5749AB1C034EE1E58FF /* TKGlobal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKGlobal.m; path = src/TapkuLibrary/TKGlobal.m; sourceTree = "<group>"; };
+		FA8104ACF6BEEC4F340BBBF1204E27D6 /* UIView+TKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TKCategory.m"; path = "src/TapkuLibrary/UIView+TKCategory.m"; sourceTree = "<group>"; };
+		FB00D2FFC4211BBAEE262E5CF4B17DAD /* TKAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKAppDelegate.h; path = src/TapkuLibrary/TKAppDelegate.h; sourceTree = "<group>"; };
+		FE8B2EF90CD8364B106ED313B58785CA /* TKShapeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKShapeView.h; path = src/TapkuLibrary/TKShapeView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +396,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A57C41048B8E2CB9FE749724B7830F2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB86482B49934D2463E5A9629B3F714 /* Foundation.framework in Frameworks */,
+				ED12DCDCF2ADF796F803E5437EB46B7C /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADC8726181642113F0F2EF8790933167 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6BB00037A0146C2384E584C316C3204D /* Foundation.framework in Frameworks */,
 				1807756E19A848F2C231A90DA517111A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C786D149D10631C7719D553AC0A832BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE38F5B52338657FB0F5739DC467F55B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,69 +430,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE308155F935DED713AEFCF99D6EAA3F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAE1CE15D7F8BFEE81B0E13124EF74FD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12C88490F0E1C37B41E2D9D9AABAD9AC /* Pods */ = {
+		0AFB838149F8EF6FE739DC90F5421336 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B84EDA676F6EB92BA2556EB21531EAB4 /* Google-Mobile-Ads-SDK */,
-				CBF07AEE49AA2CF179037BADCF2EFC84 /* iRate */,
-				A400E30E6679E903CF08EF95E75090A6 /* iVersion */,
-				15DEEC868D6F7406A852C22916648590 /* LKbadgeView */,
-				9853E9DDC0E40BA318955E20DC236256 /* MBProgressHUD */,
+				6C9DC5AC938B71CFC62A04191AA461B1 /* iRate.xcconfig */,
+				4AC0A54A1167A7A31020AC063B5E5F92 /* iRate-dummy.m */,
+				C8585E4ABB088F7C73451E328BCD80B0 /* iRate-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/iRate";
 			sourceTree = "<group>";
 		};
-		13C38BB89A3896085DFDA620035CDF73 /* Products */ = {
+		15BD90048E9EACDF3243DCC8A0A021C9 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				F1D4FF5BA60F2B4615624C0E6BB35779 /* libiRate.a */,
-				95D378230198212C87CDCCA5E6D5AC78 /* libiVersion.a */,
-				B149F440B5C5CFF7723A7C9359E49653 /* libLKbadgeView.a */,
-				596903A192CC8A9F5BD8B1FC9A4E2968 /* libMBProgressHUD.a */,
-				930357E2E2AE05FF2A4BC270E8C0DE19 /* libPods-Oriole2.a */,
+				E6C11DEFE88A7129CC00FB138A1769D7 /* Frameworks */,
 			);
-			name = Products;
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53EEED7E3820696E48D7B344992DBF6F /* iOS */,
+				68644CDE8106348F3BC7231F102A0796 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		15DEEC868D6F7406A852C22916648590 /* LKbadgeView */ = {
+		2A2026F890541047C19A42F393B65887 /* LKbadgeView */ = {
 			isa = PBXGroup;
 			children = (
-				D23E12EFA4AE430DF15830AD35059286 /* LKBadgeView.h */,
-				634B96210BA3EE03AFC70D40BD717366 /* LKBadgeView.m */,
-				742FCF0C9654BF7BF08F9516E58991B9 /* Support Files */,
+				9FC486E8E222BDC073E2B7313A4B2A6C /* LKBadgeView.h */,
+				A64C27AE45756DBE84D663251D83FA90 /* LKBadgeView.m */,
+				63570F5F34BAAE83379397A349FCAF0A /* Support Files */,
 			);
 			name = LKbadgeView;
 			path = LKbadgeView;
 			sourceTree = "<group>";
 		};
-		53EEED7E3820696E48D7B344992DBF6F /* iOS */ = {
+		2F4105AAF29CA8BCAC0B81EC94BD77E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				47EFB5DF8426F596F91070C9D262405F /* CoreGraphics.framework */,
-				8D16849D6424F2BF5536A44DC0D576A2 /* Foundation.framework */,
-				B555187E3CF4CD52DE5B9AF8E5D9FC09 /* StoreKit.framework */,
-				AF5DFE361FE1333AE390621178CE1D3E /* UIKit.framework */,
+				D02ED8BDA4EF364F469FBCA86DF4AF04 /* iVersion.bundle */,
 			);
-			name = iOS;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3E3D54AE8C0E127C2B0BC25F741B5879 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF3B619D1746C0CA3314C2ECADB170 /* TapkuLibrary.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		50A6B3C423E27DE65579D9A7C16FC9BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15BD90048E9EACDF3243DCC8A0A021C9 /* Google-Mobile-Ads-SDK */,
+				9C1238C98F66B1F8D3A1D8D70FC218DB /* iRate */,
+				EF82ECB6F300D0E5A15A7C9571BFF514 /* iVersion */,
+				2A2026F890541047C19A42F393B65887 /* LKbadgeView */,
+				E267F3318DE125F1F3811944D1F42A4C /* MBProgressHUD */,
+				B75592619CFC65613068BED7BD7069FC /* TapkuLibrary */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A0F84559126FBB349BE75247F446E39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C58BB349CC009A7F13F9BBB0D62C9A7D /* libiRate.a */,
+				90C0241984E274AD4D94064D77B42B18 /* libiVersion.a */,
+				168A5B404A9B83352B495A71EF8B38C0 /* libLKbadgeView.a */,
+				E797E742057F550DC20B8703D7DDBB12 /* libMBProgressHUD.a */,
+				80B3DD47FA20773154BFA013D0760C2A /* libPods-Oriole2.a */,
+				88F61C645CF5EB38227CAE89B9656CD7 /* libTapkuLibrary.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5BBEC729222393445AAC7D550C472CB2 /* Targets Support Files */ = {
@@ -212,32 +522,47 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		742FCF0C9654BF7BF08F9516E58991B9 /* Support Files */ = {
+		5F783076067BA8DD633EB1B8AB6D212A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C0F1EE999E0B79FE4B196D5EEE80E168 /* LKbadgeView.xcconfig */,
-				BC8FF04B3B488EC232D814716D3F9573 /* LKbadgeView-dummy.m */,
-				2B41970E77BC4CD2556AA55FF68394DB /* LKbadgeView-prefix.pch */,
+				F2E297CB7C7F6A9336A377C141C17CEA /* iVersion.xcconfig */,
+				87EFBFA466BF56EADAE8B0783CF4603F /* iVersion-dummy.m */,
+				8F2D6AC20CC2DB7B6974C92E24820FBB /* iVersion-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iVersion";
+			sourceTree = "<group>";
+		};
+		63570F5F34BAAE83379397A349FCAF0A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D14DD2EA7438ED2642815E7487A2BF5 /* LKbadgeView.xcconfig */,
+				238E358AE13A838DFAA38220C829B5EA /* LKbadgeView-dummy.m */,
+				B1B74F375D12A11EFD2D533E8E6FA486 /* LKbadgeView-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/LKbadgeView";
 			sourceTree = "<group>";
 		};
-		785035E0C65C04111DE8CB77348FD7C4 /* Resources */ = {
+		68644CDE8106348F3BC7231F102A0796 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F24C35F5D3455E7AA7223691D9DBEB17 /* iVersion.bundle */,
+				83A578FAF320BC929578D9E351D5E1F7 /* CoreGraphics.framework */,
+				A97EAEC43FDF2C8719ECB13BCC212EF3 /* Foundation.framework */,
+				A25260DB9B397BF0F0666630A9DEEC35 /* QuartzCore.framework */,
+				AC26C65697EB13255A7001A8DA0B1771 /* StoreKit.framework */,
+				3D05DBD84D2F2B468512BF6210992A06 /* UIKit.framework */,
 			);
-			name = Resources;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				12C88490F0E1C37B41E2D9D9AABAD9AC /* Pods */,
-				13C38BB89A3896085DFDA620035CDF73 /* Products */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				50A6B3C423E27DE65579D9A7C16FC9BB /* Pods */,
+				5A0F84559126FBB349BE75247F446E39 /* Products */,
 				5BBEC729222393445AAC7D550C472CB2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -256,97 +581,216 @@
 			path = "Target Support Files/Pods-Oriole2";
 			sourceTree = "<group>";
 		};
-		9853E9DDC0E40BA318955E20DC236256 /* MBProgressHUD */ = {
+		9C1238C98F66B1F8D3A1D8D70FC218DB /* iRate */ = {
 			isa = PBXGroup;
 			children = (
-				72F2C4D24551450B8D9FB461D69A988E /* MBProgressHUD.h */,
-				713E84FB735E81C9B14B94BABC9FA676 /* MBProgressHUD.m */,
-				D7807D45E36ED82571441EDC88BC4C4A /* Support Files */,
-			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		A400E30E6679E903CF08EF95E75090A6 /* iVersion */ = {
-			isa = PBXGroup;
-			children = (
-				5DF1B3C3BA423493FDE9A25BC627ED51 /* iVersion.h */,
-				16C56B6DE59EE81AE58ACF55BC2C336E /* iVersion.m */,
-				785035E0C65C04111DE8CB77348FD7C4 /* Resources */,
-				BB9B2B090959928B47A1A6938AC812BE /* Support Files */,
-			);
-			name = iVersion;
-			path = iVersion;
-			sourceTree = "<group>";
-		};
-		A449CE5D6B98681D4C0E59653A6632EC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F3F2E05FEEED92D163329CB99D333C50 /* GoogleMobileAds.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AC26A62A33360904D5F5007954548032 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F4AF0C830B61CE7182364D019C0E47C6 /* iRate.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		B84EDA676F6EB92BA2556EB21531EAB4 /* Google-Mobile-Ads-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				A449CE5D6B98681D4C0E59653A6632EC /* Frameworks */,
-			);
-			name = "Google-Mobile-Ads-SDK";
-			path = "Google-Mobile-Ads-SDK";
-			sourceTree = "<group>";
-		};
-		BB9B2B090959928B47A1A6938AC812BE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E6570AE6E3C51205386F14A6A97663F3 /* iVersion.xcconfig */,
-				2C8CF2ED5AF30C3DDBF16692D1337567 /* iVersion-dummy.m */,
-				778B90976F7AB19347FC390A58F6D52A /* iVersion-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/iVersion";
-			sourceTree = "<group>";
-		};
-		C4C6BC6671003B7A9E2212E5595344F9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E8865C7B7194930196EF487504271A9C /* iRate.xcconfig */,
-				B8E2F932F05497544B11AA24A5AF49FD /* iRate-dummy.m */,
-				28FCFEC8E0845322F337551D3ED44C2D /* iRate-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/iRate";
-			sourceTree = "<group>";
-		};
-		CBF07AEE49AA2CF179037BADCF2EFC84 /* iRate */ = {
-			isa = PBXGroup;
-			children = (
-				27BE7D4854FD21EF1D8A6BBFEF9DCE51 /* iRate.h */,
-				9C6260F0E3C123FA9DC09FC271AD9825 /* iRate.m */,
-				AC26A62A33360904D5F5007954548032 /* Resources */,
-				C4C6BC6671003B7A9E2212E5595344F9 /* Support Files */,
+				4F6EF1B03C4AFBDDB419FFFBDCF775B6 /* iRate.h */,
+				F0FC09D3D1BC77F6F8F90601E0E780A6 /* iRate.m */,
+				9E9AD85386E68EFC5EE738DED0881804 /* Resources */,
+				0AFB838149F8EF6FE739DC90F5421336 /* Support Files */,
 			);
 			name = iRate;
 			path = iRate;
 			sourceTree = "<group>";
 		};
-		D7807D45E36ED82571441EDC88BC4C4A /* Support Files */ = {
+		9E9AD85386E68EFC5EE738DED0881804 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4CD5B752E0ECCBD835174991056249E1 /* MBProgressHUD.xcconfig */,
-				7A02E8E5397B257AD90322C04FD87085 /* MBProgressHUD-dummy.m */,
-				BCD294241B0EED6F4F2D2DE60A239469 /* MBProgressHUD-prefix.pch */,
+				01DCAE8E5BE8A7EE65E52C8DC5448929 /* iRate.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B75592619CFC65613068BED7BD7069FC /* TapkuLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				5E9742C5134660340CE6F5282CB79CBB /* NSArray+TKCategory.h */,
+				049AA034A0CF8255B248CA8E70B88ABE /* NSArray+TKCategory.m */,
+				3A07A175BB74B2A65093B2C1A92E0881 /* NSDate+CalendarGrid.h */,
+				97B17F7B8E0BCE7256AA764386588044 /* NSDate+CalendarGrid.m */,
+				F0F9C20EA238D48CE5517023D79C14CF /* NSDate+TKCategory.h */,
+				E5C5CBD390E0E91C970C0C1EA779A545 /* NSDate+TKCategory.m */,
+				B9A4DF2BA45A3FE35A2BBAE94F5A7B2D /* NSMutableArray+TKCategory.h */,
+				724D981A9E09C9765942C8F93B52069C /* NSMutableArray+TKCategory.m */,
+				655D8BB09301260237F26F53B699E095 /* NSObject+TKCategory.h */,
+				ADDD740A503A32545B21A2666332B47B /* NSObject+TKCategory.m */,
+				F5E821DD46E187A6699D1E309F678AED /* NSString+TKCategory.h */,
+				F85C7C18069096309523665A6214A6CD /* NSString+TKCategory.m */,
+				7096FAF03DC59A62E40B66AA1FE7909F /* TapkuLibrary.h */,
+				3DA867DE27BC513E522DB229B248DA91 /* TKAlertCenter.h */,
+				9F182316FCB12679D9C10ECE440C2442 /* TKAlertCenter.m */,
+				3086569C196935DF8802B9BD2D072469 /* TKAlertViewController.h */,
+				5F51190917601D441400ED39AA4B567D /* TKAlertViewController.m */,
+				FB00D2FFC4211BBAEE262E5CF4B17DAD /* TKAppDelegate.h */,
+				EC8428DFBF30AD32712851226BB43BD4 /* TKAppDelegate.m */,
+				A1658A3899C31AAA210FBDA9A9F8BF44 /* TKButtonCell.h */,
+				0AD0F8C633AAC5F1510DAC87667AE458 /* TKButtonCell.m */,
+				1D9315CCF5042D406C2E7B5F6B9A23E7 /* TKCalendarDayEventView.h */,
+				BA925963394C8E4A066194B0161E4E2D /* TKCalendarDayEventView.m */,
+				DD3E03668CABFF98EB607C00D90D24B5 /* TKCalendarDayView.h */,
+				79ACBBF40E64C378486CC3A235D3D934 /* TKCalendarDayView.m */,
+				9137C53BD72DBDC0D3CE102F6CEC429B /* TKCalendarDayViewController.h */,
+				46F7DC80DC7A67946611EB3FD75F6A0C /* TKCalendarDayViewController.m */,
+				315FC13BA175B9E6B6825C407F22E325 /* TKCalendarMonthTableViewController.h */,
+				1A0E0B0032D645195621B2A1A403A350 /* TKCalendarMonthTableViewController.m */,
+				EB0EAAE2B5446B57F1B02C089D3EC674 /* TKCalendarMonthView.h */,
+				0C0B5C0F4DBD5B1D0CFA881DC7268AD4 /* TKCalendarMonthView.m */,
+				31D334EDFD6A2DD9B7076A961A2DE88B /* TKCalendarMonthViewController.h */,
+				2F8825465E173E6E81D9868DF6BE4B87 /* TKCalendarMonthViewController.m */,
+				59A56ACDE668D624D840E5362CB64F6C /* TKCoverflowView.h */,
+				B49A02EFEBC3940C688C21C1D76BAB03 /* TKCoverflowView.m */,
+				0E7B61DAD60DD55C82CEE9C0A1E5AB9F /* TKEmptyView.h */,
+				C63B5097593F1C4A2CF11F30D6ED1925 /* TKEmptyView.m */,
+				974D137F0454AEC26D4A206CFAF8A1C0 /* TKGlobal.h */,
+				FA124E5DEA69F5749AB1C034EE1E58FF /* TKGlobal.m */,
+				AA1CD1181BF89CE63D0140DD4D4B48EF /* TKGlowButton.h */,
+				D80F2359ADD9D87A85A66B6D62D72F55 /* TKGlowButton.m */,
+				F5E0AE16689F4DF1A1BFEFC4689E171C /* TKGradientView.h */,
+				5DDE2F3BD23778094F4B616478226002 /* TKGradientView.m */,
+				30FAC3657219F998020C0B3F9C01CDA6 /* TKHTTPRequest.h */,
+				2092D7BF48D33CF1C9000699F609DC33 /* TKHTTPRequest.m */,
+				BDED7EF660BA2E67DFE67FD308F17AB4 /* TKImageCache.h */,
+				529C59861F3F4EE9BEC62ACFA28CFFD3 /* TKImageCache.m */,
+				4F02A794A29FAD3E2A458BD152BB0FEF /* TKKeyboardTableViewController.h */,
+				8B283A68C1145AFA4391A558627E12C4 /* TKKeyboardTableViewController.m */,
+				3D628B3718761FE18148D9B29B2A8008 /* TKLabelCell.h */,
+				79324838287B1FC37F6330D84A01C5FF /* TKLabelCell.m */,
+				63E1392950C351231B52766BCADECEE2 /* TKLabelFieldCell.h */,
+				C85214B4C005FC3ACAF976A2EDEF24D1 /* TKLabelFieldCell.m */,
+				71EBA20F01579AD7AA0F82A29468D86B /* TKLabelSwitchCell.h */,
+				62933D7272A3D58EED2967C65D9261D7 /* TKLabelSwitchCell.m */,
+				64D025B3B52D032D36337951C3BE5752 /* TKLabelTextFieldCell.h */,
+				1E3C43A91643932CA24E1A1F7670EA20 /* TKLabelTextFieldCell.m */,
+				0DA3CD64F1FD071FAB4028C015DBA062 /* TKLabelTextViewCell.h */,
+				689411D2D32C45DF38E39582008B5FBF /* TKLabelTextViewCell.m */,
+				D7448818F42A73C3F95C0A944B744836 /* TKLoadingView.h */,
+				871B921AEDBEB2D9EF69C7CA7270D78E /* TKLoadingView.m */,
+				D3FB67B034DE240EAAA4B25CA602320D /* TKNetworkQueue.h */,
+				CD5C42A30CA434F6BA4EC04E3C8DA731 /* TKNetworkQueue.m */,
+				AA307DC5028F2892BC013B52B42629C5 /* TKProgressAlertView.h */,
+				B471507B799E45E2A82BC00C2BB43595 /* TKProgressAlertView.m */,
+				BB459C0ED274037F559D7A8C1F5D21E0 /* TKProgressBarView.h */,
+				68A7274C618DCCF13CF210A87309955A /* TKProgressBarView.m */,
+				3246E58AA631575E57518F55571C672B /* TKProgressCircleView.h */,
+				EE5453E669AF9ECCC63ABD87570D0A8D /* TKProgressCircleView.m */,
+				C41A10544D69797FC21DBECF22DEF331 /* TKReorderTableView.h */,
+				AFC665CF56507407188CB65CB5D3B9F5 /* TKReorderTableView.m */,
+				DB7FD561A8053463BC5446ECB110E11D /* TKRetroButton.h */,
+				B2CE96A76841AB3F802EEAF993336C5B /* TKRetroButton.m */,
+				FE8B2EF90CD8364B106ED313B58785CA /* TKShapeView.h */,
+				D165B7D9FFBBC476E865EBC67F896CED /* TKShapeView.m */,
+				16BAF546FE5FE0DBF3F98A91F1CDFCDB /* TKShimmerLabel.h */,
+				940A05434CC7CB61B17B988DF5A7EEBE /* TKShimmerLabel.m */,
+				E6DCC59C1F3AA9C779E63C8F62E25937 /* TKSlideToUnlockView.h */,
+				8756CA644C95DB1B68364DBC805E9E70 /* TKSlideToUnlockView.m */,
+				0AE3D3D7107F580EFDE725640CD9219B /* TKSwitchCell.h */,
+				D340269ACF2D65BF9814E587435E66A8 /* TKSwitchCell.m */,
+				489012E762E6B9D217E8F030117E4ACB /* TKTableViewCell.h */,
+				14802B770BCE97C09B302E5BC6C11A89 /* TKTableViewCell.m */,
+				2EF0C3EFC7A482ED361A71E13A6CAB56 /* TKTableViewController.h */,
+				C216E6480046B64578D5FF087F36DFA8 /* TKTableViewController.m */,
+				618745FD816ABF24B0575B3D7EEE4EFE /* TKTextFieldCell.h */,
+				52DC3F40A21B13671360967D722FEABF /* TKTextFieldCell.m */,
+				49AE5CEE770B4BF3F68A07F718752125 /* TKTextView.h */,
+				B47B4E1AFBA353BAF0DDEEF36A010D30 /* TKTextView.m */,
+				DD63BCC4D46E2E43B46261ED32CAABDA /* TKTextViewCell.h */,
+				7CDDCB7D711DE64945FD8CE0262ECA9B /* TKTextViewCell.m */,
+				58F57BBC1901DF3C23BED3940E324180 /* TKViewController.h */,
+				B5E0C46A48E2BA48D0D85A6013AB0283 /* TKViewController.m */,
+				9798F94485313CD633B9FA9976229EF9 /* TKWebViewController.h */,
+				9A41FAE11ABC3E958A76FCC81149FDAE /* TKWebViewController.m */,
+				2C7A707116A366D9F5EE7769671423F7 /* TKWindow.h */,
+				D239286160B42D1E7CC3B09F05BC8FF2 /* TKWindow.m */,
+				6331FBC9C4A4688F07F423454DDC43C7 /* UIActionSheet+TKCategory.h */,
+				12341D0FB787D09E73696F44680DDB7D /* UIActionSheet+TKCategory.m */,
+				ECB0531FBA716420B8CABD32A210F72E /* UIAlertView+TKCategory.h */,
+				C14B324D353621C4CA7E566A496F8066 /* UIAlertView+TKCategory.m */,
+				36B5DC3B365345113EF74489BE6AF49D /* UIBarButtonItem+TKCategory.h */,
+				5AECC938BAA71415312221BE70EFEA7E /* UIBarButtonItem+TKCategory.m */,
+				1E433C3A9797E864F1BAA4527B40E2AE /* UIButton+TKCategory.h */,
+				2C407F0CC69FAA0B60E8948125749724 /* UIButton+TKCategory.m */,
+				CCD726F473E7A75773381F984B0A9E84 /* UIColor+TKCategory.h */,
+				453EF0106FE8E00C6B1C57DB2AAE1B27 /* UIColor+TKCategory.m */,
+				46693A6F16611D2BC119DB9A15959D10 /* UIDevice+TKCategory.h */,
+				34756AA7391FF3C8AE196182592D71F7 /* UIDevice+TKCategory.m */,
+				95EB8F012A2FDF5AD78579FA11E94A27 /* UIFont+TKCategory.h */,
+				13C6AD81BFB46B138D50BDBF79622572 /* UIFont+TKCategory.m */,
+				52FD4638B5AC6E8A53F37D68FFFC4A11 /* UIGestureRecognizer+TKCategory.h */,
+				0588182D98B652D3A0283E02C7CBCA94 /* UIGestureRecognizer+TKCategory.m */,
+				4D0D2470C40EBBA8610789D92306CB82 /* UIImage+TKCategory.h */,
+				F26F940A2BB0DADF6010A497EC1A896A /* UIImage+TKCategory.m */,
+				6F4EA9BDCAE9A3CDA4DD653C5CBCBFD5 /* UIImagePickerController+TKCategory.h */,
+				130F8C6D3C8E74FE1C19EAC203AFE132 /* UIImagePickerController+TKCategory.m */,
+				7058E90C38F649BC9FDEB35135EAB0F3 /* UIImageView+TKCategory.h */,
+				1057B01CD1129FCD73EA8B6A1F1AC600 /* UIImageView+TKCategory.m */,
+				4775065B5201ABCD555318F25A26D03F /* UIScreen+TKCategory.h */,
+				23B6629864C826F750C80A6A9DAAF52A /* UIScreen+TKCategory.m */,
+				01A79C27F122EC8B8CDF64D5E0408096 /* UIScrollview+TKCategory.h */,
+				35ADE386F1D91B8A30514A3358D3395C /* UIScrollview+TKCategory.m */,
+				ABC61028D7426903A817529081678F66 /* UITextField+TKCategory.h */,
+				A7F7F6B998973F8D237F0C44779160C1 /* UITextField+TKCategory.m */,
+				D4D94AB86E347C289B505DDB0C6C5FB5 /* UIView+TKCategory.h */,
+				FA8104ACF6BEEC4F340BBBF1204E27D6 /* UIView+TKCategory.m */,
+				223F997B555C338DC15BC95140137124 /* UIViewController+TKCategory.h */,
+				2EE2D834276C0E53D2C86D2CC87FD096 /* UIViewController+TKCategory.m */,
+				3E3D54AE8C0E127C2B0BC25F741B5879 /* Resources */,
+				D2B4E6C912FBFC7ADECE30E3C4A102E9 /* Support Files */,
+			);
+			name = TapkuLibrary;
+			path = TapkuLibrary;
+			sourceTree = "<group>";
+		};
+		CAC2638ACCFAC6C1CE4CCF819FB7AF36 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C04494B67807E9A04E6684F243EE1EA /* MBProgressHUD.xcconfig */,
+				E7268D49AD4D7A2B29CBA7FB312162C8 /* MBProgressHUD-dummy.m */,
+				B9BD44C9B630137CF5B644460AC0E7F5 /* MBProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		D2B4E6C912FBFC7ADECE30E3C4A102E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FD1FD4E204D867C6E73ADB67D6F6187 /* TapkuLibrary.xcconfig */,
+				9F53C51E5CEC9F45A513B0B3EB64DC81 /* TapkuLibrary-dummy.m */,
+				A2CF67FEF777EEEFD454276375538375 /* TapkuLibrary-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TapkuLibrary";
+			sourceTree = "<group>";
+		};
+		E267F3318DE125F1F3811944D1F42A4C /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				AA3F5DEBEE70A85755C3944D53D72AD3 /* MBProgressHUD.h */,
+				E59E1B74E6AD3BAD2A6E2FE471412A32 /* MBProgressHUD.m */,
+				CAC2638ACCFAC6C1CE4CCF819FB7AF36 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		E6C11DEFE88A7129CC00FB138A1769D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCF398D9E29EA611D98084BC35964489 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF82ECB6F300D0E5A15A7C9571BFF514 /* iVersion */ = {
+			isa = PBXGroup;
+			children = (
+				558295C57AC45796A99DF2E23461DC80 /* iVersion.h */,
+				9B76EB7D128682940CABD399403682AE /* iVersion.m */,
+				2F4105AAF29CA8BCAC0B81EC94BD77E9 /* Resources */,
+				5F783076067BA8DD633EB1B8AB6D212A /* Support Files */,
+			);
+			name = iVersion;
+			path = iVersion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +801,78 @@
 			buildActionMask = 2147483647;
 			files = (
 				D096B7E9A7B9DBC9B9AE2025D44FBF2E /* iVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3205FE370DEFE53C5DBB7A1F9D09EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08244BCA27831CCB7E97BDF7AF7C7431 /* NSArray+TKCategory.h in Headers */,
+				B735714C68437A3ABC7881B844EB6239 /* NSDate+CalendarGrid.h in Headers */,
+				A93E8A04A4DAE5005C20CFA890F8B5EB /* NSDate+TKCategory.h in Headers */,
+				42D5BE289DA135CEFFB21B3D2F701C14 /* NSMutableArray+TKCategory.h in Headers */,
+				A00E2F7E63346A2E625AB5E1284FE2BF /* NSObject+TKCategory.h in Headers */,
+				207A87A28E7DF295B1652D3B38DBBE67 /* NSString+TKCategory.h in Headers */,
+				1F4ED7072278331509992D5495181228 /* TapkuLibrary.h in Headers */,
+				5EC829DB03AFDE7A4BB24AB6FDE80CFF /* TKAlertCenter.h in Headers */,
+				4D534CD98195D179F24C7B8ACA9491C0 /* TKAlertViewController.h in Headers */,
+				780A811FABC411888DD20012F44C7A66 /* TKAppDelegate.h in Headers */,
+				640455554ED5D2DACC1C1DC5A5F78112 /* TKButtonCell.h in Headers */,
+				81A2AF0201A9CD2A43F784637383ED2E /* TKCalendarDayEventView.h in Headers */,
+				4F7411F84BA4EA16AEFB1CD751CAD6EB /* TKCalendarDayView.h in Headers */,
+				AB36D0420A644A9634BC17B66D3F653D /* TKCalendarDayViewController.h in Headers */,
+				46D95C47B2FE7BB0FE4920BA4BB15233 /* TKCalendarMonthTableViewController.h in Headers */,
+				7A519622F55D3C7D2EF4DA52D637A3DF /* TKCalendarMonthView.h in Headers */,
+				2028F61079B3DA8B223528924EDE747B /* TKCalendarMonthViewController.h in Headers */,
+				0B61019A632E10237EAAE32F9562F6B7 /* TKCoverflowView.h in Headers */,
+				2FC43083ACF0A46904122EDEA0CD95AE /* TKEmptyView.h in Headers */,
+				4840A954E57FA0CF7EB9FB0B2D6C4D31 /* TKGlobal.h in Headers */,
+				8B517D41705810170C1B6BFE1D5C8D7A /* TKGlowButton.h in Headers */,
+				8D287D81DA272D0908931665C39DCABE /* TKGradientView.h in Headers */,
+				4127D8C08C84EE6F14942B9B1105589C /* TKHTTPRequest.h in Headers */,
+				8376C23421A0F93A7E227928D87BFE15 /* TKImageCache.h in Headers */,
+				C3B6045C0B5D6718D9265479AFCE5ECD /* TKKeyboardTableViewController.h in Headers */,
+				AA8519236438905F81578E6227E67BCB /* TKLabelCell.h in Headers */,
+				5AE4B3BC7960F2B8FD5AA1DD79B13CC7 /* TKLabelFieldCell.h in Headers */,
+				80F0A7D88BB6A7D6D0D549B4D3E38D6A /* TKLabelSwitchCell.h in Headers */,
+				115C128E21EBC1206720B1D507AEA4C0 /* TKLabelTextFieldCell.h in Headers */,
+				C5CF78AA057E8F5095EAE2B478172482 /* TKLabelTextViewCell.h in Headers */,
+				C9B6D9A575482BA3FD18991CEEFEF1F6 /* TKLoadingView.h in Headers */,
+				679CE3AF2FAF85E0614C65B7B1A6C7FF /* TKNetworkQueue.h in Headers */,
+				2730BD069FBDD5F3F25461A175BE4CF1 /* TKProgressAlertView.h in Headers */,
+				D4CB82FFE67ACFB7FD10A00E40708E46 /* TKProgressBarView.h in Headers */,
+				7BDF24290789E8CE53E9D08D07CCB163 /* TKProgressCircleView.h in Headers */,
+				E456AF92FE3C18DDC06A7B86AAC32AA2 /* TKReorderTableView.h in Headers */,
+				CDF50083850D27561031CFD3F75A303B /* TKRetroButton.h in Headers */,
+				A21F6B51D82BD75346CA9FE17D8720CF /* TKShapeView.h in Headers */,
+				14C2FB41D13217703D2629ABBA5FBF03 /* TKShimmerLabel.h in Headers */,
+				E954C344403518DE089FD7C4C5063B47 /* TKSlideToUnlockView.h in Headers */,
+				7960D28B42767DADB99D47026E42584C /* TKSwitchCell.h in Headers */,
+				DB24EB0CBB94475A5F33BFB15BC0FCD8 /* TKTableViewCell.h in Headers */,
+				A51924D201A3F80F5D71851B0E2A4AF0 /* TKTableViewController.h in Headers */,
+				69BE429213F18B2F2DFD808F349598CD /* TKTextFieldCell.h in Headers */,
+				1EEF27316D8A4BAAE34F250197ED2AA7 /* TKTextView.h in Headers */,
+				10612A04D48ABEAB488E7FCD1410AA47 /* TKTextViewCell.h in Headers */,
+				B97DA38E52F93874066E5F3493F4B3D9 /* TKViewController.h in Headers */,
+				5A2E4D7C5256922952966E9FBB5BCD6F /* TKWebViewController.h in Headers */,
+				99624A9D50078A2BA099C10AEB293EC7 /* TKWindow.h in Headers */,
+				6C963965723DD430A9425FE982D29DC7 /* UIActionSheet+TKCategory.h in Headers */,
+				851F9775B74601CB9079E1D6732D60BA /* UIAlertView+TKCategory.h in Headers */,
+				FAD34A3DC0E6E0B10630BD77DA9FDB52 /* UIBarButtonItem+TKCategory.h in Headers */,
+				B00AFACB98C961516C0208882E777040 /* UIButton+TKCategory.h in Headers */,
+				A5BC3BF53CBCE39270A177E00A2527ED /* UIColor+TKCategory.h in Headers */,
+				8D7FE38A25ED57F759EEE708B4090EA7 /* UIDevice+TKCategory.h in Headers */,
+				E49E8BFDCA1580E558CA5303F46A8ACB /* UIFont+TKCategory.h in Headers */,
+				EE8A754CB100E5B9163E3C695A73839A /* UIGestureRecognizer+TKCategory.h in Headers */,
+				76D281FC3C95AE9D329C411E3150AB6A /* UIImage+TKCategory.h in Headers */,
+				51CFB9B6ED53C34A5511FD1925CED140 /* UIImagePickerController+TKCategory.h in Headers */,
+				D582D0AFADDAF3D69D6BA33A4F1F9B5F /* UIImageView+TKCategory.h in Headers */,
+				3883622E338222F47D711AAEBB5CCA73 /* UIScreen+TKCategory.h in Headers */,
+				878F9839EEB792D8092E2A9700924C9D /* UIScrollview+TKCategory.h in Headers */,
+				9E9875FA86D8788C1D60E76A7D0B68A3 /* UITextField+TKCategory.h in Headers */,
+				DC2062890BD5D0DAE513938F4DE106C6 /* UIView+TKCategory.h in Headers */,
+				C5B314A64A53950BDFA131082F7D6804 /* UIViewController+TKCategory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,27 +917,7 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 596903A192CC8A9F5BD8B1FC9A4E2968 /* libMBProgressHUD.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		2B0DFE34CB7CF019C725CCB2DBAD1DB8 /* Pods-Oriole2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA17DC25D5BA93451C1A9A90E9BEBE57 /* Build configuration list for PBXNativeTarget "Pods-Oriole2" */;
-			buildPhases = (
-				30B717A4CE1C83601303FF8B97A0D203 /* Sources */,
-				FE308155F935DED713AEFCF99D6EAA3F /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5CE7D07017FCEAE1EB821EF6FBCA2B4B /* PBXTargetDependency */,
-				314DDB34AE6CA338DD19B5B49D366EFA /* PBXTargetDependency */,
-				397A76196219F9572DE6642A223F574F /* PBXTargetDependency */,
-				D2B8297FC688158439A57FC583AC1DAA /* PBXTargetDependency */,
-			);
-			name = "Pods-Oriole2";
-			productName = "Pods-Oriole2";
-			productReference = 930357E2E2AE05FF2A4BC270E8C0DE19 /* libPods-Oriole2.a */;
+			productReference = E797E742057F550DC20B8703D7DDBB12 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		35FEDD8D3367DFD007FC58FF284F05C9 /* LKbadgeView */ = {
@@ -438,7 +934,7 @@
 			);
 			name = LKbadgeView;
 			productName = LKbadgeView;
-			productReference = B149F440B5C5CFF7723A7C9359E49653 /* libLKbadgeView.a */;
+			productReference = 168A5B404A9B83352B495A71EF8B38C0 /* libLKbadgeView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6E6BDA29873EFF9BFC3331A7594A3AA3 /* iVersion */ = {
@@ -455,7 +951,45 @@
 			);
 			name = iVersion;
 			productName = iVersion;
-			productReference = 95D378230198212C87CDCCA5E6D5AC78 /* libiVersion.a */;
+			productReference = 90C0241984E274AD4D94064D77B42B18 /* libiVersion.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9B524849F128861FF1F3096FB6D57531 /* TapkuLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CC7F1E96E46EE7A46E57980000CAB9 /* Build configuration list for PBXNativeTarget "TapkuLibrary" */;
+			buildPhases = (
+				51DC1B550C15D5D95197358599155B70 /* Sources */,
+				A57C41048B8E2CB9FE749724B7830F2A /* Frameworks */,
+				6E3205FE370DEFE53C5DBB7A1F9D09EC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapkuLibrary;
+			productName = TapkuLibrary;
+			productReference = 88F61C645CF5EB38227CAE89B9656CD7 /* libTapkuLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B7123FA3C3944D714CA327C3057B11A6 /* Pods-Oriole2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848E0334A734AEC7B283DCFC43C4F956 /* Build configuration list for PBXNativeTarget "Pods-Oriole2" */;
+			buildPhases = (
+				8D06C205B338A5DB84AA83D4AFE6AA67 /* Sources */,
+				C786D149D10631C7719D553AC0A832BB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EDDD56EE75456DECA52FC29EAF71E52 /* PBXTargetDependency */,
+				E49F0FC99603E8AC7C13D9D6F9A8565B /* PBXTargetDependency */,
+				EA40D51D203911BB554EF45EF09D5A0D /* PBXTargetDependency */,
+				111F25041982577B51F9110B526C9604 /* PBXTargetDependency */,
+				DF7E2C1A6F8EC96828961FC634203BAE /* PBXTargetDependency */,
+			);
+			name = "Pods-Oriole2";
+			productName = "Pods-Oriole2";
+			productReference = 80B3DD47FA20773154BFA013D0760C2A /* libPods-Oriole2.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		E998595DE39E28C562D6DAA4E8A9AE9E /* iRate */ = {
@@ -472,7 +1006,7 @@
 			);
 			name = iRate;
 			productName = iRate;
-			productReference = F1D4FF5BA60F2B4615624C0E6BB35779 /* libiRate.a */;
+			productReference = C58BB349CC009A7F13F9BBB0D62C9A7D /* libiRate.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -492,7 +1026,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 13C38BB89A3896085DFDA620035CDF73 /* Products */;
+			productRefGroup = 5A0F84559126FBB349BE75247F446E39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -500,7 +1034,8 @@
 				6E6BDA29873EFF9BFC3331A7594A3AA3 /* iVersion */,
 				35FEDD8D3367DFD007FC58FF284F05C9 /* LKbadgeView */,
 				175B076ED45EB1A3E40F58BA14036467 /* MBProgressHUD */,
-				2B0DFE34CB7CF019C725CCB2DBAD1DB8 /* Pods-Oriole2 */,
+				B7123FA3C3944D714CA327C3057B11A6 /* Pods-Oriole2 */,
+				9B524849F128861FF1F3096FB6D57531 /* TapkuLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -515,11 +1050,75 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30B717A4CE1C83601303FF8B97A0D203 /* Sources */ = {
+		51DC1B550C15D5D95197358599155B70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67A8A000A299E576C5F20B8922CB257 /* Pods-Oriole2-dummy.m in Sources */,
+				2BA399C51A239A3DA8EC28ECDB84CBB4 /* NSArray+TKCategory.m in Sources */,
+				980D94BAD68447B2AFDB2E0D10FD5AC5 /* NSDate+CalendarGrid.m in Sources */,
+				FAE87C044C17FE5E639597A66A6C5BA7 /* NSDate+TKCategory.m in Sources */,
+				96B6772E9E9F6788AE6371E2F5065D3D /* NSMutableArray+TKCategory.m in Sources */,
+				05566222D2FD59CA00AE22EC4F54D1DE /* NSObject+TKCategory.m in Sources */,
+				936BA3BCD49A3A439550228C5CAC0D40 /* NSString+TKCategory.m in Sources */,
+				B19AA0E3A0968F40B6D5E30CE1425D77 /* TapkuLibrary-dummy.m in Sources */,
+				1231A89D2988B8B695789ED6F4BA81E1 /* TKAlertCenter.m in Sources */,
+				6D7C6F826EC6F5AB10B4C8F78E426BE0 /* TKAlertViewController.m in Sources */,
+				DBD046F0895C4EBE6BF674EEF3A6326B /* TKAppDelegate.m in Sources */,
+				F939295186D1A5A48102B613F9981FA7 /* TKButtonCell.m in Sources */,
+				14F0A2E64477A8CEFF1E89E385EEC498 /* TKCalendarDayEventView.m in Sources */,
+				F1261C86060B31A201658BAB3393D620 /* TKCalendarDayView.m in Sources */,
+				C7C8C775F6021D994FBC6C385898D0EC /* TKCalendarDayViewController.m in Sources */,
+				310F83FFAAC7B1D764522F63B25E9B39 /* TKCalendarMonthTableViewController.m in Sources */,
+				BD594175ABFE0DC22F620AC8BDDEFEF8 /* TKCalendarMonthView.m in Sources */,
+				11D6BAF7BEF85DF1B2BC8BDD212231D9 /* TKCalendarMonthViewController.m in Sources */,
+				1715E8189C1672D29102DDA592D77BCB /* TKCoverflowView.m in Sources */,
+				EB29B5D05E3108B69C3550ACDF9EB639 /* TKEmptyView.m in Sources */,
+				F46BD060F69C9F323FFB7A019D74E54F /* TKGlobal.m in Sources */,
+				0CF4181605B75715B3535BEFDD6826C7 /* TKGlowButton.m in Sources */,
+				D7F1607BA2553A052229C16E46B3A4D0 /* TKGradientView.m in Sources */,
+				A1F813701093C285D29F0A7F8486967D /* TKHTTPRequest.m in Sources */,
+				0DA05281BB654CA503C67AA33B5147FD /* TKImageCache.m in Sources */,
+				A26E064F3323512A3C03154B321742A4 /* TKKeyboardTableViewController.m in Sources */,
+				9F801975886CE896569ED5D9DD45E831 /* TKLabelCell.m in Sources */,
+				CCF6B6E3611CEF479B521ABF34C1CA27 /* TKLabelFieldCell.m in Sources */,
+				316C9C1431EF12C86272FFF8F12C939E /* TKLabelSwitchCell.m in Sources */,
+				0DF12F5D9FF3B735A8C96A38745BB7E5 /* TKLabelTextFieldCell.m in Sources */,
+				740E31E030D16BA044C8911DAF756134 /* TKLabelTextViewCell.m in Sources */,
+				B7202F121EC11226DC42C846525312F2 /* TKLoadingView.m in Sources */,
+				7E1075B56FA6BC8AFEFB680D768B1A12 /* TKNetworkQueue.m in Sources */,
+				FCD3A953A2600C5588C88FACF0B823C8 /* TKProgressAlertView.m in Sources */,
+				793E9A35B3D61F35B23A022F9ACF2882 /* TKProgressBarView.m in Sources */,
+				8C7BB9915A62B98AA64A907CAFF4BC10 /* TKProgressCircleView.m in Sources */,
+				D09BD59CEFA2995821F573B7490E0974 /* TKReorderTableView.m in Sources */,
+				458996020054A4BDE87B62B687BFE0B5 /* TKRetroButton.m in Sources */,
+				569238AA646083C7082B63F68460230A /* TKShapeView.m in Sources */,
+				9B4B4B067410775B0E754163F1EF272D /* TKShimmerLabel.m in Sources */,
+				F81266B5090BFE1CE264C938C5C44C0F /* TKSlideToUnlockView.m in Sources */,
+				0BBE63D91CDA5D2C015EDD40EB3BD7AC /* TKSwitchCell.m in Sources */,
+				8EFB8D390C15E93FC8464F11333DA809 /* TKTableViewCell.m in Sources */,
+				BB3675D453D4306FAB4F07B232AA02A7 /* TKTableViewController.m in Sources */,
+				CC734F95948676A2BD387A4D1EADFFE4 /* TKTextFieldCell.m in Sources */,
+				7CF32E86531C09A785254096B984430F /* TKTextView.m in Sources */,
+				C77FF332ABCC1FB03964E96FA1F4E613 /* TKTextViewCell.m in Sources */,
+				5500B01842D5483E32705080284A7C21 /* TKViewController.m in Sources */,
+				466758E62953DC8893C45CD9E3FD4985 /* TKWebViewController.m in Sources */,
+				C8494C427A97B2D3D7BEC0EBAE830647 /* TKWindow.m in Sources */,
+				CAB42C3E85285E9007769300C8FBB11A /* UIActionSheet+TKCategory.m in Sources */,
+				206FAA269F212D9F9C5FC81FD0832AC4 /* UIAlertView+TKCategory.m in Sources */,
+				0EC3AF09E1FD436727CD18B9EDD3843F /* UIBarButtonItem+TKCategory.m in Sources */,
+				F70A11BFFD40266819F66BC86B673A0C /* UIButton+TKCategory.m in Sources */,
+				5897235214DE8A5652773FAC373C36B0 /* UIColor+TKCategory.m in Sources */,
+				C2F9E0544D08B928FEB7255E7277D030 /* UIDevice+TKCategory.m in Sources */,
+				A800CBE6B23831B9E139D9962DF277E9 /* UIFont+TKCategory.m in Sources */,
+				A76930EEA941BBFB42F042B088EE6136 /* UIGestureRecognizer+TKCategory.m in Sources */,
+				EE9794CA50C4A82D6B30959B686637A3 /* UIImage+TKCategory.m in Sources */,
+				433C65DB56AD882B0FEDEB1DE2ADC5B1 /* UIImagePickerController+TKCategory.m in Sources */,
+				D7047091A812F4A526BB1A0E8FCD39D3 /* UIImageView+TKCategory.m in Sources */,
+				FB51BA14989FE2F4EE63716D71FFBB00 /* UIScreen+TKCategory.m in Sources */,
+				4FFE5655CC39CA2D939412439B4BCA38 /* UIScrollview+TKCategory.m in Sources */,
+				67882E38F06959FC7F5376447E9AEA69 /* UITextField+TKCategory.m in Sources */,
+				BC0683A105C496A5E9B484B9588C03F9 /* UIView+TKCategory.m in Sources */,
+				2833BF3277834802550DA6BA783D12E8 /* UIViewController+TKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +1128,14 @@
 			files = (
 				41F3F0ADA2A729654ABA403D27BB0DB2 /* LKbadgeView-dummy.m in Sources */,
 				F4CACA203D51BC789AEFA5ADCDC8301E /* LKBadgeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D06C205B338A5DB84AA83D4AFE6AA67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EFB6345C2A67F4AAC64DA331BA63F1C /* Pods-Oriole2-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,36 +1160,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		314DDB34AE6CA338DD19B5B49D366EFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = 175B076ED45EB1A3E40F58BA14036467 /* MBProgressHUD */;
-			targetProxy = EBDE8AD4C3D7CB6824F09B6700AF6558 /* PBXContainerItemProxy */;
-		};
-		397A76196219F9572DE6642A223F574F /* PBXTargetDependency */ = {
+		111F25041982577B51F9110B526C9604 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iRate;
 			target = E998595DE39E28C562D6DAA4E8A9AE9E /* iRate */;
-			targetProxy = 05866D2897F19DD0324E8CAFA28A9D97 /* PBXContainerItemProxy */;
+			targetProxy = 6F72A8A760984610C16D0947AB98EDF5 /* PBXContainerItemProxy */;
 		};
-		5CE7D07017FCEAE1EB821EF6FBCA2B4B /* PBXTargetDependency */ = {
+		2EDDD56EE75456DECA52FC29EAF71E52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LKbadgeView;
 			target = 35FEDD8D3367DFD007FC58FF284F05C9 /* LKbadgeView */;
-			targetProxy = 2CE110BF9483CDD15D7EBDFCA69C2205 /* PBXContainerItemProxy */;
+			targetProxy = 1229EEB0310D0AD70B4AFF156478A8F4 /* PBXContainerItemProxy */;
 		};
-		D2B8297FC688158439A57FC583AC1DAA /* PBXTargetDependency */ = {
+		DF7E2C1A6F8EC96828961FC634203BAE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iVersion;
 			target = 6E6BDA29873EFF9BFC3331A7594A3AA3 /* iVersion */;
-			targetProxy = 1E61143812A7FAD65A88247EEA3A4F55 /* PBXContainerItemProxy */;
+			targetProxy = F9BADC69E873C66F19AA2D65D35080EF /* PBXContainerItemProxy */;
+		};
+		E49F0FC99603E8AC7C13D9D6F9A8565B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 175B076ED45EB1A3E40F58BA14036467 /* MBProgressHUD */;
+			targetProxy = A60B43E5B1B347FD8FB037BE53D871A6 /* PBXContainerItemProxy */;
+		};
+		EA40D51D203911BB554EF45EF09D5A0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			target = 9B524849F128861FF1F3096FB6D57531 /* TapkuLibrary */;
+			targetProxy = 4E8D8F7A48F317585FBBF7BB6D0D5A5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0A88EA846E6BFF73620491BEF574A573 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8865C7B7194930196EF487504271A9C /* iRate.xcconfig */;
+			baseConfigurationReference = 6C9DC5AC938B71CFC62A04191AA461B1 /* iRate.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -606,7 +1219,7 @@
 		};
 		121C2AE2770801412F2129F8CDAA5EE0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0F1EE999E0B79FE4B196D5EEE80E168 /* LKbadgeView.xcconfig */;
+			baseConfigurationReference = 9D14DD2EA7438ED2642815E7487A2BF5 /* LKbadgeView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -630,7 +1243,7 @@
 		};
 		1D2BB551D39E1FAF7075B72868CE9464 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8865C7B7194930196EF487504271A9C /* iRate.xcconfig */;
+			baseConfigurationReference = 6C9DC5AC938B71CFC62A04191AA461B1 /* iRate.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -654,7 +1267,7 @@
 		};
 		31C0C0DD39AA4C074B797E05D5A5DEA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CD5B752E0ECCBD835174991056249E1 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 0C04494B67807E9A04E6684F243EE1EA /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -676,7 +1289,30 @@
 			};
 			name = Release;
 		};
-		63EEA549765E9535FB34A3DB48FA95E7 /* Debug */ = {
+		4F9E5CB5E262A3FCAD9B5366F4592533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140F8D3301A51085EEC164607A380F54 /* Pods-Oriole2.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		66A2D0179A13CB00612004C5A6A22C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4006E2754839D27B3D7AA3A8B1BC167 /* Pods-Oriole2.debug.xcconfig */;
 			buildSettings = {
@@ -701,7 +1337,7 @@
 		};
 		6DA6DA41AAC3C622AC8FA4E92333A493 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6570AE6E3C51205386F14A6A97663F3 /* iVersion.xcconfig */;
+			baseConfigurationReference = F2E297CB7C7F6A9336A377C141C17CEA /* iVersion.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -818,7 +1454,7 @@
 		};
 		AEE3C770814DC8A5A5E1CE60C9190937 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6570AE6E3C51205386F14A6A97663F3 /* iVersion.xcconfig */;
+			baseConfigurationReference = F2E297CB7C7F6A9336A377C141C17CEA /* iVersion.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -842,7 +1478,7 @@
 		};
 		BAD40D213F828144FF00BE0F73FB40DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0F1EE999E0B79FE4B196D5EEE80E168 /* LKbadgeView.xcconfig */;
+			baseConfigurationReference = 9D14DD2EA7438ED2642815E7487A2BF5 /* LKbadgeView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -866,7 +1502,7 @@
 		};
 		C75785D68ED2DE9A5418493FE339AD26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CD5B752E0ECCBD835174991056249E1 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 0C04494B67807E9A04E6684F243EE1EA /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -888,9 +1524,33 @@
 			};
 			name = Debug;
 		};
-		F5D97F2629E39B8C42AA657B64E813C6 /* Release */ = {
+		D253116C5E01D632CA67BD6B697B4949 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 140F8D3301A51085EEC164607A380F54 /* Pods-Oriole2.release.xcconfig */;
+			baseConfigurationReference = 1FD1FD4E204D867C6E73ADB67D6F6187 /* TapkuLibrary.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TapkuLibrary/TapkuLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		D3EAF72AE06043B1E2A8B200A0CE05B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD1FD4E204D867C6E73ADB67D6F6187 /* TapkuLibrary.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -898,22 +1558,32 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/TapkuLibrary/TapkuLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		19CC7F1E96E46EE7A46E57980000CAB9 /* Build configuration list for PBXNativeTarget "TapkuLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D253116C5E01D632CA67BD6B697B4949 /* Debug */,
+				D3EAF72AE06043B1E2A8B200A0CE05B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -941,6 +1611,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		848E0334A734AEC7B283DCFC43C4F956 /* Build configuration list for PBXNativeTarget "Pods-Oriole2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66A2D0179A13CB00612004C5A6A22C58 /* Debug */,
+				4F9E5CB5E262A3FCAD9B5366F4592533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8CC328DC9DA97BC0212B538E7B752E59 /* Build configuration list for PBXNativeTarget "iRate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -955,15 +1634,6 @@
 			buildConfigurations = (
 				AEE3C770814DC8A5A5E1CE60C9190937 /* Debug */,
 				6DA6DA41AAC3C622AC8FA4E92333A493 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA17DC25D5BA93451C1A9A90E9BEBE57 /* Build configuration list for PBXNativeTarget "Pods-Oriole2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				63EEA549765E9535FB34A3DB48FA95E7 /* Debug */,
-				F5D97F2629E39B8C42AA657B64E813C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

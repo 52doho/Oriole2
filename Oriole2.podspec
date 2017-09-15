@@ -15,5 +15,4 @@ Pod::Spec.new do |s|
   s.dependency "MBProgressHUD"
   s.dependency "iRate"
   s.dependency "iVersion"
-  s.dependency "Parse"
 end

@@ -84,10 +84,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/TapkuLibrary/src/TapkuLibrary.bundle"
   install_resource "${PODS_ROOT}/iRate/iRate/iRate.bundle"
   install_resource "${PODS_ROOT}/iVersion/iVersion/iVersion.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/TapkuLibrary/src/TapkuLibrary.bundle"
   install_resource "${PODS_ROOT}/iRate/iRate/iRate.bundle"
   install_resource "${PODS_ROOT}/iVersion/iVersion/iVersion.bundle"
 fi
