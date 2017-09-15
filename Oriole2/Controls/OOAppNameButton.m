@@ -101,9 +101,4 @@
     [[iVersion sharedInstance] openAppPageInAppStore];
 }
 
-- (void)dealloc
-{
-    OOLog(@"OOAppNameButton dealloc");
-}
-
 @end

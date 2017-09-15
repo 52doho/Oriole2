@@ -20,8 +20,17 @@
 @interface OOMoreAppsButton : UIButton
 {
 }
-@property(nonatomic, retain) IB_DESIGNABLE NSString *configName;
 
-+ (id)buttonWithConfigName:(NSString *)configName;
++ (id)button;
+
+@end
+
+
+@interface OOInstagramButton : UIButton
+{
+}
+@property(nonatomic, assign) BOOL showText;
+
++ (id)button;
 
 @end

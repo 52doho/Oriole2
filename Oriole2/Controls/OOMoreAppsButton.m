@@ -20,6 +20,7 @@
 #import "OOAd.h"
 #import "UIColor+Extend.h"
 #import "LKBadgeView.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface OOMoreAppsButton ()<GADInterstitialDelegate>
 {
@@ -42,34 +43,6 @@
     } else {
         badgeView.hidden = NO;
         badgeView.text = badge ?: [@((int)OORANDOM(2, 10)) stringValue];
-    }
-}
-
-- (void)_didLoadConfig:(NSDictionary *)appConfig {
-    _config = appConfig;
-    if (appConfig) {
-        BOOL disabled = [appConfig[@"download_button"][@"disabled"] boolValue];
-        self.hidden = disabled;
-        
-        _app_callback_url = appConfig[@"download_button"][@"app_callback_url"];
-        _is_show_interstitial = [appConfig[@"download_button"][@"is_show_interstitial"] boolValue];
-        if (_is_show_interstitial) {
-            NSString *title = appConfig[@"download_button"][@"interstitial"][@"title"];
-            NSString *badge_text = appConfig[@"download_button"][@"interstitial"][@"badge_text"];
-            UIColor *badge_color = [UIColor colorFromHexString:appConfig[@"download_button"][@"interstitial"][@"badge_color"]];
-            if (!badge_color) {
-                badge_color = [UIColor redColor];
-            }
-            [self setTitle:title forState:UIControlStateNormal];
-            [self _setBadge:badge_text];
-            badgeView.badgeColor = badge_color;
-            _interstitial_id = appConfig[@"download_button"][@"interstitial"][@"id"];
-        } else {
-            _apps = appConfig[@"download_button"][@"apps"];
-            [self _gotoNextApp];
-        }
-    } else {
-        OOLogError(@"%@ name not found", self.configName);
     }
 }
 
@@ -128,28 +101,36 @@
     [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchDown];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didDownloadOOAdConfig:) name:@"kDidDownloadOOAdConfig" object:nil];
-    [[OOAd instance] downloadConfigWithAppName:self.configName];
 }
 
 - (void)_didDownloadOOAdConfig:(NSNotification *)notification {
-    [self _didLoadConfig:notification.object];
-}
-
-+ (id)buttonWithConfigName:(NSString *)configName {
-    OOMoreAppsButton *button = [[OOMoreAppsButton alloc] initWithFrame:CGRectMake(0, 0, 150, 30) configName:configName];
-    return button;
-}
-
-- (id)initWithFrame:(CGRect)frame configName:(NSString *)configName
-{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        self.configName = configName;
-        [self _setDefault];
+    NSDictionary *appConfig = notification.object;
+    if ([appConfig isKindOfClass:[NSDictionary class]]) {
+        BOOL disabled = [appConfig[@"download_button"][@"disabled"] boolValue];
+        self.hidden = disabled;
+        
+        _app_callback_url = appConfig[@"download_button"][@"app_callback_url"];
+        _is_show_interstitial = [appConfig[@"download_button"][@"is_show_interstitial"] boolValue];
+        if (_is_show_interstitial) {
+            NSString *title = appConfig[@"download_button"][@"interstitial"][@"title"];
+            NSString *badge_text = appConfig[@"download_button"][@"interstitial"][@"badge_text"];
+            UIColor *badge_color = [UIColor colorFromHexString:appConfig[@"download_button"][@"interstitial"][@"badge_color"]];
+            if (!badge_color) {
+                badge_color = [UIColor redColor];
+            }
+            [self setTitle:title forState:UIControlStateNormal];
+            [self _setBadge:badge_text];
+            badgeView.badgeColor = badge_color;
+            _interstitial_id = appConfig[@"download_button"][@"interstitial"][@"id"];
+        } else {
+            _apps = appConfig[@"download_button"][@"apps"];
+            [self _gotoNextApp];
+        }
     }
-    
-    return self;
+}
+
++ (id)button {
+    return [[OOMoreAppsButton alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -215,8 +196,9 @@
         
         if ([self _isWebUrl:_app_callback_url]) {
             NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970] * 1000;
+            NSString *app_name = _config[@"app_name"];
             NSDictionary *params = @{
-                                     @"channel":[NSString stringWithFormat:@"Oriole2_%@", self.configName],
+                                     @"channel":[NSString stringWithFormat:@"Oriole2_%@", app_name],
                                      @"timestamp":[@(timestamp) stringValue],
                                      @"device_id":[OOCommon deviceId],
                                      @"ios_idfa":[OOCommon idfa],
@@ -241,14 +223,87 @@
     }
 }
 
-- (void)dealloc
-{
-    OOLog(@"OOMoreAppsButton dealloc");
-}
-
 #pragma mark - GADInterstitialDelegate
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
     [self _setBadge:[@(OORANDOM(1, 5)) stringValue]];
+}
+
+@end
+
+
+
+#pragma mark - OOInstagramButton
+@interface OOInstagramButton ()
+{
+    NSString *_instagramId, *_instagramName;
+}
+
+@end
+
+@implementation OOInstagramButton
+
+- (void)_setDefault
+{
+    _showText = YES;
+    self.hidden = ![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"instagram://"]];
+    self.backgroundColor = [UIColor clearColor];
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
+    [self setImage:[UIImage imageNamed:@"instagram.png"] forState:UIControlStateNormal];
+    [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchDown];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didDownloadOOAdConfig:) name:@"kDidDownloadOOAdConfig" object:nil];
+}
+
+- (void)_didDownloadOOAdConfig:(NSNotification *)notification {
+    NSDictionary *appConfig = notification.object;
+    if ([appConfig isKindOfClass:[NSDictionary class]]) {
+        _instagramId = appConfig[@"instagram"][@"id"];
+        _instagramName = appConfig[@"instagram"][@"name"];
+        if (_instagramId.length == 0) {
+            _instagramId = @"o2apps";
+        }
+        if (self.showText) {
+            [self setTitle:_instagramName forState:UIControlStateNormal];
+        }
+    }
+}
+
++ (id)button {
+    return [[OOInstagramButton alloc] init];
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self _setDefault];
+    }
+    
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    [self _setDefault];
+}
+
+- (void)setShowText:(BOOL)showText {
+    _showText = showText;
+    if (!showText) {
+        CGFloat length = kIsiPad ? 55 : 33;
+        [self setTitle:nil forState:UIControlStateNormal];
+        self.bounds = CGRectMake(0, 0, length, length);
+    }
+}
+
+- (void)_moreAppsViewTapped
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"instagram://user?username=%@", _instagramId]]];
+    
+    [Answers logCustomEventWithName:@"Instagram button" customAttributes:@{@"account":_instagramId}];
 }
 
 @end
