@@ -7,12 +7,12 @@
  */
 
 //iRate
-"iRateMessageTitle" = "Congratulation🎉";
-"iRateAppMessage" = "We look forward to your comments and suggestions!🌟🌟🌟🌟🌟";
-"iRateGameMessage" = "We look forward to your comments and suggestions!🌟🌟🌟🌟🌟";
-"iRateCancelButton" = "No";
-"iRateRateButton" = "Go Now";
-"iRateRemindButton" = "Later";
+"iRateMessageTitle" = "Selamat🎉";
+"iRateAppMessage" = "Kami menantikan komentar dan saran Anda!🌟🌟🌟🌟🌟";
+"iRateGameMessage" = "Kami menantikan komentar dan saran Anda!🌟🌟🌟🌟🌟";
+"iRateCancelButton" = "Tidak";
+"iRateRateButton" = "Pergi";
+"iRateRemindButton" = "Kemudian";
 
 "Inbox" = "Inbox";
 "Error" = "Error";

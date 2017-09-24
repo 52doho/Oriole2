@@ -217,7 +217,7 @@
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             NSOperationQueue *queue = [[NSOperationQueue alloc] init];
             [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-                OOLog(@"点击记录结果：%@", connectionError);
+                OOLog(@"moreApps 点击记录结果：%@", connectionError);
             }];
         }
     }

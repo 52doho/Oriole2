@@ -113,8 +113,11 @@
                 NSString *path = [self _getLocalPathForImageUrl:imageUrl];
                 if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-                        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-                        [imageData writeToFile:path atomically:YES];
+                        NSURL *url = [NSURL URLWithString:imageUrl];
+                        if (url) {
+                            NSData *imageData = [NSData dataWithContentsOfURL:url];
+                            [imageData writeToFile:path atomically:YES];
+                        }
                     });
                 }
             }

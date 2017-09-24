@@ -6,6 +6,7 @@
 //
 
 #import "OOAd.h"
+#import "iRate.h"
 //#import <Chartboost/Chartboost.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
@@ -80,12 +81,33 @@
             OOLogError(@"下载广告配置错误：%@", err);
         } else {
             dispatch_main_async_safe(^{
-                _interstitial_aba_enabled = ![json[@"interstitial_aba"][@"disabled"] boolValue];
                 _config = json;
+                [self _didDownloadOOAdConfig];
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"kDidDownloadOOAdConfig" object:json];
             });
         }
     });
+}
+
+- (NSInteger)_getIntegerValueWithKeys:(NSArray *)keys defaultValue:(NSInteger)defaultValue {
+    NSDictionary *dic = _config;
+    for (NSString *key in keys) {
+        dic = dic[key];
+    }
+    if ([dic isKindOfClass:[NSNumber class]]) {
+        return [(NSNumber *)dic integerValue];
+    } else {
+        return defaultValue;
+    }
+}
+
+- (void)_didDownloadOOAdConfig {
+    _interstitial_aba_enabled = [_config[@"interstitial_aba"][@"enabled"] boolValue];
+    [iRate sharedInstance].promptAtLaunch = [_config[@"iRate"][@"promptAtLaunch"] boolValue];
+    [iRate sharedInstance].daysUntilPrompt = [self _getIntegerValueWithKeys:@[@"iRate", @"daysUntilPrompt"] defaultValue:2];
+    [iRate sharedInstance].eventsUntilPrompt = [self _getIntegerValueWithKeys:@[@"iRate", @"eventsUntilPrompt"] defaultValue:5];
+    [iRate sharedInstance].usesUntilPrompt = [self _getIntegerValueWithKeys:@[@"iRate", @"usesUntilPrompt"] defaultValue:2];
+    [iRate sharedInstance].remindPeriod = [self _getIntegerValueWithKeys:@[@"iRate", @"remindPeriod"] defaultValue:4];
 }
 
 #define OOAdLog(log, ...) OOLog(@"<OOAd> %@", [NSString stringWithFormat:(log), ## __VA_ARGS__])

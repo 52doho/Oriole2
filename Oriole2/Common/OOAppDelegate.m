@@ -32,7 +32,7 @@
 {
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     [iRate sharedInstance].promptAtLaunch = NO;
-    [iRate sharedInstance].daysUntilPrompt = 0;
+    [iRate sharedInstance].daysUntilPrompt = 2;
     [iRate sharedInstance].eventsUntilPrompt = 5;
     [iRate sharedInstance].usesUntilPrompt = 2;
     [iRate sharedInstance].remindPeriod = 4;
