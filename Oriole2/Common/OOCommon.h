@@ -43,7 +43,7 @@
 #define kIsStatusBarHidden      [[UIApplication sharedApplication] isStatusBarHidden]
 
 #define INVALID_INDEX           -9999
-#define kDefaultAnimateDuration .3
+#define kDefaultAnimateDuration .2
 
 #define kOriole2_AppStoreUrl    @"itms-apps://itunes.apple.com/us/artist/oriole2-co.-ltd./id506665225?mt=8"
 

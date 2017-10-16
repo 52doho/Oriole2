@@ -9,6 +9,7 @@
 #import "iRate.h"
 //#import <Chartboost/Chartboost.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import <Crashlytics/Crashlytics.h>
 
 #import "OOMoreAppsView.h"
 
@@ -77,6 +78,21 @@
             return;
         }
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+        [Answers logCustomEventWithName:@"下载广告配置" customAttributes:@{
+                                                                     @"isSuccess" : err ? @"NO" : @"YES",
+                                                                     @"device_id":[OOCommon deviceId],
+                                                                     @"ios_idfa":[OOCommon idfa],
+                                                                     @"ios_idfa_md5":[OOCommon idfa_md5],
+                                                                     @"device_model":[OOCommon deviceModel],
+                                                                     @"device_brand":[OOCommon deviceBrand],
+                                                                     @"device_name":[OOCommon deviceName],
+                                                                     @"country":[OOCommon deviceCountry],
+                                                                     @"locale":[OOCommon deviceLocale],
+                                                                     @"system_version":[OOCommon systemVersion],
+                                                                     @"system_name":[OOCommon systemName],
+                                                                     @"app_version":[OOCommon appVersion],
+                                                                     @"timezone":[OOCommon timezone],
+                                                                     }];
         if (err || !json) {
             OOLogError(@"下载广告配置错误：%@", err);
         } else {
@@ -129,6 +145,10 @@
     [extras setExtras:dic forLabel:@"iAd"];
     [extras setExtras:dic forLabel:@"Millennial Media"];
     [request registerAdNetworkExtras:extras];
+    
+#ifdef DEBUG
+    request.testDevices = @[ kGADSimulatorID, @"5331e99c6444bf981c5847d8ed5a2166" ];
+#endif
     
     return request;
 }
@@ -334,8 +354,8 @@
     return [self showInterstitialOfMoreAppsWithMediationID:mediationID delegate:nil];
 }
 
-- (void)cacheInterstitialOfMoreAppsWithMediationID:(NSString *)mediationID {
-    [self _showInterstitialWithMediationId:mediationID placement:@"more_games" isMoreGame:YES isCache:YES delegate:nil];
+- (void)cacheInterstitialOfMoreAppsWithMediationID:(NSString *)mediationID delegate:(id <GADInterstitialDelegate> )delegate {
+    [self _showInterstitialWithMediationId:mediationID placement:@"more_games" isMoreGame:YES isCache:YES delegate:delegate];
 }
 
 // GADInterstitialDelegate
@@ -350,7 +370,7 @@
         [interstitial.delegateBackup interstitialDidReceiveAd:ad];
     }
     
-    OOAdLog(@"interstitialDidReceiveAd:%@", interstitial.placement);
+    OOAdLog(@"interstitialDidReceiveAd:%@, adNetworkClassName:%@", interstitial.placement, interstitial.adNetworkClassName);
     
     if (interstitial.needToShowAfterReceiveAd) {
         [self _presentInterstitialAndCacheMore:interstitial delegate:interstitial.delegateBackup];

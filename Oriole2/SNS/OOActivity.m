@@ -29,7 +29,6 @@
 
 @interface OOActivityBase ()
 
-@property (nonatomic, assign) UIImage                         *imageToEdit;
 @property (nonatomic, strong) UIDocumentInteractionController *interactionController;
 @end
 
@@ -217,6 +216,10 @@
 #pragma mark - OOActivityInstagram -
 @implementation OOActivityInstagram
 
++ (BOOL)canOpenInstagram {
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"instagram://app"]];
+}
+
 - (NSString *)activityType
 {
     return @"com.Oriole2.activity.OpenInInstagram";
@@ -238,9 +241,7 @@
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems
 {
-    NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
-
-    if (![[UIApplication sharedApplication] canOpenURL:instagramURL]) {
+    if (![OOActivityInstagram canOpenInstagram]) {
         return NO; // no instagram.
     }
 

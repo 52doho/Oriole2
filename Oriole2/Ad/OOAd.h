@@ -45,7 +45,7 @@ typedef enum {
 
 - (OOInterstitialState)showInterstitialOfMoreAppsWithMediationID:(NSString *)mediationID delegate:(id <GADInterstitialDelegate> )delegate;
 - (OOInterstitialState)showInterstitialOfMoreAppsWithMediationID:(NSString *)mediationID;
-- (void)cacheInterstitialOfMoreAppsWithMediationID:(NSString *)mediationID;
+- (void)cacheInterstitialOfMoreAppsWithMediationID:(NSString *)mediationID delegate:(id <GADInterstitialDelegate> )delegate;
 
 @end
 

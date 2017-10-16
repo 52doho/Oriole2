@@ -38,12 +38,29 @@
 @implementation OOMoreAppsButton
 
 - (void)_setBadge:(NSString *)badge {
-    if([badge isEqual: @"0"]) {
+    if([badge isEqual: @"0"] || !badge) {
         badgeView.hidden = YES;
     } else {
         badgeView.hidden = NO;
         badgeView.text = badge ?: [@((int)OORANDOM(2, 10)) stringValue];
     }
+}
+
+- (void)_gotoInterstitial {
+    _is_show_interstitial = true;
+    [self _showSelf:NO];
+    
+    NSString *title = _config[@"download_button"][@"interstitial"][@"title"];
+    NSString *badge_text = _config[@"download_button"][@"interstitial"][@"badge_text"];
+    UIColor *badge_color = [UIColor colorFromHexString:_config[@"download_button"][@"interstitial"][@"badge_color"]];
+    if (!badge_color) {
+        badge_color = [UIColor redColor];
+    }
+    [self setTitle:title forState:UIControlStateNormal];
+    [self _setBadge:badge_text];
+    badgeView.badgeColor = badge_color;
+    _interstitial_id = _config[@"download_button"][@"interstitial"][@"id"];
+    [[OOAd instance] cacheInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
 }
 
 - (void)_gotoNextApp {
@@ -53,7 +70,7 @@
     if (_appCurrentIndex >= ((int)_apps.count - 1)) {
         _appCurrentIndex = 0;
         if (_interstitial_id.length > 0) {
-            _is_show_interstitial = true;
+            [self _gotoInterstitial];
             return;// 所有 app 已显示，显示 admob 广告
         }
     }
@@ -83,6 +100,9 @@
     [self setTitle:title forState:UIControlStateNormal];
     [self _setBadge:badge_text];
     badgeView.badgeColor = badge_color;
+    if (!title) {
+        [self _gotoInterstitial];
+    }
 }
 
 - (void)_setDefault
@@ -93,7 +113,7 @@
     badgeView = [[LKBadgeView alloc] init];
     badgeView.textColor = [UIColor whiteColor];
     badgeView.badgeColor = [UIColor clearColor];
-    badgeView.font = [UIFont boldSystemFontOfSize:14];
+    badgeView.font = [UIFont boldSystemFontOfSize:12];
     badgeView.horizontalAlignment = LKBadgeViewHorizontalAlignmentRight;
     badgeView.outlineWidth = 0;
     [self _setBadge:@""];
@@ -106,22 +126,14 @@
 - (void)_didDownloadOOAdConfig:(NSNotification *)notification {
     NSDictionary *appConfig = notification.object;
     if ([appConfig isKindOfClass:[NSDictionary class]]) {
+        _config = appConfig;
         BOOL disabled = [appConfig[@"download_button"][@"disabled"] boolValue];
         self.hidden = disabled;
         
         _app_callback_url = appConfig[@"download_button"][@"app_callback_url"];
         _is_show_interstitial = [appConfig[@"download_button"][@"is_show_interstitial"] boolValue];
         if (_is_show_interstitial) {
-            NSString *title = appConfig[@"download_button"][@"interstitial"][@"title"];
-            NSString *badge_text = appConfig[@"download_button"][@"interstitial"][@"badge_text"];
-            UIColor *badge_color = [UIColor colorFromHexString:appConfig[@"download_button"][@"interstitial"][@"badge_color"]];
-            if (!badge_color) {
-                badge_color = [UIColor redColor];
-            }
-            [self setTitle:title forState:UIControlStateNormal];
-            [self _setBadge:badge_text];
-            badgeView.badgeColor = badge_color;
-            _interstitial_id = appConfig[@"download_button"][@"interstitial"][@"id"];
+            [self _gotoInterstitial];
         } else {
             _apps = appConfig[@"download_button"][@"apps"];
             [self _gotoNextApp];
@@ -177,7 +189,9 @@
 - (void)_moreAppsViewTapped
 {
     if (_is_show_interstitial) {
+        [self _showSelf:NO];
         [[OOAd instance] showInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
+        [Answers logCustomEventWithName:@"MoreApps-Interstitial" customAttributes:@{}];
     } else {
         NSDictionary *appConfig = _apps[_appCurrentIndex];
         
@@ -220,12 +234,26 @@
                 OOLog(@"moreApps 点击记录结果：%@", connectionError);
             }];
         }
+        
+        NSString *scheme = appConfig[@"scheme"] ?: @"";
+        [Answers logCustomEventWithName:@"MoreApps-Oriole2" customAttributes:@{@"scheme": scheme}];
     }
 }
 
 #pragma mark - GADInterstitialDelegate
+- (void)_showSelf:(BOOL)show {
+    [UIView animateWithDuration:kDefaultAnimateDuration animations:^{
+        self.alpha = show ? 1 : 0;
+    }];
+}
+
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
-    [self _setBadge:[@(OORANDOM(1, 5)) stringValue]];
+    [self _setBadge:[@((int)OORANDOM(1, 5)) stringValue]];
+    [self _showSelf:YES];
+}
+
+- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
+    [self _showSelf:NO];
 }
 
 @end
@@ -249,7 +277,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     [self setImage:[UIImage imageNamed:@"instagram.png"] forState:UIControlStateNormal];
-    [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchDown];
+    [self addTarget:self action:@selector(_instagramButtonTapped) forControlEvents:UIControlEventTouchDown];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didDownloadOOAdConfig:) name:@"kDidDownloadOOAdConfig" object:nil];
 }
@@ -299,7 +327,7 @@
     }
 }
 
-- (void)_moreAppsViewTapped
+- (void)_instagramButtonTapped
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"instagram://user?username=%@", _instagramId]]];
     

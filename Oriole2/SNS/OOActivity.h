@@ -25,6 +25,7 @@
 @interface OOActivityBase : UIActivity <UIDocumentInteractionControllerDelegate, SKStoreProductViewControllerDelegate>
 {
 }
+@property (nonatomic, assign) UIImage                         *imageToEdit;
 @property (nonatomic, strong, readonly) UIBarButtonItem *presentFromButton;
 @property (nonatomic, assign) UIPopoverController       *popoverController;
 
@@ -48,5 +49,7 @@
 {
 }
 @property (nonatomic, strong) NSString *caption;// 已经不能使用
+
++ (BOOL)canOpenInstagram;
 
 @end
