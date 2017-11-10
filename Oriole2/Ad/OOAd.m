@@ -146,8 +146,9 @@
     [extras setExtras:dic forLabel:@"Millennial Media"];
     [request registerAdNetworkExtras:extras];
     
+    ZPInvokeBlock([OOAd instance].didCreateGADRequest, request);
 #ifdef DEBUG
-    request.testDevices = @[ kGADSimulatorID, @"5331e99c6444bf981c5847d8ed5a2166" ];
+//    request.testDevices = @[ kGADSimulatorID, @"5331e99c6444bf981c5847d8ed5a2166" ];
 #endif
     
     return request;
