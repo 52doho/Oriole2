@@ -867,6 +867,7 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
         [queryItems addObject:[NSURLQueryItem queryItemWithName:key value:params[key]]];
     }
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
+    [queryItems addObjectsFromArray:components.queryItems];
     components.queryItems = queryItems;
     return components.URL;
 }

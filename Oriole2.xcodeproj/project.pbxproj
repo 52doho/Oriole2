@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37073ACEE84A2E7F9E56BE74 /* libPods-Oriole2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F26A58D40E4F833B4E2C7E1F /* libPods-Oriole2.a */; };
+		4E0D173D1FC26268002C993F /* RMStore+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0D173B1FC26268002C993F /* RMStore+Extend.h */; };
+		4E0D173E1FC26268002C993F /* RMStore+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D173C1FC26268002C993F /* RMStore+Extend.m */; };
 		4E0DE7131769D282008A4E30 /* OOMoreAppsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0DE7111769D282008A4E30 /* OOMoreAppsView.h */; };
 		4E0DE7151769D282008A4E30 /* OOMoreAppsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DE7121769D282008A4E30 /* OOMoreAppsView.m */; };
 		4E1FDE3414F5CB3D003D15C0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDE3314F5CB3D003D15C0 /* MobileCoreServices.framework */; };
@@ -74,6 +76,8 @@
 		09213B0C624BC16EAE786AE0 /* Pods-Oriole2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oriole2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Oriole2/Pods-Oriole2.debug.xcconfig"; sourceTree = "<group>"; };
 		1E1940BEA17E27A5CADC7A84 /* Pods-Oriole2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oriole2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Oriole2/Pods-Oriole2.release.xcconfig"; sourceTree = "<group>"; };
 		4E03ADA61681D49200B1DA93 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4E0D173B1FC26268002C993F /* RMStore+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMStore+Extend.h"; sourceTree = "<group>"; };
+		4E0D173C1FC26268002C993F /* RMStore+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMStore+Extend.m"; sourceTree = "<group>"; };
 		4E0DE7111769D282008A4E30 /* OOMoreAppsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOMoreAppsView.h; sourceTree = "<group>"; };
 		4E0DE7121769D282008A4E30 /* OOMoreAppsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOMoreAppsView.m; sourceTree = "<group>"; };
 		4E135BEF15558FF9000EDE4D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -189,7 +193,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 = {
+		0867D691FE84028FC02AAC07 /* VSCommonLib */ = {
 			isa = PBXGroup;
 			children = (
 				4EA5BAF91607286900C27749 /* Oriole2 */,
@@ -237,6 +241,15 @@
 				4E6DF04914F4CA1B00379535 /* Oriole2_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4E0D173A1FC26268002C993F /* RMStore */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D173B1FC26268002C993F /* RMStore+Extend.h */,
+				4E0D173C1FC26268002C993F /* RMStore+Extend.m */,
+			);
+			path = RMStore;
 			sourceTree = "<group>";
 		};
 		4E9E225A1F627A3400904BEB /* Ad */ = {
@@ -322,6 +335,7 @@
 				4EA206991ABA4BD000FA02CE /* CoreAnimation */,
 				4EA5BB2B1607286900C27749 /* CoreGraphic */,
 				4EA5BB2E1607286900C27749 /* Foundation */,
+				4E0D173A1FC26268002C993F /* RMStore */,
 				4EA5BB351607286900C27749 /* UIKit */,
 			);
 			path = Extend;
@@ -429,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6DF04A14F4CA1B00379535 /* Oriole2_Prefix.pch in Headers */,
+				4E0D173D1FC26268002C993F /* RMStore+Extend.h in Headers */,
 				4EA5BDF81607286A00C27749 /* OOAnimation.h in Headers */,
 				4EA5BE081607286A00C27749 /* OOAppDelegate.h in Headers */,
 				4E5FAB401A2AD52400BA308D /* OOAnimationManager.h in Headers */,
@@ -520,7 +535,7 @@
 				es,
 				de,
 			);
-			mainGroup = 0867D691FE84028FC02AAC07;
+			mainGroup = 0867D691FE84028FC02AAC07 /* VSCommonLib */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -610,6 +625,7 @@
 				4EA2069D1ABA4BD000FA02CE /* CALayer+XibConfiguration.m in Sources */,
 				4E393C271F6360200008FEA7 /* DeviceUID.m in Sources */,
 				4EA5BE5A1607286A00C27749 /* NSString+Extend.m in Sources */,
+				4E0D173E1FC26268002C993F /* RMStore+Extend.m in Sources */,
 				4EA5BE5E1607286A00C27749 /* UIColor+Extend.m in Sources */,
 				4E5FAB411A2AD52400BA308D /* OOAnimationManager.m in Sources */,
 				4EA5BE621607286A00C27749 /* UIImage+Extend.m in Sources */,

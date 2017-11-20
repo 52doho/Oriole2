@@ -7,7 +7,7 @@ PODS:
   - TapkuLibrary (0.3.3)
 
 DEPENDENCIES:
-  - Google-Mobile-Ads-SDK (~> 7.23.0)
+  - Google-Mobile-Ads-SDK
   - iRate
   - iVersion
   - LKbadgeView

@@ -25,3 +25,4 @@
 #import "UIColor+Extend.h"
 #import "UIView+Extend.h"
 #import "OOGeometry+Extend.h"
+#import "RMStore+Extend.h"
