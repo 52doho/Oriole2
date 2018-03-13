@@ -18,6 +18,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import <AdSupport/AdSupport.h>
+#import <Crashlytics/Crashlytics.h>
 #import "OOCommon.h"
 #import "DeviceUID.h"
 #import "MBProgressHUD.h"
@@ -923,6 +924,28 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
 - (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
     [self _setiVersionLastNewVersion:version];
     ZPInvokeBlock(_iVersionStateChangedCallback, YES);
+}
+
+// Answers
++ (void)logAnswersCustomEventWithName:(NSString *)eventName customAttributes:(NSDictionary<NSString *, id> *)customAttributes {
+    if (eventName.length > 0) {
+        NSMutableDictionary<NSString *, id> *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
+                                                     //                                                                     @"device_id":[OOCommon deviceId],
+                                                     //                                                                     @"ios_idfa":[OOCommon idfa],
+                                                     //                                                                     @"ios_idfa_md5":[OOCommon idfa_md5],
+                                                     @"device_model":[OOCommon deviceModel],
+                                                     //                                                                     @"device_brand":[OOCommon deviceBrand],
+                                                     @"device_name":[OOCommon deviceName],
+                                                     @"country":[OOCommon deviceCountry],
+                                                     @"locale":[OOCommon deviceLocale],
+                                                     @"timezone":[OOCommon timezone],
+                                                     @"system_version":[OOCommon systemVersion],
+                                                     //                                                                     @"system_name":[OOCommon systemName],
+                                                     @"app_version":[OOCommon appVersion],
+                                                     }];
+        [attributes addEntriesFromDictionary:customAttributes];
+        [Answers logCustomEventWithName:eventName customAttributes:attributes];
+    }
 }
 
 @end

@@ -9,7 +9,6 @@
 #import "iRate.h"
 //#import <Chartboost/Chartboost.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
-#import <Crashlytics/Crashlytics.h>
 
 #import "OOMoreAppsView.h"
 
@@ -78,20 +77,8 @@
             return;
         }
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
-        [Answers logCustomEventWithName:@"下载广告配置" customAttributes:@{
+        [OOCommon logAnswersCustomEventWithName:@"下载广告配置" customAttributes:@{
                                                                      @"isSuccess" : err ? @"NO" : @"YES",
-                                                                     @"device_id":[OOCommon deviceId],
-                                                                     @"ios_idfa":[OOCommon idfa],
-                                                                     @"ios_idfa_md5":[OOCommon idfa_md5],
-                                                                     @"device_model":[OOCommon deviceModel],
-                                                                     @"device_brand":[OOCommon deviceBrand],
-                                                                     @"device_name":[OOCommon deviceName],
-                                                                     @"country":[OOCommon deviceCountry],
-                                                                     @"locale":[OOCommon deviceLocale],
-                                                                     @"system_version":[OOCommon systemVersion],
-                                                                     @"system_name":[OOCommon systemName],
-                                                                     @"app_version":[OOCommon appVersion],
-                                                                     @"timezone":[OOCommon timezone],
                                                                      }];
         if (err || !json) {
             OOLogError(@"下载广告配置错误：%@", err);

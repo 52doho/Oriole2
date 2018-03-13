@@ -208,4 +208,7 @@ dispatch_async(dispatch_get_main_queue(), block); \
 + (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params;
 + (void)logAppOpenWithAppName:(NSString *)appName;
 
+// Answers
++ (void)logAnswersCustomEventWithName:(NSString *)eventName customAttributes:(NSDictionary<NSString *, id> *)customAttributes;
+
 @end
