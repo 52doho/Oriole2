@@ -38,6 +38,9 @@
 @implementation OOMoreAppsButton
 
 - (void)_setBadge:(NSString *)badge {
+    if (![badge isKindOfClass:[NSString class]]) {
+        badge = [NSString stringWithFormat:@"%@", badge];
+    }
     if([badge isEqual: @"0"] || !badge) {
         badgeView.hidden = YES;
     } else {
@@ -285,11 +288,11 @@
 - (void)_didDownloadOOAdConfig:(NSNotification *)notification {
     NSDictionary *appConfig = notification.object;
     if ([appConfig isKindOfClass:[NSDictionary class]]) {
-        _instagramId = appConfig[@"instagram"][@"id"];
-        _instagramName = appConfig[@"instagram"][@"name"];
-        if (_instagramId.length == 0) {
-            _instagramId = @"o2apps";
-        }
+        _instagramId = @"o2apps";//appConfig[@"instagram"][@"id"];
+        _instagramName = @"O2 Games";//appConfig[@"instagram"][@"name"];
+//        if (_instagramId.length == 0) {
+//            _instagramId = @"o2apps";
+//        }
         if (self.showText) {
             [self setTitle:_instagramName forState:UIControlStateNormal];
         }

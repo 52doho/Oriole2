@@ -874,6 +874,8 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
 }
 
 + (void)logAppOpenWithAppName:(NSString *)appName {
+    return; // NOTE: 服务器已关，现在不 log
+    
     if (appName.length > 0) {
         NSDictionary *params = @{
                                  @"app_name":appName,

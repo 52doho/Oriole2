@@ -55,31 +55,90 @@
 
 - (void)downloadConfigWithAppName:(NSString *)appname {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSDictionary *params = @{
-                                 @"app":appname,
-                                 @"device_id":[OOCommon deviceId],
-                                 @"ios_idfa":[OOCommon idfa],
-                                 @"device_model":[OOCommon deviceModel],
-                                 @"device_brand":[OOCommon deviceBrand],
-                                 @"device_name":[OOCommon deviceName],
-                                 @"country":[OOCommon deviceCountry],
-                                 @"locale":[OOCommon deviceLocale],
-                                 @"system_version":[OOCommon systemVersion],
-                                 @"system_name":[OOCommon systemName],
-                                 @"app_version":[OOCommon appVersion],
-                                 @"timezone":[OOCommon timezone],
-                                 };
-        NSURL *url = [OOCommon buildQueryUrl:@"https://www.taobangzhu.net/mobileapi/ad/configOriole2" params:params];
+//        NSDictionary *params = @{
+//                                 @"app":appname,
+//                                 @"device_id":[OOCommon deviceId],
+//                                 @"ios_idfa":[OOCommon idfa],
+//                                 @"device_model":[OOCommon deviceModel],
+//                                 @"device_brand":[OOCommon deviceBrand],
+//                                 @"device_name":[OOCommon deviceName],
+//                                 @"country":[OOCommon deviceCountry],
+//                                 @"locale":[OOCommon deviceLocale],
+//                                 @"system_version":[OOCommon systemVersion],
+//                                 @"system_name":[OOCommon systemName],
+//                                 @"app_version":[OOCommon appVersion],
+//                                 @"timezone":[OOCommon timezone],
+//                                 };
+//        NSURL *url = [OOCommon buildQueryUrl:@"https://www.taobangzhu.net/mobileapi/ad/configOriole2" params:params];
         NSError *err = nil;
-        NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
-        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
-        if (!data) {
-            return;
-        }
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
-        [OOCommon logAnswersCustomEventWithName:@"下载广告配置" customAttributes:@{
-                                                                     @"isSuccess" : err ? @"NO" : @"YES",
-                                                                     }];
+//        NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
+//        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+//        if (!data) {
+//            return;
+//        }
+//        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+//        [OOCommon logAnswersCustomEventWithName:@"下载广告配置" customAttributes:@{
+//                                                                     @"isSuccess" : err ? @"NO" : @"YES",
+//                                                                     }];
+        
+        NSDictionary *json = @{
+                               @"interstitial_close_share":@{
+                                       @"enabled": @(true),
+                                       @"min_close_count": @(3),
+                                       @"interstitial_id": @"ca-app-pub-4085955388423915/9576610584"
+                                       },
+                               @"download_button":@{
+                                       @"disabled": @(false),
+                                       @"is_show_interstitial": @(false),
+                                       @"interstitial": @{
+                                               @"id": @"ca-app-pub-4085955388423915/2053343788",
+                                               @"title": @"More Games",
+                                               @"badge_text": @"NEW",
+                                               @"badge_color": @"#FFCE44",
+                                               },
+                                       @"apps": @[
+                                               @{
+                                                   @"title": @"BoothCool",
+                                                   @"app_id": @(529538575),
+                                                   @"scheme": @"boothcool://",
+                                                   @"badge_text": @"NEW",
+                                                   @"disabled": @(false),
+                                                   @"badge_color": @"#54BBFF",
+                                                   },
+                                               @{
+                                                   @"title": @"InstaMirrorⓂ️",
+                                                   @"app_id": @(651289240),
+                                                   @"scheme": @"instamirror://",
+                                                   @"badge_text": @"NEW",
+                                                   @"disabled": @(false),
+                                                   @"badge_color": @"#E57057",
+                                                   },
+                                               @{
+                                                   @"title": @"CamCool🎃",
+                                                   @"app_id": @(512796815),
+                                                   @"scheme": @"camcool://",
+                                                   @"badge_text": @"COOL",
+                                                   @"disabled": @(false),
+                                                   @"badge_color": @"#FFCE44",
+                                                   },
+                                               @{
+                                                   @"title": @"Slots",
+                                                   @"app_id": @(690443788),
+                                                   @"scheme": @"SlotsFarm://",
+                                                   @"badge_text": @(777),
+                                                   @"disabled": @(false),
+                                                   @"badge_color": @"#DD4330",
+                                                   },
+                                               @{
+                                                   @"title": @"Cool Apps🎃",
+                                                   @"url": @"itms-apps://itunes.apple.com/artist/oriole2-co.-ltd./id506665225?mt=8",
+                                                   @"badge_text": @"COOL",
+                                                   @"disabled": @(false),
+                                                   @"badge_color": @"#FFCE44",
+                                                   },
+                                               ]
+                                       }
+                               };
         if (err || !json) {
             OOLogError(@"下载广告配置错误：%@", err);
         } else {
@@ -105,8 +164,8 @@
 }
 
 - (void)_didDownloadOOAdConfig {
-    _interstitial_aba_enabled = [_config[@"interstitial_aba"][@"enabled"] boolValue];
-    [iRate sharedInstance].promptAtLaunch = [_config[@"iRate"][@"promptAtLaunch"] boolValue];
+    _interstitial_aba_enabled = NO;//[_config[@"interstitial_aba"][@"enabled"] boolValue];
+    [iRate sharedInstance].promptAtLaunch = NO;//[_config[@"iRate"][@"promptAtLaunch"] boolValue];
     [iRate sharedInstance].daysUntilPrompt = [self _getIntegerValueWithKeys:@[@"iRate", @"daysUntilPrompt"] defaultValue:2];
     [iRate sharedInstance].eventsUntilPrompt = [self _getIntegerValueWithKeys:@[@"iRate", @"eventsUntilPrompt"] defaultValue:5];
     [iRate sharedInstance].usesUntilPrompt = [self _getIntegerValueWithKeys:@[@"iRate", @"usesUntilPrompt"] defaultValue:2];
