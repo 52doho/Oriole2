@@ -85,13 +85,13 @@
                                @"interstitial_close_share":@{
                                        @"enabled": @(true),
                                        @"min_close_count": @(3),
-                                       @"interstitial_id": @"ca-app-pub-4085955388423915/9576610584"
+                                       @"interstitial_id": @"ca-app-pub-4085955388423915/2552871388"
                                        },
                                @"download_button":@{
                                        @"disabled": @(false),
                                        @"is_show_interstitial": @(false),
                                        @"interstitial": @{
-                                               @"id": @"ca-app-pub-4085955388423915/2053343788",
+                                               @"id": @"ca-app-pub-4085955388423915/4029604582",
                                                @"title": @"More Games",
                                                @"badge_text": @"NEW",
                                                @"badge_color": @"#FFCE44",

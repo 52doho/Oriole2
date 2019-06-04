@@ -1,9 +1,37 @@
 PODS:
-  - Google-Mobile-Ads-SDK (7.23.0)
-  - iRate (1.11.4)
-  - iVersion (1.11.4)
+  - Google-Mobile-Ads-SDK (7.42.2):
+    - GoogleAppMeasurement (~> 5.7)
+  - GoogleAppMeasurement (5.8.1):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (5.8.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.8.0)
+  - GoogleUtilities/Logger (5.8.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.8.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.8.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.8.0)"
+  - GoogleUtilities/Reachability (5.8.0):
+    - GoogleUtilities/Logger
+  - iRate (1.11.7)
+  - iVersion (1.11.5)
   - LKbadgeView (1.1.0)
-  - MBProgressHUD (0.9.1)
+  - MBProgressHUD (1.0.0)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - TapkuLibrary (0.3.3)
 
 DEPENDENCIES:
@@ -14,14 +42,29 @@ DEPENDENCIES:
   - MBProgressHUD
   - TapkuLibrary
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
+    - iRate
+    - iVersion
+    - LKbadgeView
+    - MBProgressHUD
+    - nanopb
+    - TapkuLibrary
+
 SPEC CHECKSUMS:
-  Google-Mobile-Ads-SDK: a43dc8efdb566c74d00ac6934c781de969348d80
-  iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
-  iVersion: 2b6ffe708672cb494ba3cab150a94800c2892e81
+  Google-Mobile-Ads-SDK: 8f4f7e793bfd3fff5b082181b54112f81b579a67
+  GoogleAppMeasurement: ffe513e90551844a739e7bcbb1d2aca1c28a4338
+  GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
+  iRate: adae3f183d83c925ac42d7a2e86e89e838963f57
+  iVersion: 3a93a89259eb3b52b0a8ba52c46a0027fa6b4d30
   LKbadgeView: 35e7ecee61ef8e8282902ee79332b3b0b5efa5a9
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   TapkuLibrary: 57c311343008ac9505481af39fb4cf8e7af3f789
 
 PODFILE CHECKSUM: 00ac1cd8115f6196f8be4e310920d0ef0570d060
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.1
