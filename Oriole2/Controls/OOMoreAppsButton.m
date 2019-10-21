@@ -20,7 +20,8 @@
 #import "OOAd.h"
 #import "UIColor+Extend.h"
 #import "LKBadgeView.h"
-#import <Crashlytics/Crashlytics.h>
+
+#import <Firebase/Firebase.h>
 
 @interface OOMoreAppsButton ()<GADInterstitialDelegate>
 {
@@ -53,16 +54,16 @@
     _is_show_interstitial = true;
     [self _showSelf:NO];
     
-    NSString *title = _config[@"download_button"][@"interstitial"][@"title"];
-    NSString *badge_text = _config[@"download_button"][@"interstitial"][@"badge_text"];
-    UIColor *badge_color = [UIColor colorFromHexString:_config[@"download_button"][@"interstitial"][@"badge_color"]];
+    NSString *title = _config[@"interstitial"][@"title"];
+    NSString *badge_text = _config[@"interstitial"][@"badge_text"];
+    UIColor *badge_color = [UIColor colorFromHexString:_config[@"interstitial"][@"badge_color"]];
     if (!badge_color) {
         badge_color = [UIColor redColor];
     }
     [self setTitle:title forState:UIControlStateNormal];
     [self _setBadge:badge_text];
     badgeView.badgeColor = badge_color;
-    _interstitial_id = _config[@"download_button"][@"interstitial"][@"id"];
+    _interstitial_id = _config[@"interstitial"][@"id"];
     [[OOAd instance] cacheInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
 }
 
@@ -122,26 +123,17 @@
     [self _setBadge:@""];
     [self addSubview:badgeView];
     [self addTarget:self action:@selector(_moreAppsViewTapped) forControlEvents:UIControlEventTouchDown];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didDownloadOOAdConfig:) name:@"kDidDownloadOOAdConfig" object:nil];
 }
 
-- (void)_didDownloadOOAdConfig:(NSNotification *)notification {
-    NSDictionary *appConfig = notification.object;
-    if ([appConfig isKindOfClass:[NSDictionary class]]) {
-        _config = appConfig;
-        BOOL disabled = [appConfig[@"download_button"][@"disabled"] boolValue];
-        self.hidden = disabled;
-        
-        _app_callback_url = appConfig[@"download_button"][@"app_callback_url"];
-        _is_show_interstitial = [appConfig[@"download_button"][@"is_show_interstitial"] boolValue];
-        if (_is_show_interstitial) {
-            [self _gotoInterstitial];
-        } else {
-            _apps = appConfig[@"download_button"][@"apps"];
-            [self _gotoNextApp];
-        }
-    }
+- (void)setConfig:(NSDictionary *)config {
+    _config = config;
+    BOOL disabled = [config[@"disabled"] boolValue];
+    self.hidden = disabled;
+    
+    _app_callback_url = config[@"app_callback_url"];
+    _is_show_interstitial = [config[@"is_show_interstitial"] boolValue];
+    _apps = config[@"apps"];
+    [self _gotoNextApp];
 }
 
 + (id)button {
@@ -194,17 +186,17 @@
     if (_is_show_interstitial) {
         [self _showSelf:NO];
         [[OOAd instance] showInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
-        [Answers logCustomEventWithName:@"MoreApps-Interstitial" customAttributes:@{}];
+        [FIRAnalytics logEventWithName:@"MoreApps-Interstitial" parameters:@{}];
     } else {
-        NSDictionary *appConfig = _apps[_appCurrentIndex];
+        NSDictionary *config = _apps[_appCurrentIndex];
         
         UIViewController *topmostViewController = [OOCommon getTopmostViewController];
-        NSUInteger appId = [appConfig[@"app_id"] integerValue];
+        NSUInteger appId = [config[@"app_id"] integerValue];
         
         if (appId > 0 && topmostViewController) {
             [OOCommon openInAppStoreWithID:appId viewController:topmostViewController];
         } else {
-            NSString *url = appConfig[@"url"];
+            NSString *url = config[@"url"];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url ?:@"itms-apps://itunes.apple.com/us/artist/oriole2-co.-ltd./id506665225?mt=8"]];
         }
         
@@ -238,8 +230,8 @@
             }];
         }
         
-        NSString *scheme = appConfig[@"scheme"] ?: @"";
-        [Answers logCustomEventWithName:@"MoreApps-Oriole2" customAttributes:@{@"scheme": scheme}];
+        NSString *scheme = config[@"scheme"] ?: @"";
+        [FIRAnalytics logEventWithName:@"MoreApps-Oriole2" parameters:@{@"scheme": scheme}];
     }
 }
 
@@ -282,20 +274,14 @@
     [self setImage:[UIImage imageNamed:@"instagram.png"] forState:UIControlStateNormal];
     [self addTarget:self action:@selector(_instagramButtonTapped) forControlEvents:UIControlEventTouchDown];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didDownloadOOAdConfig:) name:@"kDidDownloadOOAdConfig" object:nil];
+    [self _didDownloadOOAdConfig];
 }
 
-- (void)_didDownloadOOAdConfig:(NSNotification *)notification {
-    NSDictionary *appConfig = notification.object;
-    if ([appConfig isKindOfClass:[NSDictionary class]]) {
-        _instagramId = @"o2apps";//appConfig[@"instagram"][@"id"];
-        _instagramName = @"O2 Games";//appConfig[@"instagram"][@"name"];
-//        if (_instagramId.length == 0) {
-//            _instagramId = @"o2apps";
-//        }
-        if (self.showText) {
-            [self setTitle:_instagramName forState:UIControlStateNormal];
-        }
+- (void)_didDownloadOOAdConfig {
+    _instagramId = @"o2apps";
+    _instagramName = @"O2 Games";
+    if (self.showText) {
+        [self setTitle:_instagramName forState:UIControlStateNormal];
     }
 }
 
@@ -334,7 +320,7 @@
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"instagram://user?username=%@", _instagramId]]];
     
-    [Answers logCustomEventWithName:@"Instagram button" customAttributes:@{@"account":_instagramId}];
+    [FIRAnalytics logEventWithName:@"Instagram button" parameters:@{@"account":_instagramId}];
 }
 
 @end

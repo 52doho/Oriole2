@@ -33,7 +33,7 @@
 
 @implementation TKRetroButton
 
-- (id) initWithFrame:(CGRect)frame{
+- (instancetype) initWithFrame:(CGRect)frame{
 	if(!(self=[super initWithFrame:frame])) return nil;
 	[self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	[self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
@@ -43,9 +43,6 @@
 	self.layer.contentsScale = [UIScreen mainScreen].scale;
     return self;
 }
-
-
-
 
 - (void) drawRect:(CGRect)rect {
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -75,7 +72,7 @@
     
 	CGContextSetLineWidth(ctx, self.borderWidth);
 	
-	UIBezierPath *outlinePath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.bounds, self.borderWidth, self.borderWidth) cornerRadius:(self.bounds.size.height-2)/2];
+	UIBezierPath *outlinePath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.bounds, self.borderWidth, self.borderWidth) cornerRadius:(CGRectGetHeight(self.bounds)-2)/2];
 	
 	CGContextAddPath(ctx, outlinePath.CGPath);
 	CGContextStrokePath(ctx);
@@ -84,13 +81,21 @@
 	
 	if (self.highlighted || self.selected) {
 		CGContextSaveGState(ctx);
-		UIBezierPath *fillPath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.bounds, self.insetWidth, self.insetWidth) cornerRadius:self.bounds.size.height/2];
+		UIBezierPath *fillPath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.bounds, self.insetWidth, self.insetWidth) cornerRadius:CGRectGetHeight(self.bounds)/2];
 		
 		CGContextAddPath(ctx, fillPath.CGPath);
 		CGContextFillPath(ctx);
 		
 		CGContextRestoreGState(ctx);
 	}
+	
+	if(self.highlighted)
+		self.imageView.tintColor = [self titleColorForState:UIControlStateHighlighted];
+	else if(self.selected)
+		self.imageView.tintColor = [self titleColorForState:UIControlStateSelected];
+	else
+		self.imageView.tintColor = [self titleColorForState:UIControlStateNormal];
+	
 }
 
 - (void) layoutSubviews {

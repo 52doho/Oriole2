@@ -22,6 +22,7 @@
 }
 
 + (id)button;
+- (void)setConfig:(NSDictionary *)config;
 
 @end
 

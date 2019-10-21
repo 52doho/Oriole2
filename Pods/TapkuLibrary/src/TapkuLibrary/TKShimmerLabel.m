@@ -33,11 +33,12 @@
 
 @implementation TKShimmerLabel
 
-- (id) initWithFrame:(CGRect)frame{
+- (instancetype) initWithFrame:(CGRect)frame{
     if (!(self = [super initWithFrame:frame])) return nil;
 		
 	self.textAlignment = NSTextAlignmentCenter;
 	self.backgroundColor = [UIColor clearColor];
+	_direction = TKShimmerLabelDirectionLeftToRight;
 	
 	id dark = (id)[UIColor colorWithWhite:1 alpha:0.40].CGColor;
 	id light = (id)[UIColor colorWithWhite:1 alpha:1.0f].CGColor;
@@ -50,22 +51,56 @@
 	self.textHighlightLayer.endPoint = CGPointMake(1.0, 0);
 	self.layer.mask = self.textHighlightLayer;
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationDidBecomeActive:)
+												 name:UIApplicationDidBecomeActiveNotification object:nil];
+	
     return self;
 }
-
-- (void) willMoveToWindow:(UIWindow *)newWindow{
-	
-	[self.textHighlightLayer removeAllAnimations];
-	CGFloat x = self.textHighlightLayer.frame.size.width/2.0f;
-	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-	animation.repeatCount = HUGE_VALF;
-	animation.toValue = @(x);
-	animation.fromValue = @(-x + self.frame.size.width);
-	animation.duration = 4.0f;
-	[self.textHighlightLayer addAnimation:animation forKey:@"position.x"];
-	
+- (void) dealloc{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+#pragma mark Private Animation Methods
+- (NSNumber*) _animationStartPoint{
+	CGFloat x = CGRectGetWidth(self.textHighlightLayer.frame)/2.0f;
+	if(self.direction == TKShimmerLabelDirectionLeftToRight)
+		return @(-x + CGRectGetWidth(self.frame));
+	return @(x);
+}
+- (NSNumber*) _animationEndPoint{
+	CGFloat x = CGRectGetWidth(self.textHighlightLayer.frame)/2.0f;
+	if(self.direction == TKShimmerLabelDirectionLeftToRight)
+		return @(x);
+	return @(-x + CGRectGetWidth(self.frame));
+}
+- (void) _startShimmerAnimation{
+	if(!self.superview) return;
+	
+	[self.textHighlightLayer removeAllAnimations];
+	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+	animation.repeatCount = HUGE_VALF;
+	animation.toValue = [self _animationEndPoint];
+	animation.fromValue = [self _animationStartPoint];
+	animation.duration = 4.0f;
+	[self.textHighlightLayer addAnimation:animation forKey:@"position.x"];
+}
+
+#pragma mark Methods That Trigger The Animation To Start
+- (void) applicationDidBecomeActive:(id)sender{
+	
+	[self _startShimmerAnimation];
+	
+}
+- (void) willMoveToWindow:(UIWindow *)newWindow{
+	[self _startShimmerAnimation];
+}
+
+#pragma mark Properties
+- (void) setDirection:(TKShimmerLabelDirection)direction{
+	_direction = direction;
+	[self _startShimmerAnimation];
+}
 
 
 @end

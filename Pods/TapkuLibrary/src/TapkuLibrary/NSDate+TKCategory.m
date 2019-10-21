@@ -109,6 +109,21 @@
     return ((abs(time) / (60.0 * 60.0 * 24.0)) + 0.5);
 }
 
++ (NSInteger) daysBetweenDate:(NSDate*)fromDateTime andDate:(NSDate*)toDateTime{
+	NSDate *fromDate;
+	NSDate *toDate;
+	
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	
+	[calendar rangeOfUnit:NSDayCalendarUnit startDate:&fromDate interval:NULL forDate:fromDateTime];
+	[calendar rangeOfUnit:NSDayCalendarUnit startDate:&toDate interval:NULL forDate:toDateTime];
+	
+	NSDateComponents *difference = [calendar components:NSDayCalendarUnit fromDate:fromDate toDate:toDate options:0];
+	
+	return [difference day];
+}
+
+
 #pragma mark Same Day
 - (BOOL) isSameDay:(NSDate*)anotherDate{
 	return [self isSameDay:anotherDate timeZone:[NSTimeZone defaultTimeZone]];
@@ -129,8 +144,8 @@
 	
 	NSCalendar* calendar = [NSCalendar currentCalendar];
 	calendar.timeZone = timeZone;
-	NSDateComponents* components1 = [calendar components:NSYearCalendarUnit fromDate:self];
-	NSDateComponents* components2 = [calendar components:NSYearCalendarUnit fromDate:anotherDate];
+	NSDateComponents* components1 = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit fromDate:self];
+	NSDateComponents* components2 = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit fromDate:anotherDate];
 	return components1.year == components2.year && components1.month == components2.month;
 }
 

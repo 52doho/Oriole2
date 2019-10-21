@@ -51,22 +51,22 @@
 @dynamic delegate;
 
 #pragma mark Init & Friends
-- (id) init{
+- (instancetype) init{
 	if(!(self=[super init])) return nil;
 	[self setup];
     return self;
 }
-- (id) initWithFrame:(CGRect)frame{
+- (instancetype) initWithFrame:(CGRect)frame{
 	if(!(self=[super initWithFrame:frame])) return nil;
 	[self setup];
     return self;
 }
-- (id) initWithCoder:(NSCoder *)coder {
+- (instancetype) initWithCoder:(NSCoder *)coder {
 	if(!(self=[super initWithCoder:coder])) return nil;
 	[self setup];
     return self;
 }
-- (id) initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
+- (instancetype) initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
 	if(!(self=[super initWithFrame:frame style:style])) return nil;
 	[self setup];
     return self;
@@ -82,7 +82,7 @@
 
 - (UIImageView*) draggingImageViewWithImage:(UIImage*)image frame:(CGRect)frame{
 	UIImageView *dragging = [[UIImageView alloc] initWithImage:image];
-	dragging.frame = CGRectOffset(dragging.bounds, frame.origin.x, frame.origin.y);
+	dragging.frame = CGRectOffset(dragging.bounds, CGRectGetMinX(frame), CGRectGetMinY(frame));
 	dragging.layer.masksToBounds = NO;
 	dragging.layer.shadowColor = [UIColor blackColor].CGColor;
 	dragging.layer.shadowOffset = CGSizeMake(0, 0);
@@ -251,11 +251,11 @@
     if (newOffset.y < -self.contentInset.top)
         newOffset.y = -self.contentInset.top;
 	
-	else if (self.contentSize.height < self.frame.size.height)
+	else if (self.contentSize.height < CGRectGetHeight(self.frame))
         newOffset = currentOffset;
 	
-	else if (newOffset.y > self.contentSize.height - self.frame.size.height)
-        newOffset.y = self.contentSize.height - self.frame.size.height;
+	else if (newOffset.y > self.contentSize.height - CGRectGetHeight(self.frame))
+        newOffset.y = self.contentSize.height - CGRectGetHeight(self.frame);
     
 	
 	self.contentOffset = newOffset;

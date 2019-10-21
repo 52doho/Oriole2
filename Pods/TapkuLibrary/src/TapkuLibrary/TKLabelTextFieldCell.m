@@ -35,7 +35,7 @@
 @implementation TKLabelTextFieldCell
 
 
-- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 	if(!(self=[super initWithStyle:style reuseIdentifier:reuseIdentifier])) return nil;
     
     _field = [[UITextField alloc] initWithFrame:CGRectZero];
@@ -59,8 +59,9 @@
     [super layoutSubviews];
 	
 	CGRect r = CGRectInset(self.contentView.bounds, 8, 8);
-	r.origin.x += self.label.frame.size.width + 6;
-	r.size.width -= self.label.frame.size.width + 6;
+	CGFloat wid = CGRectGetWidth(self.label.frame);
+	r.origin.x += wid + 6;
+	r.size.width -= wid + 6;
 	_field.frame = r;
 	
 	

@@ -36,20 +36,17 @@
 #pragma mark - TKAlertView
 @interface TKAlertView : UIView {
 	CGRect _messageRect;
-	NSString *_text;
-	UIImage *_image;
 }
 
-- (id) init;
-- (void) setMessageText:(NSString*)str;
-- (void) setImage:(UIImage*)image;
+@property (nonatomic,strong) UIImage *image;
+@property (nonatomic,copy) NSString *messageText;
 
 @end
 
 
 @implementation TKAlertView
 
-- (id) init{
+- (instancetype) init{
 	if(!(self = [super initWithFrame:CGRectMake(0, 0, 100, 100)])) return nil;
 	_messageRect = CGRectInset(self.bounds, 10, 10);
 	self.backgroundColor = [UIColor clearColor];
@@ -77,7 +74,7 @@
 	[[UIColor colorWithWhite:0 alpha:0.8] set];
 	[self _drawRoundRectangleInRect:rect withRadius:10];
 	[[UIColor whiteColor] set];
-	[_text drawInRect:_messageRect
+	[_messageText drawInRect:_messageRect
 			 withFont:[UIFont boldSystemFontOfSize:14]
 		lineBreakMode:NSLineBreakByWordWrapping
 			alignment:NSTextAlignmentCenter];
@@ -93,7 +90,7 @@
 #pragma mark Setter Methods
 - (void) adjust{
 	
-	CGSize s = [_text sizeWithFont:[UIFont boldSystemFontOfSize:14]
+	CGSize s = [_messageText sizeWithFont:[UIFont boldSystemFontOfSize:14]
 				 constrainedToSize:CGSizeMake(160,200)
 					 lineBreakMode:NSLineBreakByWordWrapping];
 	
@@ -114,7 +111,7 @@
 	
 }
 - (void) setMessageText:(NSString*)str{
-	_text = str;
+	_messageText = str;
 	[self adjust];
 }
 - (void) setImage:(UIImage*)img{
@@ -135,7 +132,7 @@
 	}
 	return defaultCenter;
 }
-- (id) init{
+- (instancetype) init{
 	if(!(self=[super init])) return nil;
 	
 	_alerts = [[NSMutableArray alloc] init];
@@ -182,7 +179,7 @@
 	
 	
 	
-	_alertView.center = CGPointMake(_alertFrame.origin.x+_alertFrame.size.width/2, _alertFrame.origin.y+_alertFrame.size.height/2);
+	_alertView.center = CGPointMake(CGRectGetMidX(_alertFrame),CGRectGetMidY(_alertFrame));
 		
 	
 	CGRect rr = _alertView.frame;
@@ -287,8 +284,6 @@ CGRect subtractRect(CGRect wf,CGRect kf){
 	}
 	return CGRectIntersection(wf, kf);
 	
-	
-	
 }
 - (void) keyboardWillAppear:(NSNotification *)notification {
 	
@@ -299,8 +294,7 @@ CGRect subtractRect(CGRect wf,CGRect kf){
 	
 	[UIView beginAnimations:nil context:nil];
 	_alertFrame = subtractRect(wf,kf);
-	_alertView.center = CGPointMake(_alertFrame.origin.x+_alertFrame.size.width/2, _alertFrame.origin.y+_alertFrame.size.height/2);
-
+	_alertView.center = CGPointMake(CGRectGetMidX(_alertFrame), CGRectGetMidY(_alertFrame));
 	[UIView commitAnimations];
 
 }
@@ -324,7 +318,7 @@ CGRect subtractRect(CGRect wf,CGRect kf){
 	
 	[UIView beginAnimations:nil context:nil];
 	_alertView.transform = CGAffineTransformMakeRotation(degrees * M_PI / 180);
-	_alertView.frame = CGRectMake((int)_alertView.frame.origin.x, (int)_alertView.frame.origin.y, (int)_alertView.frame.size.width, (int)_alertView.frame.size.height);
+	_alertView.frame = CGRectMake((int)CGRectGetMinX(_alertView.frame), (int)CGRectGetMinY(_alertView.frame), (int)CGRectGetWidth(_alertView.frame), (int)CGRectGetHeight(_alertView.frame));
 	[UIView commitAnimations];
 	
 }

@@ -18,7 +18,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import <AdSupport/AdSupport.h>
-#import <Crashlytics/Crashlytics.h>
 #import "OOCommon.h"
 #import "DeviceUID.h"
 #import "MBProgressHUD.h"
@@ -32,6 +31,8 @@
 #include <net/if.h>
 #include <net/if_dl.h>
 #include <execinfo.h>
+
+#import <Firebase/Firebase.h>
 
 @interface OOBridgeObject : NSObject <SKStoreProductViewControllerDelegate>
 {
@@ -946,7 +947,8 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
                                                      @"app_version":[OOCommon appVersion],
                                                      }];
         [attributes addEntriesFromDictionary:customAttributes];
-        [Answers logCustomEventWithName:eventName customAttributes:attributes];
+//        [Answers logCustomEventWithName:eventName customAttributes:attributes];
+        [FIRAnalytics logEventWithName:eventName parameters:attributes];
     }
 }
 

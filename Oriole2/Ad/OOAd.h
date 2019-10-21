@@ -28,11 +28,9 @@ typedef void (^ OOBlockGADRequest)(GADRequest *request);
 @interface OOAd : NSObject {
 }
 @property (nonatomic, strong, readonly) NSDictionary *config;
-@property (nonatomic, assign) BOOL interstitial_aba_enabled;
 @property (nonatomic, strong) OOBlockGADRequest didCreateGADRequest;
 
 + (OOAd *)instance;
-- (void)downloadConfigWithAppName:(NSString *)appname;
 
 + (GADRequest *)adRequestWithPlacement:(NSString *)placement isMoreGame:(BOOL)isMoreGame;
 + (GADRequest *)adRequestWithPlacement:(NSString *)placement;

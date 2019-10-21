@@ -44,6 +44,9 @@
 /** The main view to display content on. */
 @property (nonatomic,strong) UIView *alertView;
 
+@property (nonatomic,strong) UIColor *backgroundShadeColor;
+
+
 ///----------------------------
 /// @name Displaying and hiding alert
 ///----------------------------
@@ -53,5 +56,17 @@
 
 /** Hide the alert */
 - (void) hide;
+
+/** 
+ Overwrite this function to implement your own presentation animation. 
+ @param transitionContext The transition context.
+ */
+- (void) showAlertView:(id<UIViewControllerContextTransitioning>)transitionContext;
+
+/** 
+ Overwrite this function to implement your own dismissal animation. 
+ @param transitionContext The transition context.
+ */
+- (void) hideAlertView:(id<UIViewControllerContextTransitioning>)transitionContext;
 
 @end

@@ -15,4 +15,8 @@ Pod::Spec.new do |s|
   s.dependency "MBProgressHUD"
   s.dependency "iRate"
   s.dependency "iVersion"
+  s.dependency "Google-Mobile-Ads-SDK"
+  s.dependency "Firebase/Core"
+  s.dependency "Firebase/Analytics"
+  s.dependency "RMStore"
 end

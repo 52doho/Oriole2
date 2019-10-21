@@ -35,7 +35,7 @@
 @implementation TKLabelSwitchCell
 
 
-- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if(!(self=[super initWithStyle:style reuseIdentifier:reuseIdentifier])) return nil;
 	
 	_switcher = [[UISwitch alloc] initWithFrame:CGRectZero];
@@ -52,8 +52,9 @@
     [super layoutSubviews];
 	
 	CGRect r = CGRectInset(self.bounds, 8, 8);
-	r.origin.x += self.label.frame.size.width + 6;
-	r.size.width -= self.label.frame.size.width + 6;
+	CGFloat wid = CGRectGetWidth(self.label.frame);
+	r.origin.x += wid + 6;
+	r.size.width -= wid + 6;
 	_switcher.frame = r;
 	
 }

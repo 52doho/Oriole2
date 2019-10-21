@@ -33,7 +33,7 @@
 
 @implementation TKLabelTextViewCell
 
-- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 	if(!(self=[super initWithStyle:style reuseIdentifier:reuseIdentifier])) return nil;
     
     _textView = [[UITextView alloc] initWithFrame:CGRectZero];
@@ -55,8 +55,9 @@
 	
 	
 	CGRect r = CGRectInset(self.contentView.bounds, 8, 8);
-	r.origin.x += self.label.frame.size.width + 0;
-	r.size.width -= self.label.frame.size.width + 0;
+	CGFloat wid = CGRectGetWidth(self.label.frame);
+	r.origin.x += wid;
+	r.size.width -= wid;
 	_textView.frame = r;
 
 }
