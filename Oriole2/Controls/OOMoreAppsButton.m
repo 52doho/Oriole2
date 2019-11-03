@@ -28,8 +28,7 @@
     NSDictionary *_config;
     BOOL _is_show_interstitial;
     NSArray *_apps;
-    NSUInteger _appCurrentIndex;
-    NSString *_app_callback_url;
+    int _appCurrentIndex;
     NSString *_interstitial_id;
     LKBadgeView *badgeView;
 }
@@ -63,7 +62,6 @@
     [self setTitle:title forState:UIControlStateNormal];
     [self _setBadge:badge_text];
     badgeView.badgeColor = badge_color;
-    _interstitial_id = _config[@"interstitial"][@"id"];
     [[OOAd instance] cacheInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
 }
 
@@ -71,34 +69,31 @@
     NSString *title;
     NSString *badge_text;
     UIColor *badge_color = [UIColor redColor];
-    if (_appCurrentIndex >= ((int)_apps.count - 1)) {
-        _appCurrentIndex = 0;
-        if (_interstitial_id.length > 0) {
-            [self _gotoInterstitial];
-            return;// 所有 app 已显示，显示 admob 广告
-        }
+    _appCurrentIndex++;
+    if (_appCurrentIndex > ((int)_apps.count - 1)) {
+        [self _gotoInterstitial];
+        return;// 所有 app 已显示，显示 admob 广告
     }
     
-    for (NSUInteger i = _appCurrentIndex; i < _apps.count; i++) {
-        BOOL disabled = [_apps[i][@"disabled"] boolValue];
+    for (; _appCurrentIndex < _apps.count; _appCurrentIndex++) {
+        id appConfig = _apps[_appCurrentIndex];
+        BOOL disabled = [appConfig[@"disabled"] boolValue];
         if (disabled) {
             continue;
         }
         
-        NSString *scheme = _apps[i][@"scheme"];
+        NSString *scheme = appConfig[@"scheme"];
         if (scheme.length > 0) {
             if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]]) {
                 continue;// has been installed
             }
         }
-        title = _apps[i][@"title"];
-        badge_text = _apps[i][@"badge_text"];
-        UIColor *color = [UIColor colorFromHexString:_apps[i][@"badge_color"]];
+        title = appConfig[@"title"];
+        badge_text = appConfig[@"badge_text"];
+        UIColor *color = [UIColor colorFromHexString:appConfig[@"badge_color"]];
         if (color) {
             badge_color = color;
         }
-        
-        _appCurrentIndex = i;
         break;
     }
     [self setTitle:title forState:UIControlStateNormal];
@@ -114,6 +109,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     
+    _appCurrentIndex = -1;
     badgeView = [[LKBadgeView alloc] init];
     badgeView.textColor = [UIColor whiteColor];
     badgeView.badgeColor = [UIColor clearColor];
@@ -130,8 +126,8 @@
     BOOL disabled = [config[@"disabled"] boolValue];
     self.hidden = disabled;
     
-    _app_callback_url = config[@"app_callback_url"];
     _is_show_interstitial = [config[@"is_show_interstitial"] boolValue];
+    _interstitial_id = _config[@"interstitial"][@"id"];
     _apps = config[@"apps"];
     [self _gotoNextApp];
 }
@@ -183,16 +179,11 @@
 
 - (void)_moreAppsViewTapped
 {
-    if (_is_show_interstitial) {
-        [self _showSelf:NO];
-        [[OOAd instance] showInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
-        [FIRAnalytics logEventWithName:@"MoreApps-Interstitial" parameters:@{}];
-    } else {
+    if (_appCurrentIndex < _apps.count) {
         NSDictionary *config = _apps[_appCurrentIndex];
         
         UIViewController *topmostViewController = [OOCommon getTopmostViewController];
         NSUInteger appId = [config[@"app_id"] integerValue];
-        
         if (appId > 0 && topmostViewController) {
             [OOCommon openInAppStoreWithID:appId viewController:topmostViewController];
         } else {
@@ -200,38 +191,14 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url ?:@"itms-apps://itunes.apple.com/us/artist/oriole2-co.-ltd./id506665225?mt=8"]];
         }
         
-        _appCurrentIndex++;
         [self performSelector:@selector(_gotoNextApp) withObject:nil afterDelay:2];
-        
-        if ([self _isWebUrl:_app_callback_url]) {
-            NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970] * 1000;
-            NSString *app_name = _config[@"app_name"];
-            NSDictionary *params = @{
-                                     @"channel":[NSString stringWithFormat:@"Oriole2_%@", app_name],
-                                     @"timestamp":[@(timestamp) stringValue],
-                                     @"device_id":[OOCommon deviceId],
-                                     @"ios_idfa":[OOCommon idfa],
-                                     @"ios_idfa_md5":[OOCommon idfa_md5],
-                                     @"device_model":[OOCommon deviceModel],
-                                     @"device_brand":[OOCommon deviceBrand],
-                                     @"device_name":[OOCommon deviceName],
-                                     @"country":[OOCommon deviceCountry],
-                                     @"locale":[OOCommon deviceLocale],
-                                     @"system_version":[OOCommon systemVersion],
-                                     @"system_name":[OOCommon systemName],
-                                     @"app_version":[OOCommon appVersion],
-                                     @"timezone":[OOCommon timezone],
-                                     };
-            NSURL *url = [OOCommon buildQueryUrl:_app_callback_url params:params];
-            NSURLRequest *request = [NSURLRequest requestWithURL:url];
-            NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-            [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-                OOLog(@"moreApps 点击记录结果：%@", connectionError);
-            }];
-        }
-        
+                
         NSString *scheme = config[@"scheme"] ?: @"";
-        [FIRAnalytics logEventWithName:@"MoreApps-Oriole2" parameters:@{@"scheme": scheme}];
+        [FIRAnalytics logEventWithName:@"MoreApps_Oriole2" parameters:@{@"scheme": scheme}];
+    } else {
+        [self _showSelf:NO];
+        [[OOAd instance] showInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
+        [FIRAnalytics logEventWithName:@"MoreApps_Interstitial" parameters:@{}];
     }
 }
 
@@ -320,7 +287,7 @@
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"instagram://user?username=%@", _instagramId]]];
     
-    [FIRAnalytics logEventWithName:@"Instagram button" parameters:@{@"account":_instagramId}];
+    [FIRAnalytics logEventWithName:@"Instagram_button" parameters:@{@"account":_instagramId}];
 }
 
 @end
