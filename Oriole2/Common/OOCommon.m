@@ -18,6 +18,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import <AdSupport/AdSupport.h>
+#import <Photos/Photos.h>
+#import <ImageIO/ImageIO.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "OOCommon.h"
 #import "DeviceUID.h"
 #import "MBProgressHUD.h"
@@ -837,6 +840,82 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
 }
 
 + (void)writeImageToSavedPhotosAlbum:(UIImage *)image metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock
+{
+    // AssetsLibrary throws inside Photos on current iOS versions. Keep the old
+    // implementation only for shared-library clients running iOS 8 or earlier.
+    if (@available(iOS 9.0, *)) {
+        void (^finish)(NSURL *, NSError *) = ^(NSURL *url, NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completionBlock) completionBlock(url, error);
+            });
+        };
+        if (!image) {
+            finish(nil, [NSError errorWithDomain:@"Oriole2.PhotoLibrary" code:1 userInfo:@{NSLocalizedDescriptionKey: @"No image to save."}]);
+            return;
+        }
+
+        void (^save)(PHAuthorizationStatus) = ^(PHAuthorizationStatus status) {
+            BOOL authorized = status == PHAuthorizationStatusAuthorized;
+            if (@available(iOS 14.0, *)) {
+                authorized = authorized || status == PHAuthorizationStatusLimited;
+            }
+            if (!authorized) {
+                finish(nil, [NSError errorWithDomain:@"Oriole2.PhotoLibrary" code:2 userInfo:@{NSLocalizedDescriptionKey: @"Photo permission is not authorized. Please open on Settings."}]);
+                return;
+            }
+
+            NSData *photoData = UIImageJPEGRepresentation(image, 1.0);
+            if (!photoData) {
+                finish(nil, [NSError errorWithDomain:@"Oriole2.PhotoLibrary" code:3 userInfo:@{NSLocalizedDescriptionKey: @"Unable to encode the photo."}]);
+                return;
+            }
+            if (metadata.count) {
+                CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)photoData, NULL);
+                NSMutableData *encoded = [NSMutableData data];
+                CGImageDestinationRef destination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)encoded, kUTTypeJPEG, 1, NULL);
+                if (source && destination) {
+                    NSMutableDictionary *properties = [CFBridgingRelease(CGImageSourceCopyPropertiesAtIndex(source, 0, NULL)) mutableCopy] ?: [NSMutableDictionary dictionary];
+                    [properties addEntriesFromDictionary:metadata];
+                    CGImageDestinationAddImageFromSource(destination, source, 0, (__bridge CFDictionaryRef)properties);
+                    if (CGImageDestinationFinalize(destination)) photoData = encoded;
+                }
+                if (destination) CFRelease(destination);
+                if (source) CFRelease(source);
+            }
+
+            NSString *albumName = [self getLocalizedAppName];
+            PHFetchOptions *options = [[PHFetchOptions alloc] init];
+            options.predicate = [NSPredicate predicateWithFormat:@"title == %@", albumName];
+            PHAssetCollection *album = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:options].firstObject;
+            __block NSString *assetIdentifier;
+            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+                PHAssetCreationRequest *assetRequest = [PHAssetCreationRequest creationRequestForAsset];
+                [assetRequest addResourceWithType:PHAssetResourceTypePhoto data:photoData options:nil];
+                PHObjectPlaceholder *placeholder = assetRequest.placeholderForCreatedAsset;
+                assetIdentifier = placeholder.localIdentifier;
+                PHAssetCollectionChangeRequest *albumRequest = album ? [PHAssetCollectionChangeRequest changeRequestForAssetCollection:album] : [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:albumName];
+                if (placeholder) [albumRequest addAssets:@[placeholder]];
+            } completionHandler:^(BOOL success, NSError *error) {
+                if (!success && !error) {
+                    error = [NSError errorWithDomain:@"Oriole2.PhotoLibrary" code:4 userInfo:@{NSLocalizedDescriptionKey: @"Unable to save the photo."}];
+                }
+                NSURL *url = success && assetIdentifier ? [NSURL URLWithString:[@"ph://" stringByAppendingString:assetIdentifier]] : nil;
+                finish(url, error);
+            }];
+        };
+
+        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+        if (status == PHAuthorizationStatusNotDetermined) {
+            [PHPhotoLibrary requestAuthorization:save];
+        } else {
+            save(status);
+        }
+        return;
+    }
+    [self _writeImageToSavedPhotosAlbumLegacy:image metadata:metadata completionBlock:completionBlock];
+}
+
++ (void)_writeImageToSavedPhotosAlbumLegacy:(UIImage *)image metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock
 {
     __block ALAssetsLibrary *library = nil;
 

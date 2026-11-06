@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.resources = "Oriole2/Resources/*.{bundle}"
   s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Parse" }
   s.frameworks = "SystemConfiguration", "MobileCoreServices", "StoreKit"
+  s.weak_frameworks = "Photos", "ImageIO"
   s.requires_arc = true
   s.dependency "MBProgressHUD"
   s.dependency "iRate"
