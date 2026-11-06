@@ -19,7 +19,12 @@ Both references resolve to the existing app/library and Pods projects. The
 `.gitignore` allows only this shared workspace definition. The local IDE check
 marker and SCM blueprint are deliberately omitted as machine-specific metadata.
 
-The original Oriole2-ori directory remains the comparison baseline.
+On 2026-11-06, the user explicitly requested removal of Oriole2-ori after
+integration. A final content comparison confirmed that the only snapshot-only
+files were the IDE check marker and SCM blueprint listed above. The HUD API
+changes, Debug-scoped test device setting and identical shared workspace were
+verified before deleting the original directory. This report retains the
+comparison baseline and integration decisions.
 
 Subsequent crash repairs in Oriole2 add Photos/ImageIO weak framework linkage
 and replace AssetsLibrary execution on iOS 9+. Fully authorized saves retain the
