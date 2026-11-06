@@ -215,6 +215,9 @@
         
         interstitial.delegate = self;
         GADRequest *request = [OOAd adRequestWithPlacement:placement isMoreGame:isMoreGame];
+#ifdef DEBUG
+        request.testDevices = @[ @"5331e99c6444bf981c5847d8ed5a2166" ];
+#endif
         [interstitial loadRequest:request];
         
         dicPlacements[placement] = interstitial;
