@@ -883,18 +883,26 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
                 if (source) CFRelease(source);
             }
 
+            // Limited access allows creating photos, but forbids fetching or
+            // creating user albums. Save directly to the camera roll in that case.
+            BOOL canManageAlbums = status == PHAuthorizationStatusAuthorized;
             NSString *albumName = [self getLocalizedAppName];
-            PHFetchOptions *options = [[PHFetchOptions alloc] init];
-            options.predicate = [NSPredicate predicateWithFormat:@"title == %@", albumName];
-            PHAssetCollection *album = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:options].firstObject;
+            PHAssetCollection *album = nil;
+            if (canManageAlbums) {
+                PHFetchOptions *options = [[PHFetchOptions alloc] init];
+                options.predicate = [NSPredicate predicateWithFormat:@"title == %@", albumName];
+                album = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:options].firstObject;
+            }
             __block NSString *assetIdentifier;
             [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
                 PHAssetCreationRequest *assetRequest = [PHAssetCreationRequest creationRequestForAsset];
                 [assetRequest addResourceWithType:PHAssetResourceTypePhoto data:photoData options:nil];
                 PHObjectPlaceholder *placeholder = assetRequest.placeholderForCreatedAsset;
                 assetIdentifier = placeholder.localIdentifier;
-                PHAssetCollectionChangeRequest *albumRequest = album ? [PHAssetCollectionChangeRequest changeRequestForAssetCollection:album] : [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:albumName];
-                if (placeholder) [albumRequest addAssets:@[placeholder]];
+                if (canManageAlbums) {
+                    PHAssetCollectionChangeRequest *albumRequest = album ? [PHAssetCollectionChangeRequest changeRequestForAssetCollection:album] : [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:albumName];
+                    if (placeholder) [albumRequest addAssets:@[placeholder]];
+                }
             } completionHandler:^(BOOL success, NSError *error) {
                 if (!success && !error) {
                     error = [NSError errorWithDomain:@"Oriole2.PhotoLibrary" code:4 userInfo:@{NSLocalizedDescriptionKey: @"Unable to save the photo."}];
@@ -904,11 +912,20 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
             }];
         };
 
-        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-        if (status == PHAuthorizationStatusNotDetermined) {
-            [PHPhotoLibrary requestAuthorization:save];
+        if (@available(iOS 14.0, *)) {
+            PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatusForAccessLevel:PHAccessLevelReadWrite];
+            if (status == PHAuthorizationStatusNotDetermined) {
+                [PHPhotoLibrary requestAuthorizationForAccessLevel:PHAccessLevelReadWrite handler:save];
+            } else {
+                save(status);
+            }
         } else {
-            save(status);
+            PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+            if (status == PHAuthorizationStatusNotDetermined) {
+                [PHPhotoLibrary requestAuthorization:save];
+            } else {
+                save(status);
+            }
         }
         return;
     }
