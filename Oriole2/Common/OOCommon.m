@@ -713,20 +713,20 @@ static NSBundle * wlBundle;
             // show waiting
             hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
             hud.minShowTime = 1;
-            hud.labelText = OOLocalizedStringInOOBundle(@"Waiting");
+            hud.label.text = OOLocalizedStringInOOBundle(@"Waiting");
             hud.mode = MBProgressHUDModeIndeterminate;
             hud.removeFromSuperViewOnHide = YES;
             hud.userInteractionEnabled = NO;
 
             [storeController loadProductWithParameters:productParameters completionBlock:^(BOOL result, NSError *error) {
                 if (result) {
-                    [hud hide:YES];
+                    [hud hideAnimated:YES];
                     [self presentOnTopmostVCWithVC:storeController animated:YES completion:NULL];
 
                     [bridge increaseRetainCount];
                 } else {
-                    hud.labelText = [error localizedDescription];
-                    [hud hide:YES afterDelay:1.];
+                    hud.label.text = [error localizedDescription];
+                    [hud hideAnimated:YES afterDelay:1.];
                     OOLog(@"There was a problem displaying app store view");
                 }
             }];

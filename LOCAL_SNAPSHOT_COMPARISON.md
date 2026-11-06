@@ -10,7 +10,7 @@ podspecs and bundled dependency files match.
 | File | Change in Oriole2-ori | Integration status |
 | --- | --- | --- |
 | `Oriole2/Ad/OOAd.m` | Adds a hardcoded AdMob test device to interstitial requests | Pending; scope test configuration to Debug builds |
-| `Oriole2/Common/OOCommon.m` | Replaces obsolete MBProgressHUD label/hide calls with 1.x APIs | Pending compilation verification |
+| `Oriole2/Common/OOCommon.m` | Replaces obsolete MBProgressHUD label/hide calls with 1.x APIs | Imported; calls verified by Clang against BoothCool's installed MBProgressHUD 1.2.0 header; complete app build pending dependency restoration |
 
 The snapshot additionally contains `Oriole2.xcworkspace/contents.xcworkspacedata`,
 `xcshareddata/IDEWorkspaceChecks.plist` and `xcshareddata/Oriole2.xcscmblueprint`.
