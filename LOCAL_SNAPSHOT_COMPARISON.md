@@ -14,7 +14,9 @@ podspecs and bundled dependency files match.
 
 The snapshot additionally contains `Oriole2.xcworkspace/contents.xcworkspacedata`,
 `xcshareddata/IDEWorkspaceChecks.plist` and `xcshareddata/Oriole2.xcscmblueprint`.
-The workspace references will be inspected before importing; local SCM metadata
-is not application functionality.
+The workspace contents were imported and verified with `xcodebuild -list`.
+Both references resolve to the existing app/library and Pods projects. The
+`.gitignore` allows only this shared workspace definition. The local IDE check
+marker and SCM blueprint are deliberately omitted as machine-specific metadata.
 
 The original Oriole2-ori directory remains the comparison baseline.

@@ -13,5 +13,8 @@ build-lite/
 xcuserdatad/
 xcuserdata
 *.xcworkspace/
+!Oriole2.xcworkspace/
+Oriole2.xcworkspace/*
+!Oriole2.xcworkspace/contents.xcworkspacedata
 UserInterfaceState.xcuserstate
 /PhotoSafety.xcodeproj/project.xcworkspace/xcuserdata/zhangdong.xcuserdatad/UserInterfaceState.xcuserstate
