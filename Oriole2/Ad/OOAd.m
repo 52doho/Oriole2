@@ -48,6 +48,7 @@
     if (self) {
         dicMediations = [NSMutableDictionary dictionary];
         aryInterstitialPresenting = [NSMutableArray array];
+        _allowsDeferredPresentation = YES;
     }
     
     return self;
@@ -109,51 +110,75 @@
     return [self adRequestWithPlacement:@"default"];
 }
 
-- (void)_presentInterstitial:(OOInterstitial *)interstitial fromViewController:(UIViewController *)fromViewController {
-    if (!interstitial || !fromViewController) {
-        return;
+- (void)_notifyEvent:(NSString *)event ad:(OOInterstitial *)ad error:(NSError *)error {
+    if (self.eventHandler) self.eventHandler(event, ad.adUnitID ?: @"", ad.placement ?: @"", error);
+}
+
+- (OOInterstitial *)_newInterstitialWithAdUnitID:(NSString *)adUnitID {
+    return [[OOInterstitial alloc] initWithAdUnitID:adUnitID];
+}
+
+- (BOOL)isInterstitialReadyWithMediationID:(NSString *)mediationID placement:(NSString *)placement {
+    OOInterstitial *ad = dicMediations[mediationID][placement];
+    return ad.isReady && !ad.hasBeenUsed && ad.loadedUptime > 0 && [NSProcessInfo processInfo].systemUptime - ad.loadedUptime < 3300;
+}
+
+- (void)discardCachedInterstitials {
+    for (NSDictionary *placements in dicMediations.allValues) {
+        for (OOInterstitial *ad in placements.allValues) {
+            ad.needToShowAfterReceiveAd = NO;
+            [self _clearDelegate:ad];
+        }
     }
-    
-    if ([fromViewController isBeingPresented]) {
+    [dicMediations removeAllObjects];
+}
+
+- (BOOL)_presentInterstitial:(OOInterstitial *)interstitial fromViewController:(UIViewController *)fromViewController {
+    if (!interstitial || !fromViewController || (self.presentationValidator && !self.presentationValidator(interstitial.adUnitID, interstitial.placement))) {
+        interstitial.needToShowAfterReceiveAd = NO;
+        [self _notifyEvent:@"presentation_blocked" ad:interstitial error:nil];
+        return NO;
+    }
+
+    if (self.presentationValidator && ([UIApplication sharedApplication].applicationState != UIApplicationStateActive || fromViewController.isBeingPresented || fromViewController.presentedViewController || !fromViewController.view.window)) {
+        interstitial.needToShowAfterReceiveAd = NO;
+        [self _notifyEvent:@"presentation_blocked" ad:interstitial error:nil];
+        return NO;
+    }
+    if ([fromViewController isBeingPresented] && self.allowsDeferredPresentation) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self _presentInterstitial:interstitial fromViewController:fromViewController];
         });
-    } else {
-        [interstitial presentFromRootViewController:fromViewController];
-        
-        [DEFAULTS setObject:[NSDate date] forKey:[self _getInterstitialLastShowDateKeyWithPlacement:interstitial.placement]];
-        NSString   *kCount = [self _getInterstitialLastShowCountKeyWithPlacement:interstitial.placement];
-        NSUInteger count = [DEFAULTS integerForKey:kCount];
-        [DEFAULTS setObject:@(count + 1) forKey:kCount];
+        return YES;
     }
+    [self _notifyEvent:@"presentation_requested" ad:interstitial error:nil];
+    @try {
+        [interstitial presentFromRootViewController:fromViewController];
+    } @catch (NSException *exception) {
+        NSError *error = [NSError errorWithDomain:@"Oriole2.AdPresentation" code:1 userInfo:@{NSLocalizedDescriptionKey: exception.reason ?: @"Unable to present ad"}];
+        [self _notifyEvent:@"presentation_failed" ad:interstitial error:error];
+        return NO;
+    }
+    return YES;
 }
 
 - (void)_presentInterstitialAndCacheMore:(OOInterstitial *)interstitialOld delegate:(id <GADInterstitialDelegate> )delegate {
     if (interstitialOld) {
         if (!interstitialOld.hasBeenUsed) {
             [aryInterstitialPresenting addObject:interstitialOld];
-            [self _presentInterstitial:interstitialOld fromViewController:[OOCommon getTopmostViewController]];
+            if (![self _presentInterstitial:interstitialOld fromViewController:[OOCommon getTopmostViewController]]) {
+                [aryInterstitialPresenting removeObject:interstitialOld];
+                return;
+            }
         } else {
             OOAdLog(@"interstitialOld has been used, will not present again");
         }
-        
-        NSMutableDictionary *dicPlacements = dicMediations[interstitialOld.adUnitID];
         
         [self _removeInterstitialFromCache:interstitialOld];
         
         // cache more
         OOAdLog(@"cache more interstitial");
-        OOInterstitial *interstitial = [[OOInterstitial alloc] initWithAdUnitID:interstitialOld.adUnitID];
-        interstitial.placement = interstitialOld.placement;
-        interstitial.delegateBackup = delegate;
-        interstitial.isMoreGame = interstitialOld.isMoreGame;
-        interstitial.needToShowAfterReceiveAd = NO;
-        
-        interstitial.delegate = self;
-        GADRequest *request = [OOAd adRequestWithPlacement:interstitialOld.placement isMoreGame:interstitialOld.isMoreGame];
-        [interstitial loadRequest:request];
-        
-        dicPlacements[interstitialOld.placement] = interstitial;
+        [self _showInterstitialWithMediationId:interstitialOld.adUnitID placement:interstitialOld.placement isMoreGame:interstitialOld.isMoreGame isCache:YES delegate:delegate];
     } else {
         OOAdLog(@"logic error: interstitial hasBeenUsed");
     }
@@ -163,17 +188,19 @@
     NSMutableDictionary *dicPlacements = dicMediations[interstitial.adUnitID];
     
     if (dicPlacements[interstitial.placement]) {
-        [dicPlacements removeObjectForKey:interstitial.placement];
+    if (dicPlacements[interstitial.placement] == interstitial) [dicPlacements removeObjectForKey:interstitial.placement];
     } else {
         OOAdLog(@"can't find interstitial:%@ from cache", interstitial.placement);
     }
 }
 
 - (OOInterstitialState)_showInterstitialWithMediationId:(NSString *)mediationID placement:(NSString *)placement isMoreGame:(BOOL)isMoreGame isCache:(BOOL)isCache delegate:(id <GADInterstitialDelegate> )delegate {
-    if ((mediationID == nil) || (placement == nil)) {
+    if (![mediationID isKindOfClass:[NSString class]] || ![placement isKindOfClass:[NSString class]] || mediationID.length == 0 || placement.length == 0) {
         OOAdLog(@"mediationID and placement can't be empty");
         return OOInterstitialState_Nothing;
     }
+    if (self.requestValidator && !self.requestValidator(mediationID, placement)) return OOInterstitialState_Nothing;
+    if (!isCache && self.presentationValidator && !self.presentationValidator(mediationID, placement)) return OOInterstitialState_Nothing;
     
     NSMutableDictionary *dicPlacements = dicMediations[mediationID];
     
@@ -183,6 +210,11 @@
     }
     
     OOInterstitial *interstitial = dicPlacements[placement];
+    if (interstitial && interstitial.loadedUptime > 0 && ![self isInterstitialReadyWithMediationID:mediationID placement:placement]) {
+        [self _clearDelegate:interstitial];
+        [dicPlacements removeObjectForKey:placement];
+        interstitial = nil;
+    }
     
     if (interstitial) {
         if (!isCache) {
@@ -193,7 +225,7 @@
             } else {
                 // wait
                 OOAdLog(@"waiting interstitial to complete");
-                interstitial.needToShowAfterReceiveAd = YES;
+                interstitial.needToShowAfterReceiveAd = self.allowsDeferredPresentation;
                 
                 return OOInterstitialState_Loading;
             }
@@ -202,7 +234,7 @@
         }
     } else {
         // create new
-        interstitial = [[OOInterstitial alloc] initWithAdUnitID:mediationID];
+        interstitial = [self _newInterstitialWithAdUnitID:mediationID];
         interstitial.placement = placement;
         interstitial.delegateBackup = delegate;
         interstitial.isMoreGame = isMoreGame;
@@ -210,7 +242,7 @@
         if (isCache) {
             interstitial.needToShowAfterReceiveAd = NO;
         } else {
-            interstitial.needToShowAfterReceiveAd = YES;
+            interstitial.needToShowAfterReceiveAd = self.allowsDeferredPresentation;
         }
         
         interstitial.delegate = self;
@@ -218,9 +250,9 @@
 #ifdef DEBUG
         request.testDevices = @[ @"5331e99c6444bf981c5847d8ed5a2166" ];
 #endif
-        [interstitial loadRequest:request];
-        
         dicPlacements[placement] = interstitial;
+        [self _notifyEvent:@"request" ad:interstitial error:nil];
+        [interstitial loadRequest:request];
         
         return OOInterstitialState_CreateNew;
     }
@@ -316,6 +348,12 @@
     }
     
     OOInterstitial *interstitial = (OOInterstitial *)ad;
+    if (dicMediations[interstitial.adUnitID][interstitial.placement] != interstitial) {
+        [self _clearDelegate:interstitial];
+        return;
+    }
+    interstitial.loadedUptime = [NSProcessInfo processInfo].systemUptime;
+    [self _notifyEvent:@"loaded" ad:interstitial error:nil];
     
     if ([interstitial.delegateBackup respondsToSelector:@selector(interstitialDidReceiveAd:)]) {
         [interstitial.delegateBackup interstitialDidReceiveAd:ad];
@@ -346,6 +384,7 @@
     }
     
     OOAdLog(@"interstitial:%@, didFailToReceiveAdWithError:%@", interstitial.placement, error);
+    [self _notifyEvent:@"load_failed" ad:interstitial error:error];
     [self _removeInterstitialFromCache:interstitial];
     [self _clearDelegate:interstitial];
 }
@@ -356,6 +395,10 @@
     }
     
     OOInterstitial *interstitial = (OOInterstitial *)ad;
+    [DEFAULTS setObject:[NSDate date] forKey:[self _getInterstitialLastShowDateKeyWithPlacement:interstitial.placement]];
+    NSString *countKey = [self _getInterstitialLastShowCountKeyWithPlacement:interstitial.placement];
+    [DEFAULTS setInteger:[DEFAULTS integerForKey:countKey] + 1 forKey:countKey];
+    [self _notifyEvent:@"presented" ad:interstitial error:nil];
     
     if ([interstitial.delegateBackup respondsToSelector:@selector(interstitialWillPresentScreen:)]) {
         [interstitial.delegateBackup interstitialWillPresentScreen:ad];
@@ -370,6 +413,7 @@
     }
     
     OOInterstitial *interstitial = (OOInterstitial *)ad;
+    [self _notifyEvent:@"dismissed" ad:interstitial error:nil];
     
     if ([interstitial.delegateBackup respondsToSelector:@selector(interstitialDidDismissScreen:)]) {
         [interstitial.delegateBackup interstitialDidDismissScreen:ad];
@@ -392,8 +436,9 @@
         [interstitial.delegateBackup interstitialWillLeaveApplication:ad];
     }
     
-    [aryInterstitialPresenting removeObject:ad];
-    [self _clearDelegate:interstitial];
+    // A click can open Safari/App Store while the ad is still on screen. Keep
+    // receiving its final dismissal so the app's presentation lock is released.
+    [self _notifyEvent:@"left_application" ad:interstitial error:nil];
     
     OOAdLog(@"interstitialWillLeaveApplication:%@", interstitial.placement);
 }

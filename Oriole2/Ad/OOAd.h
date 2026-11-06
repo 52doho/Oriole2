@@ -12,8 +12,9 @@
 
 @interface OOInterstitial : GADInterstitial
 @property (nonatomic, copy) NSString                             *placement;
-@property (nonatomic, assign) NSObject <GADInterstitialDelegate> *delegateBackup;
+@property (nonatomic, weak) NSObject <GADInterstitialDelegate> *delegateBackup;
 @property (nonatomic, assign) BOOL needToShowAfterReceiveAd, isMoreGame;
+@property (nonatomic, assign) NSTimeInterval loadedUptime;
 @end
 
 typedef enum {
@@ -29,6 +30,13 @@ typedef void (^ OOBlockGADRequest)(GADRequest *request);
 }
 @property (nonatomic, strong, readonly) NSDictionary *config;
 @property (nonatomic, strong) OOBlockGADRequest didCreateGADRequest;
+// Optional hooks: existing client apps retain their behavior unless they opt in.
+@property (nonatomic, copy) BOOL (^requestValidator)(NSString *adUnitID, NSString *placement);
+@property (nonatomic, copy) BOOL (^presentationValidator)(NSString *adUnitID, NSString *placement);
+@property (nonatomic, copy) void (^eventHandler)(NSString *event, NSString *adUnitID, NSString *placement, NSError *error);
+@property (nonatomic, assign) BOOL allowsDeferredPresentation;
+- (BOOL)isInterstitialReadyWithMediationID:(NSString *)mediationID placement:(NSString *)placement;
+- (void)discardCachedInterstitials;
 
 + (OOAd *)instance;
 
