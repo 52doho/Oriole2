@@ -10,7 +10,7 @@ podspecs and bundled dependency files match.
 | File | Change in Oriole2-ori | Integration status |
 | --- | --- | --- |
 | `Oriole2/Ad/OOAd.m` | Adds a hardcoded AdMob test device to interstitial requests | Imported under `DEBUG`; verified against BoothCool's installed GoogleMobileAds headers (deprecated API warning only). Release requests keep their existing configuration |
-| `Oriole2/Common/OOCommon.m` | Replaces obsolete MBProgressHUD label/hide calls with 1.x APIs | Imported; calls verified by Clang against BoothCool's installed MBProgressHUD 1.2.0 header; complete app build pending dependency restoration |
+| `Oriole2/Common/OOCommon.m` | Replaces obsolete MBProgressHUD label/hide calls with 1.x APIs | Imported; complete BoothCool Debug simulator and arm64 Release builds pass with Xcode 14.2 |
 
 The snapshot additionally contains `Oriole2.xcworkspace/contents.xcworkspacedata`,
 `xcshareddata/IDEWorkspaceChecks.plist` and `xcshareddata/Oriole2.xcscmblueprint`.
@@ -20,3 +20,9 @@ Both references resolve to the existing app/library and Pods projects. The
 marker and SCM blueprint are deliberately omitted as machine-specific metadata.
 
 The original Oriole2-ori directory remains the comparison baseline.
+
+Subsequent crash repairs in Oriole2 add Photos/ImageIO weak framework linkage
+and replace AssetsLibrary execution on iOS 9+. Fully authorized saves retain the
+application album; Limited authorization saves directly to the camera roll.
+Both branches were exercised in BoothCool on the iOS 16.2 simulator. These repairs
+are new changes beyond the original snapshot, committed separately from imports.
