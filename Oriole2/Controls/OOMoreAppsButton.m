@@ -50,6 +50,10 @@
 }
 
 - (void)_gotoInterstitial {
+    if (![_config[@"is_show_interstitial"] boolValue] || !_interstitial_id.length || [_config[@"disabled"] boolValue]) {
+        [self _showSelf:NO];
+        return;
+    }
     _is_show_interstitial = true;
     [self _showSelf:NO];
     
@@ -71,8 +75,11 @@
     UIColor *badge_color = [UIColor redColor];
     _appCurrentIndex++;
     if (_appCurrentIndex > ((int)_apps.count - 1)) {
-        [self _gotoInterstitial];
-        return;// 所有 app 已显示，显示 admob 广告
+        if ([_config[@"is_show_interstitial"] boolValue]) {
+            [self _gotoInterstitial];
+            return;
+        }
+        _appCurrentIndex = 0; // Keep normal promotion links usable when ads are off.
     }
     
     for (; _appCurrentIndex < _apps.count; _appCurrentIndex++) {
@@ -101,6 +108,8 @@
     badgeView.badgeColor = badge_color;
     if (!title) {
         [self _gotoInterstitial];
+    } else {
+        [self _showSelf:YES];
     }
 }
 
@@ -122,13 +131,17 @@
 }
 
 - (void)setConfig:(NSDictionary *)config {
-    _config = config;
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(_gotoNextApp) object:nil];
+    _config = [config isKindOfClass:[NSDictionary class]] ? [config copy] : @{@"disabled": @YES};
+    config = _config;
     BOOL disabled = [config[@"disabled"] boolValue];
     self.hidden = disabled;
+    _appCurrentIndex = -1;
     
     _is_show_interstitial = [config[@"is_show_interstitial"] boolValue];
     _interstitial_id = _config[@"interstitial"][@"id"];
-    _apps = config[@"apps"];
+    _apps = [config[@"apps"] isKindOfClass:[NSArray class]] ? config[@"apps"] : @[];
+    if (disabled) return;
     [self _gotoNextApp];
 }
 
@@ -179,7 +192,8 @@
 
 - (void)_moreAppsViewTapped
 {
-    if (_appCurrentIndex < _apps.count) {
+    if (self.hidden || [_config[@"disabled"] boolValue]) return;
+    if (_appCurrentIndex >= 0 && _appCurrentIndex < _apps.count) {
         NSDictionary *config = _apps[_appCurrentIndex];
         
         UIViewController *topmostViewController = [OOCommon getTopmostViewController];
@@ -196,6 +210,7 @@
         NSString *scheme = config[@"scheme"] ?: @"";
         [FIRAnalytics logEventWithName:@"MoreApps_Oriole2" parameters:@{@"scheme": scheme}];
     } else {
+        if (![_config[@"is_show_interstitial"] boolValue]) return;
         [self _showSelf:NO];
         [[OOAd instance] showInterstitialOfMoreAppsWithMediationID:_interstitial_id delegate:self];
         [FIRAnalytics logEventWithName:@"MoreApps_Interstitial" parameters:@{}];
