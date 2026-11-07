@@ -1045,7 +1045,6 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
                                                      //                                                                     @"ios_idfa_md5":[OOCommon idfa_md5],
                                                      @"device_model":[OOCommon deviceModel],
                                                      //                                                                     @"device_brand":[OOCommon deviceBrand],
-                                                     @"device_name":[OOCommon deviceName],
                                                      @"country":[OOCommon deviceCountry],
                                                      @"locale":[OOCommon deviceLocale],
                                                      @"timezone":[OOCommon timezone],
