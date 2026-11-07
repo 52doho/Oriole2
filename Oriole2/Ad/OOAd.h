@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import "OOAdSDKCompatibility.h"
 #import "OOCommon.h"
 
 @interface OOInterstitial : GADInterstitial
@@ -30,6 +31,7 @@ typedef void (^ OOBlockGADRequest)(GADRequest *request);
 }
 @property (nonatomic, strong, readonly) NSDictionary *config;
 @property (nonatomic, strong) OOBlockGADRequest didCreateGADRequest;
+@property (nonatomic, copy) void (^didCreateGADRequestForPlacement)(GADRequest *request, NSString *placement);
 // Optional hooks: existing client apps retain their behavior unless they opt in.
 @property (nonatomic, copy) BOOL (^requestValidator)(NSString *adUnitID, NSString *placement);
 @property (nonatomic, copy) BOOL (^presentationValidator)(NSString *adUnitID, NSString *placement);

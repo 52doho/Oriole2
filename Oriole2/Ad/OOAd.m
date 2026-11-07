@@ -95,6 +95,9 @@
     [request registerAdNetworkExtras:extras];
     
     ZPInvokeBlock([OOAd instance].didCreateGADRequest, request);
+    if ([OOAd instance].didCreateGADRequestForPlacement) {
+        [OOAd instance].didCreateGADRequestForPlacement(request, placement);
+    }
 #ifdef DEBUG
 //    request.testDevices = @[ kGADSimulatorID, @"5331e99c6444bf981c5847d8ed5a2166" ];
 #endif
@@ -248,7 +251,11 @@
         interstitial.delegate = self;
         GADRequest *request = [OOAd adRequestWithPlacement:placement isMoreGame:isMoreGame];
 #ifdef DEBUG
+#if OO_AD_LEGACY_INTERSTITIAL
         request.testDevices = @[ @"5331e99c6444bf981c5847d8ed5a2166" ];
+#else
+        [GADMobileAds sharedInstance].requestConfiguration.testDeviceIdentifiers = @[ @"5331e99c6444bf981c5847d8ed5a2166" ];
+#endif
 #endif
         dicPlacements[placement] = interstitial;
         [self _notifyEvent:@"request" ad:interstitial error:nil];
@@ -423,6 +430,15 @@
     [self _clearDelegate:interstitial];
     
     OOAdLog(@"interstitialDidDismissScreen:%@", interstitial.placement);
+}
+
+- (void)interstitial:(GADInterstitial *)ad didFailToPresentScreenWithError:(NSError *)error {
+    if (![ad isKindOfClass:[OOInterstitial class]]) return;
+    OOInterstitial *interstitial = (OOInterstitial *)ad;
+    [self _notifyEvent:@"presentation_failed" ad:interstitial error:error];
+    [aryInterstitialPresenting removeObject:interstitial];
+    [self _removeInterstitialFromCache:interstitial];
+    [self _clearDelegate:interstitial];
 }
 
 - (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
