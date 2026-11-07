@@ -15,6 +15,7 @@
 - (void)interstitialWillPresentScreen:(OOAdLegacyInterstitial *)ad;
 - (void)interstitialDidDismissScreen:(OOAdLegacyInterstitial *)ad;
 - (void)interstitialWillLeaveApplication:(OOAdLegacyInterstitial *)ad;
+- (void)interstitialDidRecordImpression:(OOAdLegacyInterstitial *)ad;
 - (void)interstitial:(OOAdLegacyInterstitial *)ad didFailToPresentScreenWithError:(NSError *)error;
 @end
 
@@ -24,6 +25,7 @@
 @property (nonatomic, readonly, getter=isReady) BOOL ready;
 @property (nonatomic, readonly) BOOL hasBeenUsed;
 @property (nonatomic, copy, readonly) NSString *adNetworkClassName;
+@property (nonatomic, copy) void (^revenueHandler)(NSDecimalNumber *value, NSString *currency, NSInteger precision, NSString *network);
 - (instancetype)initWithAdUnitID:(NSString *)adUnitID;
 - (void)loadRequest:(GADRequest *)request;
 - (void)presentFromRootViewController:(UIViewController *)controller;

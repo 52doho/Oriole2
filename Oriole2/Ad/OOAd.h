@@ -36,6 +36,8 @@ typedef void (^ OOBlockGADRequest)(GADRequest *request);
 @property (nonatomic, copy) BOOL (^requestValidator)(NSString *adUnitID, NSString *placement);
 @property (nonatomic, copy) BOOL (^presentationValidator)(NSString *adUnitID, NSString *placement);
 @property (nonatomic, copy) void (^eventHandler)(NSString *event, NSString *adUnitID, NSString *placement, NSError *error);
+// Optional diagnostics for modern SDK clients. No change to legacy SDK behavior.
+@property (nonatomic, copy) void (^revenueHandler)(NSString *adUnitID, NSString *placement, NSDecimalNumber *value, NSString *currency, NSInteger precision, NSString *network);
 @property (nonatomic, assign) BOOL allowsDeferredPresentation;
 - (BOOL)isInterstitialReadyWithMediationID:(NSString *)mediationID placement:(NSString *)placement;
 - (void)discardCachedInterstitials;

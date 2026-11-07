@@ -27,6 +27,10 @@
         strongSelf->_loading = NO;
         strongSelf->_ad = ad;
         ad.fullScreenContentDelegate = strongSelf;
+        ad.paidEventHandler = ^(GADAdValue *value) {
+            OOAdLegacyInterstitial *owner = weakSelf;
+            if (owner.revenueHandler) owner.revenueHandler(value.value, value.currencyCode, value.precision, owner.adNetworkClassName ?: @"");
+        };
         id<GADInterstitialDelegate> delegate = strongSelf.delegate;
         if (error || !ad) {
             if ([delegate respondsToSelector:@selector(interstitial:didFailToReceiveAdWithError:)]) {
@@ -62,6 +66,11 @@
     }
     _ad.fullScreenContentDelegate = nil;
     _ad = nil;
+}
+- (void)adDidRecordImpression:(id<GADFullScreenPresentingAd>)ad {
+    if ([self.delegate respondsToSelector:@selector(interstitialDidRecordImpression:)]) {
+        [self.delegate interstitialDidRecordImpression:self];
+    }
 }
 - (void)ad:(id<GADFullScreenPresentingAd>)ad didFailToPresentFullScreenContentWithError:(NSError *)error {
     [self reportPresentationFailure:error];

@@ -121,9 +121,11 @@
     return [[OOInterstitial alloc] initWithAdUnitID:adUnitID];
 }
 
+- (NSTimeInterval)_currentUptime { return [NSProcessInfo processInfo].systemUptime; }
+
 - (BOOL)isInterstitialReadyWithMediationID:(NSString *)mediationID placement:(NSString *)placement {
     OOInterstitial *ad = dicMediations[mediationID][placement];
-    return ad.isReady && !ad.hasBeenUsed && ad.loadedUptime > 0 && [NSProcessInfo processInfo].systemUptime - ad.loadedUptime < 3300;
+    return ad.isReady && !ad.hasBeenUsed && ad.loadedUptime > 0 && [self _currentUptime] - ad.loadedUptime < 3300;
 }
 
 - (void)discardCachedInterstitials {
@@ -214,6 +216,7 @@
     
     OOInterstitial *interstitial = dicPlacements[placement];
     if (interstitial && interstitial.loadedUptime > 0 && ![self isInterstitialReadyWithMediationID:mediationID placement:placement]) {
+        [self _notifyEvent:@"expired" ad:interstitial error:nil];
         [self _clearDelegate:interstitial];
         [dicPlacements removeObjectForKey:placement];
         interstitial = nil;
@@ -233,6 +236,7 @@
                 return OOInterstitialState_Loading;
             }
         } else {
+            [self _notifyEvent:@"cache_reused" ad:interstitial error:nil];
             return OOInterstitialState_Nothing;// for cache
         }
     } else {
@@ -249,6 +253,13 @@
         }
         
         interstitial.delegate = self;
+#if !OO_AD_LEGACY_INTERSTITIAL
+        __weak typeof(self) weakSelf = self;
+        interstitial.revenueHandler = ^(NSDecimalNumber *value, NSString *currency, NSInteger precision, NSString *network) {
+            OOAd *owner = weakSelf;
+            if (owner.revenueHandler) owner.revenueHandler(mediationID, placement, value, currency, precision, network);
+        };
+#endif
         GADRequest *request = [OOAd adRequestWithPlacement:placement isMoreGame:isMoreGame];
 #ifdef DEBUG
 #if OO_AD_LEGACY_INTERSTITIAL
@@ -359,7 +370,7 @@
         [self _clearDelegate:interstitial];
         return;
     }
-    interstitial.loadedUptime = [NSProcessInfo processInfo].systemUptime;
+    interstitial.loadedUptime = [self _currentUptime];
     [self _notifyEvent:@"loaded" ad:interstitial error:nil];
     
     if ([interstitial.delegateBackup respondsToSelector:@selector(interstitialDidReceiveAd:)]) {
@@ -412,6 +423,10 @@
     }
     
     OOAdLog(@"interstitialWillPresentScreen:%@", interstitial.placement);
+}
+
+- (void)interstitialDidRecordImpression:(GADInterstitial *)ad {
+    if ([ad isKindOfClass:[OOInterstitial class]]) [self _notifyEvent:@"impression" ad:(OOInterstitial *)ad error:nil];
 }
 
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
