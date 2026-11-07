@@ -343,8 +343,11 @@ static NSBundle * wlBundle;
 }
 
 + (NSString *)userAgent {
-    UIWebView* webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-    return [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
+    // A synchronous application user agent needs no browser instance. This API
+    // is retained for shared clients without linking the retired UIWebView API.
+    return [NSString stringWithFormat:@"%@/%@ (%@; iOS %@)",
+            [self bundleId] ?: @"Oriole2", [self appVersion] ?: @"1",
+            [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion];
 }
 
 + (NSString *)getCurrentLanguage
@@ -799,6 +802,7 @@ BOOL ProcessGetMemUsage(unsigned int *resident, unsigned int *_virtual)
     return jailbroken;
 }
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 90000
 typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
 + (ALAssetsLibrary *)_findAssetsGroupCompleteBlock:(OOBlockAssetsGroup)completeBlock
 {
@@ -838,6 +842,8 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
     }];
     return library;
 }
+
+#endif
 
 + (void)writeImageToSavedPhotosAlbum:(UIImage *)image metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock
 {
@@ -929,9 +935,12 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
         }
         return;
     }
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 90000
     [self _writeImageToSavedPhotosAlbumLegacy:image metadata:metadata completionBlock:completionBlock];
+#endif
 }
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 90000
 + (void)_writeImageToSavedPhotosAlbumLegacy:(UIImage *)image metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock
 {
     __block ALAssetsLibrary *library = nil;
@@ -958,6 +967,8 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
         }];
 }
 
+
+#endif
 
 + (NSURL *)buildQueryUrl:(NSString *)url params:(NSDictionary *)params {
     NSMutableArray *queryItems = [NSMutableArray array];
