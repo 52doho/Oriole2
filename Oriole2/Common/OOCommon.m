@@ -158,7 +158,7 @@ static NSBundle * wlBundle;
 }
 
 + (NSString *)deviceLocale {
-    NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSString *language = [NSLocale preferredLanguages].firstObject;
     return language;
 }
 
@@ -168,6 +168,9 @@ static NSBundle * wlBundle;
 }
 
 + (NSString *)deviceModel {
+#if TARGET_OS_SIMULATOR
+    return @"Simulator";
+#endif
     static NSDictionary* deviceNamesByCode = nil;
     
     if (!deviceNamesByCode) {
@@ -256,7 +259,7 @@ static NSBundle * wlBundle;
         }
     }
     
-    return deviceName;
+    return deviceName ?: [self deviceId] ?: @"Unknown";
 }
 
 + (NSString *)deviceBrand {
@@ -1039,21 +1042,16 @@ typedef void (^ OOBlockAssetsGroup)(ALAssetsGroup *group);
 // Answers
 + (void)logAnswersCustomEventWithName:(NSString *)eventName customAttributes:(NSDictionary<NSString *, id> *)customAttributes {
     if (eventName.length > 0) {
-        NSMutableDictionary<NSString *, id> *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                     //                                                                     @"device_id":[OOCommon deviceId],
-                                                     //                                                                     @"ios_idfa":[OOCommon idfa],
-                                                     //                                                                     @"ios_idfa_md5":[OOCommon idfa_md5],
-                                                     @"device_model":[OOCommon deviceModel],
-                                                     //                                                                     @"device_brand":[OOCommon deviceBrand],
-                                                     @"country":[OOCommon deviceCountry],
-                                                     @"locale":[OOCommon deviceLocale],
-                                                     @"timezone":[OOCommon timezone],
-                                                     @"system_version":[OOCommon systemVersion],
-                                                     //                                                                     @"system_name":[OOCommon systemName],
-                                                     @"app_version":[OOCommon appVersion],
-                                                     }];
-        [attributes addEntriesFromDictionary:customAttributes];
-//        [Answers logCustomEventWithName:eventName customAttributes:attributes];
+        // Metadata can be unavailable on new hardware or privacy-restricted
+        // environments. A diagnostic event must never crash the application.
+        NSMutableDictionary<NSString *, id> *attributes = [NSMutableDictionary dictionary];
+        attributes[@"device_model"] = [self deviceModel];
+        attributes[@"country"] = [self deviceCountry];
+        attributes[@"locale"] = [self deviceLocale];
+        attributes[@"timezone"] = [self timezone];
+        attributes[@"system_version"] = [self systemVersion];
+        attributes[@"app_version"] = [self appVersion];
+        if ([customAttributes isKindOfClass:[NSDictionary class]]) [attributes addEntriesFromDictionary:customAttributes];
         [FIRAnalytics logEventWithName:eventName parameters:attributes];
     }
 }
